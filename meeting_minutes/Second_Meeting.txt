@@ -1,0 +1,21 @@
+SSAD Meet-2
+Date – 15/08/2014
+
+Meeting with Aviruch Bhatia – Associate of Dr. Vishal Garg
+
+Since our project mentor Dr. Vishal Garg was out of the country we corresponded with him via email and he directed us to meet up with his associate and get our project description. 
+
+Aviruch Bhatia conducted the meeting where he explained to us what the project was all about. 
+
+The project is about making a Surogate City Finder Tool. Weather Data Files in .epw format are used for energy simulation software by a lots of organisations for energy simulations,constructing buildings. 
+
+Weather data files are  basically in .csv that we can process. The link to the database of files available was given. (?)  
+The tool is supposed to find a surrogate city which matches the climate of the city for which weather data files are not available in the existing database of files. Multiple cities can be matched. A list can be returned as a result. We are supposed to process only with the latitude,altitude and temperature profile round the year as of now. 
+
+The client explained the kind of GUI he wants from us. (Attach Blackboard picture). He gave us free reign on what technology we want to use for the project as long as the web app we make can be deployed and made public to be used by industries. As an example he showed us a previous similar SSAD project made last year by a senior which  is being used by indutry people for actual work. The client has used python to deal with this data before.  
+
+If we are able toe project implement the UI in time and sucessfully then we can expand the project to incorporate maximum matching/optimising and work with Berkerly University in US who are partners on this project. 
+
+Discussed timeline of the project and project reviews. We want to complete it as soon as possible so we can think about expansions on the project. 
+
+
