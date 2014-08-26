@@ -1,0 +1,9 @@
+SSAD Meet 1
+Date - 13/8/2014
+Meeting with Dr. Raghu Reddy and team members
+We met with Prof. Dr Raghu Reddy as our client Dr. Vishal Garg was out of station. 
+He discussed some very important aspects of the project with us.
+Firstly, he told us the necessary commits and dedication we will have to put in to develop the industry app that we have been allotted.
+Then, he asked us to meet up with out client and shrink/ expand the complexity of our project. 
+Finally, he gave us a few insights and ideas on implementing our project. There were consensuses on suggestions like whether using machine learning libraries to carry out search efficiently or storing some particular queries in the cache can change the performance of the app.
+

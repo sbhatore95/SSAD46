@@ -1,0 +1,18 @@
+SSAD Meet-3
+Date - 18/08/14
+Meeting with Team Mentor and T.A. Aman Arora
+
+This was the first meet with Aman Sir. It started with us telling him about the previous meetings with 
+Raghu Sir and Aviruch Sir.
+
+We first discussed about our project in detail, viz, Surrogate City finder tool and the expectations of
+the client from us.
+
+Then we talked about the framework which we would want to use for the project. Frameworks such as Web2py, Jango,
+ 'Ruby on Rails', etc. were brought up in the discussion. 
+
+The final decision for the framework to be used was not decided in the meeting. However, Aman Sir suggested not
+to use Web2py as it has a lot of problems in using. But finally, he left it on us to use the framework of our choice.
+
+The meeting concluded with the hope of having the first meeting with the project client soon as Sir was out of station till that time and we
+weren't able to meet him .
