@@ -14,7 +14,7 @@ The tool is supposed to find a surrogate city which matches the climate of the c
 
 The client explained the kind of GUI he wants from us. (Attach Blackboard picture). He gave us free reign on what technology we want to use for the project as long as the web app we make can be deployed and made public to be used by industries. As an example he showed us a previous similar SSAD project made last year by a senior which  is being used by indutry people for actual work. The client has used python to deal with this data before.  
 
-If we are able toe project implement the UI in time and sucessfully then we can expand the project to incorporate maximum matching/optimising and work with Berkerly University in US who are partners on this project. 
+If we are able to project implement the UI in time and sucessfully then we can expand the project to incorporate maximum matching/optimising and work with Berkerly University in US who are partners on this project. 
 
 Discussed timeline of the project and project reviews. We want to complete it as soon as possible so we can think about expansions on the project. 
 
