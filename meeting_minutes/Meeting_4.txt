@@ -1,0 +1,6 @@
+SSAD Meet-4
+Date - 28/8/2014
+Met our client again with the team members and mainly discussed about the milestones
+that will be used for our project. We set up the deadlines for presentation before R1 and R2.
+He showed us a sample SRS and expected the same standard. We also told him about the final framewok we will be working on i.e. ruby on rails. In the end we mutually agreed on the goals he looked forward to be completed at the end of the project.
+
