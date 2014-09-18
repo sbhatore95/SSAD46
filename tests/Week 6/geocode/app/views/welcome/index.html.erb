@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <%= stylesheet_link_tag "application" %>
+    <%= javascript_include_tag "application" %>
+    <title>Geocoding service</title>
+       </head>
+    <body>
+   
+   <div id="panel">
+      <input id="address" type="textbox" value="Sydney, NSW">
+      <input type="button" value="Geocode" onclick="codeAddress()">
+    </div>
+    <div id="map-canvas"></div>
+  </body>
+</html>
+
