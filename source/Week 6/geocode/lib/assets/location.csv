@@ -1,4 +1,4 @@
-City, State Province Region, Country, Data Source, WMO Number, Latitude,Longitude, Time Zone, Elevation
+City,State,Country,Data_Source,WMO_Number,Latitude,Longitude,Time_Zone,Elevation
 MIDLAND,TX,USA,TMY2-23023,722650,31.93,-102.2,-6,871
 Harrison Faa Ap,AR,USA,TMY3,723446,36.27,-93.15,-6,419
 Grand Island Central Ne Regio,NE,USA,TMY3,725520,40.97,-98.32,-6,561
