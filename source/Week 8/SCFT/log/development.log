@@ -7596,3 +7596,725 @@ Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-09 18:38:16 +0
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-09 18:38:16 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=delhi&latitude_range%5B%7B%3Ain%3D%3E1..90%7D%5D=3&elevation_range%5B%7B%3Ain%3D%3E1..90%7D%5D=3&radius_range%5B%7B%3Ain%3D%3E1..100000%7D%5D=3&commit=Search" for 127.0.0.1 at 2014-10-09 18:44:49 +0530
+Processing by SearchController#printvals as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"delhi", "latitude_range"=>{"{:in=>1..90}"=>"3"}, "elevation_range"=>{"{:in=>1..90}"=>"3"}, "radius_range"=>{"{:in=>1..100000}"=>"3"}, "commit"=>"Search"}
+  Rendered text template (0.0ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-09 18:44:52 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (8.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-09 18:44:52 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-09 18:44:52 +0530
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-09 19:01:22 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (4.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-09 19:01:22 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-09 19:01:22 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-09 19:01:22 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=delhi&latitude_range%5B%7B%3Ain%3D%3E1..90%7D%5D=3&elevation_range%5B%7B%3Ain%3D%3E1..90%7D%5D=3&radius_range%5B%7B%3Ain%3D%3E1..100000%7D%5D=3&commit=Search" for 127.0.0.1 at 2014-10-09 19:01:26 +0530
+Processing by SearchController#printvals as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"delhi", "latitude_range"=>{"{:in=>1..90}"=>"3"}, "elevation_range"=>{"{:in=>1..90}"=>"3"}, "radius_range"=>{"{:in=>1..100000}"=>"3"}, "commit"=>"Search"}
+Completed 500 Internal Server Error in 3ms
+
+NameError (undefined local variable or method `timestamp' for #<SearchController:0x007f1a4d6bfd28>):
+  app/controllers/search_controller.rb:7:in `printvals'
+
+
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.6ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&city=delhi&latitude_range%5B%7B%3Ain%3D%3E1..90%7D%5D=3&elevation_range%5B%7B%3Ain%3D%3E1..90%7D%5D=3&radius_range%5B%7B%3Ain%3D%3E1..100000%7D%5D=3&commit=Search" for 127.0.0.1 at 2014-10-09 19:02:06 +0530
+Processing by SearchController#printvals as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"delhi", "latitude_range"=>{"{:in=>1..90}"=>"3"}, "elevation_range"=>{"{:in=>1..90}"=>"3"}, "radius_range"=>{"{:in=>1..100000}"=>"3"}, "commit"=>"Search"}
+  [1m[36mLocation Load (0.9ms)[0m  [1mSELECT "locations".* FROM "locations"  WHERE (latitude >= @lat)[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-09 19:02:11 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (6.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-09 19:02:11 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-09 19:02:11 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-09 19:02:11 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=delhi&latitude_range%5B%7B%3Ain%3D%3E1..90%7D%5D=3&elevation_range%5B%7B%3Ain%3D%3E1..90%7D%5D=3&radius_range%5B%7B%3Ain%3D%3E1..100000%7D%5D=3&commit=Search" for 127.0.0.1 at 2014-10-09 19:02:14 +0530
+Processing by SearchController#printvals as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"delhi", "latitude_range"=>{"{:in=>1..90}"=>"3"}, "elevation_range"=>{"{:in=>1..90}"=>"3"}, "radius_range"=>{"{:in=>1..100000}"=>"3"}, "commit"=>"Search"}
+  [1m[36mLocation Load (0.5ms)[0m  [1mSELECT "locations".* FROM "locations"  WHERE (latitude >= @lat)[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-09 19:02:36 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (4.3ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Completed 200 OK in 46ms (Views: 45.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&city=delhi&latitude_range%5B%7B%3Ain%3D%3E1..90%7D%5D=3&elevation_range%5B%7B%3Ain%3D%3E1..90%7D%5D=3&radius_range%5B%7B%3Ain%3D%3E1..100000%7D%5D=3&commit=Search" for 127.0.0.1 at 2014-10-09 19:02:38 +0530
+Processing by SearchController#printvals as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"delhi", "latitude_range"=>{"{:in=>1..90}"=>"3"}, "elevation_range"=>{"{:in=>1..90}"=>"3"}, "radius_range"=>{"{:in=>1..100000}"=>"3"}, "commit"=>"Search"}
+  [1m[36mLocation Load (1.4ms)[0m  [1mSELECT "locations".* FROM "locations"  WHERE (latitude >= 50)[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 15ms (Views: 0.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&city=SEMIPALATINSK&latitude_range%5B%7B%3Ain%3D%3E1..90%7D%5D=3&elevation_range%5B%7B%3Ain%3D%3E1..90%7D%5D=3&radius_range%5B%7B%3Ain%3D%3E1..100000%7D%5D=3&commit=Search" for 127.0.0.1 at 2014-10-09 19:18:38 +0530
+Processing by SearchController#printvals as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"SEMIPALATINSK", "latitude_range"=>{"{:in=>1..90}"=>"3"}, "elevation_range"=>{"{:in=>1..90}"=>"3"}, "radius_range"=>{"{:in=>1..100000}"=>"3"}, "commit"=>"Search"}
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `find_by_city' for #<Class:0x007f1a4e7e9450>):
+  app/controllers/search_controller.rb:7:in `printvals'
+
+
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.4ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.4ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-09 19:18:51 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (7.3ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-09 19:18:51 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=SEMIPALATINSK&latitude_range%5B%7B%3Ain%3D%3E1..90%7D%5D=3&elevation_range%5B%7B%3Ain%3D%3E1..90%7D%5D=3&radius_range%5B%7B%3Ain%3D%3E1..100000%7D%5D=3&commit=Search" for 127.0.0.1 at 2014-10-09 19:24:52 +0530
+Processing by SearchController#printvals as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"SEMIPALATINSK", "latitude_range"=>{"{:in=>1..90}"=>"3"}, "elevation_range"=>{"{:in=>1..90}"=>"3"}, "radius_range"=>{"{:in=>1..100000}"=>"3"}, "commit"=>"Search"}
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `find_by_city' for #<Class:0x007f1a4e7e9450>):
+  app/controllers/search_controller.rb:7:in `printvals'
+
+
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.2ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&city=SEMIPALATINSK&latitude_range%5B%7B%3Ain%3D%3E1..90%7D%5D=3&elevation_range%5B%7B%3Ain%3D%3E1..90%7D%5D=3&radius_range%5B%7B%3Ain%3D%3E1..100000%7D%5D=3&commit=Search" for 127.0.0.1 at 2014-10-09 19:25:35 +0530
+Processing by SearchController#printvals as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"SEMIPALATINSK", "latitude_range"=>{"{:in=>1..90}"=>"3"}, "elevation_range"=>{"{:in=>1..90}"=>"3"}, "radius_range"=>{"{:in=>1..100000}"=>"3"}, "commit"=>"Search"}
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `find_by_city' for #<Class:0x007f1a4fe9def8>):
+  app/controllers/search_controller.rb:7:in `printvals'
+
+
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.7ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&city=SEMIPALATINSK&latitude_range%5B%7B%3Ain%3D%3E1..90%7D%5D=3&elevation_range%5B%7B%3Ain%3D%3E1..90%7D%5D=3&radius_range%5B%7B%3Ain%3D%3E1..100000%7D%5D=3&commit=Search" for 127.0.0.1 at 2014-10-09 19:25:36 +0530
+Processing by SearchController#printvals as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"SEMIPALATINSK", "latitude_range"=>{"{:in=>1..90}"=>"3"}, "elevation_range"=>{"{:in=>1..90}"=>"3"}, "radius_range"=>{"{:in=>1..100000}"=>"3"}, "commit"=>"Search"}
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `find_by_city' for #<Class:0x007f1a4fe9def8>):
+  app/controllers/search_controller.rb:7:in `printvals'
+
+
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.5ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&city=SEMIPALATINSK&latitude_range%5B%7B%3Ain%3D%3E1..90%7D%5D=3&elevation_range%5B%7B%3Ain%3D%3E1..90%7D%5D=3&radius_range%5B%7B%3Ain%3D%3E1..100000%7D%5D=3&commit=Search" for 127.0.0.1 at 2014-10-09 19:25:36 +0530
+Processing by SearchController#printvals as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"SEMIPALATINSK", "latitude_range"=>{"{:in=>1..90}"=>"3"}, "elevation_range"=>{"{:in=>1..90}"=>"3"}, "radius_range"=>{"{:in=>1..100000}"=>"3"}, "commit"=>"Search"}
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `find_by_city' for #<Class:0x007f1a4fe9def8>):
+  app/controllers/search_controller.rb:7:in `printvals'
+
+
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.7ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&city=SEMIPALATINSK&latitude_range%5B%7B%3Ain%3D%3E1..90%7D%5D=3&elevation_range%5B%7B%3Ain%3D%3E1..90%7D%5D=3&radius_range%5B%7B%3Ain%3D%3E1..100000%7D%5D=3&commit=Search" for 127.0.0.1 at 2014-10-09 19:25:36 +0530
+Processing by SearchController#printvals as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"SEMIPALATINSK", "latitude_range"=>{"{:in=>1..90}"=>"3"}, "elevation_range"=>{"{:in=>1..90}"=>"3"}, "radius_range"=>{"{:in=>1..100000}"=>"3"}, "commit"=>"Search"}
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `find_by_city' for #<Class:0x007f1a4fe9def8>):
+  app/controllers/search_controller.rb:7:in `printvals'
+
+
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.1ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&city=SEMIPALATINSK&latitude_range%5B%7B%3Ain%3D%3E1..90%7D%5D=3&elevation_range%5B%7B%3Ain%3D%3E1..90%7D%5D=3&radius_range%5B%7B%3Ain%3D%3E1..100000%7D%5D=3&commit=Search" for 127.0.0.1 at 2014-10-09 19:25:36 +0530
+Processing by SearchController#printvals as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"SEMIPALATINSK", "latitude_range"=>{"{:in=>1..90}"=>"3"}, "elevation_range"=>{"{:in=>1..90}"=>"3"}, "radius_range"=>{"{:in=>1..100000}"=>"3"}, "commit"=>"Search"}
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `find_by_city' for #<Class:0x007f1a4fe9def8>):
+  app/controllers/search_controller.rb:7:in `printvals'
+
+
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.8ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&city=SEMIPALATINSK&latitude_range%5B%7B%3Ain%3D%3E1..90%7D%5D=3&elevation_range%5B%7B%3Ain%3D%3E1..90%7D%5D=3&radius_range%5B%7B%3Ain%3D%3E1..100000%7D%5D=3&commit=Search" for 127.0.0.1 at 2014-10-09 19:26:22 +0530
+Processing by SearchController#printvals as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"SEMIPALATINSK", "latitude_range"=>{"{:in=>1..90}"=>"3"}, "elevation_range"=>{"{:in=>1..90}"=>"3"}, "radius_range"=>{"{:in=>1..100000}"=>"3"}, "commit"=>"Search"}
+Completed 500 Internal Server Error in 3ms
+
+NameError (undefined local variable or method `cityname' for #<SearchController:0x007f1a511443e0>):
+  app/controllers/search_controller.rb:7:in `printvals'
+
+
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.4ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&city=SEMIPALATINSK&latitude_range%5B%7B%3Ain%3D%3E1..90%7D%5D=3&elevation_range%5B%7B%3Ain%3D%3E1..90%7D%5D=3&radius_range%5B%7B%3Ain%3D%3E1..100000%7D%5D=3&commit=Search" for 127.0.0.1 at 2014-10-09 19:26:39 +0530
+Processing by SearchController#printvals as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"SEMIPALATINSK", "latitude_range"=>{"{:in=>1..90}"=>"3"}, "elevation_range"=>{"{:in=>1..90}"=>"3"}, "radius_range"=>{"{:in=>1..100000}"=>"3"}, "commit"=>"Search"}
+  [1m[36mLocation Load (0.7ms)[0m  [1mSELECT "locations".* FROM "locations"  WHERE "locations"."city" = 'SEMIPALATINSK'[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 9ms (Views: 0.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-09 19:26:44 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (9.3ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-09 19:26:44 +0530
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-09 19:27:22 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (4.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-09 19:27:23 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-09 19:27:23 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-09 19:27:23 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=SEMIPALATINSK&latitude_range%5B%7B%3Ain%3D%3E1..90%7D%5D=3&elevation_range%5B%7B%3Ain%3D%3E1..90%7D%5D=3&radius_range%5B%7B%3Ain%3D%3E1..100000%7D%5D=3&commit=Search" for 127.0.0.1 at 2014-10-09 19:27:24 +0530
+Processing by SearchController#printvals as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"SEMIPALATINSK", "latitude_range"=>{"{:in=>1..90}"=>"3"}, "elevation_range"=>{"{:in=>1..90}"=>"3"}, "radius_range"=>{"{:in=>1..100000}"=>"3"}, "commit"=>"Search"}
+  [1m[35mLocation Load (0.8ms)[0m  SELECT "locations".* FROM "locations"  WHERE "locations"."city" = 'SEMIPALATINSK'
+  Rendered text template (0.0ms)
+Completed 200 OK in 10ms (Views: 0.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&city=SEMIPALATINSK&latitude_range%5B%7B%3Ain%3D%3E1..90%7D%5D=3&elevation_range%5B%7B%3Ain%3D%3E1..90%7D%5D=3&radius_range%5B%7B%3Ain%3D%3E1..100000%7D%5D=3&commit=Search" for 127.0.0.1 at 2014-10-09 19:28:21 +0530
+Processing by SearchController#printvals as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"SEMIPALATINSK", "latitude_range"=>{"{:in=>1..90}"=>"3"}, "elevation_range"=>{"{:in=>1..90}"=>"3"}, "radius_range"=>{"{:in=>1..100000}"=>"3"}, "commit"=>"Search"}
+  [1m[36mLocation Load (0.6ms)[0m  [1mSELECT "locations".* FROM "locations"  WHERE "locations"."City" = 'SEMIPALATINSK'[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-09 19:28:23 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=SEMIPALATINSK&latitude_range%5B%7B%3Ain%3D%3E1..90%7D%5D=3&elevation_range%5B%7B%3Ain%3D%3E1..90%7D%5D=3&radius_range%5B%7B%3Ain%3D%3E1..100000%7D%5D=3&commit=Search" for 127.0.0.1 at 2014-10-09 19:28:25 +0530
+Processing by SearchController#printvals as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"SEMIPALATINSK", "latitude_range"=>{"{:in=>1..90}"=>"3"}, "elevation_range"=>{"{:in=>1..90}"=>"3"}, "radius_range"=>{"{:in=>1..100000}"=>"3"}, "commit"=>"Search"}
+  [1m[35mLocation Load (0.5ms)[0m  SELECT "locations".* FROM "locations"  WHERE "locations"."City" = 'SEMIPALATINSK'
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-09 19:28:28 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (6.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-09 19:28:28 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-09 19:28:28 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-09 19:28:28 +0530
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-09 19:28:29 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (3.9ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Completed 200 OK in 17ms (Views: 16.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-09 19:28:29 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-09 19:28:29 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-09 19:28:29 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=SEMIPALATINSK&latitude_range%5B%7B%3Ain%3D%3E1..90%7D%5D=3&elevation_range%5B%7B%3Ain%3D%3E1..90%7D%5D=3&radius_range%5B%7B%3Ain%3D%3E1..100000%7D%5D=3&commit=Search" for 127.0.0.1 at 2014-10-09 19:28:31 +0530
+Processing by SearchController#printvals as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"SEMIPALATINSK", "latitude_range"=>{"{:in=>1..90}"=>"3"}, "elevation_range"=>{"{:in=>1..90}"=>"3"}, "radius_range"=>{"{:in=>1..100000}"=>"3"}, "commit"=>"Search"}
+  [1m[36mLocation Load (0.7ms)[0m  [1mSELECT "locations".* FROM "locations"  WHERE "locations"."City" = 'SEMIPALATINSK'[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-09 19:31:45 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (6.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-09 19:31:45 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-09 19:31:45 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-09 19:31:45 +0530
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-09 20:09:10 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (4.8ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    117:     </div>
+    118:     <div id="map-canvas"></div>
+    119:     <div id="display">
+    120: 	<% for post in @results %> 
+    121: 	<tr> 
+    122:          <td><%=h post.latitude %></td>
+    123: 	 <td><%=h post.longitude %></td>
+  app/views/welcome/index.html.erb:120:in `_app_views_welcome_index_html_erb___994243442379143314_69875499267080'
+
+
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (7.8ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-09 20:10:31 +0530
+Processing by WelcomeController#index as HTML
+  [1m[36mLocation Load (0.7ms)[0m  [1mSELECT "locations".* FROM "locations"  WHERE "locations"."City" IS NULL[0m
+  Rendered welcome/index.html.erb within layouts/application (5.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Completed 200 OK in 19ms (Views: 17.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-09 20:10:31 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-09 20:10:31 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-09 20:10:31 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=SEMIPALATINSK&latitude_range%5B%7B%3Ain%3D%3E1..90%7D%5D=3&elevation_range%5B%7B%3Ain%3D%3E1..90%7D%5D=3&radius_range%5B%7B%3Ain%3D%3E1..100000%7D%5D=3&commit=Search" for 127.0.0.1 at 2014-10-09 20:10:34 +0530
+Processing by SearchController#printvals as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"SEMIPALATINSK", "latitude_range"=>{"{:in=>1..90}"=>"3"}, "elevation_range"=>{"{:in=>1..90}"=>"3"}, "radius_range"=>{"{:in=>1..100000}"=>"3"}, "commit"=>"Search"}
+Completed 500 Internal Server Error in 1ms
+
+ActionView::MissingTemplate (Missing template search/printvals, application/printvals with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/home/arushi/ssad_project/source/Week 8/SCFT/app/views"
+):
+  actionview (4.1.6) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.1.6) lib/action_view/lookup_context.rb:124:in `find'
+  actionview (4.1.6) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:41:in `determine_template'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.1.6) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.1.6) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.1.6) lib/action_view/rendering.rb:99:in `_render_template'
+  actionpack (4.1.6) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.1.6) lib/action_view/rendering.rb:82:in `render_to_body'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.1.6) lib/action_controller/metal/renderers.rb:32:in `render_to_body'
+  actionpack (4.1.6) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.1.6) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/arushi/.rbenv/versions/2.1.2/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.1.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.1.6) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.1.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.1.6) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.1.6) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.6) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.6) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/arushi/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/arushi/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/arushi/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (0.4ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&city=SEMIPALATINSK&latitude_range%5B%7B%3Ain%3D%3E1..90%7D%5D=3&elevation_range%5B%7B%3Ain%3D%3E1..90%7D%5D=3&radius_range%5B%7B%3Ain%3D%3E1..100000%7D%5D=3&commit=Search" for 127.0.0.1 at 2014-10-09 20:12:32 +0530
+Processing by SearchController#printvals as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"SEMIPALATINSK", "latitude_range"=>{"{:in=>1..90}"=>"3"}, "elevation_range"=>{"{:in=>1..90}"=>"3"}, "radius_range"=>{"{:in=>1..100000}"=>"3"}, "commit"=>"Search"}
+Completed 500 Internal Server Error in 2ms
+
+ActionView::MissingTemplate (Missing template search/printvals, application/printvals with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/home/arushi/ssad_project/source/Week 8/SCFT/app/views"
+):
+  actionview (4.1.6) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.1.6) lib/action_view/lookup_context.rb:124:in `find'
+  actionview (4.1.6) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:41:in `determine_template'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.1.6) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.1.6) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.1.6) lib/action_view/rendering.rb:99:in `_render_template'
+  actionpack (4.1.6) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.1.6) lib/action_view/rendering.rb:82:in `render_to_body'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.1.6) lib/action_controller/metal/renderers.rb:32:in `render_to_body'
+  actionpack (4.1.6) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.1.6) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/arushi/.rbenv/versions/2.1.2/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.1.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.1.6) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.1.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.1.6) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.1.6) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.6) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.6) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/arushi/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/arushi/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/arushi/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (0.3ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&city=SEMIPALATINSK&latitude_range%5B%7B%3Ain%3D%3E1..90%7D%5D=3&elevation_range%5B%7B%3Ain%3D%3E1..90%7D%5D=3&radius_range%5B%7B%3Ain%3D%3E1..100000%7D%5D=3&commit=Search" for 127.0.0.1 at 2014-10-09 20:12:33 +0530
+Processing by SearchController#printvals as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"SEMIPALATINSK", "latitude_range"=>{"{:in=>1..90}"=>"3"}, "elevation_range"=>{"{:in=>1..90}"=>"3"}, "radius_range"=>{"{:in=>1..100000}"=>"3"}, "commit"=>"Search"}
+Completed 500 Internal Server Error in 2ms
+
+ActionView::MissingTemplate (Missing template search/printvals, application/printvals with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/home/arushi/ssad_project/source/Week 8/SCFT/app/views"
+):
+  actionview (4.1.6) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.1.6) lib/action_view/lookup_context.rb:124:in `find'
+  actionview (4.1.6) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:41:in `determine_template'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.1.6) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.1.6) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.1.6) lib/action_view/rendering.rb:99:in `_render_template'
+  actionpack (4.1.6) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.1.6) lib/action_view/rendering.rb:82:in `render_to_body'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.1.6) lib/action_controller/metal/renderers.rb:32:in `render_to_body'
+  actionpack (4.1.6) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.1.6) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/arushi/.rbenv/versions/2.1.2/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.1.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.1.6) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.1.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.1.6) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.1.6) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.6) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.6) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/arushi/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/arushi/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/arushi/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (0.4ms)
