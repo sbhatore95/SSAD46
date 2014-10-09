@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'game/new'
 
   get 'welcome/index'
+  get '/search' => 'search#printvals' 
 
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -18,6 +19,10 @@ resources :users
 resources :sessions
 get 'sessions/new'
 get 'users/new'
+
+
+
+#resources :location 
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
