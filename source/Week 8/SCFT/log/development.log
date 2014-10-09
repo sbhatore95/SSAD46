@@ -7107,3 +7107,492 @@ Processing by SearchController#printvals as HTML
   Parameters: {"utf8"=>"✓", "city"=>"dgsdgdsgsd", "latitude_range"=>{"{:in=>1..90}"=>"9"}, "elevation_range"=>{"{:in=>1..90}"=>""}, "radius_range"=>{"{:in=>1..100000}"=>""}, "commit"=>"Search"}
   Rendered text template (0.0ms)
 Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-09 17:23:06 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-09 17:23:07 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-09 17:23:07 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=delhi&latitude_range%5B%7B%3Ain%3D%3E1..90%7D%5D=9&elevation_range%5B%7B%3Ain%3D%3E1..90%7D%5D=34&radius_range%5B%7B%3Ain%3D%3E1..100000%7D%5D=2&commit=Search" for 127.0.0.1 at 2014-10-09 17:23:29 +0530
+Processing by SearchController#printvals as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"delhi", "latitude_range"=>{"{:in=>1..90}"=>"9"}, "elevation_range"=>{"{:in=>1..90}"=>"34"}, "radius_range"=>{"{:in=>1..100000}"=>"2"}, "commit"=>"Search"}
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-09 17:29:42 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.5ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Completed 200 OK in 21ms (Views: 20.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-09 17:29:42 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-09 17:29:42 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=delhi&latitude_range%5B%7B%3Ain%3D%3E1..90%7D%5D=9&elevation_range%5B%7B%3Ain%3D%3E1..90%7D%5D=34&radius_range%5B%7B%3Ain%3D%3E1..100000%7D%5D=2&commit=Search" for 127.0.0.1 at 2014-10-09 17:29:45 +0530
+Processing by SearchController#printvals as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"delhi", "latitude_range"=>{"{:in=>1..90}"=>"9"}, "elevation_range"=>{"{:in=>1..90}"=>"34"}, "radius_range"=>{"{:in=>1..100000}"=>"2"}, "commit"=>"Search"}
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-09 17:37:45 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 4ms
+
+SyntaxError (/home/arushi/ssad_project/source/Week 8/SCFT/app/views/welcome/index.html.erb:149: syntax error, unexpected keyword_do_block, expecting =>
+...onSubmit => "initialize();"} do @output_buffer.safe_append='
+...                               ^
+/home/arushi/ssad_project/source/Week 8/SCFT/app/views/welcome/index.html.erb:172: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/welcome/index.html.erb:149: syntax error, unexpected keyword_do_block, expecting =>
+  app/views/welcome/index.html.erb:172: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.3ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-09 17:37:46 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 4ms
+
+SyntaxError (/home/arushi/ssad_project/source/Week 8/SCFT/app/views/welcome/index.html.erb:149: syntax error, unexpected keyword_do_block, expecting =>
+...onSubmit => "initialize();"} do @output_buffer.safe_append='
+...                               ^
+/home/arushi/ssad_project/source/Week 8/SCFT/app/views/welcome/index.html.erb:172: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/welcome/index.html.erb:149: syntax error, unexpected keyword_do_block, expecting =>
+  app/views/welcome/index.html.erb:172: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.4ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-09 17:38:09 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 2ms
+
+SyntaxError (/home/arushi/ssad_project/source/Week 8/SCFT/app/views/welcome/index.html.erb:149: syntax error, unexpected keyword_do_block, expecting =>
+...:onSubmit => "initialize()"} do @output_buffer.safe_append='
+...                               ^
+/home/arushi/ssad_project/source/Week 8/SCFT/app/views/welcome/index.html.erb:172: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/welcome/index.html.erb:149: syntax error, unexpected keyword_do_block, expecting =>
+  app/views/welcome/index.html.erb:172: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.3ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-09 17:38:10 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 3ms
+
+SyntaxError (/home/arushi/ssad_project/source/Week 8/SCFT/app/views/welcome/index.html.erb:149: syntax error, unexpected keyword_do_block, expecting =>
+...:onSubmit => "initialize()"} do @output_buffer.safe_append='
+...                               ^
+/home/arushi/ssad_project/source/Week 8/SCFT/app/views/welcome/index.html.erb:172: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/welcome/index.html.erb:149: syntax error, unexpected keyword_do_block, expecting =>
+  app/views/welcome/index.html.erb:172: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.1ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-09 17:38:25 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 4ms
+
+SyntaxError (/home/arushi/ssad_project/source/Week 8/SCFT/app/views/welcome/index.html.erb:149: syntax error, unexpected keyword_do, expecting ')'
+...,:onSubmit => "initialize()" do @output_buffer.safe_append='
+...                               ^
+/home/arushi/ssad_project/source/Week 8/SCFT/app/views/welcome/index.html.erb:172: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/welcome/index.html.erb:149: syntax error, unexpected keyword_do, expecting ')'
+  app/views/welcome/index.html.erb:172: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.3ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2014-10-09 17:38:36 +0530
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-09 17:38:36 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-09 17:38:36 +0530
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-09 17:46:34 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 4ms
+
+SyntaxError (/home/arushi/ssad_project/source/Week 8/SCFT/app/views/welcome/index.html.erb:162: syntax error, unexpected ',', expecting ')'
+...append=( submit_tag("Search") , codeAddress() );@output_buff...
+...                               ^):
+  app/views/welcome/index.html.erb:162: syntax error, unexpected ',', expecting ')'
+
+
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.3ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-09 17:46:35 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 4ms
+
+SyntaxError (/home/arushi/ssad_project/source/Week 8/SCFT/app/views/welcome/index.html.erb:162: syntax error, unexpected ',', expecting ')'
+...append=( submit_tag("Search") , codeAddress() );@output_buff...
+...                               ^):
+  app/views/welcome/index.html.erb:162: syntax error, unexpected ',', expecting ')'
+
+
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.4ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-09 17:51:22 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-09 17:51:22 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-09 17:51:22 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=delhi&latitude_range%5B%7B%3Ain%3D%3E1..90%7D%5D=11&elevation_range%5B%7B%3Ain%3D%3E1..90%7D%5D=32&radius_range%5B%7B%3Ain%3D%3E1..100000%7D%5D=232&commit=Search" for 127.0.0.1 at 2014-10-09 17:52:31 +0530
+Processing by SearchController#printvals as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"delhi", "latitude_range"=>{"{:in=>1..90}"=>"11"}, "elevation_range"=>{"{:in=>1..90}"=>"32"}, "radius_range"=>{"{:in=>1..100000}"=>"232"}, "commit"=>"Search"}
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-09 17:52:34 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-09 17:52:34 +0530
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-09 18:25:12 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 21ms (Views: 20.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-09 18:25:12 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-09 18:25:12 +0530
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-09 18:28:33 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-09 18:28:33 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-09 18:28:33 +0530
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-09 18:32:00 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-09 18:32:00 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-09 18:32:00 +0530
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-09 18:34:39 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (45.6ms)
+Completed 500 Internal Server Error in 48ms
+
+ActionView::Template::Error (Asset filtered out and will not be served: add `Rails.application.config.assets.precompile += %w( welcome.css )` to `config/initializers/assets.rb` and restart your server):
+    3:   <head>
+    4:     <title>Geocoding service</title>
+    5:     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    6:     <%= stylesheet_link_tag "welcome" %>
+    7:     <script>
+    8: // In the following example, markers appear when the user clicks on the map.
+    9: // The markers are stored in an array.
+  app/views/welcome/index.html.erb:6:in `_app_views_welcome_index_html_erb__575903589302497286_70291026581120'
+
+
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (7.6ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-09 18:36:21 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (26.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Completed 200 OK in 36ms (Views: 35.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/stylesheets/welcome.css.scss.css" for 127.0.0.1 at 2014-10-09 18:36:21 +0530
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/welcome.css.scss.css"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/arushi/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/arushi/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/arushi/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.9ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (41.3ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (59.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-09 18:36:21 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-09 18:36:21 +0530
+
+
+Started GET "/stylesheets/welcome.css.scss.css" for 127.0.0.1 at 2014-10-09 18:36:23 +0530
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/welcome.css.scss.css"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/arushi/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/arushi/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/arushi/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.5ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.7ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (21.8ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-09 18:36:34 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (20.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-09 18:36:34 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-09 18:36:34 +0530
+
+
+Started GET "/stylesheets/welcome.css.scss.css" for 127.0.0.1 at 2014-10-09 18:36:34 +0530
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/welcome.css.scss.css"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/arushi/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/arushi/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/arushi/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.9ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (18.2ms)
+
+
+Started GET "/stylesheets/welcome.css.scss.css" for 127.0.0.1 at 2014-10-09 18:36:35 +0530
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/welcome.css.scss.css"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/arushi/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/arushi/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/arushi/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.5ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.6ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (25.4ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-09 18:36:48 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (Asset filtered out and will not be served: add `Rails.application.config.assets.precompile += %w( welcome.css )` to `config/initializers/assets.rb` and restart your server):
+    3:   <head>
+    4:     <title>Geocoding service</title>
+    5:     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    6:     <%= stylesheet_link_tag "welcome.css" %>
+    7:     <script>
+    8: // In the following example, markers appear when the user clicks on the map.
+    9: // The markers are stored in an array.
+  app/views/welcome/index.html.erb:6:in `_app_views_welcome_index_html_erb__575903589302497286_70291016738640'
+
+
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (8.5ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-09 18:36:50 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 2ms
+
+ActionView::Template::Error (Asset filtered out and will not be served: add `Rails.application.config.assets.precompile += %w( welcome.css )` to `config/initializers/assets.rb` and restart your server):
+    3:   <head>
+    4:     <title>Geocoding service</title>
+    5:     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    6:     <%= stylesheet_link_tag "welcome.css" %>
+    7:     <script>
+    8: // In the following example, markers appear when the user clicks on the map.
+    9: // The markers are stored in an array.
+  app/views/welcome/index.html.erb:6:in `_app_views_welcome_index_html_erb__575903589302497286_70291016738640'
+
+
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (7.8ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-09 18:38:16 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (10.8ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Completed 200 OK in 41ms (Views: 33.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-09 18:38:16 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-09 18:38:16 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-09 18:38:16 +0530
