@@ -6903,3 +6903,207 @@ Processing by SearchController#printvals as HTML
   Parameters: {"utf8"=>"✓", "city"=>"dsfsygafuesfjdk", "latitude_range"=>{"{:in=>1..90}"=>"3122"}, "radius_range"=>{"{:in=>1..100000}"=>"50"}, "commit"=>"Search"}
   Rendered text template (0.0ms)
 Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-09 16:32:59 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (68.9ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 179ms (Views: 157.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-09 16:33:00 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-09 16:33:00 +0530
+
+
+Started GET "/welcome/" for 127.0.0.1 at 2014-10-09 16:33:09 +0530
+
+ActionController::RoutingError (No route matches [GET] "/welcome"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/arushi/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/arushi/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/arushi/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.5ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (31.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-09 16:33:12 +0530
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 18ms (Views: 16.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-09 16:33:12 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-09 16:33:12 +0530
+
+
+Started POST "/users" for 127.0.0.1 at 2014-10-09 16:33:22 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vU8vrNFSPGrKLSca8/ldQjxUJ4sg3r3Z7sQtowvuwG8=", "user"=>{"email"=>"arushi.8295@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'arushi.8295@gmail.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `password_hash`
+Binary data inserted for `string` type on column `password_salt`
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "password_hash", "password_salt", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", "2014-10-09 11:03:23.284946"], ["email", "arushi.8295@gmail.com"], ["password_hash", "$2a$10$g0axx2gCSIvyM7vbf5YPTeQD7/Iabsy/G18GErz4k5rUr5NaJKlWa"], ["password_salt", "$2a$10$g0axx2gCSIvyM7vbf5YPTe"], ["updated_at", "2014-10-09 11:03:23.284946"]]
+  [1m[36m (138.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 447ms (ActiveRecord: 138.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-09 16:33:23 +0530
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.9ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-09 16:33:23 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-09 16:33:23 +0530
+
+
+Started GET "/log_out" for 127.0.0.1 at 2014-10-09 16:33:30 +0530
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-09 16:33:30 +0530
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-09 16:33:30 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-09 16:33:30 +0530
+
+
+Started GET "/log_in" for 127.0.0.1 at 2014-10-09 16:33:32 +0530
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 81ms (Views: 79.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-09 16:33:32 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-09 16:33:32 +0530
+
+
+Started POST "/sessions" for 127.0.0.1 at 2014-10-09 16:33:38 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vU8vrNFSPGrKLSca8/ldQjxUJ4sg3r3Z7sQtowvuwG8=", "email"=>"arushi.8295@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'arushi.8295@gmail.com' LIMIT 1[0m
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 207ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-09 16:33:38 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (19.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Completed 200 OK in 29ms (Views: 28.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-09 16:33:38 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-09 16:33:38 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=dgsdgdsgsd&latitude_range%5B%7B%3Ain%3D%3E1..90%7D%5D=9&radius_range%5B%7B%3Ain%3D%3E1..100000%7D%5D=39&commit=Search" for 127.0.0.1 at 2014-10-09 16:33:58 +0530
+Processing by SearchController#printvals as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"dgsdgdsgsd", "latitude_range"=>{"{:in=>1..90}"=>"9"}, "radius_range"=>{"{:in=>1..100000}"=>"39"}, "commit"=>"Search"}
+  Rendered text template (0.0ms)
+Completed 200 OK in 82ms (Views: 80.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-09 16:34:02 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-09 16:34:02 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-09 16:34:02 +0530
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-09 16:37:35 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.9ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-09 16:37:35 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-09 16:37:35 +0530
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-09 16:39:17 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 21ms (Views: 20.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-09 16:39:17 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-09 16:39:17 +0530
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-09 16:39:57 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-09 16:39:57 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-09 16:39:57 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=dgsdgdsgsd&latitude_range%5B%7B%3Ain%3D%3E1..90%7D%5D=9&elevation_range%5B%7B%3Ain%3D%3E1..90%7D%5D=&radius_range%5B%7B%3Ain%3D%3E1..100000%7D%5D=&commit=Search" for 127.0.0.1 at 2014-10-09 16:41:27 +0530
+Processing by SearchController#printvals as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"dgsdgdsgsd", "latitude_range"=>{"{:in=>1..90}"=>"9"}, "elevation_range"=>{"{:in=>1..90}"=>""}, "radius_range"=>{"{:in=>1..100000}"=>""}, "commit"=>"Search"}
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
