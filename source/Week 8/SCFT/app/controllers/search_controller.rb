@@ -14,7 +14,7 @@ class SearchController < ApplicationController
   #If the city does not exists in database 
     	if @mycity == nil 
 
-    		redirect_to :action => 'findSurrogateCity'
+    		redirect_to :action => 'findSurrogateCity' ,:city => params[:city] ,:latitude_range => params[:latitude_range], :elevation_range => params[:elevation_range] ,:radius => params[:radius_range]
 	    
 	
   #If the city  exist in database 

@@ -10916,3 +10916,67 @@ ActionController::RoutingError (No route matches [GET] "/show"):
   Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
   Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.7ms)
   Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (27.9ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-10 18:03:14 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (24.1ms)
+Completed 200 OK in 83ms (Views: 66.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 18:03:14 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 18:03:14 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-10 18:03:14 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=MIDLAND&latitude_range=10&elevation_range=10&radius_range=10&commit=Search" for 127.0.0.1 at 2014-10-10 18:03:44 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"MIDLAND", "latitude_range"=>"10", "elevation_range"=>"10", "radius_range"=>"10", "commit"=>"Search"}
+  [1m[35mLocation Load (0.7ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."City" = 'MIDLAND' LIMIT 1
+Redirected to http://localhost:3000/search/weather?city=MIDLAND
+Completed 302 Found in 51ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/search/weather?city=MIDLAND" for 127.0.0.1 at 2014-10-10 18:03:44 +0530
+Processing by SearchController#weather as HTML
+  Parameters: {"city"=>"MIDLAND"}
+  Rendered search/weather.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 31ms (Views: 30.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 18:03:44 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 18:03:44 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-10 18:03:44 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=MIDLAND&latitude_range=10&elevation_range=10&radius_range=10&commit=Search" for 127.0.0.1 at 2014-10-10 18:05:16 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"MIDLAND", "latitude_range"=>"10", "elevation_range"=>"10", "radius_range"=>"10", "commit"=>"Search"}
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."City" = 'MIDLAND' LIMIT 1[0m
+Redirected to http://localhost:3000/search/weather?city=MIDLAND
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/search/weather?city=MIDLAND" for 127.0.0.1 at 2014-10-10 18:05:16 +0530
+Processing by SearchController#weather as HTML
+  Parameters: {"city"=>"MIDLAND"}
+  Rendered search/weather.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 30ms (Views: 28.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 18:05:16 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 18:05:16 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-10 18:05:16 +0530
