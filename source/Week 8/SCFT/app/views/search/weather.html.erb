@@ -63,7 +63,7 @@
                             map.setCenter(results[0].geometry.location);
                             addMarker(results[0].geometry.location);
                             /* var marker = new google.maps.Marker(
-         {
+         {'
          map: map,
          position: results[0].geometry.location
       });*/
@@ -73,8 +73,9 @@
                         var a = results[0].geometry.location;
                         var lat = a.lat();
                         var lon = a.lng();
-			document.getElementById("searchpanel").innerHTML = "Latitude: " + lat + "<br>" + "Longitude: " + lon;
-			elevator = new google.maps.ElevationService();
+			document.getElementById("searchpanel").innerHTML = "Latitude: " + lat + "<br> Longitude: " + lon+ "<br>";
+			document.getElementById("myHiddenForm").innerHTML = "<form accept-charset='UTF-8' action='/search/findSurrogateCity' method='get'><div style='margin:0;padding:0;display:inline'><input name='utf8' type='hidden' value='&#x2713;'/><input name='latitude_mycity' type='hidden' value="+ lat + " /><input name='longitude_mycity' type=hidden value="+ lon + " /></div> <input name='test' type='submit' value='Search' /></form>";
+            		elevator = new google.maps.ElevationService();
 
                     });
                 }
@@ -121,12 +122,11 @@
         <input onclick="deleteMarkers();" type=button value="Delete Markers">
     </div>
     <div id="searchpanel">
-        <!---<input id="address" type="textbox" placeholder="Search">
-    <input type="button" value="Geocode" class="Button" onclick="codeAddress()">-->
-    </div>
+	</div>
+
+	    <div id="myHiddenForm">    </div>
     <div id="map-canvas"></div>
-    <div id="display">
-    </div>
+ 
     <!--div id="loc" style="position : absolute; left : 970px; width: 250px; top : 170px; border : 2px solid;"></div-->
 </body>
 
