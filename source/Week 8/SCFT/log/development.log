@@ -8318,3 +8318,1620 @@ ActionView::MissingTemplate (Missing template search/printvals, application/prin
 
 
   Rendered /home/arushi/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (0.4ms)
+  [1m[36mLocation Load (0.4ms)[0m  [1mSELECT "locations".* FROM "locations"  WHERE "locations"."id" IN (1, 10)[0m
+  [1m[35mLocation Load (0.3ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."City" = 'MIDLAND' LIMIT 1
+  [1m[36mLocation Load (23.9ms)[0m  [1mSELECT "locations".* FROM "locations"  WHERE (Latitude >= 10 AND Latitude <= 100)[0m
+  [1m[35mLocation Load (0.4ms)[0m  SELECT "locations".* FROM "locations"  WHERE (Latitude >= a AND Latitude <= b)
+SQLite3::SQLException: no such column: a: SELECT "locations".* FROM "locations"  WHERE (Latitude >= a AND Latitude <= b)
+  [1m[36mLocation Load (20.1ms)[0m  [1mSELECT "locations".* FROM "locations"  WHERE (Latitude >= 10 AND Latitude <= 100)[0m
+  [1m[35mLocation Load (17.5ms)[0m  SELECT "locations".* FROM "locations"  WHERE (Latitude >= 10 AND Latitude <= 100)
+  [1m[36mLocation Load (18.3ms)[0m  [1mSELECT "locations".* FROM "locations"  WHERE (Latitude >= 10 AND Latitude <= 100)[0m
+  [1m[35mLocation Load (17.3ms)[0m  SELECT "locations".* FROM "locations"  WHERE (Latitude >= 10 AND Latitude <= 100)
+  [1m[36mLocation Load (0.4ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE (Latitude >= 10 AND Latitude <= 100) LIMIT 6[0m
+
+
+Started GET "/log_in" for 127.0.0.1 at 2014-10-10 00:35:29 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (3.8ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 76ms (Views: 58.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 00:35:30 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 00:35:30 +0530
+
+
+Started POST "/sessions" for 127.0.0.1 at 2014-10-10 00:35:31 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O2bxczIPGwQNLbutD6Pz6U5qNYODsUIufu1rQUwO/NE=", "email"=>"akanksha.dlf@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'akanksha.dlf@gmail.com' LIMIT 1[0m
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 156ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-10 00:35:32 +0530
+
+SyntaxError (/home/akanksha/SSAD46/ssad46/source/Week 8/SCFT/app/controllers/welcome_controller.rb:4: syntax error, unexpected ':', expecting keyword_end
+	   render: none
+	          ^):
+  app/controllers/welcome_controller.rb:4: syntax error, unexpected ':', expecting keyword_end
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.5ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.7ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.9ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-10 00:36:34 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (47.7ms)
+Completed 500 Internal Server Error in 51ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    117:     </div>
+    118:     <div id="map-canvas"></div>
+    119:     <div id="display">
+    120: 	<% for post in @results %> 
+    121: 	<tr> 
+    122:          <td><%=h post.latitude %></td>
+    123: 	 <td><%=h post.longitude %></td>
+  app/views/welcome/index.html.erb:120:in `_app_views_welcome_index_html_erb___2084552510307666361_69890333050880'
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.4ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-10 00:37:56 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (21.3ms)
+Completed 500 Internal Server Error in 26ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    117:     </div>
+    118:     <div id="map-canvas"></div>
+    119:     <div id="display">
+    120: 	<!--<% for post in @results %> 
+    121: 	<tr> 
+    122:          <td><%=h post.latitude %></td>
+    123: 	 <td><%=h post.longitude %></td>
+  app/views/welcome/index.html.erb:120:in `_app_views_welcome_index_html_erb___2084552510307666361_69890319704440'
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.1ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-10 00:38:20 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (16.5ms)
+Completed 500 Internal Server Error in 19ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    117:     </div>
+    118:     <div id="map-canvas"></div>
+    119:     <div id="display">
+    120: 	<!--<% for post in @results %> 
+    121: 	<tr> 
+    122:          <td><%=h post.latitude %></td>
+    123: 	 <td><%=h post.longitude %></td>
+  app/views/welcome/index.html.erb:120:in `_app_views_welcome_index_html_erb___2084552510307666361_69890319704440'
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.5ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-10 00:38:29 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (17.5ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 57ms (Views: 55.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-10 00:38:29 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 00:38:29 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 00:38:29 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=MIDLAND&latitude_range%5B%7B%3Ain%3D%3E1..90%7D%5D=10&elevation_range%5B%7B%3Ain%3D%3E1..90%7D%5D=10&radius_range%5B%7B%3Ain%3D%3E1..100000%7D%5D=10&commit=Search" for 127.0.0.1 at 2014-10-10 00:38:43 +0530
+
+SyntaxError (/home/akanksha/SSAD46/ssad46/source/Week 8/SCFT/app/controllers/search_controller.rb:9: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/search_controller.rb:9: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.4ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-10 00:43:14 +0530
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (25.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 54ms (Views: 47.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 00:43:14 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 00:43:14 +0530
+
+
+Started GET "/welcome/" for 127.0.0.1 at 2014-10-10 00:43:28 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (16.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 51ms (Views: 49.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 00:43:28 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 00:43:28 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-10 00:43:28 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=MIDLAND&latitude_range%5B%7B%3Ain%3D%3E1..90%7D%5D=10&elevation_range%5B%7B%3Ain%3D%3E1..90%7D%5D=10&radius_range%5B%7B%3Ain%3D%3E1..100000%7D%5D=&commit=Search" for 127.0.0.1 at 2014-10-10 00:43:38 +0530
+Processing by SearchController#printvals as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"MIDLAND", "latitude_range"=>{"{:in=>1..90}"=>"10"}, "elevation_range"=>{"{:in=>1..90}"=>"10"}, "radius_range"=>{"{:in=>1..100000}"=>""}, "commit"=>"Search"}
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."City" = 'MIDLAND' LIMIT 1[0m
+  Rendered text template (0.1ms)
+Completed 200 OK in 20ms (Views: 2.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&city=MIDLAND&latitude_range%5B%7B%3Ain%3D%3E1..90%7D%5D=10&elevation_range%5B%7B%3Ain%3D%3E1..90%7D%5D=10&radius_range%5B%7B%3Ain%3D%3E1..100000%7D%5D=&commit=Search" for 127.0.0.1 at 2014-10-10 01:38:28 +0530
+Processing by SearchController#printvals as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"MIDLAND", "latitude_range"=>{"{:in=>1..90}"=>"10"}, "elevation_range"=>{"{:in=>1..90}"=>"10"}, "radius_range"=>{"{:in=>1..100000}"=>""}, "commit"=>"Search"}
+  [1m[35mLocation Load (0.3ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."City" = 'MIDLAND' LIMIT 1
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-10 01:42:18 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (8.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 42ms (Views: 39.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 01:42:19 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-10 01:42:19 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 01:42:19 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=MIDLAND&latitude_range%5B%7B%3Ain%3D%3E1..90%7D%5D=10&elevation_range%5B%7B%3Ain%3D%3E1..90%7D%5D=10&radius_range%5B%7B%3Ain%3D%3E1..100000%7D%5D=10&commit=Search" for 127.0.0.1 at 2014-10-10 01:42:28 +0530
+
+SyntaxError (/home/akanksha/SSAD46/ssad46/source/Week 8/SCFT/app/controllers/search_controller.rb:8: dynamic constant assignment
+	Latitude_mycity= mycity.Latitude
+	                ^
+/home/akanksha/SSAD46/ssad46/source/Week 8/SCFT/app/controllers/search_controller.rb:9: dynamic constant assignment
+	Latitude_Range_Start = Latitude_mycity - @lat
+	                      ^
+/home/akanksha/SSAD46/ssad46/source/Week 8/SCFT/app/controllers/search_controller.rb:10: dynamic constant assignment
+	Latitude_Range_End = Latitude_mycity + @lat
+	                    ^
+/home/akanksha/SSAD46/ssad46/source/Week 8/SCFT/app/controllers/search_controller.rb:11: syntax error, unexpected ',', expecting =>
+...nge_Start, Latitude_Range_End , Latitude_mycity 
+...                               ^):
+  app/controllers/search_controller.rb:8: dynamic constant assignment
+  app/controllers/search_controller.rb:9: dynamic constant assignment
+  app/controllers/search_controller.rb:10: dynamic constant assignment
+  app/controllers/search_controller.rb:11: syntax error, unexpected ',', expecting =>
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.8ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&city=MIDLAND&latitude_range%5B%7B%3Ain%3D%3E1..90%7D%5D=10&elevation_range%5B%7B%3Ain%3D%3E1..90%7D%5D=10&radius_range%5B%7B%3Ain%3D%3E1..100000%7D%5D=10&commit=Search" for 127.0.0.1 at 2014-10-10 01:43:52 +0530
+
+SyntaxError (/home/akanksha/SSAD46/ssad46/source/Week 8/SCFT/app/controllers/search_controller.rb:8: dynamic constant assignment
+	Latitude_mycity= mycity.Latitude
+	                ^
+/home/akanksha/SSAD46/ssad46/source/Week 8/SCFT/app/controllers/search_controller.rb:11: syntax error, unexpected ',', expecting =>
+...nge_Start, Latitude_Range_End , Latitude_mycity 
+...                               ^):
+  app/controllers/search_controller.rb:8: dynamic constant assignment
+  app/controllers/search_controller.rb:11: syntax error, unexpected ',', expecting =>
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.4ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.5ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&city=MIDLAND&latitude_range%5B%7B%3Ain%3D%3E1..90%7D%5D=10&elevation_range%5B%7B%3Ain%3D%3E1..90%7D%5D=10&radius_range%5B%7B%3Ain%3D%3E1..100000%7D%5D=10&commit=Search" for 127.0.0.1 at 2014-10-10 01:44:59 +0530
+
+SyntaxError (/home/akanksha/SSAD46/ssad46/source/Week 8/SCFT/app/controllers/search_controller.rb:8: dynamic constant assignment
+	Latitude_mycity= mycity.Latitude
+	                ^):
+  app/controllers/search_controller.rb:8: dynamic constant assignment
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.5ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.6ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&city=MIDLAND&latitude_range%5B%7B%3Ain%3D%3E1..90%7D%5D=10&elevation_range%5B%7B%3Ain%3D%3E1..90%7D%5D=10&radius_range%5B%7B%3Ain%3D%3E1..100000%7D%5D=10&commit=Search" for 127.0.0.1 at 2014-10-10 01:45:18 +0530
+Processing by SearchController#printvals as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"MIDLAND", "latitude_range"=>{"{:in=>1..90}"=>"10"}, "elevation_range"=>{"{:in=>1..90}"=>"10"}, "radius_range"=>{"{:in=>1..100000}"=>"10"}, "commit"=>"Search"}
+  [1m[35mLocation Load (0.2ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."City" = 'MIDLAND' LIMIT 1
+Completed 500 Internal Server Error in 13ms
+
+NameError (uninitialized constant SearchController::Latitude_mycity):
+  app/controllers/search_controller.rb:11:in `printvals'
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.8ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-10 01:45:42 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (8.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 42ms (Views: 39.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 01:45:43 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 01:45:43 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-10 01:45:43 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=MID&latitude_range%5B%7B%3Ain%3D%3E1..90%7D%5D=&elevation_range%5B%7B%3Ain%3D%3E1..90%7D%5D=&radius_range%5B%7B%3Ain%3D%3E1..100000%7D%5D=&commit=Search" for 127.0.0.1 at 2014-10-10 01:45:48 +0530
+Processing by SearchController#printvals as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"MID", "latitude_range"=>{"{:in=>1..90}"=>""}, "elevation_range"=>{"{:in=>1..90}"=>""}, "radius_range"=>{"{:in=>1..100000}"=>""}, "commit"=>"Search"}
+  [1m[35mLocation Load (2.1ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."City" = 'MID' LIMIT 1
+Completed 500 Internal Server Error in 7ms
+
+NoMethodError (undefined method `Latitude' for nil:NilClass):
+  app/controllers/search_controller.rb:8:in `printvals'
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&city=MIDLAND&latitude_range%5B%7B%3Ain%3D%3E1..90%7D%5D=10&elevation_range%5B%7B%3Ain%3D%3E1..90%7D%5D=10&radius_range%5B%7B%3Ain%3D%3E1..100000%7D%5D=9&commit=Search" for 127.0.0.1 at 2014-10-10 01:46:02 +0530
+Processing by SearchController#printvals as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"MIDLAND", "latitude_range"=>{"{:in=>1..90}"=>"10"}, "elevation_range"=>{"{:in=>1..90}"=>"10"}, "radius_range"=>{"{:in=>1..100000}"=>"9"}, "commit"=>"Search"}
+  [1m[36mLocation Load (0.4ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."City" = 'MIDLAND' LIMIT 1[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 14ms (Views: 1.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&city=MIDLAND&latitude_range%5B%7B%3Ain%3D%3E1..90%7D%5D=10&elevation_range%5B%7B%3Ain%3D%3E1..90%7D%5D=10&radius_range%5B%7B%3Ain%3D%3E1..100000%7D%5D=9&commit=Search" for 127.0.0.1 at 2014-10-10 01:47:20 +0530
+
+SyntaxError (/home/akanksha/SSAD46/ssad46/source/Week 8/SCFT/app/controllers/search_controller.rb:12: syntax error, unexpected ',', expecting =>
+...mycity , @Latitude_Range_Start, @Latitude_Range_End
+...                               ^):
+  app/controllers/search_controller.rb:12: syntax error, unexpected ',', expecting =>
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (81.7ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (106.8ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&city=MIDLAND&latitude_range%5B%7B%3Ain%3D%3E1..90%7D%5D=10&elevation_range%5B%7B%3Ain%3D%3E1..90%7D%5D=10&radius_range%5B%7B%3Ain%3D%3E1..100000%7D%5D=9&commit=Search" for 127.0.0.1 at 2014-10-10 01:49:04 +0530
+
+SyntaxError (/home/akanksha/SSAD46/ssad46/source/Week 8/SCFT/app/controllers/search_controller.rb:13: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+	    render :text => @Latitude_Range_Start
+	            ^):
+  app/controllers/search_controller.rb:13: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.5ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&city=MIDLAND&latitude_range%5B%7B%3Ain%3D%3E1..90%7D%5D=10&elevation_range%5B%7B%3Ain%3D%3E1..90%7D%5D=10&radius_range%5B%7B%3Ain%3D%3E1..100000%7D%5D=9&commit=Search" for 127.0.0.1 at 2014-10-10 01:49:20 +0530
+Processing by SearchController#printvals as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"MIDLAND", "latitude_range"=>{"{:in=>1..90}"=>"10"}, "elevation_range"=>{"{:in=>1..90}"=>"10"}, "radius_range"=>{"{:in=>1..100000}"=>"9"}, "commit"=>"Search"}
+  [1m[35mLocation Load (0.3ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."City" = 'MIDLAND' LIMIT 1
+Completed 500 Internal Server Error in 15ms
+
+NameError (uninitialized constant SearchController::Latitude_mycity):
+  app/controllers/search_controller.rb:10:in `printvals'
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.3ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&city=MIDLAND&latitude_range%5B%7B%3Ain%3D%3E1..90%7D%5D=10&elevation_range%5B%7B%3Ain%3D%3E1..90%7D%5D=10&radius_range%5B%7B%3Ain%3D%3E1..100000%7D%5D=9&commit=Search" for 127.0.0.1 at 2014-10-10 01:50:07 +0530
+Processing by SearchController#printvals as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"MIDLAND", "latitude_range"=>{"{:in=>1..90}"=>"10"}, "elevation_range"=>{"{:in=>1..90}"=>"10"}, "radius_range"=>{"{:in=>1..100000}"=>"9"}, "commit"=>"Search"}
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."City" = 'MIDLAND' LIMIT 1[0m
+Completed 500 Internal Server Error in 15ms
+
+NameError (uninitialized constant SearchController::Latitude_mycity):
+  app/controllers/search_controller.rb:9:in `printvals'
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&city=MIDLAND&latitude_range%5B%7B%3Ain%3D%3E1..90%7D%5D=10&elevation_range%5B%7B%3Ain%3D%3E1..90%7D%5D=10&radius_range%5B%7B%3Ain%3D%3E1..100000%7D%5D=9&commit=Search" for 127.0.0.1 at 2014-10-10 01:50:40 +0530
+
+SyntaxError (/home/akanksha/SSAD46/ssad46/source/Week 8/SCFT/app/controllers/search_controller.rb:8: syntax error, unexpected ':', expecting keyword_then or ';' or '\n'
+/home/akanksha/SSAD46/ssad46/source/Week 8/SCFT/app/controllers/search_controller.rb:17: syntax error, unexpected keyword_end, expecting end-of-input):
+  app/controllers/search_controller.rb:8: syntax error, unexpected ':', expecting keyword_then or ';' or '\n'
+  app/controllers/search_controller.rb:17: syntax error, unexpected keyword_end, expecting end-of-input
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.2ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&city=MIDLAND&latitude_range%5B%7B%3Ain%3D%3E1..90%7D%5D=10&elevation_range%5B%7B%3Ain%3D%3E1..90%7D%5D=10&radius_range%5B%7B%3Ain%3D%3E1..100000%7D%5D=9&commit=Search" for 127.0.0.1 at 2014-10-10 01:51:59 +0530
+Processing by SearchController#printvals as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"MIDLAND", "latitude_range"=>{"{:in=>1..90}"=>"10"}, "elevation_range"=>{"{:in=>1..90}"=>"10"}, "radius_range"=>{"{:in=>1..100000}"=>"9"}, "commit"=>"Search"}
+  [1m[35mLocation Load (0.2ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."City" = 'MIDLAND' LIMIT 1
+Completed 500 Internal Server Error in 19ms
+
+NoMethodError (undefined method `mycity!' for #<SearchController:0x007f213a4d2f80>):
+  app/controllers/search_controller.rb:8:in `printvals'
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.5ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.8ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&city=MIDLAND&latitude_range%5B%7B%3Ain%3D%3E1..90%7D%5D=10&elevation_range%5B%7B%3Ain%3D%3E1..90%7D%5D=10&radius_range%5B%7B%3Ain%3D%3E1..100000%7D%5D=9&commit=Search" for 127.0.0.1 at 2014-10-10 01:54:03 +0530
+Processing by SearchController#printvals as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"MIDLAND", "latitude_range"=>{"{:in=>1..90}"=>"10"}, "elevation_range"=>{"{:in=>1..90}"=>"10"}, "radius_range"=>{"{:in=>1..100000}"=>"9"}, "commit"=>"Search"}
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."City" = 'MIDLAND' LIMIT 1[0m
+Completed 500 Internal Server Error in 12ms
+
+NameError (uninitialized constant SearchController::Latitude_mycity):
+  app/controllers/search_controller.rb:10:in `printvals'
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.6ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&city=MIDLAND&latitude_range%5B%7B%3Ain%3D%3E1..90%7D%5D=10&elevation_range%5B%7B%3Ain%3D%3E1..90%7D%5D=10&radius_range%5B%7B%3Ain%3D%3E1..100000%7D%5D=9&commit=Search" for 127.0.0.1 at 2014-10-10 01:54:30 +0530
+Processing by SearchController#printvals as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"MIDLAND", "latitude_range"=>{"{:in=>1..90}"=>"10"}, "elevation_range"=>{"{:in=>1..90}"=>"10"}, "radius_range"=>{"{:in=>1..100000}"=>"9"}, "commit"=>"Search"}
+  [1m[35mLocation Load (0.2ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."City" = 'MIDLAND' LIMIT 1
+Completed 500 Internal Server Error in 13ms
+
+TypeError (ActionController::Parameters can't be coerced into Float):
+  app/controllers/search_controller.rb:10:in `-'
+  app/controllers/search_controller.rb:10:in `printvals'
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.2ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-10 02:13:45 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (13.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 48ms (Views: 46.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 02:13:45 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 02:13:45 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-10 02:13:45 +0530
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-10 02:14:28 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (14.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 40ms (Views: 38.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 02:14:28 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 02:14:28 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-10 02:14:28 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=MIDLAND&latitude_range=10&elevation_range=10&radius_range=10&commit=Search" for 127.0.0.1 at 2014-10-10 02:14:36 +0530
+Processing by SearchController#printvals as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"MIDLAND", "latitude_range"=>"10", "elevation_range"=>"10", "radius_range"=>"10", "commit"=>"Search"}
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."City" = 'MIDLAND' LIMIT 1[0m
+Completed 500 Internal Server Error in 2ms
+
+TypeError (String can't be coerced into Float):
+  app/controllers/search_controller.rb:10:in `-'
+  app/controllers/search_controller.rb:10:in `printvals'
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&city=MIDLAND&latitude_range=10&elevation_range=10&radius_range=10&commit=Search" for 127.0.0.1 at 2014-10-10 02:18:25 +0530
+Processing by SearchController#printvals as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"MIDLAND", "latitude_range"=>"10", "elevation_range"=>"10", "radius_range"=>"10", "commit"=>"Search"}
+  [1m[35mLocation Load (0.2ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."City" = 'MIDLAND' LIMIT 1
+Completed 500 Internal Server Error in 15ms
+
+TypeError (String can't be coerced into Float):
+  app/controllers/search_controller.rb:10:in `-'
+  app/controllers/search_controller.rb:10:in `printvals'
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.5ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.3ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&city=MIDLAND&latitude_range=10&elevation_range=10&radius_range=10&commit=Search" for 127.0.0.1 at 2014-10-10 02:20:18 +0530
+Processing by SearchController#printvals as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"MIDLAND", "latitude_range"=>"10", "elevation_range"=>"10", "radius_range"=>"10", "commit"=>"Search"}
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."City" = 'MIDLAND' LIMIT 1[0m
+  Rendered text template (0.0ms)
+Completed 500 Internal Server Error in 17ms
+
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/search_controller.rb:13:in `printvals'
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.2ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-10 02:21:01 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (9.4ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 44ms (Views: 41.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 02:21:02 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-10 02:21:02 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 02:21:02 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=MIDLAND&latitude_range=10&elevation_range=10&radius_range=10&commit=Search" for 127.0.0.1 at 2014-10-10 02:21:15 +0530
+Processing by SearchController#printvals as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"MIDLAND", "latitude_range"=>"10", "elevation_range"=>"10", "radius_range"=>"10", "commit"=>"Search"}
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."City" = 'MIDLAND' LIMIT 1[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 17ms (Views: 0.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&city=MIDLAND&latitude_range=10&elevation_range=10&radius_range=10&commit=Search" for 127.0.0.1 at 2014-10-10 02:21:30 +0530
+Processing by SearchController#printvals as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"MIDLAND", "latitude_range"=>"10", "elevation_range"=>"10", "radius_range"=>"10", "commit"=>"Search"}
+  [1m[35mLocation Load (0.3ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."City" = 'MIDLAND' LIMIT 1
+  Rendered text template (0.0ms)
+Completed 200 OK in 15ms (Views: 0.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&city=tfr&latitude_range=10&elevation_range=10&radius_range=10&commit=Search" for 127.0.0.1 at 2014-10-10 02:22:00 +0530
+Processing by SearchController#printvals as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"tfr", "latitude_range"=>"10", "elevation_range"=>"10", "radius_range"=>"10", "commit"=>"Search"}
+  [1m[36mLocation Load (2.2ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."City" = 'tfr' LIMIT 1[0m
+Completed 500 Internal Server Error in 5ms
+
+ActionView::MissingTemplate (Missing template search/printvals, application/printvals with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/home/akanksha/SSAD46/ssad46/source/Week 8/SCFT/app/views"
+):
+  actionview (4.1.6) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.1.6) lib/action_view/lookup_context.rb:124:in `find'
+  actionview (4.1.6) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:41:in `determine_template'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.1.6) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.1.6) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.1.6) lib/action_view/rendering.rb:99:in `_render_template'
+  actionpack (4.1.6) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.1.6) lib/action_view/rendering.rb:82:in `render_to_body'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.1.6) lib/action_controller/metal/renderers.rb:32:in `render_to_body'
+  actionpack (4.1.6) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.1.6) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.1.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.1.6) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.1.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.1.6) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.1.6) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.6) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.6) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (0.8ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&city=tfr&latitude_range=10&elevation_range=10&radius_range=10&commit=Search" for 127.0.0.1 at 2014-10-10 02:22:45 +0530
+Processing by SearchController#printvals as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"tfr", "latitude_range"=>"10", "elevation_range"=>"10", "radius_range"=>"10", "commit"=>"Search"}
+  [1m[35mLocation Load (2.3ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."City" = 'tfr' LIMIT 1
+  Rendered text template (0.0ms)
+Completed 200 OK in 7ms (Views: 0.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-10 02:23:12 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (8.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 44ms (Views: 41.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 02:23:13 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 02:23:13 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-10 02:23:13 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=rtfc&latitude_range=10&elevation_range=10&radius_range=10&commit=Search" for 127.0.0.1 at 2014-10-10 02:23:24 +0530
+
+SyntaxError (/home/akanksha/SSAD46/ssad46/source/Week 8/SCFT/app/controllers/search_controller.rb:15: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/search_controller.rb:15: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.6ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&city=rtfc&latitude_range=10&elevation_range=10&radius_range=10&commit=Search" for 127.0.0.1 at 2014-10-10 02:24:08 +0530
+Processing by SearchController#printvals as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"rtfc", "latitude_range"=>"10", "elevation_range"=>"10", "radius_range"=>"10", "commit"=>"Search"}
+  [1m[35mLocation Load (2.9ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."City" = 'rtfc' LIMIT 1
+  Rendered text template (0.0ms)
+Completed 200 OK in 8ms (Views: 1.1ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-10 07:13:50 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (19.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 57ms (Views: 55.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 07:13:50 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 07:13:50 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-10 07:13:50 +0530
+
+
+Started GET "/search/get_search_data?utf8=%E2%9C%93&city=Kathmandu&latitude_range=10&elevation_range=10&radius_range=10&commit=Search" for 127.0.0.1 at 2014-10-10 07:14:08 +0530
+
+ActionController::RoutingError (No route matches [GET] "/search/get_search_data"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.1ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.7ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (52.1ms)
+
+
+Started GET "/search/get_search_data?utf8=%E2%9C%93&city=Kathmandu&latitude_range=10&elevation_range=10&radius_range=10&commit=Search" for 127.0.0.1 at 2014-10-10 07:16:29 +0530
+
+ActionController::RoutingError (No route matches [GET] "/search/get_search_data"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.0ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (42.9ms)
+
+
+Started GET "/search/get_search_data?utf8=%E2%9C%93&city=Kathmandu&latitude_range=10&elevation_range=10&radius_range=10&commit=Search" for 127.0.0.1 at 2014-10-10 07:16:59 +0530
+
+SyntaxError (/home/akanksha/SSAD46/ssad46/source/Week 8/SCFT/app/controllers/search_controller.rb:47: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/search_controller.rb:47: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (28.9ms)
+
+
+Started GET "/search/get_search_data?utf8=%E2%9C%93&city=Kathmandu&latitude_range=10&elevation_range=10&radius_range=10&commit=Search" for 127.0.0.1 at 2014-10-10 07:17:45 +0530
+Processing by SearchController#get_search_data as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"Kathmandu", "latitude_range"=>"10", "elevation_range"=>"10", "radius_range"=>"10", "commit"=>"Search"}
+  [1m[35mLocation Load (1.9ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."City" = 'Kathmandu' LIMIT 1
+Completed 500 Internal Server Error in 9ms
+
+ActionView::MissingTemplate (Missing template search/findSurrogateCity, application/findSurrogateCity with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/home/akanksha/SSAD46/ssad46/source/Week 8/SCFT/app/views"
+):
+  app/controllers/search_controller.rb:14:in `get_search_data'
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (0.7ms)
+
+
+Started GET "/search/get_search_data?utf8=%E2%9C%93&city=Kathmandu&latitude_range=10&elevation_range=10&radius_range=10&commit=Search" for 127.0.0.1 at 2014-10-10 07:25:36 +0530
+Processing by SearchController#get_search_data as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"Kathmandu", "latitude_range"=>"10", "elevation_range"=>"10", "radius_range"=>"10", "commit"=>"Search"}
+  [1m[36mLocation Load (1.0ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."City" = 'Kathmandu' LIMIT 1[0m
+Completed 500 Internal Server Error in 4ms
+
+ActionView::MissingTemplate (Missing template search/findSurrogateCity, application/findSurrogateCity with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/home/akanksha/SSAD46/ssad46/source/Week 8/SCFT/app/views"
+):
+  app/controllers/search_controller.rb:14:in `get_search_data'
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (0.7ms)
+
+
+Started GET "/search/get_search_data?utf8=%E2%9C%93&city=Kathmandu&latitude_range=10&elevation_range=10&radius_range=10&commit=Search" for 127.0.0.1 at 2014-10-10 07:27:08 +0530
+Processing by SearchController#get_search_data as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"Kathmandu", "latitude_range"=>"10", "elevation_range"=>"10", "radius_range"=>"10", "commit"=>"Search"}
+  [1m[35mLocation Load (1.7ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."City" = 'Kathmandu' LIMIT 1
+Completed 500 Internal Server Error in 8ms
+
+ActionView::MissingTemplate (Missing template search/findSurrogateCity, application/findSurrogateCity with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/home/akanksha/SSAD46/ssad46/source/Week 8/SCFT/app/views"
+):
+  app/controllers/search_controller.rb:14:in `get_search_data'
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (0.9ms)
+
+
+Started GET "/search/get_search_data?utf8=%E2%9C%93&city=Kathmandu&latitude_range=10&elevation_range=10&radius_range=10&commit=Search" for 127.0.0.1 at 2014-10-10 07:27:42 +0530
+Processing by SearchController#get_search_data as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"Kathmandu", "latitude_range"=>"10", "elevation_range"=>"10", "radius_range"=>"10", "commit"=>"Search"}
+  [1m[36mLocation Load (1.7ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."City" = 'Kathmandu' LIMIT 1[0m
+Completed 500 Internal Server Error in 6ms
+
+NoMethodError (undefined method `-' for nil:NilClass):
+  app/controllers/search_controller.rb:36:in `findSurrogateCity'
+  app/controllers/search_controller.rb:14:in `get_search_data'
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.9ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-10 08:04:11 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (14.8ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 54ms (Views: 51.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 08:04:11 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 08:04:11 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-10 08:04:11 +0530
+
+
+Started GET "/search/get_search_data?utf8=%E2%9C%93&city=Kathmandu&latitude_range=10&elevation_range=10&radius_range=10&commit=Search" for 127.0.0.1 at 2014-10-10 08:04:14 +0530
+Processing by SearchController#get_search_data as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"Kathmandu", "latitude_range"=>"10", "elevation_range"=>"10", "radius_range"=>"10", "commit"=>"Search"}
+  [1m[36mLocation Load (1.1ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."City" = 'Kathmandu' LIMIT 1[0m
+Completed 500 Internal Server Error in 3ms
+
+NoMethodError (undefined method `-' for nil:NilClass):
+  app/controllers/search_controller.rb:36:in `findSurrogateCity'
+  app/controllers/search_controller.rb:14:in `get_search_data'
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.8ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.9ms)
+
+
+Started GET "/search/get_search_data?utf8=%E2%9C%93&city=Kathmandu&latitude_range=10&elevation_range=10&radius_range=10&commit=Search" for 127.0.0.1 at 2014-10-10 08:07:15 +0530
+Processing by SearchController#get_search_data as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"Kathmandu", "latitude_range"=>"10", "elevation_range"=>"10", "radius_range"=>"10", "commit"=>"Search"}
+  [1m[35mLocation Load (3.1ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."City" = 'Kathmandu' LIMIT 1
+Completed 500 Internal Server Error in 12ms
+
+ActionView::MissingTemplate (Missing template search/get_search_data, application/get_search_data with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/home/akanksha/SSAD46/ssad46/source/Week 8/SCFT/app/views"
+):
+  app/controllers/search_controller.rb:14:in `get_search_data'
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (0.8ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-10 08:09:38 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (14.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 59ms (Views: 56.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-10 08:09:38 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 08:09:38 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 08:09:38 +0530
+
+
+Started GET "/search/get_search_data?utf8=%E2%9C%93&city=Kathmandu&latitude_range=10&elevation_range=10&radius_range=10&commit=Search" for 127.0.0.1 at 2014-10-10 08:09:50 +0530
+Processing by SearchController#get_search_data as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"Kathmandu", "latitude_range"=>"10", "elevation_range"=>"10", "radius_range"=>"10", "commit"=>"Search"}
+  [1m[35mLocation Load (1.0ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."City" = 'Kathmandu' LIMIT 1
+Completed 500 Internal Server Error in 4ms
+
+ActionView::MissingTemplate (Missing template search/get_search_data, application/get_search_data with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/home/akanksha/SSAD46/ssad46/source/Week 8/SCFT/app/views"
+):
+  app/controllers/search_controller.rb:14:in `get_search_data'
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (0.8ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2014-10-10 08:10:37 +0530
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 42ms (Views: 40.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 08:10:37 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 08:10:37 +0530
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-10 08:18:41 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (22.4ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 111ms (Views: 88.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-10 08:18:41 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 08:18:41 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 08:18:41 +0530
+
+
+Started GET "/search/get_search_data?utf8=%E2%9C%93&city=Kathmandu+&latitude_range=10&elevation_range=10&radius_range=10&commit=Search" for 127.0.0.1 at 2014-10-10 08:19:09 +0530
+
+ActionController::RoutingError (No route matches [GET] "/search/get_search_data"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.4ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (10.3ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (58.5ms)
+
+
+Started GET "/search/get_search_data?utf8=%E2%9C%93&city=Kathmandu+&latitude_range=10&elevation_range=10&radius_range=10&commit=Search" for 127.0.0.1 at 2014-10-10 08:19:32 +0530
+
+ActionController::RoutingError (No route matches [GET] "/search/get_search_data"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.2ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (48.2ms)
+
+
+Started GET "/search/get_search_data?utf8=%E2%9C%93&city=Kathmandu+&latitude_range=10&elevation_range=10&radius_range=10&commit=Search" for 127.0.0.1 at 2014-10-10 08:19:36 +0530
+
+ActionController::RoutingError (No route matches [GET] "/search/get_search_data"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.6ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.9ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (48.1ms)
+
+
+Started GET "/search/get_search_data?utf8=%E2%9C%93&city=Kathmandu+&latitude_range=10&elevation_range=10&radius_range=10&commit=Search" for 127.0.0.1 at 2014-10-10 08:22:47 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (No route matches [GET] "/search/get_search_data"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.1ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (14.4ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (68.3ms)
+
+
+Started GET "/search/get_search_data?utf8=%E2%9C%93&city=Kathmandu+&latitude_range=10&elevation_range=10&radius_range=10&commit=Search" for 127.0.0.1 at 2014-10-10 08:23:51 +0530
+
+ActionController::RoutingError (No route matches [GET] "/search/get_search_data"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.4ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (53.1ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-10 08:24:12 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (20.7ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 102ms (Views: 85.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 08:24:12 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 08:24:12 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-10 08:24:12 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=Kathmandu&latitude_range=10&elevation_range=10&radius_range=10&commit=Search" for 127.0.0.1 at 2014-10-10 08:24:20 +0530
+Processing by SearchController#get_search_data as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"Kathmandu", "latitude_range"=>"10", "elevation_range"=>"10", "radius_range"=>"10", "commit"=>"Search"}
+  [1m[36mLocation Load (2.5ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."City" = 'Kathmandu' LIMIT 1[0m
+Completed 500 Internal Server Error in 18ms
+
+ActionView::MissingTemplate (Missing template search/get_search_data, application/get_search_data with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/home/akanksha/SSAD46/ssad46/source/Week 8/SCFT/app/views"
+):
+  app/controllers/search_controller.rb:14:in `get_search_data'
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (1.1ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&city=Kathmandu&latitude_range=10&elevation_range=10&radius_range=10&commit=Search" for 127.0.0.1 at 2014-10-10 08:26:38 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SearchController#get_search_data as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"Kathmandu", "latitude_range"=>"10", "elevation_range"=>"10", "radius_range"=>"10", "commit"=>"Search"}
+  [1m[35mLocation Load (2.4ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."City" = 'Kathmandu' LIMIT 1
+Completed 500 Internal Server Error in 42ms
+
+ActionView::MissingTemplate (Missing template search/get_search_data, application/get_search_data with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/home/akanksha/SSAD46/ssad46/source/Week 8/SCFT/app/views"
+):
+  app/controllers/search_controller.rb:14:in `get_search_data'
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (2.3ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&city=Kathmandu&latitude_range=10&elevation_range=10&radius_range=10&commit=Search" for 127.0.0.1 at 2014-10-10 08:28:40 +0530
+Processing by SearchController#get_search_data as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"Kathmandu", "latitude_range"=>"10", "elevation_range"=>"10", "radius_range"=>"10", "commit"=>"Search"}
+  [1m[36mLocation Load (2.1ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."City" = 'Kathmandu' LIMIT 1[0m
+Completed 500 Internal Server Error in 9ms
+
+ActionView::MissingTemplate (Missing template search/get_search_data, application/get_search_data with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/home/akanksha/SSAD46/ssad46/source/Week 8/SCFT/app/views"
+):
+  app/controllers/search_controller.rb:14:in `get_search_data'
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (0.7ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&city=Kathmandu&latitude_range=10&elevation_range=10&radius_range=10&commit=Search" for 127.0.0.1 at 2014-10-10 08:30:47 +0530
+Processing by SearchController#get_search_data as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"Kathmandu", "latitude_range"=>"10", "elevation_range"=>"10", "radius_range"=>"10", "commit"=>"Search"}
+  [1m[35mLocation Load (2.1ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."City" = 'Kathmandu' LIMIT 1
+Completed 500 Internal Server Error in 8ms
+
+ActionView::MissingTemplate (Missing template search/get_search_data, application/get_search_data with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/home/akanksha/SSAD46/ssad46/source/Week 8/SCFT/app/views"
+):
+  app/controllers/search_controller.rb:14:in `get_search_data'
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (0.7ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&city=Kathmandu&latitude_range=10&elevation_range=10&radius_range=10&commit=Search" for 127.0.0.1 at 2014-10-10 08:33:29 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SearchController#get_search_data as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"Kathmandu", "latitude_range"=>"10", "elevation_range"=>"10", "radius_range"=>"10", "commit"=>"Search"}
+  [1m[35mLocation Load (2.6ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."City" = 'Kathmandu' LIMIT 1
+Completed 500 Internal Server Error in 45ms
+
+ActionView::MissingTemplate (Missing template search/get_search_data, application/get_search_data with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/home/akanksha/SSAD46/ssad46/source/Week 8/SCFT/app/views"
+):
+  app/controllers/search_controller.rb:14:in `get_search_data'
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (2.5ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&city=Kathmandu&latitude_range=10&elevation_range=10&radius_range=10&commit=Search" for 127.0.0.1 at 2014-10-10 08:39:26 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"Kathmandu", "latitude_range"=>"10", "elevation_range"=>"10", "radius_range"=>"10", "commit"=>"Search"}
+  [1m[35mLocation Load (2.1ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."City" = 'Kathmandu' LIMIT 1
+Completed 500 Internal Server Error in 42ms
+
+ActionView::MissingTemplate (Missing template search/getsearchdata, application/getsearchdata with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/home/akanksha/SSAD46/ssad46/source/Week 8/SCFT/app/views"
+):
+  app/controllers/search_controller.rb:14:in `getsearchdata'
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (3.2ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&city=Kathmandu&latitude_range=10&elevation_range=10&radius_range=10&commit=Search" for 127.0.0.1 at 2014-10-10 08:40:13 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"Kathmandu", "latitude_range"=>"10", "elevation_range"=>"10", "radius_range"=>"10", "commit"=>"Search"}
+  [1m[36mLocation Load (1.0ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."City" = 'Kathmandu' LIMIT 1[0m
+Completed 500 Internal Server Error in 4ms
+
+ActionView::MissingTemplate (Missing template search/getsearchdata, application/getsearchdata with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/home/akanksha/SSAD46/ssad46/source/Week 8/SCFT/app/views"
+):
+  app/controllers/search_controller.rb:14:in `getsearchdata'
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (0.7ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-10 08:40:50 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (24.8ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 83ms (Views: 80.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-10 08:40:50 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 08:40:50 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 08:40:50 +0530
+
+
+Started GET "/welcome" for 127.0.0.1 at 2014-10-10 08:40:52 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (11.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 48ms (Views: 46.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 08:40:52 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 08:40:53 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-10 08:40:53 +0530
+
+
+Started GET "/welcome" for 127.0.0.1 at 2014-10-10 08:41:23 +0530
+Processing by WelcomeController#index as HTML
+  Rendered text template (0.1ms)
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome" for 127.0.0.1 at 2014-10-10 08:41:38 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (10.3ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 56ms (Views: 53.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-10 08:41:38 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 08:41:38 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 08:41:38 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=Kathmandu&latitude_range=10&elevation_range=10&radius_range=10&commit=Search" for 127.0.0.1 at 2014-10-10 08:42:32 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"Kathmandu", "latitude_range"=>"10", "elevation_range"=>"10", "radius_range"=>"10", "commit"=>"Search"}
+  [1m[36mLocation Load (2.1ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."City" = 'Kathmandu' LIMIT 1[0m
+Completed 500 Internal Server Error in 9ms
+
+ActionView::MissingTemplate (Missing template search/getsearchdata, application/getsearchdata with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/home/akanksha/SSAD46/ssad46/source/Week 8/SCFT/app/views"
+):
+  app/controllers/search_controller.rb:14:in `getsearchdata'
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (1.2ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&city=Kathmandu&latitude_range=10&elevation_range=10&radius_range=10&commit=Search" for 127.0.0.1 at 2014-10-10 08:43:09 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"Kathmandu", "latitude_range"=>"10", "elevation_range"=>"10", "radius_range"=>"10", "commit"=>"Search"}
+  [1m[35mLocation Load (2.6ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."City" = 'Kathmandu' LIMIT 1
+Completed 500 Internal Server Error in 10ms
+
+ActionView::MissingTemplate (Missing template search/getsearchdata, application/getsearchdata with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/home/akanksha/SSAD46/ssad46/source/Week 8/SCFT/app/views"
+):
+  app/controllers/search_controller.rb:14:in `getsearchdata'
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (0.8ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&city=Kathmandu&latitude_range=10&elevation_range=10&radius_range=10&commit=Search" for 127.0.0.1 at 2014-10-10 08:44:00 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"Kathmandu", "latitude_range"=>"10", "elevation_range"=>"10", "radius_range"=>"10", "commit"=>"Search"}
+  Rendered text template (0.0ms)
+  [1m[36mLocation Load (2.2ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."City" = 'Kathmandu' LIMIT 1[0m
+Completed 500 Internal Server Error in 8ms
+
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/search_controller.rb:15:in `getsearchdata'
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.8ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&city=Kathmandu&latitude_range=10&elevation_range=10&radius_range=10&commit=Search" for 127.0.0.1 at 2014-10-10 08:45:01 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"Kathmandu", "latitude_range"=>"10", "elevation_range"=>"10", "radius_range"=>"10", "commit"=>"Search"}
+  Rendered text template (0.0ms)
+  [1m[35mLocation Load (2.2ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."City" = 'Kathmandu' LIMIT 1
+Completed 200 OK in 8ms (Views: 0.8ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&city=MIDLAND&latitude_range=10&elevation_range=10&radius_range=10&commit=Search" for 127.0.0.1 at 2014-10-10 08:45:34 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"MIDLAND", "latitude_range"=>"10", "elevation_range"=>"10", "radius_range"=>"10", "commit"=>"Search"}
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."City" = 'MIDLAND' LIMIT 1[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 18ms (Views: 1.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&city=MIDLAND&latitude_range=10&elevation_range=10&radius_range=10&commit=Search" for 127.0.0.1 at 2014-10-10 08:46:02 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"MIDLAND", "latitude_range"=>"10", "elevation_range"=>"10", "radius_range"=>"10", "commit"=>"Search"}
+  [1m[35mLocation Load (0.4ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."City" = 'MIDLAND' LIMIT 1
+  Rendered text template (0.0ms)
+Completed 500 Internal Server Error in 26ms
+
+NameError (undefined local variable or method `mycity' for #<SearchController:0x007f9382a6ebf0>):
+  app/controllers/search_controller.rb:14:in `getsearchdata'
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (35.7ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&city=MIDLAND&latitude_range=10&elevation_range=10&radius_range=10&commit=Search" for 127.0.0.1 at 2014-10-10 08:46:24 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"MIDLAND", "latitude_range"=>"10", "elevation_range"=>"10", "radius_range"=>"10", "commit"=>"Search"}
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."City" = 'MIDLAND' LIMIT 1[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 15ms (Views: 1.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&city=MIDLAND&latitude_range=10&elevation_range=10&radius_range=10&commit=Search" for 127.0.0.1 at 2014-10-10 08:46:39 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"MIDLAND", "latitude_range"=>"10", "elevation_range"=>"10", "radius_range"=>"10", "commit"=>"Search"}
+  [1m[35mLocation Load (0.2ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."City" = 'MIDLAND' LIMIT 1
+  Rendered text template (0.0ms)
+Completed 200 OK in 16ms (Views: 1.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&city=MIDLAND&latitude_range=10&elevation_range=10&radius_range=10&commit=Search" for 127.0.0.1 at 2014-10-10 08:49:31 +0530
+
+SyntaxError (/home/akanksha/SSAD46/ssad46/source/Week 8/SCFT/app/controllers/search_controller.rb:16: syntax error, unexpected ':', expecting keyword_end
+    	redirect_to :action :findSurrogateCity
+    	                     ^):
+  app/controllers/search_controller.rb:16: syntax error, unexpected ':', expecting keyword_end
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.6ms)
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (32.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&city=MIDLAND&latitude_range=10&elevation_range=10&radius_range=10&commit=Search" for 127.0.0.1 at 2014-10-10 08:49:49 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"MIDLAND", "latitude_range"=>"10", "elevation_range"=>"10", "radius_range"=>"10", "commit"=>"Search"}
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."City" = 'MIDLAND' LIMIT 1[0m
+Completed 500 Internal Server Error in 19ms
+
+ActionView::MissingTemplate (Missing template search/getsearchdata, application/getsearchdata with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/home/akanksha/SSAD46/ssad46/source/Week 8/SCFT/app/views"
+):
+  actionview (4.1.6) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.1.6) lib/action_view/lookup_context.rb:124:in `find'
+  actionview (4.1.6) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:41:in `determine_template'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.1.6) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.1.6) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.1.6) lib/action_view/rendering.rb:99:in `_render_template'
+  actionpack (4.1.6) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.1.6) lib/action_view/rendering.rb:82:in `render_to_body'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.1.6) lib/action_controller/metal/renderers.rb:32:in `render_to_body'
+  actionpack (4.1.6) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.1.6) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.1.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.1.6) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.1.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.1.6) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.1.6) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.6) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.6) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/akanksha/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (0.9ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-10 08:52:43 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (11.5ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 65ms (Views: 61.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 08:52:43 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 08:52:43 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=Kathmandu&latitude_range=10&elevation_range=10&radius_range=10&commit=Search" for 127.0.0.1 at 2014-10-10 08:53:01 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"Kathmandu", "latitude_range"=>"10", "elevation_range"=>"10", "radius_range"=>"10", "commit"=>"Search"}
+  [1m[36mLocation Load (3.7ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."City" = 'Kathmandu' LIMIT 1[0m
+Redirected to http://localhost:3000/findSurrogateCity
+Completed 302 Found in 15ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/findSurrogateCity" for 127.0.0.1 at 2014-10-10 08:53:01 +0530
+Processing by SearchController#findSurrogateCity as HTML
+  Rendered search/findSurrogateCity.html.erb within layouts/application (9.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 37ms (Views: 36.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 08:53:01 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 08:53:02 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-10 08:53:02 +0530
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-10 13:52:45 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (9.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 35ms (Views: 33.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-10 13:52:45 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 13:52:45 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-10 13:52:45 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=Kathmandu&latitude_range=10&elevation_range=10&radius_range=10&commit=Search" for 127.0.0.1 at 2014-10-10 13:56:49 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"Kathmandu", "latitude_range"=>"10", "elevation_range"=>"10", "radius_range"=>"10", "commit"=>"Search"}
+  [1m[35mLocation Load (1.0ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."City" = 'Kathmandu' LIMIT 1
+Redirected to http://localhost:3000/findSurrogateCity
+Completed 302 Found in 3ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/findSurrogateCity" for 127.0.0.1 at 2014-10-10 13:56:49 +0530
+Processing by SearchController#findSurrogateCity as HTML
+  Rendered search/findSurrogateCity.html.erb within layouts/application (8.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 30ms (Views: 29.2ms | ActiveRecord: 0.2ms)
