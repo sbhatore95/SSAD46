@@ -2,7 +2,8 @@ class SearchController < ApplicationController
   
   def getsearchdata
 
-  @icityname= params[:city]
+
+	@icityname= params[:city]
 	@ilatitude_range= params[:latitude_range]
 	@ielevation_range= params[:elevation_range]
 	@iradius_range= params[:radius_range]
@@ -11,15 +12,16 @@ class SearchController < ApplicationController
 	@mycity = Location.find_by(City: @icityname)
 	
   #If the city does not exists in database 
-    if @mycity == nil 
+    	if @mycity == nil 
 
-    	redirect_to action: :findSurrogateCity
+    		redirect_to :action => 'findSurrogateCity'
 	    
 	
-	#If the city  exist in database 
-    else
-		  redirect_to action: :weather 
-	  end
+  #If the city  exist in database 
+  	else
+	        redirect_to :action => 'weather' , :city => params[:city]
+	 
+	end
 
   end
 
@@ -47,6 +49,9 @@ class SearchController < ApplicationController
   end
 
   def weather
+	  @found= params[:city]
+	 # render :text => @found.inspect
+	  
   end 
 
 end

@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
-  get 'game/new'
+ 
 
   get 'welcome/index'
   get '/search' => 'search#getsearchdata' 
   get '/welcome' => 'welcome#index'
-  get '/findSurrogateCity' => 'search#findSurrogateCity'
+  get 'search/getsearchdata'
+  match 'search/findSurrogateCity' => 'search#findSurrogateCity' , :via => 'post'
+  get 'search/weather'
+  match 'search/weather' => 'search#weather' , :via => 'post'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
