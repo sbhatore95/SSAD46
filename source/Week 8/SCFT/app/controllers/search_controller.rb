@@ -3,11 +3,11 @@ class SearchController < ApplicationController
 $ilatitude_range= 0
 $ielevation_range= 0
 $iradius_range= 0
-  
+$icityname = " "
   def getsearchdata
 
 
-	@icityname= params[:city]
+	$icityname= params[:city]
 	$ilatitude_range= params[:latitude_range]
 	$ielevation_range= params[:elevation_range]
 	$iradius_range= params[:radius_range]
@@ -38,6 +38,7 @@ $iradius_range= 0
   	#get data from JS code of geocoder
   	@latitude_mycity = params[:latitude_mycity]
   	@longitude_mycity = params[:longitude_mycity]
+	@city = $icityname
   	#@elevation_mycity = params[:elevation_mycity]
 
 	#render :text => @longitude_mycity	
