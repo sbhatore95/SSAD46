@@ -33,7 +33,7 @@ var markers = [];
 
         // Adds a marker at the center of the map.
         //addMarker(haightAshbury);
-        //codeAddress();
+        codeAddress();
     }
     var marker;
     var parliament;
@@ -42,10 +42,10 @@ var markers = [];
     var flag;
 
     function codeAddress() {
-        var address = document.getElementById('searchpanel').getElementsByTagName("li");
+        var address = document.getElementById('searchpanel').getElementsByTagName("a");
         var len = document.getElementById('searchpanel').getElementsByTagName("p");
 
-        for (i = 0; i < 34; i++) {
+        for (i = 0; i < 10; i++) {
 
             geocoder.geocode({
                 'address': address[i].innerHTML
@@ -60,15 +60,10 @@ map: map,
 position: results[0].geometry.location
 });*/
                 } else {
-                    flag=0;
-                     setTimeout(function() {
-                        
-                       j=i;
-                
-            }, 200);
+                    console.log('Geocode was not successful for the following reason: ' + status);
                 }
             });
-            if(flag==0){i--;}
+            
         }
     }
 //onmouseover implementation
