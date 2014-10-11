@@ -100,17 +100,17 @@ google.maps.event.addDomListener(window, 'load', initialize);
     <!---<input id="address" type="textbox" placeholder="Search">
     <input type="button" value="Geocode" class="Button" onclick="codeAddress()">-->
     <%= form_tag("/search", method: "get", remote: true) do %>
-      <%= label_tag(:city, "City:") %>
-      <%= text_field_tag(:city) %>
+      <%= label_tag(:city, "City:") %><br>
+      <%= text_field_tag(:city) %><br>
       
-      <%= label_tag(:latitude_range, "Latitude Range:") %>
-      <%= text_field_tag(:latitude_range ) %>
+      <%= label_tag(:latitude_range, "Latitude Range:") %><br>
+      <%= text_field_tag(:latitude_range ) %><br>
 
-      <%= label_tag(:elevation_range, "Elevation Range:") %>
-      <%= text_field_tag(:elevation_range) %>
+      <%= label_tag(:elevation_range, "Elevation Range:") %><br>
+      <%= text_field_tag(:elevation_range) %><br>
       
-      <%= label_tag(:radius_range, "Radius Range:") %>
-      <%= text_field_tag(:radius_range) %>
+      <%= label_tag(:radius_range, "Radius Range:") %><br>
+      <%= text_field_tag(:radius_range) %><br>
       
       <%= submit_tag("Search") %>
     <%end %> 

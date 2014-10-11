@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get '/search/findSurrogateCity' => 'search#findSurrogateCity' 
   get 'search/weather'
   get 'search/weather' => 'search#weather' , :via => 'post'
+  get '/search/exists' => 'search#exists'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

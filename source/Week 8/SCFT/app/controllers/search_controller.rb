@@ -13,17 +13,17 @@ $icityname = " "
 	$iradius_range= params[:radius_range]
   
 
-	@mycity = Location.find_by(City: @icityname)
+	@mycity = Location.find_by(City: $icityname)
 	
   #If the city does not exists in database 
-    	if @mycity == nil 
+    	if @mycity == nil
 
     		redirect_to :action => 'weather' ,:city => params[:city] ,:latitude_range => params[:latitude_range], :elevation_range => params[:elevation_range] ,:radius => params[:radius_range]
 	    
 	
   #If the city  exist in database 
-  	else
-	        #redirect_to :action => 'findSurrogateCity' , :city => params[:city]
+  		else
+	        redirect_to :action => 'exists', :city => params[:city]
 	 
 	end
 
@@ -64,5 +64,15 @@ $icityname = " "
 	 # render :text => @found.inspect
 	  
   end 
+
+  def exists
+  	 @ecity = Location.find_by(City: params[:city])
+  	 @cityname = @ecity.City
+  	 @citycountry = @ecity.Country
+  	 @cityelev = @ecity.Elevation
+  	 
+  	 #@citylink = ??
+
+  end
 
 end
