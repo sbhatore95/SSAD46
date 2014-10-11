@@ -38,20 +38,23 @@ $icityname = " "
   	#get data from JS code of geocoder
   	@latitude_mycity = params[:latitude_mycity]
   	@longitude_mycity = params[:longitude_mycity]
-	@city = $icityname
+  	@elevation_mycity = params[:elevation_mycity]
+  
+  	@city = $icityname
 	@lat_range = $ilatitude_range
-  	#@elevation_mycity = params[:elevation_mycity]
-
 	#render :text => @lat_range	
   	#set range
   	@latitude_Range_Start = @latitude_mycity.to_f - $ilatitude_range.to_f
 	@latitude_Range_End = @latitude_mycity.to_f + $ilatitude_range.to_f
 
-	@results = Location.where('Latitude > ? AND Latitude < ?',@latitude_Range_Start,@latitude_Range_End)
+	#@latresults = Location.where('Latitude > ? AND Latitude < ?',@latitude_Range_Start,@latitude_Range_End)
 
-	#@elevation_Range_Start = @elevation_mycity - @ielevation_range.to_f
-	#@elevation_Range_End = @elevation_mycity + @ielevation_range.to_f
+	@elevation_Range_Start = @elevation_mycity.to_f - $ielevation_range.to_f
+	@elevation_Range_End = @elevation_mycity.to_f + $ielevation_range.to_f
 
+	@results = Location.where('Latitude > ? AND Latitude < ? AND Elevation > ? AND Elevation < ?',@latitude_Range_Start,@latitude_Range_End,@elevation_Range_Start, @elevation_Range_End)
+
+	#@results=?? 
 
 
   end

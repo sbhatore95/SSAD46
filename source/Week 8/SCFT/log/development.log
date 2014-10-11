@@ -10980,3 +10980,1931 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-10 18:05:16
 
 
 Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-10 18:05:16 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-11 22:20:03 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (47.2ms)
+Completed 200 OK in 110ms (Views: 87.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-11 22:20:03 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-11 22:20:03 +0530
+
+
+Started GET "/log_in" for 127.0.0.1 at 2014-10-11 22:20:06 +0530
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-11 22:20:06 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-11 22:20:06 +0530
+
+
+Started POST "/sessions" for 127.0.0.1 at 2014-10-11 22:20:07 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o3GYBmAFzO2eevTJSmNIcrKAgDAmPC2j7uK8H/79j4M=", "email"=>"akanksha.dlf@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'akanksha.dlf@gmail.com' LIMIT 1
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 190ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-11 22:20:08 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (16.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 44ms (Views: 42.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-11 22:20:08 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-11 22:20:08 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-11 22:20:08 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=delhi&latitude_range=10&elevation_range=10&radius_range=10&commit=Search" for 127.0.0.1 at 2014-10-11 22:20:21 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"delhi", "latitude_range"=>"10", "elevation_range"=>"10", "radius_range"=>"10", "commit"=>"Search"}
+  [1m[35mLocation Load (1.9ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."City" IS NULL LIMIT 1
+Redirected to http://localhost:3000/search/weather?city=delhi&elevation_range=10&latitude_range=10&radius=10
+Completed 302 Found in 7ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/search/weather?city=delhi&elevation_range=10&latitude_range=10&radius=10" for 127.0.0.1 at 2014-10-11 22:20:21 +0530
+Processing by SearchController#weather as HTML
+  Parameters: {"city"=>"delhi", "elevation_range"=>"10", "latitude_range"=>"10", "radius"=>"10"}
+  Rendered search/weather.html.erb within layouts/application (10.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-11 22:20:21 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-11 22:20:21 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-11 22:20:21 +0530
+
+
+Started GET "/search/findSurrogateCity?utf8=%E2%9C%93&latitude_mycity=28.635308&longitude_mycity=77.22496000000001&test=Search" for 127.0.0.1 at 2014-10-11 22:20:24 +0530
+Processing by SearchController#findSurrogateCity as HTML
+  Parameters: {"utf8"=>"✓", "latitude_mycity"=>"28.635308", "longitude_mycity"=>"77.22496000000001", "test"=>"Search"}
+  [1m[35mLocation Load (9.9ms)[0m  SELECT "locations".* FROM "locations"  WHERE (Latitude > 18.635308 AND Latitude < 38.635307999999995)
+  Rendered search/findSurrogateCity.html.erb within layouts/application (78.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 102ms (Views: 89.7ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-11 22:20:24 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-11 22:20:24 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-11 22:20:24 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=delhi&latitude_range=2&elevation_range=10&radius_range=10&commit=Search" for 127.0.0.1 at 2014-10-11 22:20:46 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"delhi", "latitude_range"=>"2", "elevation_range"=>"10", "radius_range"=>"10", "commit"=>"Search"}
+  [1m[35mLocation Load (0.8ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."City" IS NULL LIMIT 1
+Redirected to http://localhost:3000/search/weather?city=delhi&elevation_range=10&latitude_range=2&radius=10
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/search/weather?city=delhi&elevation_range=10&latitude_range=2&radius=10" for 127.0.0.1 at 2014-10-11 22:20:46 +0530
+Processing by SearchController#weather as HTML
+  Parameters: {"city"=>"delhi", "elevation_range"=>"10", "latitude_range"=>"2", "radius"=>"10"}
+  Rendered search/weather.html.erb within layouts/application (9.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 31ms (Views: 30.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-11 22:20:46 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-11 22:20:46 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-11 22:20:46 +0530
+
+
+Started GET "/search/findSurrogateCity?utf8=%E2%9C%93&latitude_mycity=28.635308&longitude_mycity=77.22496000000001&test=Search" for 127.0.0.1 at 2014-10-11 22:20:49 +0530
+Processing by SearchController#findSurrogateCity as HTML
+  Parameters: {"utf8"=>"✓", "latitude_mycity"=>"28.635308", "longitude_mycity"=>"77.22496000000001", "test"=>"Search"}
+  [1m[35mLocation Load (3.9ms)[0m  SELECT "locations".* FROM "locations"  WHERE (Latitude > 26.635308 AND Latitude < 30.635308)
+  Rendered search/findSurrogateCity.html.erb within layouts/application (22.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 43ms (Views: 38.2ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-11 22:20:49 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-11 22:20:49 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-11 22:20:49 +0530
+
+
+Started GET "/search/weather?city=delhi&elevation_range=10&latitude_range=2&radius=10" for 127.0.0.1 at 2014-10-11 23:38:46 +0530
+Processing by SearchController#weather as HTML
+  Parameters: {"city"=>"delhi", "elevation_range"=>"10", "latitude_range"=>"2", "radius"=>"10"}
+  Rendered search/weather.html.erb within layouts/application (9.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 85ms (Views: 84.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-11 23:38:46 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-11 23:38:46 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-11 23:38:46 +0530
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-11 23:38:48 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (8.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 32ms (Views: 30.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2014-10-11 23:38:48 +0530
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 25ms (Views: 24.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2014-10-11 23:38:50 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o3GYBmAFzO2eevTJSmNIcrKAgDAmPC2j7uK8H/79j4M=", "email"=>"akanksha.dlf@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'akanksha.dlf@gmail.com' LIMIT 1[0m
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 161ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-11 23:38:50 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (8.5ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 29ms (Views: 28.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-11 23:38:50 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-11 23:38:50 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-11 23:38:50 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=delhi&latitude_range=&elevation_range=&radius_range=&commit=Search" for 127.0.0.1 at 2014-10-11 23:39:02 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"delhi", "latitude_range"=>"", "elevation_range"=>"", "radius_range"=>"", "commit"=>"Search"}
+  [1m[36mLocation Load (0.8ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."City" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/search/weather?city=delhi&elevation_range=&latitude_range=&radius=
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/search/weather?city=delhi&elevation_range=&latitude_range=&radius=" for 127.0.0.1 at 2014-10-11 23:39:02 +0530
+Processing by SearchController#weather as HTML
+  Parameters: {"city"=>"delhi", "elevation_range"=>"", "latitude_range"=>"", "radius"=>""}
+  Rendered search/weather.html.erb within layouts/application (8.9ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 31ms (Views: 29.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-11 23:39:02 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-11 23:39:02 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-11 23:39:02 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=delhi&latitude_range=&elevation_range=&radius_range=&commit=Search" for 127.0.0.1 at 2014-10-11 23:39:51 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"delhi", "latitude_range"=>"", "elevation_range"=>"", "radius_range"=>"", "commit"=>"Search"}
+  [1m[36mLocation Load (0.8ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."City" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/search/weather?city=delhi&elevation_range=&latitude_range=&radius=
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/search/weather?city=delhi&elevation_range=&latitude_range=&radius=" for 127.0.0.1 at 2014-10-11 23:39:51 +0530
+Processing by SearchController#weather as HTML
+  Parameters: {"city"=>"delhi", "elevation_range"=>"", "latitude_range"=>"", "radius"=>""}
+  Rendered search/weather.html.erb within layouts/application (9.9ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 32ms (Views: 30.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-11 23:39:51 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-11 23:39:51 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-11 23:39:51 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 02:12:20 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 02:12:20 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 02:12:20 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=delhi&latitude_range=&elevation_range=&radius_range=&commit=Search" for 127.0.0.1 at 2014-10-12 02:12:23 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"delhi", "latitude_range"=>"", "elevation_range"=>"", "radius_range"=>"", "commit"=>"Search"}
+  [1m[36mLocation Load (1.2ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."City" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/search/weather?city=delhi&elevation_range=&latitude_range=&radius=
+Completed 302 Found in 4ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/search/weather?city=delhi&elevation_range=&latitude_range=&radius=" for 127.0.0.1 at 2014-10-12 02:12:23 +0530
+Processing by SearchController#weather as HTML
+  Parameters: {"city"=>"delhi", "elevation_range"=>"", "latitude_range"=>"", "radius"=>""}
+  Rendered search/weather.html.erb within layouts/application (13.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 36ms (Views: 35.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 02:12:23 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 02:12:23 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 02:12:23 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=delhi&latitude_range=&elevation_range=&radius_range=&commit=Search" for 127.0.0.1 at 2014-10-12 02:13:17 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"delhi", "latitude_range"=>"", "elevation_range"=>"", "radius_range"=>"", "commit"=>"Search"}
+  [1m[36mLocation Load (0.8ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."City" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/search/weather?city=delhi&elevation_range=&latitude_range=&radius=
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/search/weather?city=delhi&elevation_range=&latitude_range=&radius=" for 127.0.0.1 at 2014-10-12 02:13:17 +0530
+Processing by SearchController#weather as HTML
+  Parameters: {"city"=>"delhi", "elevation_range"=>"", "latitude_range"=>"", "radius"=>""}
+  Rendered search/weather.html.erb within layouts/application (8.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 30ms (Views: 28.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 02:13:17 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 02:13:17 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 02:13:17 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=delhi&latitude_range=&elevation_range=&radius_range=&commit=Search" for 127.0.0.1 at 2014-10-12 02:16:37 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"delhi", "latitude_range"=>"", "elevation_range"=>"", "radius_range"=>"", "commit"=>"Search"}
+  [1m[36mLocation Load (1.2ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."City" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/search/weather?city=delhi&elevation_range=&latitude_range=&radius=
+Completed 302 Found in 4ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/search/weather?city=delhi&elevation_range=&latitude_range=&radius=" for 127.0.0.1 at 2014-10-12 02:16:37 +0530
+Processing by SearchController#weather as HTML
+  Parameters: {"city"=>"delhi", "elevation_range"=>"", "latitude_range"=>"", "radius"=>""}
+  Rendered search/weather.html.erb within layouts/application (8.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 02:16:37 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 02:16:37 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 02:16:37 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 02:18:20 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 02:18:20 +0530
+
+
+Started POST "/sessions" for 127.0.0.1 at 2014-10-12 02:18:22 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o3GYBmAFzO2eevTJSmNIcrKAgDAmPC2j7uK8H/79j4M=", "email"=>"akanksha.dlf@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'akanksha.dlf@gmail.com' LIMIT 1[0m
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 150ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-12 02:18:22 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (9.9ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 32ms (Views: 30.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 02:18:23 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 02:18:23 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 02:18:23 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=&latitude_range=&elevation_range=&radius_range=&commit=Search" for 127.0.0.1 at 2014-10-12 02:18:26 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"", "latitude_range"=>"", "elevation_range"=>"", "radius_range"=>"", "commit"=>"Search"}
+  [1m[36mLocation Load (0.8ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."City" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/search/weather?city=&elevation_range=&latitude_range=&radius=
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/search/weather?city=&elevation_range=&latitude_range=&radius=" for 127.0.0.1 at 2014-10-12 02:18:26 +0530
+Processing by SearchController#weather as HTML
+  Parameters: {"city"=>"", "elevation_range"=>"", "latitude_range"=>"", "radius"=>""}
+  Rendered search/weather.html.erb within layouts/application (8.9ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 31ms (Views: 29.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 02:18:27 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 02:18:27 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 02:18:27 +0530
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-12 02:19:53 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (9.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 31ms (Views: 29.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 02:19:53 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 02:19:53 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 02:19:53 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=&latitude_range=&elevation_range=&radius_range=&commit=Search" for 127.0.0.1 at 2014-10-12 02:19:56 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"", "latitude_range"=>"", "elevation_range"=>"", "radius_range"=>"", "commit"=>"Search"}
+  [1m[35mLocation Load (0.8ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."City" IS NULL LIMIT 1
+Redirected to http://localhost:3000/search/weather?city=&elevation_range=&latitude_range=&radius=
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/search/weather?city=&elevation_range=&latitude_range=&radius=" for 127.0.0.1 at 2014-10-12 02:19:56 +0530
+Processing by SearchController#weather as HTML
+  Parameters: {"city"=>"", "elevation_range"=>"", "latitude_range"=>"", "radius"=>""}
+  Rendered search/weather.html.erb within layouts/application (7.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 28ms (Views: 27.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 02:19:57 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 02:19:57 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 02:19:57 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=Delhi&latitude_range=&elevation_range=&radius_range=&commit=Search" for 127.0.0.1 at 2014-10-12 02:20:09 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"Delhi", "latitude_range"=>"", "elevation_range"=>"", "radius_range"=>"", "commit"=>"Search"}
+  [1m[35mLocation Load (1.2ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."City" IS NULL LIMIT 1
+Redirected to http://localhost:3000/search/weather?city=Delhi&elevation_range=&latitude_range=&radius=
+Completed 302 Found in 4ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/search/weather?city=Delhi&elevation_range=&latitude_range=&radius=" for 127.0.0.1 at 2014-10-12 02:20:09 +0530
+Processing by SearchController#weather as HTML
+  Parameters: {"city"=>"Delhi", "elevation_range"=>"", "latitude_range"=>"", "radius"=>""}
+  Rendered search/weather.html.erb within layouts/application (13.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 78ms (Views: 77.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 02:20:10 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 02:20:10 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 02:20:10 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=Delhi&latitude_range=&elevation_range=&radius_range=&commit=Search" for 127.0.0.1 at 2014-10-12 02:38:48 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"Delhi", "latitude_range"=>"", "elevation_range"=>"", "radius_range"=>"", "commit"=>"Search"}
+  [1m[35mLocation Load (0.8ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."City" IS NULL LIMIT 1
+Redirected to http://localhost:3000/search/weather?city=Delhi&elevation_range=&latitude_range=&radius=
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/search/weather?city=Delhi&elevation_range=&latitude_range=&radius=" for 127.0.0.1 at 2014-10-12 02:38:48 +0530
+Processing by SearchController#weather as HTML
+  Parameters: {"city"=>"Delhi", "elevation_range"=>"", "latitude_range"=>"", "radius"=>""}
+  Rendered search/weather.html.erb within layouts/application (15.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 38ms (Views: 37.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 02:38:48 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 02:38:48 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 02:38:48 +0530
+
+
+Started GET "/search/findSurrogateCity?utf8=%E2%9C%93&latitude_mycity=undefined&longitude_mycity=undefined&elevation_mycity=undefined&test=Search" for 127.0.0.1 at 2014-10-12 02:38:55 +0530
+Processing by SearchController#findSurrogateCity as HTML
+  Parameters: {"utf8"=>"✓", "latitude_mycity"=>"undefined", "longitude_mycity"=>"undefined", "elevation_mycity"=>"undefined", "test"=>"Search"}
+  [1m[35mLocation Load (1.3ms)[0m  SELECT "locations".* FROM "locations"  WHERE (Latitude > 0.0 AND Latitude < 0.0)
+  Rendered search/findSurrogateCity.html.erb within layouts/application (10.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 31ms (Views: 28.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 02:38:56 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 02:38:56 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 02:38:56 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-12 02:39:12 +0530
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 27ms (Views: 25.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 02:39:12 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 02:39:12 +0530
+
+
+Started GET "/log_out" for 127.0.0.1 at 2014-10-12 02:41:16 +0530
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-12 02:41:16 +0530
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 25ms (Views: 24.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 02:41:16 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 02:41:16 +0530
+
+
+Started GET "/log_in" for 127.0.0.1 at 2014-10-12 02:41:18 +0530
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 02:41:18 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 02:41:18 +0530
+
+
+Started POST "/sessions" for 127.0.0.1 at 2014-10-12 02:41:19 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o3GYBmAFzO2eevTJSmNIcrKAgDAmPC2j7uK8H/79j4M=", "email"=>"akanksha.dlf@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'akanksha.dlf@gmail.com' LIMIT 1[0m
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 150ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-12 02:41:19 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (8.9ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 30ms (Views: 29.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 02:41:19 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 02:41:19 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 02:41:19 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=Delhi&latitude_range=&elevation_range=&radius_range=&commit=Search" for 127.0.0.1 at 2014-10-12 02:41:24 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"Delhi", "latitude_range"=>"", "elevation_range"=>"", "radius_range"=>"", "commit"=>"Search"}
+  [1m[36mLocation Load (0.9ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."City" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/search/weather?city=Delhi&elevation_range=&latitude_range=&radius=
+Completed 302 Found in 3ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/search/weather?city=Delhi&elevation_range=&latitude_range=&radius=" for 127.0.0.1 at 2014-10-12 02:41:24 +0530
+Processing by SearchController#weather as HTML
+  Parameters: {"city"=>"Delhi", "elevation_range"=>"", "latitude_range"=>"", "radius"=>""}
+  Rendered search/weather.html.erb within layouts/application (10.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 30ms (Views: 29.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 02:41:25 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 02:41:25 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 02:41:25 +0530
+
+
+Started GET "/search/findSurrogateCity?utf8=%E2%9C%93&latitude_mycity=%2F&longitude_mycity=%2F&elevation_mycity=%2F&test=Search" for 127.0.0.1 at 2014-10-12 02:41:28 +0530
+Processing by SearchController#findSurrogateCity as HTML
+  Parameters: {"utf8"=>"✓", "latitude_mycity"=>"/", "longitude_mycity"=>"/", "elevation_mycity"=>"/", "test"=>"Search"}
+  [1m[36mLocation Load (2.0ms)[0m  [1mSELECT "locations".* FROM "locations"  WHERE (Latitude > 0.0 AND Latitude < 0.0)[0m
+  Rendered search/findSurrogateCity.html.erb within layouts/application (16.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 48ms (Views: 44.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 02:41:28 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 02:41:28 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 02:41:28 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=Delhi&latitude_range=&elevation_range=&radius_range=&commit=Search" for 127.0.0.1 at 2014-10-12 02:45:47 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"Delhi", "latitude_range"=>"", "elevation_range"=>"", "radius_range"=>"", "commit"=>"Search"}
+  [1m[36mLocation Load (0.8ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."City" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/search/weather?city=Delhi&elevation_range=&latitude_range=&radius=
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/search/weather?city=Delhi&elevation_range=&latitude_range=&radius=" for 127.0.0.1 at 2014-10-12 02:45:47 +0530
+Processing by SearchController#weather as HTML
+  Parameters: {"city"=>"Delhi", "elevation_range"=>"", "latitude_range"=>"", "radius"=>""}
+  Rendered search/weather.html.erb within layouts/application (10.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 33ms (Views: 31.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 02:45:47 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 02:45:47 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 02:45:47 +0530
+
+
+Started GET "/search/findSurrogateCity?utf8=%E2%9C%93&latitude_mycity=0&longitude_mycity=0&elevation_mycity=0&test=Search" for 127.0.0.1 at 2014-10-12 02:45:49 +0530
+Processing by SearchController#findSurrogateCity as HTML
+  Parameters: {"utf8"=>"✓", "latitude_mycity"=>"0", "longitude_mycity"=>"0", "elevation_mycity"=>"0", "test"=>"Search"}
+  [1m[36mLocation Load (1.3ms)[0m  [1mSELECT "locations".* FROM "locations"  WHERE (Latitude > 0.0 AND Latitude < 0.0)[0m
+  Rendered search/findSurrogateCity.html.erb within layouts/application (9.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 30ms (Views: 27.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 02:45:50 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 02:45:50 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 02:45:50 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 02:46:34 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 02:46:34 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=Delhi&latitude_range=&elevation_range=&radius_range=&commit=Search" for 127.0.0.1 at 2014-10-12 02:46:36 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"Delhi", "latitude_range"=>"", "elevation_range"=>"", "radius_range"=>"", "commit"=>"Search"}
+  [1m[36mLocation Load (1.1ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."City" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/search/weather?city=Delhi&elevation_range=&latitude_range=&radius=
+Completed 302 Found in 3ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/search/weather?city=Delhi&elevation_range=&latitude_range=&radius=" for 127.0.0.1 at 2014-10-12 02:46:36 +0530
+Processing by SearchController#weather as HTML
+  Parameters: {"city"=>"Delhi", "elevation_range"=>"", "latitude_range"=>"", "radius"=>""}
+  Rendered search/weather.html.erb within layouts/application (8.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 28ms (Views: 27.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 02:46:36 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 02:46:36 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 02:46:36 +0530
+
+
+Started GET "/search/findSurrogateCity?utf8=%E2%9C%93&latitude_mycity=%2F&longitude_mycity=%2F&elevation_mycity=%2F&test=Search" for 127.0.0.1 at 2014-10-12 02:46:39 +0530
+Processing by SearchController#findSurrogateCity as HTML
+  Parameters: {"utf8"=>"✓", "latitude_mycity"=>"/", "longitude_mycity"=>"/", "elevation_mycity"=>"/", "test"=>"Search"}
+  [1m[36mLocation Load (1.2ms)[0m  [1mSELECT "locations".* FROM "locations"  WHERE (Latitude > 0.0 AND Latitude < 0.0)[0m
+  Rendered search/findSurrogateCity.html.erb within layouts/application (9.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 31ms (Views: 28.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 02:46:39 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 02:46:39 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 02:46:39 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=Delhi&latitude_range=&elevation_range=&radius_range=&commit=Search" for 127.0.0.1 at 2014-10-12 02:48:10 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"Delhi", "latitude_range"=>"", "elevation_range"=>"", "radius_range"=>"", "commit"=>"Search"}
+  [1m[36mLocation Load (0.8ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."City" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/search/weather?city=Delhi&elevation_range=&latitude_range=&radius=
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/search/weather?city=Delhi&elevation_range=&latitude_range=&radius=" for 127.0.0.1 at 2014-10-12 02:48:10 +0530
+Processing by SearchController#weather as HTML
+  Parameters: {"city"=>"Delhi", "elevation_range"=>"", "latitude_range"=>"", "radius"=>""}
+  Rendered search/weather.html.erb within layouts/application (9.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 28ms (Views: 27.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 02:48:10 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 02:48:10 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 02:48:10 +0530
+
+
+Started GET "/search/findSurrogateCity?utf8=%E2%9C%93&latitude_mycity=%2F&longitude_mycity=%2F&elevation_mycity=%2F&test=Search" for 127.0.0.1 at 2014-10-12 02:48:12 +0530
+Processing by SearchController#findSurrogateCity as HTML
+  Parameters: {"utf8"=>"✓", "latitude_mycity"=>"/", "longitude_mycity"=>"/", "elevation_mycity"=>"/", "test"=>"Search"}
+  [1m[36mLocation Load (1.5ms)[0m  [1mSELECT "locations".* FROM "locations"  WHERE (Latitude > 0.0 AND Latitude < 0.0)[0m
+  Rendered search/findSurrogateCity.html.erb within layouts/application (11.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 31ms (Views: 28.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 02:48:13 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 02:48:13 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 02:48:13 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=Delhi&latitude_range=&elevation_range=&radius_range=&commit=Search" for 127.0.0.1 at 2014-10-12 02:48:29 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"Delhi", "latitude_range"=>"", "elevation_range"=>"", "radius_range"=>"", "commit"=>"Search"}
+  [1m[36mLocation Load (0.8ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."City" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/search/weather?city=Delhi&elevation_range=&latitude_range=&radius=
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/search/weather?city=Delhi&elevation_range=&latitude_range=&radius=" for 127.0.0.1 at 2014-10-12 02:48:29 +0530
+Processing by SearchController#weather as HTML
+  Parameters: {"city"=>"Delhi", "elevation_range"=>"", "latitude_range"=>"", "radius"=>""}
+  Rendered search/weather.html.erb within layouts/application (12.8ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 43ms (Views: 41.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 02:48:29 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 02:48:29 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 02:48:29 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=Delhi&latitude_range=&elevation_range=&radius_range=&commit=Search" for 127.0.0.1 at 2014-10-12 02:49:57 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"Delhi", "latitude_range"=>"", "elevation_range"=>"", "radius_range"=>"", "commit"=>"Search"}
+  [1m[36mLocation Load (0.8ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."City" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/search/weather?city=Delhi&elevation_range=&latitude_range=&radius=
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/search/weather?city=Delhi&elevation_range=&latitude_range=&radius=" for 127.0.0.1 at 2014-10-12 02:49:57 +0530
+Processing by SearchController#weather as HTML
+  Parameters: {"city"=>"Delhi", "elevation_range"=>"", "latitude_range"=>"", "radius"=>""}
+  Rendered search/weather.html.erb within layouts/application (9.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 30ms (Views: 29.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 02:49:57 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 02:49:57 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 02:49:57 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=Delhi&latitude_range=&elevation_range=&radius_range=&commit=Search" for 127.0.0.1 at 2014-10-12 02:52:23 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"Delhi", "latitude_range"=>"", "elevation_range"=>"", "radius_range"=>"", "commit"=>"Search"}
+  [1m[36mLocation Load (0.9ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."City" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/search/weather?city=Delhi&elevation_range=&latitude_range=&radius=
+Completed 302 Found in 3ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/search/weather?city=Delhi&elevation_range=&latitude_range=&radius=" for 127.0.0.1 at 2014-10-12 02:52:23 +0530
+Processing by SearchController#weather as HTML
+  Parameters: {"city"=>"Delhi", "elevation_range"=>"", "latitude_range"=>"", "radius"=>""}
+  Rendered search/weather.html.erb within layouts/application (11.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 33ms (Views: 32.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 02:52:23 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 02:52:23 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 02:52:23 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=Delhi&latitude_range=&elevation_range=&radius_range=&commit=Search" for 127.0.0.1 at 2014-10-12 02:52:33 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"Delhi", "latitude_range"=>"", "elevation_range"=>"", "radius_range"=>"", "commit"=>"Search"}
+  [1m[36mLocation Load (0.8ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."City" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/search/weather?city=Delhi&elevation_range=&latitude_range=&radius=
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/search/weather?city=Delhi&elevation_range=&latitude_range=&radius=" for 127.0.0.1 at 2014-10-12 02:52:33 +0530
+Processing by SearchController#weather as HTML
+  Parameters: {"city"=>"Delhi", "elevation_range"=>"", "latitude_range"=>"", "radius"=>""}
+  Rendered search/weather.html.erb within layouts/application (8.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 29ms (Views: 28.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 02:52:33 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 02:52:33 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 02:52:33 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=Kolkata&latitude_range=&elevation_range=&radius_range=&commit=Search" for 127.0.0.1 at 2014-10-12 02:53:34 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"Kolkata", "latitude_range"=>"", "elevation_range"=>"", "radius_range"=>"", "commit"=>"Search"}
+  [1m[36mLocation Load (1.1ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."City" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/search/weather?city=Kolkata&elevation_range=&latitude_range=&radius=
+Completed 302 Found in 4ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/search/weather?city=Kolkata&elevation_range=&latitude_range=&radius=" for 127.0.0.1 at 2014-10-12 02:53:34 +0530
+Processing by SearchController#weather as HTML
+  Parameters: {"city"=>"Kolkata", "elevation_range"=>"", "latitude_range"=>"", "radius"=>""}
+  Rendered search/weather.html.erb within layouts/application (8.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 28ms (Views: 27.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 02:53:34 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 02:53:34 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 02:53:34 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=Kolkata&latitude_range=&elevation_range=&radius_range=&commit=Search" for 127.0.0.1 at 2014-10-12 02:54:51 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"Kolkata", "latitude_range"=>"", "elevation_range"=>"", "radius_range"=>"", "commit"=>"Search"}
+  [1m[36mLocation Load (1.2ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."City" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/search/weather?city=Kolkata&elevation_range=&latitude_range=&radius=
+Completed 302 Found in 4ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/search/weather?city=Kolkata&elevation_range=&latitude_range=&radius=" for 127.0.0.1 at 2014-10-12 02:54:51 +0530
+Processing by SearchController#weather as HTML
+  Parameters: {"city"=>"Kolkata", "elevation_range"=>"", "latitude_range"=>"", "radius"=>""}
+  Rendered search/weather.html.erb within layouts/application (10.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 33ms (Views: 32.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 02:54:51 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 02:54:51 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 02:54:51 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=Delhi&latitude_range=&elevation_range=&radius_range=&commit=Search" for 127.0.0.1 at 2014-10-12 02:55:07 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"Delhi", "latitude_range"=>"", "elevation_range"=>"", "radius_range"=>"", "commit"=>"Search"}
+  [1m[36mLocation Load (1.1ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."City" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/search/weather?city=Delhi&elevation_range=&latitude_range=&radius=
+Completed 302 Found in 4ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/search/weather?city=Delhi&elevation_range=&latitude_range=&radius=" for 127.0.0.1 at 2014-10-12 02:55:07 +0530
+Processing by SearchController#weather as HTML
+  Parameters: {"city"=>"Delhi", "elevation_range"=>"", "latitude_range"=>"", "radius"=>""}
+  Rendered search/weather.html.erb within layouts/application (9.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 31ms (Views: 30.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 02:55:08 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 02:55:08 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 02:55:08 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=Delhi&latitude_range=&elevation_range=&radius_range=&commit=Search" for 127.0.0.1 at 2014-10-12 02:56:36 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"Delhi", "latitude_range"=>"", "elevation_range"=>"", "radius_range"=>"", "commit"=>"Search"}
+  [1m[36mLocation Load (0.8ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."City" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/search/weather?city=Delhi&elevation_range=&latitude_range=&radius=
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/search/weather?city=Delhi&elevation_range=&latitude_range=&radius=" for 127.0.0.1 at 2014-10-12 02:56:36 +0530
+Processing by SearchController#weather as HTML
+  Parameters: {"city"=>"Delhi", "elevation_range"=>"", "latitude_range"=>"", "radius"=>""}
+  Rendered search/weather.html.erb within layouts/application (9.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 02:56:36 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 02:56:37 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 02:56:37 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=Delhi&latitude_range=&elevation_range=&radius_range=&commit=Search" for 127.0.0.1 at 2014-10-12 03:01:39 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"Delhi", "latitude_range"=>"", "elevation_range"=>"", "radius_range"=>"", "commit"=>"Search"}
+  [1m[36mLocation Load (0.8ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."City" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/search/weather?city=Delhi&elevation_range=&latitude_range=&radius=
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/search/weather?city=Delhi&elevation_range=&latitude_range=&radius=" for 127.0.0.1 at 2014-10-12 03:01:39 +0530
+Processing by SearchController#weather as HTML
+  Parameters: {"city"=>"Delhi", "elevation_range"=>"", "latitude_range"=>"", "radius"=>""}
+  Rendered search/weather.html.erb within layouts/application (10.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 31ms (Views: 29.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 03:01:39 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 03:01:39 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 03:01:39 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=Delhi&latitude_range=&elevation_range=&radius_range=&commit=Search" for 127.0.0.1 at 2014-10-12 03:02:58 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"Delhi", "latitude_range"=>"", "elevation_range"=>"", "radius_range"=>"", "commit"=>"Search"}
+  [1m[36mLocation Load (0.8ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."City" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/search/weather?city=Delhi&elevation_range=&latitude_range=&radius=
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/search/weather?city=Delhi&elevation_range=&latitude_range=&radius=" for 127.0.0.1 at 2014-10-12 03:02:58 +0530
+Processing by SearchController#weather as HTML
+  Parameters: {"city"=>"Delhi", "elevation_range"=>"", "latitude_range"=>"", "radius"=>""}
+  Rendered search/weather.html.erb within layouts/application (10.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 32ms (Views: 30.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 03:02:59 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 03:02:59 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 03:02:59 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=Delhi&latitude_range=&elevation_range=&radius_range=&commit=Search" for 127.0.0.1 at 2014-10-12 03:04:47 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"Delhi", "latitude_range"=>"", "elevation_range"=>"", "radius_range"=>"", "commit"=>"Search"}
+  [1m[35mLocation Load (2.0ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."City" IS NULL LIMIT 1
+Redirected to http://localhost:3000/search/weather?city=Delhi&elevation_range=&latitude_range=&radius=
+Completed 302 Found in 31ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/search/weather?city=Delhi&elevation_range=&latitude_range=&radius=" for 127.0.0.1 at 2014-10-12 03:04:48 +0530
+Processing by SearchController#weather as HTML
+  Parameters: {"city"=>"Delhi", "elevation_range"=>"", "latitude_range"=>"", "radius"=>""}
+  Rendered search/weather.html.erb within layouts/application (20.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 78ms (Views: 75.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 03:04:48 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 03:04:48 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 03:04:48 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=Delhi&latitude_range=&elevation_range=&radius_range=&commit=Search" for 127.0.0.1 at 2014-10-12 03:05:57 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"Delhi", "latitude_range"=>"", "elevation_range"=>"", "radius_range"=>"", "commit"=>"Search"}
+  [1m[35mLocation Load (0.8ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."City" IS NULL LIMIT 1
+Redirected to http://localhost:3000/search/weather?city=Delhi&elevation_range=&latitude_range=&radius=
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/search/weather?city=Delhi&elevation_range=&latitude_range=&radius=" for 127.0.0.1 at 2014-10-12 03:05:57 +0530
+Processing by SearchController#weather as HTML
+  Parameters: {"city"=>"Delhi", "elevation_range"=>"", "latitude_range"=>"", "radius"=>""}
+  Rendered search/weather.html.erb within layouts/application (11.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 03:05:57 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 03:05:57 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 03:05:57 +0530
+
+
+Started POST "/sessions" for 127.0.0.1 at 2014-10-12 03:09:48 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o3GYBmAFzO2eevTJSmNIcrKAgDAmPC2j7uK8H/79j4M=", "email"=>"akanksha.dlf@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'akanksha.dlf@gmail.com' LIMIT 1
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 173ms (Views: 23.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 03:09:48 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 03:09:48 +0530
+
+
+Started POST "/sessions" for 127.0.0.1 at 2014-10-12 03:09:50 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o3GYBmAFzO2eevTJSmNIcrKAgDAmPC2j7uK8H/79j4M=", "email"=>"akanksha.dlf@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'akanksha.dlf@gmail.com' LIMIT 1
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 150ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-12 03:09:50 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (11.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 34ms (Views: 32.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 03:09:50 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 03:09:50 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 03:09:50 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=Delhi&latitude_range=&elevation_range=&radius_range=&commit=Search" for 127.0.0.1 at 2014-10-12 03:09:58 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"Delhi", "latitude_range"=>"", "elevation_range"=>"", "radius_range"=>"", "commit"=>"Search"}
+  [1m[35mLocation Load (0.8ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."City" IS NULL LIMIT 1
+Redirected to http://localhost:3000/search/weather?city=Delhi&elevation_range=&latitude_range=&radius=
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/search/weather?city=Delhi&elevation_range=&latitude_range=&radius=" for 127.0.0.1 at 2014-10-12 03:09:59 +0530
+Processing by SearchController#weather as HTML
+  Parameters: {"city"=>"Delhi", "elevation_range"=>"", "latitude_range"=>"", "radius"=>""}
+  Rendered search/weather.html.erb within layouts/application (10.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 03:09:59 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 03:09:59 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 03:09:59 +0530
+
+
+Started GET "/search/findSurrogateCity?utf8=%E2%9C%93&latitude_mycity=28.635308&longitude_mycity=77.22496000000001&elevation_mycity=213.9990539550781&test=Search" for 127.0.0.1 at 2014-10-12 03:10:04 +0530
+Processing by SearchController#findSurrogateCity as HTML
+  Parameters: {"utf8"=>"✓", "latitude_mycity"=>"28.635308", "longitude_mycity"=>"77.22496000000001", "elevation_mycity"=>"213.9990539550781", "test"=>"Search"}
+  [1m[35mLocation Load (1.4ms)[0m  SELECT "locations".* FROM "locations"  WHERE (Latitude > 28.635308 AND Latitude < 28.635308)
+  Rendered search/findSurrogateCity.html.erb within layouts/application (11.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 37ms (Views: 34.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 03:10:04 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 03:10:04 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 03:10:04 +0530
+
+
+Started GET "/search/findSurrogateCity?utf8=%E2%9C%93&latitude_mycity=28.635308&longitude_mycity=77.22496000000001&elevation_mycity=213.9990539550781&test=Search" for 127.0.0.1 at 2014-10-12 03:12:03 +0530
+Processing by SearchController#findSurrogateCity as HTML
+  Parameters: {"utf8"=>"✓", "latitude_mycity"=>"28.635308", "longitude_mycity"=>"77.22496000000001", "elevation_mycity"=>"213.9990539550781", "test"=>"Search"}
+  [1m[35mLocation Load (1.2ms)[0m  SELECT "locations".* FROM "locations"  WHERE (Latitude > 28.635308 AND Latitude < 28.635308)
+  Rendered search/findSurrogateCity.html.erb within layouts/application (9.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 31ms (Views: 28.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 03:12:03 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 03:12:03 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 03:12:03 +0530
+
+
+Started GET "/search/findSurrogateCity?utf8=%E2%9C%93&latitude_mycity=28.635308&longitude_mycity=77.22496000000001&elevation_mycity=213.9990539550781&test=Search" for 127.0.0.1 at 2014-10-12 03:13:05 +0530
+Processing by SearchController#findSurrogateCity as HTML
+  Parameters: {"utf8"=>"✓", "latitude_mycity"=>"28.635308", "longitude_mycity"=>"77.22496000000001", "elevation_mycity"=>"213.9990539550781", "test"=>"Search"}
+  [1m[35mLocation Load (1.2ms)[0m  SELECT "locations".* FROM "locations"  WHERE (Latitude > 28.635308 AND Latitude < 28.635308)
+  Rendered search/findSurrogateCity.html.erb within layouts/application (12.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 35ms (Views: 32.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 03:13:05 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 03:13:05 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 03:13:05 +0530
+
+
+Started GET "/search/findSurrogateCity?utf8=%E2%9C%93&latitude_mycity=28.635308&longitude_mycity=77.22496000000001&elevation_mycity=213.9990539550781&test=Search" for 127.0.0.1 at 2014-10-12 03:16:21 +0530
+Processing by SearchController#findSurrogateCity as HTML
+  Parameters: {"utf8"=>"✓", "latitude_mycity"=>"28.635308", "longitude_mycity"=>"77.22496000000001", "elevation_mycity"=>"213.9990539550781", "test"=>"Search"}
+  Rendered text template (0.0ms)
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&city=Delhi&latitude_range=&elevation_range=&radius_range=&commit=Search" for 127.0.0.1 at 2014-10-12 03:16:42 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"Delhi", "latitude_range"=>"", "elevation_range"=>"", "radius_range"=>"", "commit"=>"Search"}
+  [1m[35mLocation Load (3.1ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."City" IS NULL LIMIT 1
+Redirected to http://localhost:3000/search/weather?city=Delhi&elevation_range=&latitude_range=&radius=
+Completed 302 Found in 9ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/search/weather?city=Delhi&elevation_range=&latitude_range=&radius=" for 127.0.0.1 at 2014-10-12 03:16:42 +0530
+Processing by SearchController#weather as HTML
+  Parameters: {"city"=>"Delhi", "elevation_range"=>"", "latitude_range"=>"", "radius"=>""}
+  Rendered search/weather.html.erb within layouts/application (9.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 46ms (Views: 44.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 03:16:42 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 03:16:42 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 03:16:42 +0530
+
+
+Started GET "/search/findSurrogateCity?utf8=%E2%9C%93&latitude_mycity=28.635308&longitude_mycity=77.22496000000001&elevation_mycity=213.9990539550781&test=Search" for 127.0.0.1 at 2014-10-12 03:16:47 +0530
+Processing by SearchController#findSurrogateCity as HTML
+  Parameters: {"utf8"=>"✓", "latitude_mycity"=>"28.635308", "longitude_mycity"=>"77.22496000000001", "elevation_mycity"=>"213.9990539550781", "test"=>"Search"}
+  [1m[35mLocation Load (1.9ms)[0m  SELECT "locations".* FROM "locations"  WHERE (Latitude > 28.635308 AND Latitude < 28.635308)
+  Rendered search/findSurrogateCity.html.erb within layouts/application (15.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 48ms (Views: 44.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 03:16:47 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 03:16:47 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 03:16:47 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=Delhi&latitude_range=&elevation_range=&radius_range=&commit=Search" for 127.0.0.1 at 2014-10-12 03:18:49 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"Delhi", "latitude_range"=>"", "elevation_range"=>"", "radius_range"=>"", "commit"=>"Search"}
+  [1m[35mLocation Load (1.9ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."City" IS NULL LIMIT 1
+Redirected to http://localhost:3000/search/weather?city=Delhi&elevation_range=&latitude_range=&radius=
+Completed 302 Found in 6ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/search/weather?city=Delhi&elevation_range=&latitude_range=&radius=" for 127.0.0.1 at 2014-10-12 03:18:49 +0530
+Processing by SearchController#weather as HTML
+  Parameters: {"city"=>"Delhi", "elevation_range"=>"", "latitude_range"=>"", "radius"=>""}
+  Rendered search/weather.html.erb within layouts/application (8.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 40ms (Views: 38.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 03:18:49 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 03:18:49 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 03:18:49 +0530
+
+
+Started GET "/search/findSurrogateCity?utf8=%E2%9C%93&latitude_mycity=28.635308&longitude_mycity=77.22496000000001&elevation_mycity=213.9990539550781&test=Search" for 127.0.0.1 at 2014-10-12 03:18:54 +0530
+Processing by SearchController#findSurrogateCity as HTML
+  Parameters: {"utf8"=>"✓", "latitude_mycity"=>"28.635308", "longitude_mycity"=>"77.22496000000001", "elevation_mycity"=>"213.9990539550781", "test"=>"Search"}
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search/findSurrogateCity?utf8=%E2%9C%93&latitude_mycity=28.635308&longitude_mycity=77.22496000000001&elevation_mycity=213.9990539550781&test=Search" for 127.0.0.1 at 2014-10-12 03:20:44 +0530
+Processing by SearchController#findSurrogateCity as HTML
+  Parameters: {"utf8"=>"✓", "latitude_mycity"=>"28.635308", "longitude_mycity"=>"77.22496000000001", "elevation_mycity"=>"213.9990539550781", "test"=>"Search"}
+  [1m[35mLocation Load (3.0ms)[0m  SELECT "locations".* FROM "locations"  WHERE (Latitude > 28.635308 AND Latitude < 28.635308)
+  Rendered search/findSurrogateCity.html.erb within layouts/application (12.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 48ms (Views: 42.1ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 03:20:44 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 03:20:44 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 03:20:44 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=Delhi&latitude_range=&elevation_range=&radius_range=&commit=Search" for 127.0.0.1 at 2014-10-12 03:20:50 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"Delhi", "latitude_range"=>"", "elevation_range"=>"", "radius_range"=>"", "commit"=>"Search"}
+  [1m[35mLocation Load (0.8ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."City" IS NULL LIMIT 1
+Redirected to http://localhost:3000/search/weather?city=Delhi&elevation_range=&latitude_range=&radius=
+Completed 302 Found in 4ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/search/weather?city=Delhi&elevation_range=&latitude_range=&radius=" for 127.0.0.1 at 2014-10-12 03:20:50 +0530
+Processing by SearchController#weather as HTML
+  Parameters: {"city"=>"Delhi", "elevation_range"=>"", "latitude_range"=>"", "radius"=>""}
+  Rendered search/weather.html.erb within layouts/application (8.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 30ms (Views: 29.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 03:20:51 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 03:20:51 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 03:20:51 +0530
+
+
+Started GET "/search/findSurrogateCity?utf8=%E2%9C%93&latitude_mycity=28.635308&longitude_mycity=77.22496000000001&elevation_mycity=213.9990539550781&test=Search" for 127.0.0.1 at 2014-10-12 03:20:57 +0530
+Processing by SearchController#findSurrogateCity as HTML
+  Parameters: {"utf8"=>"✓", "latitude_mycity"=>"28.635308", "longitude_mycity"=>"77.22496000000001", "elevation_mycity"=>"213.9990539550781", "test"=>"Search"}
+  [1m[35mLocation Load (1.8ms)[0m  SELECT "locations".* FROM "locations"  WHERE (Latitude > 28.635308 AND Latitude < 28.635308)
+  Rendered search/findSurrogateCity.html.erb within layouts/application (16.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 49ms (Views: 45.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 03:20:57 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 03:20:57 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 03:20:57 +0530
+
+
+Started POST "/sessions" for 127.0.0.1 at 2014-10-12 03:21:04 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o3GYBmAFzO2eevTJSmNIcrKAgDAmPC2j7uK8H/79j4M=", "email"=>"akanksha.dlf@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'akanksha.dlf@gmail.com' LIMIT 1
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 174ms (Views: 23.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 03:21:05 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 03:21:05 +0530
+
+
+Started POST "/sessions" for 127.0.0.1 at 2014-10-12 03:21:06 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o3GYBmAFzO2eevTJSmNIcrKAgDAmPC2j7uK8H/79j4M=", "email"=>"akanksha.dlf@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'akanksha.dlf@gmail.com' LIMIT 1
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 157ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-12 03:21:06 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (9.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 03:21:06 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 03:21:06 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 03:21:06 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=Delhi&latitude_range=2&elevation_range=2&radius_range=2&commit=Search" for 127.0.0.1 at 2014-10-12 03:21:20 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"Delhi", "latitude_range"=>"2", "elevation_range"=>"2", "radius_range"=>"2", "commit"=>"Search"}
+  [1m[35mLocation Load (0.8ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."City" IS NULL LIMIT 1
+Redirected to http://localhost:3000/search/weather?city=Delhi&elevation_range=2&latitude_range=2&radius=2
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/search/weather?city=Delhi&elevation_range=2&latitude_range=2&radius=2" for 127.0.0.1 at 2014-10-12 03:21:20 +0530
+Processing by SearchController#weather as HTML
+  Parameters: {"city"=>"Delhi", "elevation_range"=>"2", "latitude_range"=>"2", "radius"=>"2"}
+  Rendered search/weather.html.erb within layouts/application (9.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 30ms (Views: 29.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 03:21:20 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 03:21:20 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 03:21:20 +0530
+
+
+Started GET "/search/findSurrogateCity?utf8=%E2%9C%93&latitude_mycity=28.635308&longitude_mycity=77.22496000000001&elevation_mycity=213.9990539550781&test=Search" for 127.0.0.1 at 2014-10-12 03:21:26 +0530
+Processing by SearchController#findSurrogateCity as HTML
+  Parameters: {"utf8"=>"✓", "latitude_mycity"=>"28.635308", "longitude_mycity"=>"77.22496000000001", "elevation_mycity"=>"213.9990539550781", "test"=>"Search"}
+  [1m[35mLocation Load (2.9ms)[0m  SELECT "locations".* FROM "locations"  WHERE (Latitude > 26.635308 AND Latitude < 30.635308)
+  Rendered search/findSurrogateCity.html.erb within layouts/application (32.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 56ms (Views: 50.9ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 03:21:26 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 03:21:26 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 03:21:26 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=Delhi&latitude_range=2&elevation_range=2&radius_range=2&commit=Search" for 127.0.0.1 at 2014-10-12 03:25:58 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"Delhi", "latitude_range"=>"2", "elevation_range"=>"2", "radius_range"=>"2", "commit"=>"Search"}
+  [1m[35mLocation Load (2.3ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."City" IS NULL LIMIT 1
+Redirected to http://localhost:3000/search/weather?city=Delhi&elevation_range=2&latitude_range=2&radius=2
+Completed 302 Found in 7ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/search/weather?city=Delhi&elevation_range=2&latitude_range=2&radius=2" for 127.0.0.1 at 2014-10-12 03:25:58 +0530
+Processing by SearchController#weather as HTML
+  Parameters: {"city"=>"Delhi", "elevation_range"=>"2", "latitude_range"=>"2", "radius"=>"2"}
+  Rendered search/weather.html.erb within layouts/application (9.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 45ms (Views: 43.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 03:25:58 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 03:25:58 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 03:25:58 +0530
+
+
+Started GET "/search/findSurrogateCity?utf8=%E2%9C%93&latitude_mycity=28.635308&longitude_mycity=77.22496000000001&elevation_mycity=213.9990539550781&test=Search" for 127.0.0.1 at 2014-10-12 03:26:05 +0530
+Processing by SearchController#findSurrogateCity as HTML
+  Parameters: {"utf8"=>"✓", "latitude_mycity"=>"28.635308", "longitude_mycity"=>"77.22496000000001", "elevation_mycity"=>"213.9990539550781", "test"=>"Search"}
+  [1m[35mLocation Load (1.3ms)[0m  SELECT "locations".* FROM "locations"  WHERE (Latitude > 26.635308 AND Latitude < 30.635308 AND Elevation > 213.9990539550781 AND Elevation < 213.9990539550781)
+  Rendered search/findSurrogateCity.html.erb within layouts/application (10.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 31ms (Views: 28.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 03:26:05 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 03:26:05 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 03:26:05 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=Delhi&latitude_range=2&elevation_range=100&radius_range=2&commit=Search" for 127.0.0.1 at 2014-10-12 03:26:29 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"Delhi", "latitude_range"=>"2", "elevation_range"=>"100", "radius_range"=>"2", "commit"=>"Search"}
+  [1m[35mLocation Load (1.2ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."City" IS NULL LIMIT 1
+Redirected to http://localhost:3000/search/weather?city=Delhi&elevation_range=100&latitude_range=2&radius=2
+Completed 302 Found in 4ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/search/weather?city=Delhi&elevation_range=100&latitude_range=2&radius=2" for 127.0.0.1 at 2014-10-12 03:26:29 +0530
+Processing by SearchController#weather as HTML
+  Parameters: {"city"=>"Delhi", "elevation_range"=>"100", "latitude_range"=>"2", "radius"=>"2"}
+  Rendered search/weather.html.erb within layouts/application (83.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 103ms (Views: 102.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 03:26:29 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 03:26:29 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 03:26:29 +0530
+
+
+Started GET "/search/findSurrogateCity?utf8=%E2%9C%93&latitude_mycity=28.635308&longitude_mycity=77.22496000000001&elevation_mycity=213.9990539550781&test=Search" for 127.0.0.1 at 2014-10-12 03:26:35 +0530
+Processing by SearchController#findSurrogateCity as HTML
+  Parameters: {"utf8"=>"✓", "latitude_mycity"=>"28.635308", "longitude_mycity"=>"77.22496000000001", "elevation_mycity"=>"213.9990539550781", "test"=>"Search"}
+  [1m[35mLocation Load (1.8ms)[0m  SELECT "locations".* FROM "locations"  WHERE (Latitude > 26.635308 AND Latitude < 30.635308 AND Elevation > 213.9990539550781 AND Elevation < 213.9990539550781)
+  Rendered search/findSurrogateCity.html.erb within layouts/application (16.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 48ms (Views: 44.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 03:26:35 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 03:26:35 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 03:26:35 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=denali&latitude_range=2&elevation_range=100&radius_range=2&commit=Search" for 127.0.0.1 at 2014-10-12 03:26:55 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"denali", "latitude_range"=>"2", "elevation_range"=>"100", "radius_range"=>"2", "commit"=>"Search"}
+  [1m[35mLocation Load (0.8ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."City" IS NULL LIMIT 1
+Redirected to http://localhost:3000/search/weather?city=denali&elevation_range=100&latitude_range=2&radius=2
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/search/weather?city=denali&elevation_range=100&latitude_range=2&radius=2" for 127.0.0.1 at 2014-10-12 03:26:55 +0530
+Processing by SearchController#weather as HTML
+  Parameters: {"city"=>"denali", "elevation_range"=>"100", "latitude_range"=>"2", "radius"=>"2"}
+  Rendered search/weather.html.erb within layouts/application (7.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 29ms (Views: 27.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 03:26:55 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 03:26:55 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 03:26:55 +0530
+
+
+Started GET "/search/findSurrogateCity?utf8=%E2%9C%93&latitude_mycity=63.7365922&longitude_mycity=-148.89747109999996&elevation_mycity=503.0752868652344&test=Search" for 127.0.0.1 at 2014-10-12 03:27:01 +0530
+Processing by SearchController#findSurrogateCity as HTML
+  Parameters: {"utf8"=>"✓", "latitude_mycity"=>"63.7365922", "longitude_mycity"=>"-148.89747109999996", "elevation_mycity"=>"503.0752868652344", "test"=>"Search"}
+  [1m[35mLocation Load (1.0ms)[0m  SELECT "locations".* FROM "locations"  WHERE (Latitude > 61.7365922 AND Latitude < 65.73659219999999 AND Elevation > 503.0752868652344 AND Elevation < 503.0752868652344)
+  Rendered search/findSurrogateCity.html.erb within layouts/application (9.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 31ms (Views: 29.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 03:27:02 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 03:27:02 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 03:27:02 +0530
+
+
+Started GET "/search/weather?city=denali&elevation_range=100&latitude_range=2&radius=2" for 127.0.0.1 at 2014-10-12 03:27:06 +0530
+Processing by SearchController#weather as HTML
+  Parameters: {"city"=>"denali", "elevation_range"=>"100", "latitude_range"=>"2", "radius"=>"2"}
+  Rendered search/weather.html.erb within layouts/application (7.5ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 29ms (Views: 28.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 03:27:06 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 03:27:06 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 03:27:06 +0530
+
+
+Started GET "/search/findSurrogateCity?utf8=%E2%9C%93&latitude_mycity=63.7365922&longitude_mycity=-148.89747109999996&elevation_mycity=503.0752868652344&test=Search" for 127.0.0.1 at 2014-10-12 03:27:21 +0530
+Processing by SearchController#findSurrogateCity as HTML
+  Parameters: {"utf8"=>"✓", "latitude_mycity"=>"63.7365922", "longitude_mycity"=>"-148.89747109999996", "elevation_mycity"=>"503.0752868652344", "test"=>"Search"}
+  [1m[36mLocation Load (1.0ms)[0m  [1mSELECT "locations".* FROM "locations"  WHERE (Latitude > 61.7365922 AND Latitude < 65.73659219999999 AND Elevation > 503.0752868652344 AND Elevation < 503.0752868652344)[0m
+  Rendered search/findSurrogateCity.html.erb within layouts/application (9.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 30ms (Views: 28.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 03:27:22 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 03:27:22 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 03:27:22 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=denali&latitude_range=10&elevation_range=100&radius_range=2&commit=Search" for 127.0.0.1 at 2014-10-12 03:27:32 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"denali", "latitude_range"=>"10", "elevation_range"=>"100", "radius_range"=>"2", "commit"=>"Search"}
+  [1m[36mLocation Load (0.8ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."City" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/search/weather?city=denali&elevation_range=100&latitude_range=10&radius=2
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/search/weather?city=denali&elevation_range=100&latitude_range=10&radius=2" for 127.0.0.1 at 2014-10-12 03:27:32 +0530
+Processing by SearchController#weather as HTML
+  Parameters: {"city"=>"denali", "elevation_range"=>"100", "latitude_range"=>"10", "radius"=>"2"}
+  Rendered search/weather.html.erb within layouts/application (8.9ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 34ms (Views: 32.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 03:27:32 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 03:27:32 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 03:27:32 +0530
+
+
+Started GET "/search/findSurrogateCity?utf8=%E2%9C%93&latitude_mycity=63.7365922&longitude_mycity=-148.89747109999996&elevation_mycity=503.0752868652344&test=Search" for 127.0.0.1 at 2014-10-12 03:27:39 +0530
+Processing by SearchController#findSurrogateCity as HTML
+  Parameters: {"utf8"=>"✓", "latitude_mycity"=>"63.7365922", "longitude_mycity"=>"-148.89747109999996", "elevation_mycity"=>"503.0752868652344", "test"=>"Search"}
+  [1m[36mLocation Load (1.6ms)[0m  [1mSELECT "locations".* FROM "locations"  WHERE (Latitude > 53.7365922 AND Latitude < 73.73659219999999 AND Elevation > 503.0752868652344 AND Elevation < 503.0752868652344)[0m
+  Rendered search/findSurrogateCity.html.erb within layouts/application (15.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 47ms (Views: 44.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 03:27:39 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 03:27:39 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 03:27:39 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=denali&latitude_range=10&elevation_range=100&radius_range=2&commit=Search" for 127.0.0.1 at 2014-10-12 03:28:26 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"denali", "latitude_range"=>"10", "elevation_range"=>"100", "radius_range"=>"2", "commit"=>"Search"}
+  [1m[36mLocation Load (0.9ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."City" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/search/weather?city=denali&elevation_range=100&latitude_range=10&radius=2
+Completed 302 Found in 3ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/search/weather?city=denali&elevation_range=100&latitude_range=10&radius=2" for 127.0.0.1 at 2014-10-12 03:28:26 +0530
+Processing by SearchController#weather as HTML
+  Parameters: {"city"=>"denali", "elevation_range"=>"100", "latitude_range"=>"10", "radius"=>"2"}
+  Rendered search/weather.html.erb within layouts/application (7.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 29ms (Views: 28.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 03:28:26 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 03:28:26 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 03:28:26 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=denali&latitude_range=10&elevation_range=100&radius_range=2&commit=Search" for 127.0.0.1 at 2014-10-12 03:31:20 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"denali", "latitude_range"=>"10", "elevation_range"=>"100", "radius_range"=>"2", "commit"=>"Search"}
+  [1m[36mLocation Load (2.5ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."City" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/search/weather?city=denali&elevation_range=100&latitude_range=10&radius=2
+Completed 302 Found in 7ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/search/weather?city=denali&elevation_range=100&latitude_range=10&radius=2" for 127.0.0.1 at 2014-10-12 03:31:20 +0530
+Processing by SearchController#weather as HTML
+  Parameters: {"city"=>"denali", "elevation_range"=>"100", "latitude_range"=>"10", "radius"=>"2"}
+  Rendered search/weather.html.erb within layouts/application (7.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 44ms (Views: 42.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 03:31:20 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 03:31:20 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 03:31:20 +0530
+
+
+Started GET "/search/findSurrogateCity?utf8=%E2%9C%93&latitude_mycity=63.7365922&longitude_mycity=-148.89747109999996&elevation_mycity=503.0752868652344&test=Search" for 127.0.0.1 at 2014-10-12 03:31:27 +0530
+Processing by SearchController#findSurrogateCity as HTML
+  Parameters: {"utf8"=>"✓", "latitude_mycity"=>"63.7365922", "longitude_mycity"=>"-148.89747109999996", "elevation_mycity"=>"503.0752868652344", "test"=>"Search"}
+  [1m[36mLocation Load (1.2ms)[0m  [1mSELECT "locations".* FROM "locations"  WHERE (Latitude > 53 AND Latitude < 73 AND Elevation > 403 AND Elevation < 603)[0m
+  Rendered search/findSurrogateCity.html.erb within layouts/application (21.8ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 45ms (Views: 42.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 03:31:27 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 03:31:27 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 03:31:27 +0530
+
+
+Started GET "/search/findSurrogateCity?utf8=%E2%9C%93&latitude_mycity=63.7365922&longitude_mycity=-148.89747109999996&elevation_mycity=503.0752868652344&test=Search" for 127.0.0.1 at 2014-10-12 03:32:01 +0530
+Processing by SearchController#findSurrogateCity as HTML
+  Parameters: {"utf8"=>"✓", "latitude_mycity"=>"63.7365922", "longitude_mycity"=>"-148.89747109999996", "elevation_mycity"=>"503.0752868652344", "test"=>"Search"}
+  [1m[36mLocation Load (1.8ms)[0m  [1mSELECT "locations".* FROM "locations"  WHERE (Latitude > 53 AND Latitude < 73 AND Elevation > 403 AND Elevation < 603)[0m
+  Rendered search/findSurrogateCity.html.erb within layouts/application (10.8ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 33ms (Views: 29.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 03:32:01 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 03:32:01 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 03:32:01 +0530
+
+
+Started POST "/sessions" for 127.0.0.1 at 2014-10-12 03:33:08 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o3GYBmAFzO2eevTJSmNIcrKAgDAmPC2j7uK8H/79j4M=", "email"=>"akanksha.dlf@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'akanksha.dlf@gmail.com' LIMIT 1[0m
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 184ms (Views: 21.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 03:33:09 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 03:33:09 +0530
+
+
+Started POST "/sessions" for 127.0.0.1 at 2014-10-12 03:33:10 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o3GYBmAFzO2eevTJSmNIcrKAgDAmPC2j7uK8H/79j4M=", "email"=>"akanksha.dlf@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'akanksha.dlf@gmail.com' LIMIT 1[0m
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 154ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-12 03:33:10 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (15.4ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 47ms (Views: 46.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 03:33:10 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 03:33:10 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 03:33:10 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=denali&latitude_range=10&elevation_range=100&radius_range=100&commit=Search" for 127.0.0.1 at 2014-10-12 03:33:24 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"denali", "latitude_range"=>"10", "elevation_range"=>"100", "radius_range"=>"100", "commit"=>"Search"}
+  [1m[36mLocation Load (2.6ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."City" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/search/weather?city=denali&elevation_range=100&latitude_range=10&radius=100
+Completed 302 Found in 9ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/search/weather?city=denali&elevation_range=100&latitude_range=10&radius=100" for 127.0.0.1 at 2014-10-12 03:33:24 +0530
+Processing by SearchController#weather as HTML
+  Parameters: {"city"=>"denali", "elevation_range"=>"100", "latitude_range"=>"10", "radius"=>"100"}
+  Rendered search/weather.html.erb within layouts/application (15.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 50ms (Views: 48.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 03:33:24 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 03:33:24 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 03:33:24 +0530
+
+
+Started GET "/search/findSurrogateCity?utf8=%E2%9C%93&latitude_mycity=63.7365922&longitude_mycity=-148.89747109999996&elevation_mycity=503.0752868652344&test=Search" for 127.0.0.1 at 2014-10-12 03:33:30 +0530
+Processing by SearchController#findSurrogateCity as HTML
+  Parameters: {"utf8"=>"✓", "latitude_mycity"=>"63.7365922", "longitude_mycity"=>"-148.89747109999996", "elevation_mycity"=>"503.0752868652344", "test"=>"Search"}
+  [1m[36mLocation Load (1.2ms)[0m  [1mSELECT "locations".* FROM "locations"  WHERE (Latitude > 53.7365922 AND Latitude < 73.73659219999999 AND Elevation > 403.0752868652344 AND Elevation < 603.0752868652344)[0m
+  Rendered search/findSurrogateCity.html.erb within layouts/application (22.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 45ms (Views: 41.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 03:33:30 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 03:33:30 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 03:33:30 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=denali&latitude_range=10&elevation_range=100&radius_range=100&commit=Search" for 127.0.0.1 at 2014-10-12 03:37:51 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"denali", "latitude_range"=>"10", "elevation_range"=>"100", "radius_range"=>"100", "commit"=>"Search"}
+  [1m[36mLocation Load (0.8ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."City" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/search/weather?city=denali&elevation_range=100&latitude_range=10&radius=100
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/search/weather?city=denali&elevation_range=100&latitude_range=10&radius=100" for 127.0.0.1 at 2014-10-12 03:37:51 +0530
+Processing by SearchController#weather as HTML
+  Parameters: {"city"=>"denali", "elevation_range"=>"100", "latitude_range"=>"10", "radius"=>"100"}
+  Rendered search/weather.html.erb within layouts/application (9.3ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 33ms (Views: 31.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 03:37:52 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 03:37:52 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 03:37:52 +0530
+
+
+Started GET "/search/findSurrogateCity?utf8=%E2%9C%93&latitude_mycity=63.7365922&longitude_mycity=-148.89747109999996&elevation_mycity=503.0752868652344&test=Search" for 127.0.0.1 at 2014-10-12 03:37:57 +0530
+Processing by SearchController#findSurrogateCity as HTML
+  Parameters: {"utf8"=>"✓", "latitude_mycity"=>"63.7365922", "longitude_mycity"=>"-148.89747109999996", "elevation_mycity"=>"503.0752868652344", "test"=>"Search"}
+  [1m[36mLocation Load (1.3ms)[0m  [1mSELECT "locations".* FROM "locations"  WHERE (Latitude > 53.7365922 AND Latitude < 73.73659219999999 AND Elevation > 403.0752868652344 AND Elevation < 603.0752868652344)[0m
+  Rendered search/findSurrogateCity.html.erb within layouts/application (10.5ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 34ms (Views: 32.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 03:37:57 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 03:37:57 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 03:37:57 +0530
+
+
+Started POST "/sessions" for 127.0.0.1 at 2014-10-12 03:57:59 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o3GYBmAFzO2eevTJSmNIcrKAgDAmPC2j7uK8H/79j4M=", "email"=>"akanksha.dlf@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'akanksha.dlf@gmail.com' LIMIT 1[0m
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 183ms (Views: 22.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 03:58:00 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 03:58:00 +0530
+
+
+Started POST "/sessions" for 127.0.0.1 at 2014-10-12 03:58:01 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o3GYBmAFzO2eevTJSmNIcrKAgDAmPC2j7uK8H/79j4M=", "email"=>"akanksha.dlf@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'akanksha.dlf@gmail.com' LIMIT 1[0m
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 151ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2014-10-12 03:58:01 +0530
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (10.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 32ms (Views: 30.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 03:58:01 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 03:58:01 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 03:58:01 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=Delhi&latitude_range=10&elevation_range=100&radius_range=2&commit=Search" for 127.0.0.1 at 2014-10-12 03:58:13 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"Delhi", "latitude_range"=>"10", "elevation_range"=>"100", "radius_range"=>"2", "commit"=>"Search"}
+  [1m[36mLocation Load (2.7ms)[0m  [1mSELECT  "locations".* FROM "locations"  WHERE "locations"."City" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/search/weather?city=Delhi&elevation_range=100&latitude_range=10&radius=2
+Completed 302 Found in 9ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/search/weather?city=Delhi&elevation_range=100&latitude_range=10&radius=2" for 127.0.0.1 at 2014-10-12 03:58:13 +0530
+Processing by SearchController#weather as HTML
+  Parameters: {"city"=>"Delhi", "elevation_range"=>"100", "latitude_range"=>"10", "radius"=>"2"}
+  Rendered search/weather.html.erb within layouts/application (8.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 37ms (Views: 36.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 03:58:13 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 03:58:13 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 03:58:13 +0530
+
+
+Started GET "/search/findSurrogateCity?utf8=%E2%9C%93&latitude_mycity=28.635308&longitude_mycity=77.22496000000001&elevation_mycity=213.9990539550781&test=Search" for 127.0.0.1 at 2014-10-12 03:58:18 +0530
+Processing by SearchController#findSurrogateCity as HTML
+  Parameters: {"utf8"=>"✓", "latitude_mycity"=>"28.635308", "longitude_mycity"=>"77.22496000000001", "elevation_mycity"=>"213.9990539550781", "test"=>"Search"}
+  [1m[36mLocation Load (5.9ms)[0m  [1mSELECT "locations".* FROM "locations"  WHERE (Latitude > 18.635308 AND Latitude < 38.635307999999995 AND Elevation > 113.9990539550781 AND Elevation < 313.9990539550781)[0m
+  Rendered search/findSurrogateCity.html.erb within layouts/application (53.0ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 88ms (Views: 78.9ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 03:58:18 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 03:58:18 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 03:58:18 +0530
+
+
+Started GET "/search/weather?city=Delhi&elevation_range=100&latitude_range=10&radius=2" for 127.0.0.1 at 2014-10-12 03:59:43 +0530
+Processing by SearchController#weather as HTML
+  Parameters: {"city"=>"Delhi", "elevation_range"=>"100", "latitude_range"=>"10", "radius"=>"2"}
+  Rendered search/weather.html.erb within layouts/application (7.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 28ms (Views: 27.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&city=Denal&latitude_range=10&elevation_range=100&radius_range=2&commit=Search" for 127.0.0.1 at 2014-10-12 04:00:39 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"Denal", "latitude_range"=>"10", "elevation_range"=>"100", "radius_range"=>"2", "commit"=>"Search"}
+  [1m[35mLocation Load (0.8ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."City" IS NULL LIMIT 1
+Redirected to http://localhost:3000/search/weather?city=Denal&elevation_range=100&latitude_range=10&radius=2
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/search/weather?city=Denal&elevation_range=100&latitude_range=10&radius=2" for 127.0.0.1 at 2014-10-12 04:00:39 +0530
+Processing by SearchController#weather as HTML
+  Parameters: {"city"=>"Denal", "elevation_range"=>"100", "latitude_range"=>"10", "radius"=>"2"}
+  Rendered search/weather.html.erb within layouts/application (9.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 30ms (Views: 29.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 04:00:39 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 04:00:39 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 04:00:39 +0530
+
+
+Started GET "/search/findSurrogateCity?utf8=%E2%9C%93&latitude_mycity=42.0880806&longitude_mycity=-75.99266130000001&elevation_mycity=369.595703125&test=Search" for 127.0.0.1 at 2014-10-12 04:00:43 +0530
+Processing by SearchController#findSurrogateCity as HTML
+  Parameters: {"utf8"=>"✓", "latitude_mycity"=>"42.0880806", "longitude_mycity"=>"-75.99266130000001", "elevation_mycity"=>"369.595703125", "test"=>"Search"}
+  [1m[35mLocation Load (3.9ms)[0m  SELECT "locations".* FROM "locations"  WHERE (Latitude > 32.0880806 AND Latitude < 52.0880806 AND Elevation > 269.595703125 AND Elevation < 469.595703125)
+  Rendered search/findSurrogateCity.html.erb within layouts/application (23.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 46ms (Views: 40.9ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-12 04:00:43 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-12 04:00:43 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-12 04:00:43 +0530
