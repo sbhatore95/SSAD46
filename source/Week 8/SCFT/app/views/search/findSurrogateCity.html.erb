@@ -5,8 +5,8 @@
         <title>
             Geocoding service
         </title>
-        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp">
-        </script>
+         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+
         <%=stylesheet_link_tag "welcome.css" %>
             <script>
             // In the following example, markers appear when the user clicks on the map.
@@ -33,31 +33,67 @@ var markers = [];
 
         // Adds a marker at the center of the map.
         //addMarker(haightAshbury);
-        codeAddress();
+        //codeAddress();
     }
     var marker;
     var parliament;
+    var j;
+    var i;
+    var flag;
 
     function codeAddress() {
         var address = document.getElementById('searchpanel').getElementsByTagName("li");
-        for (var i = 0; i < 10; i++) {
+        var len = document.getElementById('searchpanel').getElementsByTagName("p");
+
+        for (i = 0; i < 34; i++) {
+
             geocoder.geocode({
                 'address': address[i].innerHTML
             }, function(results, status) {
                 if (status == google.maps.GeocoderStatus.OK) {
                     map.setCenter(results[0].geometry.location);
                     addMarker(results[0].geometry.location);
+                    flag=1;
 /* var marker = new google.maps.Marker(
 					   {
 map: map,
 position: results[0].geometry.location
 });*/
                 } else {
-                    console.log('Geocode was not successful for the following reason: ' + status);
+                    flag=0;
+                     setTimeout(function() {
+                        
+                       j=i;
+                
+            }, 200);
                 }
             });
+            if(flag==0){i--;}
         }
     }
+//onmouseover implementation
+    function gc(element) {
+       geocoder.geocode({
+           'address': element.innerHTML
+        }, 
+        function(results, status) {
+          if(status == google.maps.GeocoderStatus.OK) {
+
+            // Clear the previous marker
+            if (marker) marker.setMap(null);
+
+            // Set the new marker
+            marker = new google.maps.Marker({
+              position: results[0].geometry.location,
+              map: map
+            });
+
+            // Center the map on the geocoded result
+            map.setCenter(results[0].geometry.location);
+          }
+       });
+     }
+
     // Add a marker to the map and push to the array.
 
 
@@ -119,9 +155,12 @@ position: results[0].geometry.location
                 Surrogate cities for
                 <%=@city %>
                     :
+                    <p> <%=@results.length%></p>
                     <% @results.each do |c| %>
                         <li>
+                          <a href="#" onmouseover="gc(this);">
                             <%=c.City %>
+                        </a>
                         </li>
                         <% end%>
             </ul>
