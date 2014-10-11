@@ -27,12 +27,7 @@ var markers = [];
         };
         map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-/* google.maps.event.addListener(map, 'click', function(event) {
-		   addMarker(event.latLng);
-		   });*/
 
-        // Adds a marker at the center of the map.
-        //addMarker(haightAshbury);
         codeAddress();
         lat_belt();
     }
@@ -44,9 +39,9 @@ var markers = [];
 
     function codeAddress() {
         var address = document.getElementById('searchpanel').getElementsByTagName("a");
-        var len = document.getElementById('searchpanel').getElementsByTagName("p");
+        var len = document.getElementById('length');//Number of cities
 
-        for (i = 0; i < 10; i++) {
+        for (i = 0; i < 10; i++) {//only 10 cities could be marked now
 
             geocoder.geocode({
                 'address': address[i].innerHTML
@@ -55,11 +50,7 @@ var markers = [];
                     map.setCenter(results[0].geometry.location);
                     addMarker(results[0].geometry.location);
                     flag=1;
-/* var marker = new google.maps.Marker(
-					   {
-map: map,
-position: results[0].geometry.location
-});*/
+
                 } else {
                     console.log('Geocode was not successful for the following reason: ' + status);
                 }
@@ -93,8 +84,6 @@ position: results[0].geometry.location
      }
 
      //make latitude belt
-
-
      function lat_belt() {
                     var address =  document.getElementById('city').innerHTML;
                     console.log(address); 
@@ -133,11 +122,7 @@ position: results[0].geometry.location
                               });
 
                             flightPath.setMap(map);
-                            /* var marker = new google.maps.Marker(
-         {'
-         map: map,
-         position: results[0].geometry.location
-      });*/
+                            
                         } else {
                             alert('Geocode was not successful for the following reason: ' + status);
                         }
@@ -146,8 +131,6 @@ position: results[0].geometry.location
         }
 
     // Add a marker to the map and push to the array.
-
-
     function addMarker(location) {
         marker = new google.maps.Marker({
             //   position: location,
@@ -201,13 +184,14 @@ position: results[0].geometry.location
             <input onclick="showMarkers();" type=button value="Show All Markers">
             <input onclick="deleteMarkers();" type=button value="Delete Markers">
         </div>
+        <!onmouseover function call>
         <div id="searchpanel" data-city="<%=@city%>" data-ran="<%=@lat_range%>" style="overflow-y: auto;height: 600px;">
             <ul>
                 Surrogate cities for
-               <p id="city"> <%=@city %> </p>
-               <p id="ran"> <%=@lat_range %></p>
-                    :
-                    <p> <%=@results.length%></p>
+               <p id="city"> <%=@city %> </p> 
+               Latitude range <p id="ran"> <%=@lat_range %></p>
+                    
+                    Total cities <p id="length"> <%=@results.length%></p>:
                     <% @results.each do |c| %>
                         <li>
                           <a href="#" onmouseover="gc(this);">
@@ -221,8 +205,7 @@ position: results[0].geometry.location
         </div>
         <div id="display">
         </div>
-        <!--div id="loc" style="position : absolute; left : 970px; width: 250px;
-        top : 170px; border : 2px solid;"></div-->
+        
     </body>
 
 </html>
