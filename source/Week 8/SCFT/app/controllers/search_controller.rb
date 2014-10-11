@@ -1,12 +1,16 @@
 class SearchController < ApplicationController
+	
+$ilatitude_range= 0
+$ielevation_range= 0
+$iradius_range= 0
   
   def getsearchdata
 
 
 	@icityname= params[:city]
-	@ilatitude_range= params[:latitude_range]
-	@ielevation_range= params[:elevation_range]
-	@iradius_range= params[:radius_range]
+	$ilatitude_range= params[:latitude_range]
+	$ielevation_range= params[:elevation_range]
+	$iradius_range= params[:radius_range]
   
 
 	@mycity = Location.find_by(City: @icityname)
@@ -36,10 +40,12 @@ class SearchController < ApplicationController
   	@longitude_mycity = params[:longitude_mycity]
   	#@elevation_mycity = params[:elevation_mycity]
 
-	render :text => @longitude_mycity	
+	#render :text => @longitude_mycity	
   	#set range
-  	#@latitude_Range_Start = @latitude_mycity - @ilatitude_range.to_f
-	#@latitude_Range_End = @latitude_mycity + @ilatitude_range.to_f
+  	@latitude_Range_Start = @latitude_mycity.to_f - $ilatitude_range.to_f
+	@latitude_Range_End = @latitude_mycity.to_f + $ilatitude_range.to_f
+
+	@results = Location.where('Latitude > ? AND Latitude < ?',@latitude_Range_Start,@latitude_Range_End)
 
 	#@elevation_Range_Start = @elevation_mycity - @ielevation_range.to_f
 	#@elevation_Range_End = @elevation_mycity + @ielevation_range.to_f

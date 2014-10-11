@@ -74,7 +74,7 @@
                         var lat = a.lat();
                         var lon = a.lng();
 			document.getElementById("searchpanel").innerHTML = "Latitude: " + lat + "<br> Longitude: " + lon+ "<br>";
-			document.getElementById("myHiddenForm").innerHTML = "<form accept-charset='UTF-8' action='/search/findSurrogateCity' method='get'><div style='margin:0;padding:0;display:inline'><input name='utf8' type='hidden' value='&#x2713;'/><input name='latitude_mycity' type='hidden' value="+ lat + " /><input name='longitude_mycity' type=hidden value="+ lon + " /></div> <input name='test' type='submit' value='Search' /></form>";
+			document.getElementById("myHiddenForm").innerHTML = "<form accept-charset='UTF-8' action='/search/findSurrogateCity' method='get'><div style='margin:0;padding:0;display:inline'><input name='utf8' type='hidden' value='&#x2713;'/><input name='latitude_mycity' type='hidden' value="+ lat + " /><input name='longitude_mycity' type=hidden value="+ lon + " /></div> <input name='test' id='searchbutton' type='submit' value='Search' /></form>";
             		elevator = new google.maps.ElevationService();
 
                     });

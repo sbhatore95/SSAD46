@@ -29,10 +29,12 @@ function initialize() {
 
   // Adds a marker at the center of the map.
   //addMarker(haightAshbury);
+  codeAddress();
 }
 function codeAddress() {
-  var address = document.getElementById('city').value;
-  geocoder.geocode( { 'address': <%= @icityname %> }, function(results, status)
+	var address = document.getElementById('searchpanel').getElementsByTagName("li");
+	for (var i=0;i<10;i++){
+  geocoder.geocode( { 'address': address[i].innerHTML }, function(results, status)
    {
     if (status == google.maps.GeocoderStatus.OK)
      {
@@ -46,13 +48,13 @@ function codeAddress() {
     } 
     
     else {
-      alert('Geocode was not successful for the following reason: ' + status);
+      console.log('Geocode was not successful for the following reason: ' + status);
     }
     var a=results[0].geometry.location;
     var lat=a.lat();
     var lon=a.lng();
-    document.getElementById("loc").innerHTML="Lat : " +lat +"<br>"+ "Lon : " + lon;
   });
+	}
 }
 // Add a marker to the map and push to the array.
 function addMarker(location) {
@@ -97,6 +99,9 @@ google.maps.event.addDomListener(window, 'load', initialize);
       <input onclick="deleteMarkers();" type=button value="Delete Markers">
     </div>
     <div id="searchpanel">
+	    <% @results.each do |c| %>
+		    <li><%= c.City %> </li>
+	    <% end%>
   
     </div>
     <div id="map-canvas"></div>
