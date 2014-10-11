@@ -80,7 +80,9 @@ position: results[0].geometry.location
             // Set the new marker
             marker = new google.maps.Marker({
               position: results[0].geometry.location,
-              map: map
+              map: map,
+              animation:google.maps.Animation.BOUNCE
+              
             });
 
             // Center the map on the geocoded result
@@ -145,7 +147,7 @@ position: results[0].geometry.location
             <input onclick="showMarkers();" type=button value="Show All Markers">
             <input onclick="deleteMarkers();" type=button value="Delete Markers">
         </div>
-        <div id="searchpanel">
+        <div id="searchpanel" style="overflow-y: auto;height: 600px;">
             <ul>
                 Surrogate cities for
                 <%=@city %>
