@@ -34,6 +34,7 @@ var markers = [];
         // Adds a marker at the center of the map.
         //addMarker(haightAshbury);
         codeAddress();
+        lat_belt();
     }
     var marker;
     var parliament;
@@ -91,6 +92,59 @@ position: results[0].geometry.location
        });
      }
 
+     //make latitude belt
+
+
+     function lat_belt() {
+                    var address =  document.getElementById('city').innerHTML;
+                    console.log(address); 
+                    var ran = parseFloat(document.getElementById('ran').innerHTML);
+                    console.log(ran);
+                    geocoder.geocode({
+                        'address': address
+                    }, function(results, status) {
+                        if (status == google.maps.GeocoderStatus.OK) {
+                            map.setCenter(results[0].geometry.location);
+                            addMarker(results[0].geometry.location);
+                            var a = results[0].geometry.location;
+                            var lat = a.lat();
+                            console.log(lat)
+                            var lon = a.lng();
+
+                            
+                            var l_up=new google.maps.LatLng(lat+ran,-177);
+                            var m_up=new google.maps.LatLng(lat+ran,0);
+                            var r_up=new google.maps.LatLng(lat+ran,+177);
+                            var l_down=new google.maps.LatLng(lat-ran,+177);
+                            var m_down=new google.maps.LatLng(lat-ran,0);
+                            var r_down=new google.maps.LatLng(lat-ran,-177);
+
+                            var myTrip = [l_up, m_up, r_up, l_down, m_down, r_down];
+
+                            console.log(l_up)
+                            
+                            var flightPath=new google.maps.Polygon({
+                              path:myTrip,
+                              strokeColor:"#0000FF",
+                              strokeOpacity:0.8,
+                              strokeWeight:2,
+                              fillColor:"#0000FF",
+                              fillOpacity:0.4
+                              });
+
+                            flightPath.setMap(map);
+                            /* var marker = new google.maps.Marker(
+         {'
+         map: map,
+         position: results[0].geometry.location
+      });*/
+                        } else {
+                            alert('Geocode was not successful for the following reason: ' + status);
+                        }
+                        
+                });
+        }
+
     // Add a marker to the map and push to the array.
 
 
@@ -147,10 +201,11 @@ position: results[0].geometry.location
             <input onclick="showMarkers();" type=button value="Show All Markers">
             <input onclick="deleteMarkers();" type=button value="Delete Markers">
         </div>
-        <div id="searchpanel" style="overflow-y: auto;height: 600px;">
+        <div id="searchpanel" data-city="<%=@city%>" data-ran="<%=@lat_range%>" style="overflow-y: auto;height: 600px;">
             <ul>
                 Surrogate cities for
-                <%=@city %>
+               <p id="city"> <%=@city %> </p>
+               <p id="ran"> <%=@lat_range %></p>
                     :
                     <p> <%=@results.length%></p>
                     <% @results.each do |c| %>

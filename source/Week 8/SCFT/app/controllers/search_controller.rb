@@ -39,9 +39,10 @@ $icityname = " "
   	@latitude_mycity = params[:latitude_mycity]
   	@longitude_mycity = params[:longitude_mycity]
 	@city = $icityname
+	@lat_range = $ilatitude_range
   	#@elevation_mycity = params[:elevation_mycity]
 
-	#render :text => @longitude_mycity	
+	#render :text => @lat_range	
   	#set range
   	@latitude_Range_Start = @latitude_mycity.to_f - $ilatitude_range.to_f
 	@latitude_Range_End = @latitude_mycity.to_f + $ilatitude_range.to_f
