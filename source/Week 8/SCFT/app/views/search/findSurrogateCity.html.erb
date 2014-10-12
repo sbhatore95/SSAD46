@@ -51,7 +51,12 @@ var markers = [];
                 if (status == google.maps.GeocoderStatus.OK) {
                     map.setCenter(results[0].geometry.location);
                     addMarker(results[0].geometry.location);
-                    flag=1;
+                    var marker=new google.maps.Marker({
+                              position:results[0].geometry.location,
+                    });
+                    marker.setMap(map);
+                    
+
 
                 } else {
                     console.log('Geocode was not successful for the following reason: ' + status);
@@ -132,7 +137,7 @@ var markers = [];
                 });
         }
 
-    //Radius range implementation
+    //Radius range implementation and infowindow showing entered city.
 
     function draw_radius(){
         var address = document.getElementById('city').innerHTML;
@@ -145,7 +150,21 @@ var markers = [];
                     }, function(results, status) {
                         if (status == google.maps.GeocoderStatus.OK) {
                             map.setCenter(results[0].geometry.location);
-                            addMarker(results[0].geometry.location);
+
+                            var marker=new google.maps.Marker({
+                              position:results[0].geometry.location,
+                              });
+
+                            marker.setMap(map);
+
+                            var infowindow = new google.maps.InfoWindow({
+                              content:address
+                              });
+
+                            infowindow.open(map,marker);
+
+                            zoom_on_click(marker,address);                     
+                            
                             var a = results[0].geometry.location;
                             var lat = a.lat();
                             
@@ -175,6 +194,17 @@ var markers = [];
                         }
                         
                 });        
+    }
+
+    function zoom_on_click(marker,address){
+        google.maps.event.addListener(marker,'click',function() {
+            map.setZoom(9);
+            map.setCenter(marker.getPosition());
+            var infowindow = new google.maps.InfoWindow({
+                content:address
+            });
+            infowindow.open(map,marker);
+        });
     }
 
     // Add a marker to the map and push to the array.
@@ -226,20 +256,20 @@ var markers = [];
     </head>
     
     <body>
-        <div id="panel">
+    <!--    <div id="panel">
             <input onclick="clearMarkers();" type=button value="Hide Markers">
             <input onclick="showMarkers();" type=button value="Show All Markers">
             <input onclick="deleteMarkers();" type=button value="Delete Markers">
-        </div>
+        </div>-->
         <!onmouseover function call>
         <div id="searchpanel" data-city="<%=@city%>" data-ran="<%=@lat_range%>" style="overflow-y: auto;height: 600px;">
             <ul>
                 Surrogate cities for
-               <p id="city"> <%=@city %> </p> 
-               Latitude range <p id="ran"> <%=@lat_range %></p>
-               Radius range(in Km) <p id="radius"> <%=@rad_range%></p>
+               <p id="city" style="color:black;"> <%=@city %> </p> 
+               Latitude range <p id="ran" style="color:black;"> <%=@lat_range %></p>
+               Radius range(in Km) <p id="radius" style="color:black;"> <%=@rad_range%></p>
                     
-                    Total cities <p id="length"> <%=@results.length%></p>:
+                    Total cities <p id="length" style="color:black;"> <%=@results.length%></p>:
                     <% @results.each do |c| %>
                         <li>
                           <a href="#" onmouseover="gc(this);">

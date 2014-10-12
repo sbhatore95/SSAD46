@@ -1,4 +1,17 @@
+<head>
+<style>
+h1 {
+  color: white;
+}
 
+p{
+  color: white;
+}
+#flash_notice {
+  font-color: white;
+}
+</style>
+</head>
 
 <h1>Sign Up</h1>
 
@@ -19,11 +32,11 @@
   </p>
   <p>
     <%= f.label :password %><br />
-    <%= f.password_field :password %>
+    <%= f.password_field :password, :placeholder=>"Minimum 8 characters" %>
   </p>
   <p>
     <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation %>
+    <%= f.password_field :password_confirmation, :placeholder=>"Minimum 8 characters" %>
   </p>
   <p class="button"><%= f.submit %></p>
 <% end %>
