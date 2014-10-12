@@ -5,7 +5,7 @@
         <title>
             Geocoding service
         </title>
-         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+          <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 
         <%=stylesheet_link_tag "welcome.css" %>
             <script>
@@ -30,6 +30,7 @@ var markers = [];
 
         codeAddress();
         lat_belt();
+        draw_radius();
     }
     var marker;
     var parliament;
@@ -39,9 +40,10 @@ var markers = [];
 
     function codeAddress() {
         var address = document.getElementById('searchpanel').getElementsByTagName("a");
-        var len = document.getElementById('length');//Number of cities
+        var len = document.getElementById('length').innerHTML;//Number of cities
+        console.log(len);
 
-        for (i = 0; i < 10; i++) {//only 10 cities could be marked now
+        for (i = 0; i < 9; i++) {//only 10 cities could be marked now
 
             geocoder.geocode({
                 'address': address[i].innerHTML
@@ -97,7 +99,7 @@ var markers = [];
                             addMarker(results[0].geometry.location);
                             var a = results[0].geometry.location;
                             var lat = a.lat();
-                            console.log(lat)
+                            
                             var lon = a.lng();
 
                             
@@ -110,7 +112,7 @@ var markers = [];
 
                             var myTrip = [l_up, m_up, r_up, l_down, m_down, r_down];
 
-                            console.log(l_up)
+                            
                             
                             var flightPath=new google.maps.Polygon({
                               path:myTrip,
@@ -124,11 +126,56 @@ var markers = [];
                             flightPath.setMap(map);
                             
                         } else {
-                            alert('Geocode was not successful for the following reason: ' + status);
+                            console.log('Geocode was not successful for the following reason: ' + status);
                         }
                         
                 });
         }
+
+    //Radius range implementation
+
+    function draw_radius(){
+        var address = document.getElementById('city').innerHTML;
+        var rad = parseFloat(document.getElementById('radius').innerHTML);
+        rad = rad*1000;
+        console.log(rad);
+        console.log(address);
+        geocoder.geocode({
+                        'address': address
+                    }, function(results, status) {
+                        if (status == google.maps.GeocoderStatus.OK) {
+                            map.setCenter(results[0].geometry.location);
+                            addMarker(results[0].geometry.location);
+                            var a = results[0].geometry.location;
+                            var lat = a.lat();
+                            
+                            var lon = a.lng();
+
+                            
+                            var city=new google.maps.LatLng(lat,lon);
+
+                            var myCity = new google.maps.Circle({
+                              center:city,
+                              radius:rad,
+                              strokeColor:"#0000FF",
+                              strokeOpacity:0.8,
+                              strokeWeight:2,
+                              fillColor:"#0000FF",
+                              fillOpacity:0.4
+                              });
+
+                            //console.log(myCity);
+
+                            myCity.setMap(map);
+                            
+                            
+                        }
+                        else {
+                            console.log('Geocode was not successful for the following reason: ' + status);
+                        }
+                        
+                });        
+    }
 
     // Add a marker to the map and push to the array.
     function addMarker(location) {
@@ -190,6 +237,7 @@ var markers = [];
                 Surrogate cities for
                <p id="city"> <%=@city %> </p> 
                Latitude range <p id="ran"> <%=@lat_range %></p>
+               Radius range(in Km) <p id="radius"> <%=@rad_range%></p>
                     
                     Total cities <p id="length"> <%=@results.length%></p>:
                     <% @results.each do |c| %>
