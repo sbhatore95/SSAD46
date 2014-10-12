@@ -1,0 +1,17 @@
+SSAD Meet-8
+
+Date 12-10-14
+
+Meeting with Aviruch Sir
+
+We discussed mainly about the requirements that we would cover for R1. It was
+decided to do parameter based searching based on latitude, altitude, radius{optional}.
+
+The presentation to be presented on R1 was discussed. The UI templates were mutually agreed.
+We also discussed about further requirements of the client, to be implemented after R1, such as
+surrogate city search based on yearly rainfall and temperture analysis. 
+TO DO :
+1. Update srs and diagrams, status tracker.
+2. UI
+3. Presentation
+4. Test cases
