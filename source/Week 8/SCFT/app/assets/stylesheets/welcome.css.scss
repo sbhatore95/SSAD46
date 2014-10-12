@@ -1,11 +1,15 @@
-html, body, #map-canvas {
-        position:relative;
+html
+{
+height: 100%;
+}
+#map-canvas {
+        position:absolute;
         height: 100%;
-        margin-top: 3%;
-        margin-left: 0%;
-        margin-bottom: 190px;
-        margin-right: 112px;
-        padding: 0px 
+        margin-top: 5%;
+        //margin-left: 0%;
+        //margin-bottom: 190px;
+        //margin-right: 112px;
+        padding: 1px; 
       }   
       #panel {
         position: absolute;
@@ -21,17 +25,19 @@ html, body, #map-canvas {
         position: absolute;
         top: 11%;
         left:50%;
-        margin-left: 30%;
-        width:320px;
+        margin-left: 20%;
+	margin-right: 0%;
+        display:inline-block;
         background-color: #fff;
-        padding: 5px;
+        padding: 15px;
         border: 1px solid #999;
       }   
       #searchbutton {
-	      position: absolute;
+	      position: relative;
 	      left: 50%;
 	      top: 20%;
 	      margin-left: 30%;
+		align: left;
 
       }
 h1{
@@ -45,7 +51,7 @@ top: 0px;
 li{
 list-style:none;
 }
-.Button{ 
+/*.Button{ 
               -webkit-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
               -moz-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;  
               box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;  
@@ -62,4 +68,4 @@ list-style:none;
               font-size:14px;
               text-shadow:#b2e2f5 0 1px 0;
         padding:5px }
-
+*/
