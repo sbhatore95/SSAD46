@@ -31460,3 +31460,1137 @@ Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 00:47:4
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 00:47:43 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-13 00:59:07 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 48ms (Views: 39.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 00:59:07 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 00:59:07 +0530
+
+
+Started GET "/assets/scft.jpg" for 127.0.0.1 at 2014-10-13 00:59:07 +0530
+
+
+Started GET "/log_in" for 127.0.0.1 at 2014-10-13 00:59:10 +0530
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 17ms (Views: 16.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 00:59:10 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 00:59:10 +0530
+
+
+Started POST "/sessions" for 127.0.0.1 at 2014-10-13 00:59:11 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hKnEuSFTexdg5jbT0ZD5bG4DVvrWkjfeYU4Ll5aMxL4=", "email"=>"ayutrip@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'ayutrip@gmail.com' LIMIT 1
+Redirected to http://127.0.0.1:3000/index
+Completed 302 Found in 76ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2014-10-13 00:59:11 +0530
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered welcome/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 35ms (Views: 33.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 00:59:11 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 00:59:11 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-13 00:59:11 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=delhi&latitude_range=10&elevation_range=100&radius_range=300&commit=Search" for 127.0.0.1 at 2014-10-13 00:59:26 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"delhi", "latitude_range"=>"10", "elevation_range"=>"100", "radius_range"=>"300", "commit"=>"Search"}
+  [1m[35mLocation Load (0.7ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."City" = 'delhi' LIMIT 1
+Redirected to http://127.0.0.1:3000/search/weather?city=delhi&elevation_range=100&latitude_range=10&radius=300
+Completed 302 Found in 4ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/search/weather?city=delhi&elevation_range=100&latitude_range=10&radius=300" for 127.0.0.1 at 2014-10-13 00:59:26 +0530
+Processing by SearchController#weather as HTML
+  Parameters: {"city"=>"delhi", "elevation_range"=>"100", "latitude_range"=>"10", "radius"=>"300"}
+  Rendered search/weather.html.erb within layouts/application (9.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 00:59:26 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 00:59:26 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-13 00:59:26 +0530
+
+
+Started GET "/search/findSurrogateCity?utf8=%E2%9C%93&latitude_mycity=28.635308&longitude_mycity=77.22496000000001&elevation_mycity=213.9990539550781&test=Search" for 127.0.0.1 at 2014-10-13 00:59:28 +0530
+Processing by SearchController#findSurrogateCity as HTML
+  Parameters: {"utf8"=>"✓", "latitude_mycity"=>"28.635308", "longitude_mycity"=>"77.22496000000001", "elevation_mycity"=>"213.9990539550781", "test"=>"Search"}
+  [1m[35mLocation Load (1.7ms)[0m  SELECT "locations".* FROM "locations"  WHERE (Latitude > 18.635308 AND Latitude < 38.635307999999995 AND Elevation > 113.9990539550781 AND Elevation < 313.9990539550781)
+  Rendered search/findSurrogateCity.html.erb within layouts/application (22.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 36ms (Views: 33.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 00:59:28 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-13 00:59:28 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 00:59:28 +0530
+
+
+Started GET "/log_out" for 127.0.0.1 at 2014-10-13 01:03:10 +0530
+Processing by SessionsController#destroy as HTML
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-13 01:03:10 +0530
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:03:10 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:03:10 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-13 01:03:19 +0530
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:03:19 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:03:19 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-13 01:03:49 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 48ms (Views: 38.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:03:49 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:03:49 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-13 01:05:57 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 49ms (Views: 39.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:05:57 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:05:57 +0530
+
+
+Started GET "/log_in" for 127.0.0.1 at 2014-10-13 01:06:00 +0530
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:06:00 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:06:00 +0530
+
+
+Started POST "/sessions" for 127.0.0.1 at 2014-10-13 01:06:02 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hKnEuSFTexdg5jbT0ZD5bG4DVvrWkjfeYU4Ll5aMxL4=", "email"=>"ayutrip@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'ayutrip@gmail.com' LIMIT 1
+Redirected to http://127.0.0.1:3000/index
+Completed 302 Found in 80ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2014-10-13 01:06:02 +0530
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered welcome/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-13 01:06:02 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:06:02 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:06:02 +0530
+
+
+Started GET "/log_out" for 127.0.0.1 at 2014-10-13 01:06:50 +0530
+Processing by SessionsController#destroy as HTML
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-13 01:06:50 +0530
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:06:50 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:06:50 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-13 01:13:47 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 48ms (Views: 39.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:13:47 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:13:47 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-13 01:13:51 +0530
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 23ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:13:51 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:13:51 +0530
+
+
+Started GET "/log_out" for 127.0.0.1 at 2014-10-13 01:16:41 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#destroy as HTML
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-13 01:16:41 +0530
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 48ms (Views: 41.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:16:42 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:16:42 +0530
+
+
+Started GET "/assets/scft.jpg" for 127.0.0.1 at 2014-10-13 01:16:42 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-13 01:16:47 +0530
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 21ms (Views: 20.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:16:47 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:16:47 +0530
+
+
+Started GET "/assets/scft.jpg" for 127.0.0.1 at 2014-10-13 01:16:47 +0530
+
+
+Started GET "/log_in" for 127.0.0.1 at 2014-10-13 01:18:39 +0530
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:18:39 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:18:39 +0530
+
+
+Started GET "/assets/scft.jpg" for 127.0.0.1 at 2014-10-13 01:18:39 +0530
+
+
+Started GET "/log_in" for 127.0.0.1 at 2014-10-13 01:20:45 +0530
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 18ms (Views: 17.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:20:45 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:20:45 +0530
+
+
+Started GET "/assets/scft.jpg" for 127.0.0.1 at 2014-10-13 01:20:45 +0530
+
+
+Started GET "/log_in" for 127.0.0.1 at 2014-10-13 01:21:23 +0530
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 13ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:21:23 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:21:23 +0530
+
+
+Started GET "/assets/scft.jpg" for 127.0.0.1 at 2014-10-13 01:21:23 +0530
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2014-10-13 01:21:26 +0530
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:21:27 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:21:27 +0530
+
+
+Started GET "/log_in" for 127.0.0.1 at 2014-10-13 01:22:12 +0530
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 16ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:22:12 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:22:12 +0530
+
+
+Started POST "/sessions" for 127.0.0.1 at 2014-10-13 01:23:35 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hKnEuSFTexdg5jbT0ZD5bG4DVvrWkjfeYU4Ll5aMxL4=", "email"=>"ayutrip@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'ayutrip@gmail.com' LIMIT 1
+Redirected to http://127.0.0.1:3000/index
+Completed 302 Found in 72ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2014-10-13 01:23:35 +0530
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered welcome/index.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:23:35 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:23:35 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-13 01:23:35 +0530
+
+
+Started GET "/search?utf8=%E2%9C%93&city=allahabad&latitude_range=10&elevation_range=100&radius_range=200&commit=Search" for 127.0.0.1 at 2014-10-13 01:23:50 +0530
+Processing by SearchController#getsearchdata as HTML
+  Parameters: {"utf8"=>"✓", "city"=>"allahabad", "latitude_range"=>"10", "elevation_range"=>"100", "radius_range"=>"200", "commit"=>"Search"}
+  [1m[35mLocation Load (0.7ms)[0m  SELECT  "locations".* FROM "locations"  WHERE "locations"."City" = 'allahabad' LIMIT 1
+Redirected to http://127.0.0.1:3000/search/weather?city=allahabad&elevation_range=100&latitude_range=10&radius=200
+Completed 302 Found in 3ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/search/weather?city=allahabad&elevation_range=100&latitude_range=10&radius=200" for 127.0.0.1 at 2014-10-13 01:23:50 +0530
+Processing by SearchController#weather as HTML
+  Parameters: {"city"=>"allahabad", "elevation_range"=>"100", "latitude_range"=>"10", "radius"=>"200"}
+  Rendered search/weather.html.erb within layouts/application (9.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:23:50 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-13 01:23:50 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:23:50 +0530
+
+
+Started GET "/search/findSurrogateCity?utf8=%E2%9C%93&latitude_mycity=25.4358011&longitude_mycity=81.84631100000001&elevation_mycity=94.8133316040039&test=Search" for 127.0.0.1 at 2014-10-13 01:23:52 +0530
+Processing by SearchController#findSurrogateCity as HTML
+  Parameters: {"utf8"=>"✓", "latitude_mycity"=>"25.4358011", "longitude_mycity"=>"81.84631100000001", "elevation_mycity"=>"94.8133316040039", "test"=>"Search"}
+  [1m[35mLocation Load (6.3ms)[0m  SELECT "locations".* FROM "locations"  WHERE (Latitude > 15.435801099999999 AND Latitude < 35.4358011 AND Elevation > -5.186668395996094 AND Elevation < 194.8133316040039)
+  Rendered search/findSurrogateCity.html.erb within layouts/application (30.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 42ms (Views: 35.0ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:23:52 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:23:52 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-13 01:23:52 +0530
+
+
+Started GET "/log_out" for 127.0.0.1 at 2014-10-13 01:29:30 +0530
+Processing by SessionsController#destroy as HTML
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-13 01:29:30 +0530
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 23ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:29:30 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:29:30 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-13 01:30:47 +0530
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:30:47 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:30:47 +0530
+
+
+Started GET "/assets/scft.jpg" for 127.0.0.1 at 2014-10-13 01:30:47 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-13 01:30:49 +0530
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 16ms (Views: 15.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:30:49 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:30:49 +0530
+
+
+Started GET "/assets/scft.jpg" for 127.0.0.1 at 2014-10-13 01:30:49 +0530
+
+
+Started POST "/users" for 127.0.0.1 at 2014-10-13 01:30:56 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hKnEuSFTexdg5jbT0ZD5bG4DVvrWkjfeYU4Ll5aMxL4=", "user"=>{"email"=>"ayutrip@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'ayutrip@gmail.com' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered users/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 20ms (Views: 11.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:30:56 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:30:56 +0530
+
+
+Started GET "/assets/scft.jpg" for 127.0.0.1 at 2014-10-13 01:30:56 +0530
+
+
+Started POST "/users" for 127.0.0.1 at 2014-10-13 01:31:08 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hKnEuSFTexdg5jbT0ZD5bG4DVvrWkjfeYU4Ll5aMxL4=", "user"=>{"email"=>"ayutrip@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'ayutrip@gmail.com' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  Rendered users/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 19ms (Views: 16.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:31:08 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:31:08 +0530
+
+
+Started GET "/assets/scft.jpg" for 127.0.0.1 at 2014-10-13 01:31:08 +0530
+
+
+Started POST "/users" for 127.0.0.1 at 2014-10-13 01:31:11 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hKnEuSFTexdg5jbT0ZD5bG4DVvrWkjfeYU4Ll5aMxL4=", "user"=>{"email"=>"ayutrip@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'ayutrip@gmail.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  Rendered users/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 21ms (Views: 17.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:31:12 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:31:12 +0530
+
+
+Started GET "/assets/scft.jpg" for 127.0.0.1 at 2014-10-13 01:31:12 +0530
+
+
+Started POST "/users" for 127.0.0.1 at 2014-10-13 01:31:13 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hKnEuSFTexdg5jbT0ZD5bG4DVvrWkjfeYU4Ll5aMxL4=", "user"=>{"email"=>"ayutrip@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'ayutrip@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered users/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 26ms (Views: 22.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:31:13 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:31:13 +0530
+
+
+Started POST "/users" for 127.0.0.1 at 2014-10-13 01:31:14 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hKnEuSFTexdg5jbT0ZD5bG4DVvrWkjfeYU4Ll5aMxL4=", "user"=>{"email"=>"ayutrip@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'ayutrip@gmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered users/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 19ms (Views: 12.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:31:14 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:31:14 +0530
+
+
+Started POST "/users" for 127.0.0.1 at 2014-10-13 01:31:14 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hKnEuSFTexdg5jbT0ZD5bG4DVvrWkjfeYU4Ll5aMxL4=", "user"=>{"email"=>"ayutrip@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'ayutrip@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered users/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 15ms (Views: 11.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:31:14 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:31:14 +0530
+
+
+Started POST "/users" for 127.0.0.1 at 2014-10-13 01:31:14 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hKnEuSFTexdg5jbT0ZD5bG4DVvrWkjfeYU4Ll5aMxL4=", "user"=>{"email"=>"ayutrip@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'ayutrip@gmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered users/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 18ms (Views: 13.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:31:14 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:31:14 +0530
+
+
+Started POST "/users" for 127.0.0.1 at 2014-10-13 01:31:15 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hKnEuSFTexdg5jbT0ZD5bG4DVvrWkjfeYU4Ll5aMxL4=", "user"=>{"email"=>"ayutrip@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'ayutrip@gmail.com' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  Rendered users/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 25ms (Views: 21.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:31:15 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:31:15 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-13 01:31:29 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 50ms (Views: 40.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:31:29 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:31:29 +0530
+
+
+Started POST "/users" for 127.0.0.1 at 2014-10-13 01:31:32 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hKnEuSFTexdg5jbT0ZD5bG4DVvrWkjfeYU4Ll5aMxL4=", "user"=>{"email"=>"ayutrip@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'ayutrip@gmail.com' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered users/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 21ms (Views: 10.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:31:32 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:31:32 +0530
+
+
+Started POST "/users" for 127.0.0.1 at 2014-10-13 01:34:45 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hKnEuSFTexdg5jbT0ZD5bG4DVvrWkjfeYU4Ll5aMxL4=", "user"=>{"email"=>"ayutrip@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'ayutrip@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered users/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 27ms (Views: 23.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:34:45 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:34:45 +0530
+
+
+Started POST "/users" for 127.0.0.1 at 2014-10-13 01:35:14 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hKnEuSFTexdg5jbT0ZD5bG4DVvrWkjfeYU4Ll5aMxL4=", "user"=>{"email"=>"ayutrip@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'ayutrip@gmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered users/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 19ms (Views: 16.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:35:14 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:35:14 +0530
+
+
+Started POST "/users" for 127.0.0.1 at 2014-10-13 01:35:18 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hKnEuSFTexdg5jbT0ZD5bG4DVvrWkjfeYU4Ll5aMxL4=", "user"=>{"email"=>"ayutrip@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'ayutrip@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered users/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 19ms (Views: 15.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:35:18 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:35:18 +0530
+
+
+Started POST "/users" for 127.0.0.1 at 2014-10-13 01:35:24 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hKnEuSFTexdg5jbT0ZD5bG4DVvrWkjfeYU4Ll5aMxL4=", "user"=>{"email"=>"ayutrip@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'ayutrip@gmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered users/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 25ms (Views: 21.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:35:24 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:35:24 +0530
+
+
+Started POST "/users" for 127.0.0.1 at 2014-10-13 01:35:25 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hKnEuSFTexdg5jbT0ZD5bG4DVvrWkjfeYU4Ll5aMxL4=", "user"=>{"email"=>"ayutrip@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'ayutrip@gmail.com' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  Rendered users/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 14ms (Views: 11.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:35:25 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:35:25 +0530
+
+
+Started GET "/log_in" for 127.0.0.1 at 2014-10-13 01:35:31 +0530
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:35:31 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:35:31 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-13 01:35:43 +0530
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:35:43 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:35:43 +0530
+
+
+Started POST "/users" for 127.0.0.1 at 2014-10-13 01:35:48 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hKnEuSFTexdg5jbT0ZD5bG4DVvrWkjfeYU4Ll5aMxL4=", "user"=>{"email"=>"ayutrip@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'ayutrip@gmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered users/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 26ms (Views: 22.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:35:48 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:35:48 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-13 01:37:11 +0530
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 21ms (Views: 20.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:37:11 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:37:11 +0530
+
+
+Started GET "/log_in" for 127.0.0.1 at 2014-10-13 01:37:15 +0530
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:37:15 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:37:15 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-13 01:38:18 +0530
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 17ms (Views: 16.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:38:18 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:38:18 +0530
+
+
+Started POST "/users" for 127.0.0.1 at 2014-10-13 01:38:22 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hKnEuSFTexdg5jbT0ZD5bG4DVvrWkjfeYU4Ll5aMxL4=", "user"=>{"email"=>"ayutrip@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'ayutrip@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered users/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 23ms (Views: 18.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:38:22 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:38:22 +0530
+
+
+Started POST "/users" for 127.0.0.1 at 2014-10-13 01:38:27 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hKnEuSFTexdg5jbT0ZD5bG4DVvrWkjfeYU4Ll5aMxL4=", "user"=>{"email"=>"ayutrip@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'ayutrip@gmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered users/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 16ms (Views: 13.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:38:27 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:38:27 +0530
+
+
+Started POST "/users" for 127.0.0.1 at 2014-10-13 01:38:28 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hKnEuSFTexdg5jbT0ZD5bG4DVvrWkjfeYU4Ll5aMxL4=", "user"=>{"email"=>"ayutrip@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'ayutrip@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered users/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 18ms (Views: 14.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:38:28 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:38:28 +0530
+
+
+Started POST "/users" for 127.0.0.1 at 2014-10-13 01:38:28 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hKnEuSFTexdg5jbT0ZD5bG4DVvrWkjfeYU4Ll5aMxL4=", "user"=>{"email"=>"ayutrip@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'ayutrip@gmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered users/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 31ms (Views: 27.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:38:28 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:38:28 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-13 01:40:04 +0530
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:40:04 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:40:04 +0530
+
+
+Started GET "/log_in" for 127.0.0.1 at 2014-10-13 01:40:06 +0530
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:40:06 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:40:06 +0530
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2014-10-13 01:40:08 +0530
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:40:08 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:40:08 +0530
+
+
+Started GET "/log_in" for 127.0.0.1 at 2014-10-13 01:40:08 +0530
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 16ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:40:08 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:40:08 +0530
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2014-10-13 01:40:09 +0530
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:40:09 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:40:09 +0530
+
+
+Started GET "/log_in" for 127.0.0.1 at 2014-10-13 01:40:09 +0530
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:40:09 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:40:09 +0530
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2014-10-13 01:40:10 +0530
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:40:10 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:40:10 +0530
+
+
+Started GET "/log_in" for 127.0.0.1 at 2014-10-13 01:40:12 +0530
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:40:12 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:40:12 +0530
+
+
+Started POST "/sessions" for 127.0.0.1 at 2014-10-13 01:40:13 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hKnEuSFTexdg5jbT0ZD5bG4DVvrWkjfeYU4Ll5aMxL4=", "email"=>"ayutrip@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'ayutrip@gmail.com' LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/index
+Completed 302 Found in 75ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2014-10-13 01:40:13 +0530
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered welcome/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:40:13 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:40:13 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-13 01:40:13 +0530
+
+
+Started GET "/log_out" for 127.0.0.1 at 2014-10-13 01:40:19 +0530
+Processing by SessionsController#destroy as HTML
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-13 01:40:19 +0530
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:40:19 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:40:19 +0530
+
+
+Started GET "/log_in" for 127.0.0.1 at 2014-10-13 01:40:28 +0530
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 21ms (Views: 20.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:40:28 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:40:28 +0530
+
+
+Started GET "/log_out" for 127.0.0.1 at 2014-10-13 01:40:48 +0530
+Processing by SessionsController#destroy as HTML
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-13 01:40:48 +0530
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:40:48 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:40:48 +0530
+
+
+Started GET "/log_in" for 127.0.0.1 at 2014-10-13 01:40:50 +0530
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:40:50 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:40:50 +0530
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2014-10-13 01:40:54 +0530
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:40:54 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:40:54 +0530
+
+
+Started GET "/log_in" for 127.0.0.1 at 2014-10-13 01:40:59 +0530
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 15ms (Views: 14.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:40:59 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:40:59 +0530
+
+
+Started POST "/sessions" for 127.0.0.1 at 2014-10-13 01:41:00 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hKnEuSFTexdg5jbT0ZD5bG4DVvrWkjfeYU4Ll5aMxL4=", "email"=>"ayutrip@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'ayutrip@gmail.com' LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/index
+Completed 302 Found in 76ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2014-10-13 01:41:00 +0530
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered welcome/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:41:00 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-13 01:41:00 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:41:00 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-13 01:41:27 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (20.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+Completed 200 OK in 51ms (Views: 41.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:41:28 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:41:28 +0530
+
+
+Started GET "/log_in" for 127.0.0.1 at 2014-10-13 01:41:30 +0530
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:41:30 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:41:30 +0530
+
+
+Started POST "/sessions" for 127.0.0.1 at 2014-10-13 01:41:31 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hKnEuSFTexdg5jbT0ZD5bG4DVvrWkjfeYU4Ll5aMxL4=", "email"=>"ayutrip@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'ayutrip@gmail.com' LIMIT 1
+Redirected to http://127.0.0.1:3000/index
+Completed 302 Found in 79ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2014-10-13 01:41:31 +0530
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered welcome/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:41:31 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:41:31 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-13 01:41:31 +0530
+
+
+Started GET "/log_out" for 127.0.0.1 at 2014-10-13 01:41:33 +0530
+Processing by SessionsController#destroy as HTML
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-13 01:41:33 +0530
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-13 01:41:33 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-13 01:41:33 +0530
