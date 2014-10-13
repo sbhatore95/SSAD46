@@ -161,13 +161,13 @@ border-radius: 10px;
     <!---<input id="address" type="textbox" placeholder="Search">
     <input type="button" value="Geocode" class="Button" onclick="codeAddress()">-->
     <%= form_tag("/search", method: "get", remote: true) do %>
-      <%= label_tag(:city, "City:") %><br>
+      <%= label_tag(:city, "City*") %><br>
       <%= text_field_tag(:city) %><br>
       
-      <%= label_tag(:latitude_range, "Latitude Range(in degrees):") %><br>
+      <%= label_tag(:latitude_range, "Latitude Range*(in degrees)") %><br>
       <%= text_field_tag(:latitude_range ) %><br>
 
-      <%= label_tag(:elevation_range, "Elevation Range(in km):") %><br>
+      <%= label_tag(:elevation_range, "Elevation Range*(in km):") %><br>
       <%= text_field_tag(:elevation_range) %><br>
       
       <%= label_tag(:radius_range, "Radius Range(in km):") %><br>
