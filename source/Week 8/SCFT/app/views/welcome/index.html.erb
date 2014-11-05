@@ -69,9 +69,10 @@ p.pos_fixed{
 		  </div>
 	  </div>
   </nav>
+  <!--
   <div id="searchpanel">
-	  <!---<input id="address" type="textbox" placeholder="Search">
-    <input type="button" value="Geocode" class="Button" onclick="codeAddress()">-->
+	  <input id="address" type="textbox" placeholder="Search">
+    <input type="button" value="Geocode" class="Button" onclick="codeAddress()"> 
 	  <%= form_tag("/search", method: "get", remote: true) do %>
 		  <%= label_tag(:city, "City*") %><br>
 	  <%= text_field_tag(:city) %><br>
@@ -87,14 +88,18 @@ p.pos_fixed{
 
 	  <%= submit_tag("Search") %>
   <%end %> 
+  
+  </div> -->
+  <div id="display"style="width:1270px;height:550px;position:relative;margin-left:20px" >
+
+  <iframe frameborder=0 style='width:100%;height:100%;' src='//www.zeemaps.com/pub?group=1187692'> </iframe> 
+  <div style="position:absolute;width:100%;height:40px;top:500px;left:465px">
+  <input type="text" id="cityname" placeholder="Search a surrogate city" style="border-radius:5px;background-color:#707070;color:#FFFFFF;border:none;padding:5px;font-size:20px;" />
+
+  <a id ="wikilink" href="" style="display:none;border-radius:5px;height:30px" onclick="initialize()" >Search &raquo;</a></p>
   </div>
-  <div id="map-canvas" style="display:none"></div>
-  <div id="display">
 
-  </div>  
-  <!--div id="loc" style="position : absolute; left : 970px; width: 250px; top : 170px; border : 2px solid;"></div-->
-  <iframe frameborder=0 style='width:100%;height:550px;' src='//www.zeemaps.com/pub?group=1187692'> </iframe>
-
+ 
   </html>
 
 
