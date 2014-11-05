@@ -7,9 +7,14 @@ class SearchController < ApplicationController
 	def getsearchdata
 
 		$icityname= params[:city]
-		$ilatitude_range= params[:latitude_range]
-		$ielevation_range= params[:elevation_range]
-		$iradius_range= params[:radius_range]
+#		$ilatitude_range= params[:latitude_range]
+#		$ielevation_range= params[:elevation_range]
+#		$iradius_range= params[:radius_range]
+
+		$ilatitude_range= params[:lat]
+		$ielevation_range= params[:lng]
+		$iradius_range= params[:radrange]
+
 
 
 		@mycity = Location.find_by(City: $icityname)
@@ -17,8 +22,10 @@ class SearchController < ApplicationController
 		#If the city does not exists in database 
 		if @mycity == nil
 
-			redirect_to :action => 'weather' ,:city => params[:city] ,:latitude_range => params[:latitude_range], :elevation_range => params[:elevation_range] ,:radius => params[:radius_range]
-
+			#redirect_to :action => 'weather' ,:city => params[:city] ,:latitude_range => params[:latitude_range], :elevation_range => params[:elevation_range] ,:radius => params[:radius_range]
+			
+			redirect_to :action => 'weather' ,:city => params[:city] ,:latitude_range => params[:lat], :elevation_range => params[:altrange] ,:radius => params[:radrange]
+			
 
 			#If the city  exist in database 
 		else

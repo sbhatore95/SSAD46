@@ -1,8 +1,8 @@
-<!DOCTYPE html>
-<html>
-  <head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="EN" lang="EN" dir="ltr">
+<head profile="http://gmpg.org/xfn/11">
+
   <title>SCFT</title>
-  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
   <%= stylesheet_link_tag "welcome.css" %>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -42,6 +42,76 @@ p.pos_fixed{
 	margin-left: 23px;
 }
   </style>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script
+src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false">
+</script>
+<script src="a.js"></script>
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places" type="text/javascript"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places"></script>
+<script type="text/javascript" src="jquery-latest.js"></script>
+<script type="text/javascript" src="jquery.tablesorter.js"></script>
+
+<script>
+
+var placeSearch, autocomplete;
+var componentForm = {
+  street_number: 'short_name',
+  route: 'long_name',
+  locality: 'long_name',
+  administrative_area_level_1: 'short_name',
+  country: 'long_name',
+  postal_code: 'short_name'
+};
+var climatedata;
+function initialize() {
+          
+  autocomplete = new google.maps.places.Autocomplete(
+      (document.getElementById('cityname')),
+      { types: ['(cities)'] });
+  google.maps.event.addListener(autocomplete, 'place_changed', function() {
+        var place = autocomplete.getPlace();
+        var country;
+
+        var a = document.getElementById("wikilink"); //or grab it by tagname etc
+        a.href = "http://54.69.17.243/cityfinder/page2.html?text="+document.getElementById("cityname").value;
+        var state;
+        var city=place.address_components[0].long_name;
+        //alert(city);
+        try
+        {
+        
+                 country=place.address_components[3].long_name;
+                 state=place.address_components[2].long_name;
+        }
+        catch(err)
+        {
+                        
+                country=place.address_components[2].long_name;
+                state=place.address_components[1].long_name;
+        }
+
+var a=10;
+var b=100;
+var c=5;
+var d=5;
+var e=500;
+
+//localhost:3000//controller/create?mdate=
+
+
+window.open( "http://127.0.0.1:3000/search/weather?text="+document.getElementById("cityname").value +  "?city="+city+"?state="+state+"?country="+country+"?lat="+place.geometry.location.lat()+"?lng="+place.geometry.location.lng()+"?ltrange="+a+"?altrange="+b+"?maxtemp="+c+"?mintemp="+d+"?radrange="+e ,"_self");
+
+
+  });
+}
+
+
+google.maps.event.addDomListener(window, 'load', initialize);
+  </script>
+
+
+
   </head>
   <div id="user_nav">
 	  <% if current_user %>
