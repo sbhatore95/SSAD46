@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  City: MyString
+  State: MyString
+  Country: MyString
+  Data_Source: MyString
+  WMO_Number: 1
+  Latitude: 1.5
+  Longitude: 1.5
+  Time_Zone: 1.5
+  Elevation: 1.5
+
+two:
+  City: MyString
+  State: MyString
+  Country: MyString
+  Data_Source: MyString
+  WMO_Number: 1
+  Latitude: 1.5
+  Longitude: 1.5
+  Time_Zone: 1.5
+  Elevation: 1.5

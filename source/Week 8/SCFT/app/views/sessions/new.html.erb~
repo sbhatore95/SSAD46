@@ -1,0 +1,47 @@
+<head>
+<style>
+h1 {
+    color: white;
+}
+
+p{
+    color: white;
+}
+#para
+{
+	text-align:center;
+}
+#myform
+{
+
+    width: 250px;
+    padding: 10px;
+    border: 5px solid gray;
+    margin: 0;
+}
+</style>
+</head>
+<!--<a href="sign_up"><button>SignUp</button></a>-->
+ <!-- <a href="log_in"><button>LogIn</button></a>-->
+<div id="para">
+<h1>Surrogate City Finder Tool</h1>
+</div>
+<div id="myform">
+<h1>Log in</h1>
+
+<%= form_tag sessions_path do %>
+  <p>
+    <%= label_tag :email %><br />
+    <%= text_field_tag :email, params[:email] %>
+  </p>
+  <p>
+    <%= label_tag :password %><br />
+    <%= password_field_tag :password %>
+  </p>
+  <p class="button"><%= submit_tag "Log in" %></p>
+</div>
+
+<a href="sign_up"><button>SignUp</button></a>-->
+<% end %>
+
+

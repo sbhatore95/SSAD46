@@ -1,0 +1,16 @@
+SSAD Meet-7
+
+Date 29-09-14
+
+Meeting with Aviruch Sir
+
+We discussed mainly about the requirements that we would cover for R1. It was
+decided to do parameter based searching(latitude, altitude, radius) of the
+cities whose data is present with ranges of parameter given with respect to the
+city typed in the search bar. The cities would be searched in the database
+satisfying the parameters. Then they would be marked on the map.
+   R1 would cover the things mentioned above.
+   We also discussed about further requirements of the client(to be done after
+R1), which included searching the best city for the input city and compare
+them by plotting graphs of Temperature on a monthly basis.
+    

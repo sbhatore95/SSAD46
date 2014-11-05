@@ -1,0 +1,10 @@
+SSAD Meet-6
+
+Date - 22/09/14
+
+Meeting with team mentor and team mates
+
+Our team faced the problem of marking so many cities on the world map(around 15000).
+We expressed our concern to the mentor. We concluded that we must mark lesser cities
+ as it is not possible to mark so many cities using Google API.
+ 	We also discussed about the requirements somewhat and the SRS document.

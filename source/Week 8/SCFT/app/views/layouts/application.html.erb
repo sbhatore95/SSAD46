@@ -1,22 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Auth</title>
+  <title>SCFT</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <style>
+  body {
+    background-color: #12181A;
+    background-image: url('/assets/scft.jpg')
+  }
+  p {
+  font-size: 10; color: white;
+  }
+  p.pos_fixed{
+      text-align: right;
+      position: absolute;
+      
+  }
+  #flash_notice{
+    font-size: 10; color: white;
+  }
+  </style>
 </head>
 <body>
-<div id="user_nav">
+<!--<div id="user_nav">
   <% if current_user %>
-    Logged in as <%= current_user.email %>.
+    <p class="pos_fixed">Logged in as <%= current_user.email %>.
+    <a href="/log_out"><button>LogOut</button></a></p>
     <%= link_to "Log out", log_out_path %>
-  <% else %>
-    <%= link_to "Sign up", sign_up_path %> or
+  <% else %>-->
+  <!--a href="sign_up"><button>SignUp</button></a>
+  <a href="log_in"><button>LogIn</button></a-->
+<!--    <%= link_to "Sign up", sign_up_path %> 
     <%= link_to "log in", log_in_path %>
   <% end %>
-</div>
-
+</div-->
 <% flash.each do |name, msg| %>
   <%= content_tag :div, msg, :id => "flash_#{name}" %>
 <% end %>

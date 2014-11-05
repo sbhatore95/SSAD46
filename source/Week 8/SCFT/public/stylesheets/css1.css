@@ -1,18 +1,47 @@
-
 html, body, #map-canvas {
-height: 100%;
-margin: 0px;
-padding: 0px
-}
-#panel {
-position: absolute;
-top: 5px;
-left: 50%;
-      margin-left: -180px;
-      z-index: 5;
-      background-color: #fff;
-padding: 5px;
-border: 1px solid #999;
-}
-
+        position:relative;
+        height: 100%;
+        margin-top: 0%;
+        margin-left: 0%;
+        margin-bottom: 190px;
+        margin-right: 112px;
+        padding: 0px 
+      }   
+      #panel {
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        margin-left: -180px;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+      }   
+      #searchpanel {
+        position: relative;
+        top: 10%;
+        left:60%;
+        margin-left: 30%;
+        width:320px;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+      }   
+.Button{ 
+              -webkit-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+              -moz-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;  
+              box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;  
+              border-bottom-color:#333;
+              border:1px
+              solid #61c4ea;
+              background-color:#7cceee;
+              border-radius:5px;
+              -moz-border-radius:5px;
+              -webkit-border-radius:5px;
+              color:#333;
+              cursor:pointer;
+              font-family:'Verdana',Arial,sans-serif;
+              font-size:14px;
+              text-shadow:#b2e2f5 0 1px 0;
+        padding:5px }
 

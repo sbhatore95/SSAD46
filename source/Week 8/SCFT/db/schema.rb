@@ -11,7 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140917085312) do
+ActiveRecord::Schema.define(version: 20141008224238) do
+
+  create_table "locations", force: true do |t|
+    t.string   "City"
+    t.string   "State"
+    t.string   "Country"
+    t.string   "Data_Source"
+    t.integer  "WMO_Number"
+    t.float    "Latitude"
+    t.float    "Longitude"
+    t.float    "Time_Zone"
+    t.float    "Elevation"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email"

@@ -1,3 +1,71 @@
-// Place all the styles related to the welcome controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+html
+{
+height: 100%;
+}
+#map-canvas {
+        position:absolute;
+        height: 100%;
+        margin-top: 5%;
+        //margin-left: 0%;
+        //margin-bottom: 190px;
+        //margin-right: 112px;
+        padding: 1px; 
+      }   
+      #panel {
+        position: absolute;
+        top: 15%;
+        left: 0%;
+        margin-left: 17%;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+      }   
+      #searchpanel {
+        position: absolute;
+        top: 11%;
+        left:50%;
+        margin-left: 20%;
+	margin-right: 0%;
+        display:inline-block;
+        background-color: #fff;
+        padding: 15px;
+        border: 1px solid #999;
+      }   
+      #searchbutton {
+	      position: relative;
+	      left: 50%;
+	      top: 20%;
+	      margin-left: 30%;
+		align: left;
+
+      }
+h1{
+    color: white;
+    text-align: center;
+position: relative;
+top: 0px;
+
+     
+}
+li{
+list-style:none;
+}
+/*.Button{ 
+              -webkit-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+              -moz-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;  
+              box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;  
+              border-bottom-color:#333;
+              border:1px
+              solid #61c4ea;
+              background-color:#7cceee;
+              border-radius:5px;
+              -moz-border-radius:5px;
+              -webkit-border-radius:5px;
+              color:#333;
+              cursor:pointer;
+              font-family:'Verdana',Arial,sans-serif;
+              font-size:14px;
+              text-shadow:#b2e2f5 0 1px 0;
+        padding:5px }
+*/

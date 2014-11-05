@@ -1,8 +1,8 @@
-html, body{
+/*body{
 height: 100%;
 margin: 0px;
 padding: 0px 
-}
+}*/
 #panel {
 position: absolute;
 top: 5px;
@@ -14,8 +14,8 @@ border: 1px solid #999;
 }
 
 #map-canvas {
-height: 50em;
-width: 50em;
+height: 10em;
+width: 55em;
 padding: 5px 5px 5px 5px;
 top: 5px;
 bottom: 5px;

@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
-  get 'game/new'
-
+ 
+  get 'index' => 'welcome#index'
   get 'welcome/index'
-
+  get '/search' => 'search#getsearchdata' 
+  get '/welcome' => 'welcome#index'
+  get 'search/getsearchdata'
+  get '/search/findSurrogateCity' => 'search#findSurrogateCity' 
+  get 'search/weather'
+  get 'search/weather' => 'search#weather' , :via => 'post'
+  get '/search/exists' => 'search#exists'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -18,6 +24,10 @@ resources :users
 resources :sessions
 get 'sessions/new'
 get 'users/new'
+
+
+
+#resources :location 
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
