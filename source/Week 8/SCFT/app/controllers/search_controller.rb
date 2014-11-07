@@ -75,7 +75,7 @@ class SearchController < ApplicationController
 		@citycountry = @ecity.Country
 		@cityelev = @ecity.Elevation
 
-		#@citylink = ??
+		
 
 	end
 
