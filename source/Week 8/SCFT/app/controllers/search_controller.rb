@@ -11,9 +11,9 @@ class SearchController < ApplicationController
 #		$ielevation_range= params[:elevation_range]
 #		$iradius_range= params[:radius_range]
 
-		$ilatitude_range= params[:lat]
-		$ielevation_range= params[:lng]
-		$iradius_range= params[:radrange]
+		$ilatitude_range= params[:latitude_range]
+		$ielevation_range= params[:elevation_range]
+		$iradius_range= params[:radius_range]
 
 
 
@@ -31,7 +31,7 @@ class SearchController < ApplicationController
 		else
 			redirect_to :action => 'exists', :city => params[:city]
 
-		end
+		end 
 
 	end
 

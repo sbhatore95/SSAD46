@@ -155,6 +155,10 @@ button:hover{
  background-image: linear-gradient(to bottom, #cdcdcd, #b3b3b3);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#cdcdcd, endColorstr=#b3b3b3);
 }
 
+=require 'demo.css'
+=require 'jquery.mmenu.all.css'
+
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
