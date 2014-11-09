@@ -116,7 +116,8 @@ window.open( "http://127.0.0.1:3000/search/weather?text="+document.getElementByI
 */
 
 var url = "http://127.0.0.1:3000/search/weather?city=" + city + "?lat=" + place.geometry.location.lat() + "?lng=" + place.geometry.location.lng() + "?ltrange="+a+"?altrange="+b+"?maxtemp="+c+"?mintemp="+d+"?radrange="+e;
-window.open(url);
+//window.open(url);
+window.location.href=url;
 
  });
 }
