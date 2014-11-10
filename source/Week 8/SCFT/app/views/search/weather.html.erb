@@ -94,7 +94,8 @@
                 var mapOptions = {
                     zoom: 5,
                     center: centre,
-                    mapTypeId: google.maps.MapTypeId.TERRAIN
+		    mapTypeId: google.maps.MapTypeId.HYBRID
+	
                 };
                 map = new google.maps.Map(document.getElementById('map-canvas'),
                     mapOptions);
@@ -120,6 +121,7 @@
                         var lat = a.lat();
                         var lon = a.lng();
                         getElevation(lat, lon);
+                        console.log("got elevation");
 
                         document.getElementById("latit").innerHTML = lat;
                         document.getElementById("longit").innerHTML = lon;
