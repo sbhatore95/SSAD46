@@ -1,16 +1,21 @@
-<head>
-<style>
-
-
-
-</style>
-</head>
-<!--<a href="sign_up"><button>SignUp</button></a>-->	
-  <a href="log_in"><button>Login</button></a>
+<!DOCTYPE HTML>
+<html>
+<body>
 <div id="main">
 <h1>Surrogate City Finder Tool</h1>
 
-<div id="login">
+
+
+
+<div id="about" style="float:left">
+</div>
+<div id="about1" style="float:left">
+</div>
+<div id="about2" style="float:left">
+</div>
+
+
+<div id="login" style="float:left;position:absolute">
 <h2>Sign Up</h2>
 
 <%= form_for @user do |f| %>
@@ -37,12 +42,14 @@
     <%= f.password_field :password_confirmation, :placeholder=>"Minimum 8 characters" %>
   </p>
   <p class="button"><%= f.submit %></p>
+<a href="log_in">Login</a>
 </div>
 </div>
-
+  
 
  
 <% end %>
+</body>
+</html>
 
-
-
+	

@@ -9,8 +9,60 @@ CSS Settings For HTML Div ExactCenter
 ------------------------------------------------*/
 #main {
 width:960px;
-margin:50px auto;
+margin: 40px 40px 40px 40px;
 font-family:raleway
+}
+#about2{
+width: 200px;
+height: 200px;
+margin-top: 15px;
+border: 11px #132e49 outset;
+
+background-color: #ffffff;
+
+-webkit-border-radius: 100px;
+-moz-border-radius: 100px;
+border-radius: 100px;
+
+-moz-box-shadow: inset 0px 0px 14px 0px #000000;
+-webkit-box-shadow: inset 0px 0px 14px 0px #000000;
+box-shadow: inset 0px 0px 14px 0px #000000;
+
+
+}
+#about1
+{
+	width: 250px;
+	height: 250px;
+
+	border: 11px #132e49 outset;
+
+	background-color: #ffffff;
+
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	border-radius: 150px;
+
+	-moz-box-shadow: inset 0px 0px 14px 0px #000000;
+	-webkit-box-shadow: inset 0px 0px 14px 0px #000000;
+	box-shadow: inset 0px 0px 14px 0px #000000;
+}
+#about
+{
+	width: 450px;
+	height: 450px;
+
+	border: 11px #132e49 outset;
+
+	background-color: #ffffff;
+
+	-webkit-border-radius: 350px;
+	-moz-border-radius: 350px;
+	border-radius: 350px;
+
+	-moz-box-shadow: inset 0px 0px 14px 0px #000000;
+	-webkit-box-shadow: inset 0px 0px 14px 0px #000000;
+	box-shadow: inset 0px 0px 14px 0px #000000;
 }
 span {
 color:red
@@ -40,6 +92,54 @@ p{
 }
 h1{
 	color:white;
+}
+#user_password{
+	width :250px;
+	height : 30px;
+	border: 1px solid #ccc;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 5px;
+	-moz-box-shadow: 2px 2px 3px #666;
+	-webkit-box-shadow: 2px 2px 3px #666;
+	box-shadow: 2px 2px 3px #666;
+	font-size: 15px;
+	padding: 4px 7px;
+	outline: 0;
+	-webkit-appearance: none;
+
+}
+#user_email{
+	width :250px;
+	height : 30px;
+	border: 1px solid #ccc;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 5px;
+	-moz-box-shadow: 2px 2px 3px #666;
+	-webkit-box-shadow: 2px 2px 3px #666;
+	box-shadow: 2px 2px 3px #666;
+	font-size: 15px;
+	padding: 4px 7px;
+	outline: 0;
+	-webkit-appearance: none;
+
+}
+#user_password_confirmation{
+	width :250px;
+	height : 30px;
+	border: 1px solid #ccc;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 5px;
+	-moz-box-shadow: 2px 2px 3px #666;
+	-webkit-box-shadow: 2px 2px 3px #666;
+	box-shadow: 2px 2px 3px #666;
+	font-size: 15px;
+	padding: 4px 7px;
+	outline: 0;
+	-webkit-appearance: none;
+
 }
 #email{
 	width :250px;
@@ -87,7 +187,7 @@ margin-bottom:30px
 }
 #login {
 width:300px;
-margin-left:710px;
+margin-left:820px;
 border-radius:5px;
 font-family:raleway;
 border:2px solid #ccc;
