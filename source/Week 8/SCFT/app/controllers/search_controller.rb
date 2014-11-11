@@ -72,17 +72,7 @@ class SearchController < ApplicationController
 	end
 
 	def weather
-		@f= params[:city]
-		@a = @f.split('?')
-	    #render :text => @a[0].inspect	  
-	    $icityname = @a[0]
-	    $lat = @a[1]
-	    $long = @a[2]
-	    $ilatitude_range = @a[3]
-	    $ielevation_range = @a[4]
-	    $imax = @a[5]
-	    $imin = @a[6]
-	    $radius_range = @a[7]
+		
 	    @mycity = Location.find_by(City: $icityname)
 
 		#If the city does not exists in database 
