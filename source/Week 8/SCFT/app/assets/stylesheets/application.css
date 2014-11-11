@@ -15,7 +15,12 @@ font-family:raleway
 span {
 color:red
 }
-
+#flash_alert{
+color: red;
+position: absolute;
+margin-top: 440px;
+margin-left:880px;
+}
 p{
   color: white;
 }
@@ -36,14 +41,43 @@ p{
 h1{
 	color:white;
 }
-
-
+#email{
+	width :250px;
+	height : 30px;
+	border: 1px solid #ccc;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 5px;
+	-moz-box-shadow: 2px 2px 3px #666;
+	-webkit-box-shadow: 2px 2px 3px #666;
+	box-shadow: 2px 2px 3px #666;
+	font-size: 15px;
+	padding: 4px 7px;
+	outline: 0;
+	-webkit-appearance: none;
+}
+#password{
+	width : 250px;
+	height :30px;
+	border: 1px solid #ccc;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 5px;
+	-moz-box-shadow: 2px 2px 3px #666;
+	-webkit-box-shadow: 2px 2px 3px #666;
+	box-shadow: 2px 2px 3px #666;
+	font-size: 15px;
+	padding: 4px 7px;
+	outline: 0;
+	-webkit-appearance: none;
+}
 h2 {
 background-color:#FEFFED;
 text-align:center;
 border-radius:10px 10px 0 0;
-margin:-10px -40px;
-padding:15px
+margin:-10px -15px;
+padding:5px;
+width: 315px;
 }
 hr {
 border:0;
@@ -53,11 +87,11 @@ margin-bottom:30px
 }
 #login {
 width:300px;
-float:left;
-border-radius:10px;
+margin-left:710px;
+border-radius:5px;
 font-family:raleway;
 border:2px solid #ccc;
-padding:10px 40px 25px;
+padding:5px 10px 15px 15px;
 margin-top:70px
 }
 input[type=text],input[type=password] {
@@ -70,8 +104,9 @@ font-size:16px;
 font-family:raleway
 }
 input[type=submit] {
+/*
 width:100%;
-background-color:#FFBC00;
+abackground-color:#FFBC00;
 color:#fff;
 border:2px solid #FFCB00;
 padding:10px;
@@ -79,7 +114,25 @@ font-size:20px;
 cursor:pointer;
 border-radius:5px;
 margin-bottom:15px
+*/
+border: 1px solid #ccc;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 5px;
+	-moz-box-shadow: 2px 2px 3px #666;
+	-webkit-box-shadow: 2px 2px 3px #666;
+	box-shadow: 2px 2px 3px #666;
+	font-size: 20px;
+	padding: 4px 7px;
+	outline: 0;
+	-webkit-appearance: none;
+	cursor:pointer;
+	background-color:#FFBC00;
+color:#fff;
+border:2px solid #FFCB00;
 }
+	
+
 #profile {
 padding:50px;
 border:1px dashed grey;

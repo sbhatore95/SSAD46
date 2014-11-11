@@ -1,7 +1,7 @@
-<head>
+<!DOCTYPE HTML>
+<html>
+<head></head>
 
-</head>
-<a href="sign_up"><button>SignUp</button></a>
  <!-- <a href="log_in"><button>LogIn</button></a>-->
 <div id="main">
 <h1>Surrogate City Finder Tool</h1>
@@ -18,10 +18,13 @@
     <%= label_tag :password %><br />
     <%= password_field_tag :password %>
   </p>
-  <p class="button"><%= submit_tag "Log in" %></p>
+  <p class="button" style="width:90px"><%= submit_tag "Log in" %></p>
+  <p class ="button" style="text-align:left">Don't have an account? 
+  <a href="sign_up">Sign up</a>
+  </p>
 </div>
+
 </div>
 <!--<a href="sign_up"><button>SignUp</button></a>-->
 <% end %>
-
-
+</html>
