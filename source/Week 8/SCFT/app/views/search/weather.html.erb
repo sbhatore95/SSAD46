@@ -227,7 +227,10 @@
             function addMarker(location) {
                 var marker = new google.maps.Marker({
                     position: location,
-                    map: map
+                    map: map,
+                    icon:'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+
+
                 });
                 markers.push(marker);
             }
@@ -338,10 +341,12 @@
       </div>
       <div class="content">
           
-      </div>
       <nav id="menu">
+      <b><h3 style="color:black;margin-left:120px" >Modify Search </h3></b>
         <%= form_tag("/search", method: "get", remote: true) do %>
         <ul>
+        
+      
         
           <li>
             <%= label_tag(:city, "City*") %><br>

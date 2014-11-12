@@ -30,7 +30,7 @@ class SearchController < ApplicationController
 		#If the city does not exists in database 
 		if @mycity == nil
 	
-			redirect_to :action => 'findSurrogateCity' ,:city => params[:city] ,:latitude_range => params[:lat], :elevation_range => params[:altrange] ,:radius => params[:radrange]
+			redirect_to :action => 'findSurrogateCity' ,:city => params[:city] ,:latitude_range => params[:latitude_range], :elevation_range => params[:elevation_range] ,:radius_range => params[:radius_range]
 			
 			#If the city  exist in database 
 		else
@@ -43,6 +43,11 @@ class SearchController < ApplicationController
 	def findSurrogateCity
 
 		if $found == 0
+			$icityname= params[:city]
+			$ilatitude_range= params[:latitude_range]
+			$ielevation_range= params[:elevation_range]
+			$iradius_range= params[:radius_range]
+
 
 		#get data from JS code of geocoder
 			
