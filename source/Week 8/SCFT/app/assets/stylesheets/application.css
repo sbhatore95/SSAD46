@@ -78,6 +78,8 @@ p{
 }
 #flash_notice {
   font-color: white;
+  float:right;
+  margin-right:100px;
 }
 #para
 {
