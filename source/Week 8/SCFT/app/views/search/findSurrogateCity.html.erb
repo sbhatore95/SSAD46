@@ -30,6 +30,8 @@
                 };
                 map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
+                var len = document.getElementById('length').innerHTML;
+
 
                 codeAddress();
                 lat_belt();
@@ -83,12 +85,23 @@
                             marker = new google.maps.Marker({
                                 position: results[0].geometry.location,
                                 map: map,
-                                animation: google.maps.Animation.BOUNCE
+                                
 
                             });
+                            
+
+                              
+
+                              map.setCenter(results[0].geometry.location);
+                             map.setZoom(9);
+
+                             google.maps.event.trigger(marker, 'click');
+
+                          //  zoom_on_click(marker, address);
+                            
 
                             // Center the map on the geocoded result
-                            map.setCenter(results[0].geometry.location);
+                           
                         }
                     });
             }
@@ -306,8 +319,18 @@
             </div>
         </div>
     </nav>
-    <div id="searchpanel" data-city="<%=@city%>" data-ran="<%=@lat_range%>" style="overflow-y: auto;height: 600px;">
+    <h3 style="float:right;margin-right:100px;margin-top:-15px">Weather file of <%=@city%>
+    <%
+    if(($found == 1))%>
+        <b>exists</b>
+    <%else%>
+        <b>does not exist</b>
+    <%end%>
+
+    </h3>
+    <div id="searchpanel" data-city="<%=@city%>" data-ran="<%=@lat_range%>" style="overflow-y: auto;height: 580px;margin-top:30px">
         <ul>
+
             Surrogate cities for
             <p id="city" style="color:black;">
                 <%=@city %>
@@ -315,6 +338,10 @@
             Latitude range
             <p id="ran" style="color:black;">
                 <%=@lat_range %>
+            </p>
+            Elevation range
+            <p id="ran" style="color:black;">
+                <%=@elev_range %>
             </p>
             Radius range(in Km)
             <p id="radius" style="color:black;">
@@ -327,8 +354,8 @@
             </p>:
             <% @results.each do |c| %>
                 <li>
-                    <a href="#" onmouseover="gc(this);">
-                        <%=c.City %>
+                    <a href="#" onclick="gc(this);">
+                        <%=c.city %>
                     </a>
                 </li>
                 <% end%>
@@ -339,7 +366,6 @@
     <div id="display">
     </div>
     <%= $found.inspect %>
-
 </body>
 
 </html>
