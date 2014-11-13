@@ -11,7 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141008224238) do
+ActiveRecord::Schema.define(version: 20141112233933) do
+
+  create_table "cities", force: true do |t|
+    t.string   "city"
+    t.string   "state"
+    t.string   "country"
+    t.string   "source"
+    t.integer  "wmonum"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.float    "timezone"
+    t.float    "elevation"
+    t.string   "link"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "locations", force: true do |t|
     t.string   "City"
