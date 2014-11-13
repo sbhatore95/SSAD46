@@ -2,7 +2,7 @@ Rails.application.routes.draw do
  
   get 'index' => 'welcome#index'
   get 'welcome/index'
-  get '/search' => 'search#getsearchdata' 
+  get '/search' => 'search#findSurrogateCity' 
   get '/welcome' => 'welcome#index'
   get 'search/getsearchdata'
   get '/search/findSurrogateCity' => 'search#findSurrogateCity' 

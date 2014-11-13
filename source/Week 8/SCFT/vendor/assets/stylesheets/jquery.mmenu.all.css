@@ -61,9 +61,7 @@
   .mm-menu > .mm-list {
     padding-bottom: 0; }
     .mm-menu > .mm-list:after {
-      content: '';
-      display: block;
-      height: 40px; }
+       }
 
 .mm-panel > .mm-list {
   margin-left: -20px;
@@ -88,28 +86,11 @@
     position: relative; }
     .mm-list > li > a,
     .mm-list > li > span {
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      overflow: hidden;
-      color: inherit;
-      line-height: 20px;
-      display: block;
-      padding: 10px 10px 10px 20px;
-      margin: 0; }
+    }
   .mm-list > li:not(.mm-subtitle):not(.mm-label):not(.mm-search):not(.mm-noresults):after {
-    content: '';
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    display: block;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0; }
+    ; }
   .mm-list > li:not(.mm-subtitle):not(.mm-label):not(.mm-search):not(.mm-noresults):after {
-    width: auto;
-    margin-left: 20px;
-    position: relative;
-    left: auto; }
+    }
   .mm-list a.mm-subopen {
     background: rgba(3, 2, 1, 0);
     width: 40px;
@@ -121,13 +102,7 @@
     z-index: 2; }
     .mm-list a.mm-subopen:before {
       content: '';
-      border-left-width: 1px;
-      border-left-style: solid;
-      display: block;
-      height: 100%;
-      position: absolute;
-      left: 0;
-      top: 0; }
+     }
     .mm-list a.mm-subopen.mm-fullsubopen {
       width: 100%; }
       .mm-list a.mm-subopen.mm-fullsubopen:before {
@@ -143,29 +118,16 @@
     padding-right: 45px;
     margin-right: 0; }
   .mm-list a.mm-subclose {
-    text-indent: 20px;
-    padding-top: 30px;
-    margin-top: -20px; }
+     }
   .mm-list > li.mm-label {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    font-size: 10px;
-    text-transform: uppercase;
-    text-indent: 20px;
-    line-height: 25px;
-    padding-right: 5px; }
+    }
   .mm-list > li.mm-spacer {
     padding-top: 40px; }
     .mm-list > li.mm-spacer.mm-label {
       padding-top: 25px; }
   .mm-list a.mm-subopen:after,
   .mm-list a.mm-subclose:before {
-    content: '';
-    border: 2px solid transparent;
-    display: inline-block;
-    width: 7px;
-    height: 7px;
+   
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
@@ -194,8 +156,7 @@
 .mm-menu.mm-vertical .mm-list > li > a.mm-subopen {
   height: 40px; }
   .mm-menu.mm-vertical .mm-list > li > a.mm-subopen:after {
-    top: 16px;
-    bottom: auto; }
+     }
 .mm-menu.mm-vertical .mm-list > li.mm-opened > a.mm-subopen:after {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
@@ -269,9 +230,7 @@ html.mm-blocking #mm-blocker {
   display: block; }
 
 .mm-menu {
-  width: 80%;
-  min-width: 140px;
-  max-width: 440px; }
+  }
 
 html.mm-opening .mm-page,
 html.mm-opening #mm-blocker {
@@ -311,9 +270,7 @@ html.mm-opening #mm-blocker {
   margin: 0;
   position: relative; }
   .mm-buttonbar:after {
-    content: '';
-    display: block;
-    clear: both; }
+     }
   .mm-buttonbar > * {
     border-left: 1px solid transparent;
     box-sizing: border-box;
@@ -345,9 +302,7 @@ html.mm-opening #mm-blocker {
     width: 20%; }
 
 .mm-header .mm-buttonbar {
-  margin-top: 20px;
-  margin-left: -30px;
-  margin-right: -30px; }
+  }
 
 .mm-footer .mm-buttonbar {
   border: none;
@@ -373,16 +328,7 @@ html.mm-opening #mm-blocker {
 	jQuery.mmenu counters addon CSS
 */
 em.mm-counter {
-  font: inherit;
-  font-size: 14px;
-  font-style: normal;
-  text-indent: 0;
-  line-height: 20px;
-  display: block;
-  margin-top: -10px;
-  position: absolute;
-  right: 40px;
-  top: 50%; }
+  
   em.mm-counter + a.mm-subopen {
     padding-left: 40px; }
     em.mm-counter + a.mm-subopen + a,
@@ -433,7 +379,7 @@ html.mm-opened.mm-dragging #mm-blocker {
   left: 0; }
 
 .mm-menu.mm-hasfooter > .mm-panel:after {
-  height: 80px; }
+ ; }
 
 .mm-menu .mm-footer {
   border-color: rgba(0, 0, 0, 0.15);
@@ -443,66 +389,29 @@ html.mm-opened.mm-dragging #mm-blocker {
 	jQuery.mmenu header addon CSS
 */
 .mm-header {
-  background: inherit;
-  border-bottom: 1px solid transparent;
-  text-align: center;
-  line-height: 20px;
-  box-sizing: border-box;
-  width: 100%;
-  height: 60px;
-  padding: 0 50px;
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  left: 0; }
+   }
   .mm-header .mm-title,
   .mm-header .mm-prev,
   .mm-header .mm-next,
   .mm-header .mm-close {
-    padding-top: 30px; }
+     }
   .mm-header .mm-title {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    display: inline-block;
-    width: 100%;
-    position: relative; }
+     }
   .mm-header .mm-prev,
   .mm-header .mm-next,
   .mm-header .mm-close {
-    text-decoration: none;
-    display: block;
-    box-sizing: border-box;
-    min-width: 10px;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    z-index: 1; }
+    }
   .mm-header .mm-prev {
-    padding-left: 20px;
-    padding-right: 10px;
-    left: 0; }
+    }
   .mm-header .mm-next,
   .mm-header .mm-close {
     padding-left: 10px;
     padding-right: 20px;
     right: 0; }
   .mm-header [href].mm-prev:before, .mm-header [href].mm-next:after {
-    content: '';
-    border: 2px solid transparent;
-    display: inline-block;
-    width: 7px;
-    height: 7px;
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    transform: rotate(-45deg); }
+    
   .mm-header [href].mm-prev:before {
-    border-right: none;
-    border-bottom: none;
-    margin-left: 2px;
-    margin-right: 5px; }
+     }
   .mm-header [href].mm-next:after, .mm-header [href].mm-close:after {
     margin-left: 5px;
     margin-right: -2px; }
@@ -510,29 +419,28 @@ html.mm-opened.mm-dragging #mm-blocker {
     border-top: none;
     border-left: none; }
   .mm-header [href].mm-close:after {
-    content: 'x'; }
+     }
 
 .mm-menu.mm-hassearch .mm-header {
-  height: 50px;
-  top: 50px; }
+   }
   .mm-menu.mm-hassearch .mm-header .mm-title,
   .mm-menu.mm-hassearch .mm-header .mm-prev,
   .mm-menu.mm-hassearch .mm-header .mm-next,
   .mm-menu.mm-hassearch .mm-header .mm-close {
-    padding-top: 20px; }
+     }
 
 .mm-menu.mm-hasheader li.mm-subtitle {
-  display: none; }
+   }
 .mm-menu.mm-hasheader > .mm-panel {
-  padding-top: 80px; }
+   }
   .mm-menu.mm-hasheader > .mm-panel.mm-list {
-    padding-top: 60px; }
+    }
   .mm-menu.mm-hasheader > .mm-panel > .mm-list:first-child {
-    margin-top: -20px; }
+     }
 .mm-menu.mm-hasheader.mm-hassearch > .mm-panel {
-  padding-top: 120px; }
+   }
   .mm-menu.mm-hasheader.mm-hassearch > .mm-panel.mm-list {
-    padding-top: 100px; }
+    }
 
 .mm-menu .mm-header {
   border-color: rgba(0, 0, 0, 0.15);
@@ -546,22 +454,14 @@ html.mm-opened.mm-dragging #mm-blocker {
 	jQuery.mmenu labels addon CSS
 */
 .mm-list li.mm-label > span {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  padding: 0;
-  line-height: 25px; }
+  }
 .mm-list li.mm-label.mm-opened a.mm-subopen:after {
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg); }
+   }
 .mm-list li.mm-collapsed:not(.mm-uncollapsed) {
   display: none; }
 
 .mm-menu.mm-vertical .mm-list > li.mm-label > a.mm-subopen:after {
-  top: 8.5px; }
+  t }
 
 .mm-menu .mm-list li.mm-label > div > div {
   background: rgba(255, 255, 255, 0.05); }
@@ -580,35 +480,18 @@ html.mm-opened.mm-dragging #mm-blocker {
   margin-top: 0; }
 
 div.mm-panel > div.mm-search {
-  padding: 0 0 10px 0; }
+   }
 
 .mm-menu.mm-hasheader .mm-list > li.mm-search {
   margin-top: 0; }
 
 .mm-menu > .mm-search {
-  background: inherit;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+ 
   z-index: 2; }
 
 .mm-search {
   padding: 10px; }
-  .mm-search input {
-    border: none;
-    border-radius: 30px;
-    font: inherit;
-    font-size: 14px;
-    line-height: 30px;
-    outline: none;
-    display: block;
-    width: 100%;
-    height: 30px;
-    margin: 0;
-    padding: 0 10px; }
-  .mm-search input::-ms-clear {
-    display: none; }
+   }
 
 .mm-menu .mm-noresultsmsg {
   text-align: center;
@@ -646,8 +529,8 @@ div.mm-panel > div.mm-search {
 */
 input.mm-toggle,
 input.mm-check {
-  position: absolute;
-  left: -10000px; }
+  
+   }
 
 label.mm-toggle,
 label.mm-check {
@@ -657,19 +540,14 @@ label.mm-check {
   z-index: 2; }
   label.mm-toggle:before,
   label.mm-check:before {
-    content: '';
+   
     display: block; }
 
 label.mm-toggle {
-  border-radius: 30px;
-  width: 50px;
-  height: 30px;
-  margin-bottom: -15px; }
+ \
   label.mm-toggle:before {
     border-radius: 30px;
-    width: 28px;
-    height: 28px;
-    margin: 1px; }
+   
 
 input.mm-toggle:checked ~ label.mm-toggle:before {
   float: right; }
@@ -679,12 +557,7 @@ label.mm-check {
   height: 30px;
   margin-bottom: -15px; }
   label.mm-check:before {
-    border-left: 3px solid;
-    border-bottom: 3px solid;
-    width: 40%;
-    height: 20%;
-    margin: 25% 0 0 20%;
-    opacity: 0.1;
+    
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
@@ -703,37 +576,37 @@ input.mm-check:checked ~ label.mm-check:before {
   top: 5px; }
 
 label.mm-toggle, label.mm-check {
-  right: 20px; }
+    
 
 label.mm-toggle + a,
 label.mm-toggle + span {
-  margin-right: 70px; }
+  
 
 label.mm-check + a,
 label.mm-check + span {
-  margin-right: 50px; }
+  
 
 a.mm-subopen + label.mm-toggle, a.mm-subopen + label.mm-check {
-  right: 50px; }
+  
 
 a.mm-subopen + label.mm-toggle + a,
 a.mm-subopen + label.mm-toggle + span {
-  margin-right: 100px; }
+  
 
 a.mm-subopen + label.mm-check + a,
 a.mm-subopen + label.mm-check + span {
-  margin-right: 80px; }
+  
 
 em.mm-counter + a.mm-subopen + label.mm-toggle, em.mm-counter + a.mm-subopen + label.mm-check {
-  right: 90px; }
+   }
 
 em.mm-counter + a.mm-subopen + label.mm-toggle + a,
 em.mm-counter + a.mm-subopen + label.mm-toggle + span {
-  margin-right: 140px; }
+  }
 
 em.mm-counter + a.mm-subopen + label.mm-check + a,
 em.mm-counter + a.mm-subopen + label.mm-check + span {
-  margin-right: 120px; }
+  }
 
 .mm-menu label.mm-toggle {
   background: rgba(0, 0, 0, 0.15); }
@@ -906,78 +779,15 @@ html.mm-zoom-panels .mm-menu.mm-horizontal > .mm-panel {
   min-width: 140px;
   max-width: 10000px; }
 
-html.mm-opening.mm-fullscreen .mm-page,
-html.mm-opening.mm-fullscreen #mm-blocker {
-  -webkit-transform: translate(100%, 0);
-  -moz-transform: translate(100%, 0);
-  -ms-transform: translate(100%, 0);
-  -o-transform: translate(100%, 0);
-  transform: translate(100%, 0); }
 
-@media all and (max-width: 140px) {
-  html.mm-opening.mm-fullscreen .mm-page,
-  html.mm-opening.mm-fullscreen #mm-blocker {
-    -webkit-transform: translate(140px, 0);
-    -moz-transform: translate(140px, 0);
-    -ms-transform: translate(140px, 0);
-    -o-transform: translate(140px, 0);
-    transform: translate(140px, 0); } }
-@media all and (min-width: 10000px) {
-  html.mm-opening.mm-fullscreen .mm-page,
-  html.mm-opening.mm-fullscreen #mm-blocker {
-    -webkit-transform: translate(10000px, 0);
-    -moz-transform: translate(10000px, 0);
-    -ms-transform: translate(10000px, 0);
-    -o-transform: translate(10000px, 0);
-    transform: translate(10000px, 0); } }
-html.mm-right.mm-opening.mm-fullscreen .mm-page,
-html.mm-right.mm-opening.mm-fullscreen #mm-blocker {
-  -webkit-transform: translate(-100%, 0);
-  -moz-transform: translate(-100%, 0);
-  -ms-transform: translate(-100%, 0);
-  -o-transform: translate(-100%, 0);
-  transform: translate(-100%, 0); }
 
-@media all and (max-width: 140px) {
-  html.mm-right.mm-opening.mm-fullscreen .mm-page,
-  html.mm-right.mm-opening.mm-fullscreen #mm-blocker {
-    -webkit-transform: translate(-140px, 0);
-    -moz-transform: translate(-140px, 0);
-    -ms-transform: translate(-140px, 0);
-    -o-transform: translate(-140px, 0);
-    transform: translate(-140px, 0); } }
-@media all and (min-width: 10000px) {
-  html.mm-right.mm-opening.mm-fullscreen .mm-page,
-  html.mm-right.mm-opening.mm-fullscreen #mm-blocker {
-    -webkit-transform: translate(-10000px, 0);
-    -moz-transform: translate(-10000px, 0);
-    -ms-transform: translate(-10000px, 0);
-    -o-transform: translate(-10000px, 0);
-    transform: translate(-10000px, 0); } }
-.mm-menu.mm-front.mm-fullscreen.mm-top, .mm-menu.mm-front.mm-fullscreen.mm-bottom {
-  height: 100%;
-  min-height: 140px;
-  max-height: 10000px; }
 
-html.mm-opened.mm-fullscreen .mm-page {
-  box-shadow: none !important; }
+
 
 /*
 	jQuery.mmenu position extension CSS
 */
-.mm-menu.mm-top,
-.mm-menu.mm-bottom {
-  width: 100%;
-  min-width: 100%;
-  max-width: 100%; }
-
-.mm-menu.mm-right {
-  left: auto;
-  right: 0; }
-
-.mm-menu.mm-bottom {
-  top: auto;
-  bottom: 0; }
+.
 
 html.mm-right.mm-opening .mm-page,
 html.mm-right.mm-opening #mm-blocker {

@@ -12,6 +12,8 @@ class SearchController < ApplicationController
 	$ilatitude_mycity = 0
 	$ilongitude_mycity = 0
 	$ielevation_mycity = 1000
+	
+
 	def getsearchdata
 	
 			redirect_to :action => 'findSurrogateCity' ,:city => params[:city] ,:latitude_range => params[:latitude_range], :elevation_range => params[:elevation_range] ,:radius_range => params[:radius_range]
@@ -21,11 +23,26 @@ class SearchController < ApplicationController
 	def findSurrogateCity
 
 
-		
+			
 			$icityname= params[:city]
 			$ilatitude_range= params[:latitude_range]
 			$ielevation_range= params[:elevation_range]
 			$iradius_range= params[:radius_range]
+
+			$ilatitude_mycity = params[:latitude_mycity]
+			$ilongitude_mycity = params[:longitude_mycity]
+
+			require 'net/http'
+			require 'json'
+			@url = 'https://maps.googleapis.com/maps/api/elevation/json?locations=' + $ilatitude_mycity + ',' + $ilongitude_mycity
+			url = URI.parse(@url)
+			http = Net::HTTP.new(url.host, url.port)
+			http.use_ssl = true
+			http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+			request = Net::HTTP::Get.new(url.request_uri)
+			res = http.request(request)
+			res = JSON.parse(res.body)
+			$ielevation_mycity = res['results'][0]['elevation']
 
 		
 		if Cities.exists?(city: $icityname)

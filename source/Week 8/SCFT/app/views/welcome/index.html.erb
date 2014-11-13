@@ -113,7 +113,7 @@ var e=500;
 window.open( "http://127.0.0.1:3000/search/weather?text="+document.getElementById("cityname").value +  "?city="+city+"?state="+state+"?country="+country+"?lat="+place.geometry.location.lat()+"?lng="+place.geometry.location.lng()+"?ltrange="+a+"?altrange="+b+"?maxtemp="+c+"?mintemp="+d+"?radrange="+e ,"_self");
 */
 
-var url = "http://127.0.0.1:3000/search/weather?city=" + city + "&latitude_mycity=" + place.geometry.location.lat() + "&longitude_mycity=" + place.geometry.location.lng() + "&latitude_range="+a+"&elevation_range="+b+"&maxtemp="+c+"&mintemp="+d+"&radius_range="+e;
+var url = "http://127.0.0.1:3000/search/findSurrogateCity?city=" + city + "&latitude_mycity=" + place.geometry.location.lat() + "&longitude_mycity=" + place.geometry.location.lng() + "&latitude_range="+a+"&elevation_range="+b+"&maxtemp="+c+"&mintemp="+d+"&radius_range="+e;
 //window.open(url);
 window.location.href=url;
 
