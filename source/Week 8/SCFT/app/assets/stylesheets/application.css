@@ -94,6 +94,8 @@ p{
 }
 h1{
 	color:white;
+	font-family:"Palatino Linotype",Palatino, serif;
+	padding:5px 5px 5px 5px ;
 }
 #user_password{
 	width :250px;
