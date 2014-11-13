@@ -17,8 +17,6 @@ height: 170%;
 </style>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
-
-var WIDTH;
 var HEIGHT;
 var canvas;
 var con;
@@ -37,7 +35,7 @@ $(document).ready(function(){
     pxs[i] = new Circle();
     pxs[i].reset();
   }
-setInterval(draw,rint);
+  setInterval(draw,rint);
 });
  
 function draw() {
@@ -73,16 +71,65 @@ function Circle() {
     this.rt = Math.random()*this.hl;
     this.s.rt = Math.random()+1;
     this.stop = Math.random()*0.2+0.4;
+    this.s.xdrift *= Math.random() * (Math.random() < 0.5 ? -1 : 1);
+    this.s.ydrift *= Math.random() * (Math.random() < 0.5 ? -1 : 1);
+    this.opacityFill = opacityFill;
+ 
+    this.currentColor = Math.floor(Math.random()*crFill.length);
+  };
+ 
+  this.fade = function() {
+    this.rt += this.s.rt;
+  };
+ 
+  this.draw = function() {
+    if(this.s.blink && (this.rt <= 0 || this.rt >= this.hl)){
+      this.s.rt = this.s.rt*-1;
+    }
+    else if(this.rt >= this.hl){
+      this.reset();
+    }
+    con.beginPath();
+    con.arc(this.x,this.y,this.r,0,Math.PI*2,true);
+    con.globalAlpha = opacityFill;
+    var newo = 1-(this.rt/this.hl);
+    var cr = this.r*newo;
+     
+    gradient = con.createRadialGradient(this.x,this.y,0,this.x,this.y,(cr <= 0 ? 1 : cr));
+    gradient.addColorStop(0.0, crFill[(this.currentColor)][1]);
+    gradient.addColorStop(0.7, crFill[(this.currentColor)][1]);
+    gradient.addColorStop(1.0, crFill[(this.currentColor)][0]);
+ 
+    con.fillStyle = gradient;
+    con.fill();
+ 
+    con.closePath();
+  };
+ 
+  this.move = function() {
+    this.x += (this.rt/this.hl)*this.dx;
+    this.y += (this.rt/this.hl)*this.dy;
+    if(this.x > WIDTH || this.x < 0){
+      this.dx *= -1;
+    } 
+    if(this.y > HEIGHT || this.y < 0){
+      this.dy *= -1;
+    } 
+  };
+ 
+  this.getX = function() { return this.x; };
+  this.getY = function() { return this.y; };
+}
 
 </script>
 </head>
 <body>
+<h1 style="text-align:center">Surrogate City Finder Tool</h1>
 <div class="section-demo">
-<canvas id="demo" style="width:1230px;height:500px;padding:10px 10px 10px 10px;">
+<canvas id="demo" style="width:1248px;height:500px;padding:10px 10px 10px 10px;top:90px">
 </canvas>
 
 <div id="main">
-<h1>Surrogate City Finder Tool</h1>
 
 <div id="login">
 <h2>Log in</h2>
