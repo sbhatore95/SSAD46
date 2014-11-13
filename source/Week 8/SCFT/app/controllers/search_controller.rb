@@ -55,20 +55,33 @@ class SearchController < ApplicationController
 
 		#@latresults = Location.where('Latitude > ? AND Latitude < ?',@latitude_Range_Start,@latitude_Range_End)
 
-			@elevation_Range_Start = $elevation_mycity.to_f - $ielevation_range.to_f
-			@elevation_Range_End = $elevation_mycity.to_f + $ielevation_range.to_f
+			@elevation_Range_Start = $ielevation_mycity.to_f - $ielevation_range.to_f
+			@elevation_Range_End = $ielevation_mycity.to_f + $ielevation_range.to_f
 
 			@results = Cities.where('latitude > ? AND latitude < ? AND elevation > ? AND elevation < ?',@latitude_Range_Start,@latitude_Range_End,@elevation_Range_Start, @elevation_Range_End)
 
 	end
 
 	def weather
+
 		$icityname= params[:city]
 		$ilatitude_range= params[:latitude_range]
 		$ielevation_range= params[:elevation_range]
 		$iradius_range= params[:radius_range]
 		$ilatitude_mycity = params[:latitude_mycity]
 		$ilongitude_mycity = params[:longitude_mycity]
+
+		require 'net/http'
+		require 'json'
+		@url = 'https://maps.googleapis.com/maps/api/elevation/json?locations=' + $ilatitude_mycity + ',' + $ilongitude_mycity
+		url = URI.parse(@url)
+		http = Net::HTTP.new(url.host, url.port)
+		http.use_ssl = true
+		http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+		request = Net::HTTP::Get.new(url.request_uri)
+		res = http.request(request)
+		res = JSON.parse(res.body)
+		$ielevation_mycity = res['results'][0]['elevation']
 
 	end
 

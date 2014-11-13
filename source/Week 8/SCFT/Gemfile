@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 gem "bcrypt-ruby", :require => "bcrypt"
 gem 'omniauth-facebook'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -41,4 +41,6 @@ gem 'spring',        group: :development
 gem 'geocoder'
 #gem 'font-awesome-less'
 #gem 'font-awesome-sass'
+gem 'net'
+gem 'json'
 
