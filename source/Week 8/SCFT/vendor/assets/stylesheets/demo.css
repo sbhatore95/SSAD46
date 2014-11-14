@@ -1,12 +1,172 @@
+html, body, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 10%;
+  font: inherit;
+  vertical-align: baseline;
+  outline: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html { height: 101%; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+
+
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+strong { font-weight: bold; } 
+
+table { border-collapse: collapse; border-spacing: 0; }
+img { border: 0; max-width: 100%; }
+
+h2 { font-size: 2.3em; line-height: 1.1em; font-family: 'ABeeZee', 'Trebuchet MS', Arial, sans-serif; color: #646464; font-weight: bold; margin-bottom: 12px; }
 
 
 
+a.close { display: inline-block; background: #5574b4; padding: 10px 8px; color: #fff; font-weight: bold; font-size: 1.4em; text-decoration: none; margin-bottom: 6px; }
+a.close:hover { background: #4a6397; }
 
-
-
-nav:not(.mm-menu)
-{
-	display: none;
+#about { 
+  display: block;
+  width: 350px;
+  background: #fff;
+  padding: 10px 11px;
+  padding-top: 35px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
 }
 
+#mainpage {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #000;
+  min-height: 800px;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+ 
+}
+
+#mainpage nav { 
+  position: absolute;
+  width: 180px; 
+  min-height: 100%;
+  padding: 0px 8px;
+  padding-top: 120px;
+  background: #fff;
+}
+#mainpage nav h1 {
+  font-family: 'ABeeZee', 'Trebuchet MS', Arial, sans-serif;
+  font-size: 2.85em;
+  line-height: 1.3em;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 11px;
+}
+
+#navigation {
+  list-style: none;
+  margin-top:-16px
+}
+#navigation li { display: block; margin-bottom: -2px; font-size: 1.4em; font-weight: bold; }
+#navigation li a { display: block; padding: 8px 6px; width: 100%; color: #000; text-decoration: none; }
+#navigation li a:hover, #navigation li a.open { color: #fff; background: #484e57; }
+
+#map-canvas{
+  margin-top:100px;
+  margin-left:20px;
+  height:400px;
+}
+
+#searchpanel {
+  display: block;
+  margin-left: 1000px;
+  padding: 10px 15px;
+  margin-top:500px;
+  background-color: #fff;
+  float:right;
+
+}
+
+#searchpanel p {
+  
+  text-shadow: 2px 1px 0px rgba(0,0,0,0.7);
+}
+
+
+/* right navigation */
+#aboutright { 
+  display: block;
+  width: 350px;
+  padding: 8px 11px;
+  padding-top: 35px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+
+nav#right { 
+  position: absolute;
+  width: 180px; 
+  min-height: 100%;
+  right: 0;
+  padding: 0px 8px;
+  padding-top: 220px;
+  background: #343638;
+}
+
+
+/* top navigation */
+#mainpage nav#top {
+  position: absolute;
+  height: 40px; 
+  width: 100%;
+  min-height: 40px;
+  top:;
+  text-align: center;
+  padding: 20px 10px;
+  background: #fff;
+}
+
+a.navbar-brand{
+  margin-top: -23px;
+    
+}
+
+nav#top #navigation li {
+  display: inline-block; 
+  margin-right: 6px;
+}
+
+
+/* bottom navigation */
+#mainpage nav#bottom {
+  position: fixed;
+  height: 120px; 
+  width: 100%;
+  min-height: 120px;
+  bottom: 0;
+  text-align: center;
+  padding: 20px 0px;
+  background: rgba(52,54,56,0.6);
+}
+
+nav#bottom #navigation li {
+  display: inline-block; 
+  margin-right: 6px;
+}
+
+.fixed-btm { padding-bottom: 120px; /* add extra space when nav is fixed at the bottom */ }
+
+
+h1{
+	font-size: 40px;
+}
 

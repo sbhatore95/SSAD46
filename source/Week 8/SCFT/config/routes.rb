@@ -24,6 +24,7 @@ resources :users
 resources :sessions
 get 'sessions/new'
 get 'users/new'
+get 'search/new'
 
 
 

@@ -102,6 +102,9 @@ class SearchController < ApplicationController
 
 	end
 
+	def new
+	end
+
 =begin
 	def exists
 		@ecity = Cities.find_by(city: params[:city])
