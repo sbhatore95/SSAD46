@@ -64,6 +64,10 @@ box-shadow: inset 0px 0px 14px 0px #000000;
 	-webkit-box-shadow: inset 0px 0px 14px 0px #000000;
 	box-shadow: inset 0px 0px 14px 0px #000000;
 }
+.lol {
+        position: relative;
+        margin: 20%;
+}
 span {
 color:red
 }
