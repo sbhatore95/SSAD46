@@ -100,6 +100,173 @@
       });
     }
   </script>
+
+
+
+
+
+        -->
+        <style>
+            body {
+                background-color: #12181A;
+                
+            }
+            #flash_notice {
+                font-size: 10;
+                color: white;
+            }
+            #user_nav {
+                top: 0px;
+                display: block;
+                width: 1000px;
+                right: 0px;
+            }
+            #searchpanel {
+                border: 2px solid;
+                border-radius: 10px;
+            }
+            #map-canvas {
+                margin-left: 23px;
+            }
+            #searchform {
+                float: left;
+            }
+            input{
+                color:black;
+            }
+        </style>
+
+</head>
+
+<body>
+    <!--    <div id="panel">
+            <input onclick="clearMarkers();" type=button value="Hide Markers">
+            <input onclick="showMarkers();" type=button value="Show All Markers">
+            <input onclick="deleteMarkers();" type=button value="Delete Markers">
+        </div>
+    <!onmouseover function call-->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">SCFT</a>
+            </div>
+            <div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/welcome">Home</a>
+                    </li>
+                    <li><a href="http://127.0.0.1:3000/log_out">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<div id="page">
+      <div class="header">
+        
+ <a onclick="button()" href="#menu"><i class="fa fa-search" style="height:40px;width:40px;"></i></a>
+ 
+       
+      </div>
+      <div class="content">
+          
+      <nav id="menu">
+      <b><h3 style="color:black;margin-left:120px" >Modify Search </h3></b>
+        <%= form_tag("/search", method: "get", remote: true) do %>
+        <ul>
+        
+      
+        
+          <li>
+            <%= label_tag(:city, "City*") %><br>
+    <%= text_field_tag(:city,$icityname) %><br>
+
+          </li>
+             
+          <li>
+            <%= label_tag(:latitude_range, "Latitude Range*(in degrees)") %><br>
+    <%= text_field_tag(:latitude_range,$ilatitude_range ) %><br>
+          </li>
+
+          <li>
+           <%= label_tag(:elevation_range, "Elevation Range*(in m):") %><br>
+    <%= text_field_tag(:elevation_range,$ielevation_range) %><br>
+          </li>
+
+           <li>
+             <%= label_tag(:radius_range, "Radius Range(in km):") %><br>
+    <%= text_field_tag(:radius_range,$iradius_range) %><br>
+          </li>
+          <li>
+           <%= hidden_field_tag 'latitude_mycity', $ilatitude_mycity %>
+          </li>
+          <li>
+           <%= hidden_field_tag 'longitude_mycity', $ilongitude_mycity %>
+          </li>
+            
+         
+
+          <li>
+             <%=  submit_tag("Search")%>
+
+          </li>
+        
+        </ul>
+        <%end%>
+        
+      </nav>
+    </div>
+    <%= $ielevation_mycity.inspect %>
+
+
+    <h3 style="float:right;margin-right:100px;margin-top:-15px">Weather file of <%=@city%>
+    <%
+    if(($found == 1))%>
+        <b>exists</b>
+    <%else%>
+        <b>does not exist</b>
+    <%end%>
+
+    </h3>
+    <div id="searchpanel" data-city="<%=@city%>" data-ran="<%=@lat_range%>" style="overflow-y: auto;height: 580px;margin-top:30px">
+        <ul>
+
+            Surrogate cities for
+            <p id="city" style="color:black;">
+                <%=@city %>
+            </p>
+            Latitude range
+            <p id="ran" style="color:black;">
+                <%=@lat_range %>
+            </p>
+            Elevation range
+            <p id="ran" style="color:black;">
+                <%=@elev_range %>
+            </p>
+            Radius range(in Km)
+            <p id="radius" style="color:black;">
+                <%=@rad_range%>
+            </p>
+
+            Total cities
+            <p id="length" style="color:black;">
+                <%=@results.length%>
+            </p>:
+            <% @results.each do |c| %>
+                <li style="display:none;">
+                    <span id="hidden" href="#" onclick="gc(this);">
+                        <%=c.city %>
+                    </a>
+                </li>
+                <% end%>
+        </ul>
+    </div>
+    <div id="map-canvas">
+    </div>
+    <div id="display">
+    </div>
+    <div id="tablespace">
+    </div>
         <script>
             // In the following example, markers appear when the user clicks on the map.
             // The markers are stored in an array.
@@ -133,7 +300,7 @@
             var flag;
 
             function codeAddress() {
-                    var address = document.getElementById('searchpanel').getElementsByTagName("a");
+                    var address = document.getElementById('searchpanel').getElementsByTagName("span");
                     var len = document.getElementById('length').innerHTML; //Number of cities
                     console.log(len);
 
@@ -362,167 +529,325 @@
                 markers = [];
             }
 
+            calcu();
             google.maps.event.addDomListener(window, 'load', initialize);
-        </script>
-        <style>
-            body {
-                background-color: #12181A;
-                
-            }
-            #flash_notice {
-                font-size: 10;
-                color: white;
-            }
-            #user_nav {
-                top: 0px;
-                display: block;
-                width: 1000px;
-                right: 0px;
-            }
-            #searchpanel {
-                border: 2px solid;
-                border-radius: 10px;
-            }
-            #map-canvas {
-                margin-left: 23px;
-            }
-            #searchform {
-                float: left;
-            }
-            input{
-                color:black;
-            }
-        </style>
-
-</head>
-
-<body>
-    <!--    <div id="panel">
-            <input onclick="clearMarkers();" type=button value="Hide Markers">
-            <input onclick="showMarkers();" type=button value="Show All Markers">
-            <input onclick="deleteMarkers();" type=button value="Delete Markers">
-        </div>
-    <!onmouseover function call-->
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">SCFT</a>
-            </div>
-            <div>
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="/welcome">Home</a>
-                    </li>
-                    <li><a href="http://127.0.0.1:3000/log_out">Logout</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-<div id="page">
-      <div class="header">
-        
- <a onclick="button()" href="#menu"><i class="fa fa-search" style="height:40px;width:40px;"></i></a>
- 
        
-      </div>
-      <div class="content">
+ 
+        <!--CODE FOR RMS-->
+
+
+
+
+
+       
+
+function calcu()
+{
+    tt= document.getElementById('searchpanel').getElementsByTagName("span");
+    climatedata=gowiki('<%= $icityname %>');
+    drawmainmap('<%= $ilatitude_mycity %>','<%= $ilatitude_mycity %>',tt,climatedata);
+
+}
+
+function drawtable(tabledata)
+{   count=count+1;
+    var i=0;
+    var maindata="<table id=\"myTable"+count+"\" class=\"tablesorter\"><thead> <tr><th>City Name</th><th>Country Name</th><th>RMS MAX</th><th>RMS Min</th><th>RMS Total</th></tr></thead><tbody>";
+    while(i<tabledata.length)
+    {
+        var template="<tr><td>"+tabledata[i][0]+"</td><td>"+tabledata[i][1]+"</td><td>"+tabledata[i][2]+"</td><td>"+tabledata[i][3]+"</td><td>"+tabledata[i][4]+"</td></tr>";
+        maindata=maindata+template;
+        i=i+1;
+    }
+    document.getElementById("tablespace").innerHTML=maindata+"</tbody></table>";
+    
+    $("#myTable"+count).tablesorter(); 
+}
+
+
+function distance(lat1, lon1, lat2, lon2, unit) {
+
+    var radlat1 = Math.PI * lat1/180;
+
+    var radlat2 = Math.PI * lat2/180;
+
+    var radlon1 = Math.PI * lon1/180;
+
+    var radlon2 = Math.PI * lon2/180;
+
+    var theta = lon1-lon2;
+
+    var radtheta = Math.PI * theta/180;
+
+    var dist = Math.sin(radlat1) * Math.sin(radlat2) + Math.cos(radlat1) * Math.cos(radlat2) * Math.cos(radtheta);
+
+    dist = Math.acos(dist);
+
+    dist = dist * 180/Math.PI;
+
+    dist = dist * 60 * 1.1515;
+
+    if (unit=="K") { dist = dist * 1.609344; }
+
+    if (unit=="N") { dist = dist * 0.8684; }
+
+    return dist;
+
+}
+
+
+
+function drawmainmap(lat,lng,matter,citydata)
+{   
+    var lnrange = parseFloat('<%= $ilatitude_range %>');//parseFloat(document.getElementById("latrange").value);
+    var maxtemp = parseFloat(40);//parseFloat(document.getElementById("maxtemp").value);
+    var mintemp = parseFloat(20);//parseFloat(document.getElementById("mintemp").value);
+    var rad = parseFloat('<%= $iradius_range %>');//parseFloat(document.getElementById("radrange").value);
+   // var myCenter=new google.maps.LatLng(lat,lng);
+    var cmf=0;
+    if(citydata.length==0)
+    {
+        cmf=1;
+    }
+   /* var mapProp = {
+          center:myCenter,
+          zoom:7,
+          mapTypeId:google.maps.MapTypeId.HYBRID,
           
-      <nav id="menu">
-      <b><h3 style="color:black;margin-left:120px" >Modify Search </h3></b>
-        <%= form_tag("/search", method: "get", remote: true) do %>
-        <ul>
         
-      
+     };
+
+    var map=new google.maps.Map(document.getElementById("chart_div2"),mapProp);
+
+    var marker=new google.maps.Marker({
+          position:myCenter,
+icon:'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+      });
+    marker.setMap(map);
+    var circle = new google.maps.Circle({
+                center: myCenter,
+                map:map,
+                radius:rad*1000,
+                strokeColor: "black",
+                strokeOpacity:0.4,
+                strokeWeight: 2,
+                fillColor: "black"
+            });
+            circle.bindTo('center',marker,'position');
+   */ i=0;
+    var tabledata=[];
+    while(i<matter.length)
+    {
+        var fl=1;
+        //var myCenter=new google.maps.LatLng(matter[i].latitude,matter[i].longitude);
+        //var marker=new google.maps.Marker({
+          //position:myCenter,});
         
-          <li>
-            <%= label_tag(:city, "City*") %><br>
-    <%= text_field_tag(:city,$icityname) %><br>
+        var the=[];
+        the.push([matter[i].mjan,matter[i].njan]);
+        the.push([matter[i].mfeb,matter[i].nfeb]);
+        the.push([matter[i].mmar,matter[i].nmar]);
+        the.push([matter[i].mapr,matter[i].napr]);
+        the.push([matter[i].mmay,matter[i].nmay]);
+        the.push([matter[i].mjun,matter[i].njun]);
+        the.push([matter[i].mjul,matter[i].njul]);
+        the.push([matter[i].maug,matter[i].naug]);
+        the.push([matter[i].msep,matter[i].nsep]);
+        the.push([matter[i].moct,matter[i].noct]);
+        the.push([matter[i].mnov,matter[i].nnov]);
+        the.push([matter[i].mdec,matter[i].ndec]);
+        if(cmf==1)
+        {
+            citydata=[];    
+            citydata.push([matter[i].mjan,matter[i].njan]);
+            citydata.push([matter[i].mfeb,matter[i].nfeb]);
+            citydata.push([matter[i].mmar,matter[i].nmar]);
+            citydata.push([matter[i].mapr,matter[i].napr]);
+            citydata.push([matter[i].mmay,matter[i].nmay]);
+            citydata.push([matter[i].mjun,matter[i].njun]);
+            citydata.push([matter[i].mjul,matter[i].njul]);
+            citydata.push([matter[i].maug,matter[i].naug]);
+            citydata.push([matter[i].msep,matter[i].nsep]);
+            citydata.push([matter[i].moct,matter[i].noct]);
+            citydata.push([matter[i].mnov,matter[i].nnov]);
+            citydata.push([matter[i].mdec,matter[i].ndec]);
+        }
+        
+        var arr=[];
+        var kk=0;
+        var rmsmax=[];
+        var rmsmin=[];
+        var rmstotal=[];
 
-          </li>
-             
-          <li>
-            <%= label_tag(:latitude_range, "Latitude Range*(in degrees)") %><br>
-    <%= text_field_tag(:latitude_range,$ilatitude_range ) %><br>
-          </li>
+        var ll=distance(lat,lng,parseFloat(matter[i].latitude),parseFloat(matter[i].longitude),"K");
+        
+        
+        while(kk<12)
+        {
+            if(Math.abs(parseFloat(the[kk][0])-parseFloat(citydata[kk][0]))<=maxtemp )
 
-          <li>
-           <%= label_tag(:elevation_range, "Elevation Range*(in m):") %><br>
-    <%= text_field_tag(:elevation_range,$ielevation_range) %><br>
-          </li>
+            {
+                arr.push(1);
+            }
+            else
+            {
+                //alert([the[kk][0],citydata[kk][0]]);
+                arr.push(0);
+                fl=0;
+            }
+            rmsmax.push(Math.pow(Math.abs(parseFloat(the[kk][0])-parseFloat(citydata[kk][0])),2 ));
+            rmsmin.push(Math.pow(Math.abs(parseFloat(the[kk][1])-parseFloat(citydata[kk][1])),2 ));
+            rmstotal.push(Math.pow(Math.abs(parseFloat(the[kk][0])-parseFloat(citydata[kk][0])),2));
+            rmstotal.push(Math.pow(Math.abs(parseFloat(the[kk][1])-parseFloat(citydata[kk][1])),2));
+            kk=kk+1;
+        }
+        kk=0;
+        rmax=0;
+        rmin=0;
+        rtotal=0;
+        while(kk<12)
+        {
+            rmax=rmax+rmsmax[kk];
+            rmin=rmin+rmsmin[kk];
+            rtotal=rtotal+rmstotal[2*kk];
+            rtotal=rtotal+rmstotal[2*kk+1];
+            kk=kk+1;
+        }
+        rmax=Math.sqrt(rmax/12);
+        rmin=Math.sqrt(rmin/12);
+        rtotal=Math.sqrt(rtotal/24);
+        rmax=Math.round(rmax * 100) / 100;
+        rmin=Math.round(rmin * 100) / 100;
+        rtotal=Math.round(rtotal * 100) / 100;
+        
+        if(fl==1 && ll<=rad)
+        {
+ //           marker.setMap(map);
+            if(cmf==0)
+            {
+                tabledata.push([matter[i].cityname,matter[i].countryname,rmax,rmin,rtotal]);
+            }
+            else
+            {
+                tabledata.push([matter[i].cityname,matter[i].countryname,"N/A","N/A","N/A"]);
+            }
+    /*        var infowindow =  new google.maps.InfoWindow({content: '', 
+            maxWidth: 200 });
+            bindInfoWindow(marker, map, infowindow, "<p style=\" width:100px;color:black;font-width:bold\">" + matter[i].cityname + "</p>"); 
+    */    }
+        i=i+1;
+    }
+   /* var flightPlanCoordinates = [
+    new google.maps.LatLng(lat+lnrange, -179),
+    new google.maps.LatLng(lat+lnrange, 0.0),
+    new google.maps.LatLng(lat+lnrange, 179.027892)
+    ];
+    var flightPath = new google.maps.Polyline({
+    path: flightPlanCoordinates,
+    strokeColor: '#FF0000',
+    strokeOpacity: 1.0,
+    strokeWeight: 1
+    });
 
-           <li>
-             <%= label_tag(:radius_range, "Radius Range(in km):") %><br>
-    <%= text_field_tag(:radius_range,$iradius_range) %><br>
-          </li>
-          <li>
-           <%= hidden_field_tag 'latitude_mycity', $ilatitude_mycity %>
-          </li>
-          <li>
-           <%= hidden_field_tag 'longitude_mycity', $ilongitude_mycity %>
-          </li>
+    flightPath.setMap(map);
+
+
+    var flightPlanCoordinates = [
+    new google.maps.LatLng(lat-lnrange, -179),
+    new google.maps.LatLng(lat-lnrange, 0.0),
+    new google.maps.LatLng(lat-lnrange, 179.027892)
+    ];
+    var flightPath = new google.maps.Polyline({
+    path: flightPlanCoordinates,
+    strokeColor: '#FF0000',
+    strokeOpacity: 1.0,
+    strokeWeight: 1
+    });
+
+    flightPath.setMap(map);
+    drawtable(tabledata);
+*/
+}
+
+
+
+
+function gowiki(cityname)
+{
+    
+    var stt=cityname;//document.getElementById("city").innerHTML;
+    var value=stt.toLowerCase();
+    var postData = new Array();
+    postData.push({name: 'cityname', value: value});
+   var sendarray=[];
+    
+/*$.ajax({url : "http://localhost/submit1.php",type: "POST",data : postData,async: false,success:function(data, textStatus, jqXHR) 
+{ */      var maxtemp=[];
+        var mintemp=[];
+        var maxyearavg;
+        var minyearavg;
+        data='<%= resultwiki%>'
+        if(data.length>1)
+        {
+            var i=0;
+            while(i<data.length)
+            {
+                if(i<12)
+                {   
+                    maxtemp.push(data[i].substring(1,data[i].length-1));
+                }
+                else if(i==12)
+                {
+                     maxyearavg=data[i].substring(1,data[i].length-1);
+                }
+                else if(i<25)
+                {
+                    mintemp.push(data[i].substring(1,data[i].length-1));
+                }
+                else
+                {
+                    minyearavg=data[i].substring(1,data[i].length-1);
+                }
+                
+                i=i+1;
+            }
+            i=0;
+            var newdata=[["year","Min","Max"]];
+            var dates=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
             
-         
+            while(i<12)
+            {
+                var temp=[dates[i],parseFloat(mintemp[i]),parseFloat(maxtemp[i])];
+                var temp1=[parseFloat(maxtemp[i]),parseFloat(mintemp[i])]   
+                newdata.push(temp);
+                sendarray.push(temp1);
+                        
+                i=i+1;  
+            }
+           // drawChart1(newdata); 
+          //  document.getElementById("temp").innerHTML=maxyearavg + "&deg;C / " +minyearavg + "&deg;C";
+            }
+            else
+            {
+                sendarray=[];
+                var newdata=[["year","Min","Max"]];
+                var dates=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+                var i=0;
+                while(i<12)
+                {
+                        newdata.push([dates[i],0,0]);
+                        i=i+1;
+                }
+             //   drawChart1(newdata); 
+            //    document.getElementById("temp").innerHTML="Weather Data Not Available";
+         }
+            /* }});*/
+        return sendarray;
+}
 
-          <li>
-             <%=  submit_tag("Search")%>
 
-          </li>
-        
-        </ul>
-        <%end%>
-        
-      </nav>
-    </div>
-    <%= $ielevation_mycity.inspect %>
+        </script>
 
-
-    <h3 style="float:right;margin-right:100px;margin-top:-15px">Weather file of <%=@city%>
-    <%
-    if(($found == 1))%>
-        <b>exists</b>
-    <%else%>
-        <b>does not exist</b>
-    <%end%>
-
-    </h3>
-    <div id="searchpanel" data-city="<%=@city%>" data-ran="<%=@lat_range%>" style="overflow-y: auto;height: 580px;margin-top:30px">
-        <ul>
-
-            Surrogate cities for
-            <p id="city" style="color:black;">
-                <%=@city %>
-            </p>
-            Latitude range
-            <p id="ran" style="color:black;">
-                <%=@lat_range %>
-            </p>
-            Elevation range
-            <p id="ran" style="color:black;">
-                <%=@elev_range %>
-            </p>
-            Radius range(in Km)
-            <p id="radius" style="color:black;">
-                <%=@rad_range%>
-            </p>
-
-            Total cities
-            <p id="length" style="color:black;">
-                <%=@results.length%>
-            </p>:
-            <% @results.each do |c| %>
-                <li>
-                    <a href="#" onclick="gc(this);">
-                        <%=c.city %>
-                    </a>
-                </li>
-                <% end%>
-        </ul>
-    </div>
-    <div id="map-canvas">
-    </div>
-    <div id="display">
-    </div>
     
 </body>
 

@@ -7,7 +7,7 @@ class SearchController < ApplicationController
 	$ielevation_range= 0
 	$imax = 0
 	$imin = 0
-	$iradius_range= 0
+	$iradius_range= 1400
 	$icityname = " "
 	$ilatitude_mycity = 0
 	$ilongitude_mycity = 0
