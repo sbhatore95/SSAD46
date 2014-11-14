@@ -62,7 +62,7 @@ $(document).ready(function(){
   }
   
   function closeSidepage(){
-    $("#srch").removeClass("open");
+    $("#srchd").removeClass("open");
     $('#mainpage').animate({
       left: '0px'
     }, 400, 'easeOutQuint');  
@@ -685,19 +685,18 @@ function gowiki(cityname)
              <%= label_tag(:radius_range, "Radius Range(in km):") %><br>
     <%= text_field_tag(:radius_range,$iradius_range) %><br>
           </li>
-          <li>
+          
            <%= hidden_field_tag 'latitude_mycity', $ilatitude_mycity %>
-          </li>
-          <li>
+          
            <%= hidden_field_tag 'longitude_mycity', $ilongitude_mycity %>
-          </li>
+          
             
          
 
-          <li>
+          
              <%=  submit_tag("Search")%>
 
-          </li>
+          
         
         </ul>
         <%end%>
@@ -716,7 +715,7 @@ function gowiki(cityname)
         <a class="navbar-brand" href="#">SCFT</a>
       </div>
     <ul id="navigation" class="nav navbar-nav">
-    <li><a href="#about" id="srch"><i class="fa fa-search" style="height:40px;width:40px;"></i></a></li>
+    <li><a href="#about" id="srch"><i class="glyphicon glyphicon-search" style="height:40px;width:40px;"></i></a></li>
       
       <li><a href="/welcome">Home</a></li>
       
@@ -738,28 +737,28 @@ function gowiki(cityname)
     <%end%>
 
     </h3>
-    <div id="searchpanel" style="overflow-y: auto;height: 580px;margin-top:30px;border:2px solid;border-radius:10px;">
+    <div id="searchpanel" style="overflow-y: auto;height: 580px;margin-top:0px;border:2px solid;border-radius:10px;">
         <ul>
 
             Surrogate cities for
-            <p id="city" style="color:black;">
+            <p id="city">
                 <%=@city %>
             </p>
             Latitude range
-            <p id="ran" style="color:black;">
+            <p id="ran">
                 <%=@lat_range %>
             </p>
             Elevation range
-            <p id="ran" style="color:black;">
+            <p id="ran">
                 <%=@elev_range %>
             </p>
             Radius range(in Km)
-            <p id="radius" style="color:black;">
+            <p id="radius">
                 <%=@rad_range%>
             </p>
 
             Total cities
-            <p id="length" style="color:black;">
+            <p id="length">
                 <%=@results.length%>
             </p>:
             <% @results.each do |c| %>

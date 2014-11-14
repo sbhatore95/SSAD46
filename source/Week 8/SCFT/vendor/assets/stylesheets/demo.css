@@ -1,15 +1,4 @@
-html, body, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 10%;
-  font: inherit;
-  vertical-align: baseline;
-  outline: none;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
+
 html { height: 101%; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
@@ -19,8 +8,6 @@ blockquote, q { quotes: none; }
 blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
 strong { font-weight: bold; } 
 
-table { border-collapse: collapse; border-spacing: 0; }
-img { border: 0; max-width: 100%; }
 
 h2 { font-size: 2.3em; line-height: 1.1em; font-family: 'ABeeZee', 'Trebuchet MS', Arial, sans-serif; color: #646464; font-weight: bold; margin-bottom: 12px; }
 
@@ -72,16 +59,16 @@ a.close:hover { background: #4a6397; }
 
 #navigation {
   list-style: none;
-  margin-top:-16px
+  margin-top:-24px;
 }
-#navigation li { display: block; margin-bottom: -2px; font-size: 1.4em; font-weight: bold; }
-#navigation li a { display: block; padding: 8px 6px; width: 100%; color: #000; text-decoration: none; }
-#navigation li a:hover, #navigation li a.open { color: #fff; background: #484e57; }
+
+
 
 #map-canvas{
   margin-top:100px;
   margin-left:20px;
-  height:400px;
+  height:500px;
+  width:900px;
 }
 
 #searchpanel {
@@ -150,7 +137,7 @@ nav#top #navigation li {
 #mainpage nav#bottom {
   position: fixed;
   height: 120px; 
-  width: 100%;
+  width: 100;
   min-height: 120px;
   bottom: 0;
   text-align: center;
