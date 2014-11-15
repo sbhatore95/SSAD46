@@ -665,11 +665,10 @@ function gowiki(cityname)
         
       
         
-          <li>
-            <%= label_tag(:city, "City*") %><br>
-    <%= text_field_tag(:city,$icityname) %><br>
+          
+            <%= hidden_field_tag('city',$icityname) %><br>
 
-          </li>
+          
              
           <li>
             <%= label_tag(:latitude_range, "Latitude Range*(in degrees)") %><br>
@@ -728,12 +727,12 @@ function gowiki(cityname)
     </nav>
   
   <div id="content"> 
-    <h3 style="float:right;margin-right:100px;margin-top:0px">Weather file of <%=@city%>
+    <h3 id="exist" style="float:right;margin-right:30px;margin-top:0px">Weather file of <b> <%=@city.titlecase%> </b>
     <%
     if(($found == 1))%>
-        <b>exists</b>
+        <i>exists</i>
     <%else%>
-        <b>does not exist</b>
+        <i>does not exist</i>
     <%end%>
 
     </h3>
@@ -768,6 +767,7 @@ function gowiki(cityname)
                     </a>
                 </li>
                 <% end%>
+                
         </ul>
     </div>
     <!-- place your main page content here --> 
