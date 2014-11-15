@@ -74,7 +74,7 @@ class SearchController < ApplicationController
 			@elevation_Range_Start = $ielevation_mycity.to_f - $ielevation_range.to_f
 			@elevation_Range_End = $ielevation_mycity.to_f + $ielevation_range.to_f
 
-			@results = Cities.where('latitude > ? AND latitude < ? AND elevation > ? AND elevation < ?',@latitude_Range_Start,@latitude_Range_End,@elevation_Range_Start, @elevation_Range_End)
+			@results = Cities.where('latitude > ? AND latitude < ? AND elevation > ? AND elevation < ? AND (round(latitude) != ? OR round(longitude) != ?)',@latitude_Range_Start,@latitude_Range_End,@elevation_Range_Start, @elevation_Range_End, $ilatitude_mycity.to_f.round, $ilongitude_mycity.to_f.round)
 
 	end
 
