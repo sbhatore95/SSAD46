@@ -19,7 +19,7 @@ body{
 	background-color: #000;
 }
 #top{
-	height:36px;
+	height:40px;
 }
 </style>
 
@@ -48,17 +48,11 @@ body{
 		Graph image
 	</div>
 	<div id="links" style="margin-left:900px;margin-top:-200px;">
-		
-		<%= button_to 'download', :controller=> "surrogate" ,:action=> "download",:class => "fa fa-download" %>
-
-		
-		<i class="fa fa-download"></i>
-			Weather File
-		</button><br><br><br><br>
-		<button>
-		<i class="fa fa-download"></i>
-			Quality Report
-		</button>
+		<%= button_to 'Quality Report', :controller=> "surrogate" ,:action=> "download",:class => "fa fa-download" %>
+		<br/><br/><br/>
+	
+		<%= button_to 'EPW Weather file', :controller=> "surrogate" ,:action=> "download1",:class => "fa fa-download" %>
+	
 		
 	</div>
 	

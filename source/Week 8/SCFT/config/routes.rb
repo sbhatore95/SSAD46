@@ -28,7 +28,7 @@ get 'search/new'
 get 'surrogate/displaySurrogateInfo'
 get 'surrogate/download'
 post 'surrogate/download' => "surrogate#download" 
-
+post 'surrogate/download1' => "surrogate#download1"
 #resources :location 
 
   # Example of regular route:
