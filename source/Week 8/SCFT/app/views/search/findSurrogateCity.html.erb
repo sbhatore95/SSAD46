@@ -98,7 +98,7 @@ $(document).ready(function(){
                     map: map
                 });
                 var infowindow = new google.maps.InfoWindow({
-                      content: "<%=$icityname%>" + '<br/>' + 
+                      content:  '<b>' + "<%=$icityname%>" + '</b>' + '<br/>' + 
                       'latitude : ' + "<%=$ilatitude_mycity%>"+
                       '<br/>' + 'longitude :  ' +
                       "<%=$ilongitude_mycity%>"
@@ -120,8 +120,10 @@ $(document).ready(function(){
                     var address = document.getElementById('searchpanel').getElementsByTagName("span");
                     var len = document.getElementById('length').innerHTML; //Number of cities
                     console.log(len);
+                    if(len > 10)
+                        len=10;
 
-                    for (i = 0; i < 9; i++) { //only 10 cities could be marked now
+                    for (i = 0; i < len; i++) { //only 10 cities could be marked now
 
                         geocoder.geocode({
                             'address': address[i].innerHTML
@@ -183,7 +185,7 @@ $(document).ready(function(){
             function lat_belt() {
                 
                 var ran = parseFloat(document.getElementById('ran').innerHTML);
-                console.log(ran);
+                console.log("ran: " + ran);
                    
                     var lat = parseFloat("<%=$ilatitude_mycity%>");
 
