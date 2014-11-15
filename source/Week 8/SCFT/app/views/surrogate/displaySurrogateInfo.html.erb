@@ -1,0 +1,64 @@
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>SCFT</title>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" media="all" href="http://fonts.googleapis.com/css?family=ABeeZee">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js"></script>
+<script>
+function goBack() {
+    window.history.back()
+}
+</script>
+
+<style>
+body{
+	background-color: #000;
+}
+#top{
+	height:40px;
+}
+</style>
+
+</head>
+
+<body>
+<nav id = "top" class="navbar navbar-default" style="margin-top:30px">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">SCFT</a>
+      </div>
+    <ul id="navigation" class="nav navbar-nav">
+    <li><a onclick="goBack()" id="srch" style="cursor:pointer"><i class="fa fa-arrow-left" style="height:40px;width:40px;"></i></a></li>
+      
+      <li><a href="/welcome">Home</a></li>
+      
+      
+      <li><a href="http://127.0.0.1:3000/log_out">Logout</a></li>
+      
+    </ul>
+    </div>
+
+    </nav>
+<div id="content">
+	<div id="graph" style="margin-top:100px;margin-left:100px;height:400px;width:700px;background-color:white;">
+		Graph image
+	</div>
+	<div id="links" style="margin-left:900px;margin-top:-200px;">
+
+		<button>
+		<i class="fa fa-download"></i>
+			Weather File
+		</button><br><br><br><br>
+		<button>
+		<i class="fa fa-download"></i>
+			Quality Report
+		</button>
+		
+	</div>
+	
+</div>
+</body>

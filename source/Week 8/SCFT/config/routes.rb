@@ -25,6 +25,7 @@ resources :sessions
 get 'sessions/new'
 get 'users/new'
 get 'search/new'
+get 'surrogate/displaySurrogateInfo'
 
 
 
