@@ -1,0 +1,43 @@
+                Average Minimum and Maximum Temperatures
+                ========================================
+
+                         Maximum Temperatures:
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMax:25.85	27.33	26.0	25.96	27.13	26.89	25.87	23.68	20.66	19.37	18.92	18.95	
+Time:11	12	14	13	13	13	13	14	13	14	13	13	
+
+                         Minimum Temperatures
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMin:16.5	17.0	17.3	16.95	17.33	17.29	16.32	14.9	10.81	8.0	9.22	8.57	
+Time: 	6	5	8	6	6	7	8	8	9	11	9	8	
+
+=================================================================================================
+
+                           Solar Radiation Analysis
+                            ========================
+Lines checked: 2792
+===============
+No. of wrong lines: 16
+==================
+Wrong Direct Normal Radiation:
+=================================
+Year: 1977  Month: 1  Day: 2  Time: 8  Solar radiation: 699
+Year: 1977  Month: 1  Day: 3  Time: 8  Solar radiation: 624
+Year: 1975  Month: 2  Day: 13  Time: 8  Solar radiation: 685
+Year: 1975  Month: 2  Day: 16  Time: 8  Solar radiation: 591
+Year: 1987  Month: 10  Day: 10  Time: 8  Solar radiation: 712
+Year: 1987  Month: 10  Day: 11  Time: 8  Solar radiation: 671
+Year: 1987  Month: 10  Day: 29  Time: 8  Solar radiation: 591
+Year: 1987  Month: 10  Day: 31  Time: 8  Solar radiation: 574
+Year: 1987  Month: 11  Day: 18  Time: 8  Solar radiation: 631
+Year: 1987  Month: 11  Day: 21  Time: 8  Solar radiation: 760
+Year: 1987  Month: 11  Day: 26  Time: 8  Solar radiation: 739
+Year: 1973  Month: 12  Day: 1  Time: 8  Solar radiation: 793
+Year: 1973  Month: 12  Day: 16  Time: 8  Solar radiation: 712
+Year: 1973  Month: 12  Day: 19  Time: 8  Solar radiation: 584
+Year: 1973  Month: 12  Day: 21  Time: 8  Solar radiation: 694
+Wrong Global Horizontal Radiation:
+==================================
+Wrong Diffuse Horizontal Radiation:
+====================================
+Year: 1987  Month: 11  Day: 13  Time: 8  Solar radiation: 268

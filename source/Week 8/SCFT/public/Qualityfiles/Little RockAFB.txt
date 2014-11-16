@@ -1,0 +1,57 @@
+                Average Minimum and Maximum Temperatures
+                ========================================
+
+                         Maximum Temperatures:
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMax:10.0	12.24	16.97	23.11	21.95	24.91	25.69	27.89	27.66	27.97	29.68	29.78	
+Time:14	12	13	14	13	13	13	13	13	13	13	13	
+
+                         Minimum Temperatures
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMin:-0.28	1.46	6.06	11.72	9.9	12.41	12.88	15.98	15.4	15.54	19.9	19.55	
+Time: 	10	11	8	9	5	4	4	5	7	6	4	4	
+
+=================================================================================================
+
+                           Solar Radiation Analysis
+                            ========================
+Lines checked: 2834
+===============
+No. of wrong lines: 30
+==================
+Wrong Direct Normal Radiation:
+=================================
+Year: 1963  Month: 5  Day: 4  Time: 8  Solar radiation: 577
+Year: 1963  Month: 5  Day: 7  Time: 8  Solar radiation: 584
+Year: 1963  Month: 5  Day: 8  Time: 8  Solar radiation: 586
+Year: 1963  Month: 5  Day: 15  Time: 8  Solar radiation: 598
+Year: 1963  Month: 5  Day: 23  Time: 8  Solar radiation: 551
+Year: 1960  Month: 6  Day: 5  Time: 8  Solar radiation: 563
+Year: 1960  Month: 6  Day: 10  Time: 8  Solar radiation: 565
+Year: 1960  Month: 6  Day: 11  Time: 8  Solar radiation: 566
+Year: 1960  Month: 6  Day: 12  Time: 8  Solar radiation: 619
+Year: 1960  Month: 6  Day: 17  Time: 8  Solar radiation: 621
+Year: 1960  Month: 6  Day: 18  Time: 8  Solar radiation: 621
+Year: 1960  Month: 6  Day: 19  Time: 8  Solar radiation: 568
+Year: 1960  Month: 6  Day: 21  Time: 8  Solar radiation: 622
+Year: 1960  Month: 6  Day: 22  Time: 8  Solar radiation: 623
+Year: 1960  Month: 6  Day: 23  Time: 8  Solar radiation: 622
+Year: 1960  Month: 6  Day: 29  Time: 8  Solar radiation: 623
+Year: 1960  Month: 6  Day: 30  Time: 8  Solar radiation: 623
+Year: 1970  Month: 7  Day: 1  Time: 8  Solar radiation: 622
+Year: 1970  Month: 7  Day: 2  Time: 8  Solar radiation: 622
+Year: 1970  Month: 7  Day: 3  Time: 8  Solar radiation: 622
+Year: 1970  Month: 7  Day: 6  Time: 8  Solar radiation: 620
+Year: 1970  Month: 7  Day: 9  Time: 8  Solar radiation: 618
+Year: 1970  Month: 7  Day: 13  Time: 8  Solar radiation: 614
+Year: 1970  Month: 7  Day: 15  Time: 8  Solar radiation: 551
+Year: 1970  Month: 7  Day: 18  Time: 8  Solar radiation: 606
+Year: 1970  Month: 7  Day: 30  Time: 8  Solar radiation: 577
+Year: 1970  Month: 7  Day: 31  Time: 8  Solar radiation: 573
+Year: 1955  Month: 8  Day: 1  Time: 8  Solar radiation: 576
+Year: 1955  Month: 8  Day: 5  Time: 8  Solar radiation: 564
+Year: 1955  Month: 8  Day: 6  Time: 8  Solar radiation: 561
+Wrong Global Horizontal Radiation:
+==================================
+Wrong Diffuse Horizontal Radiation:
+====================================

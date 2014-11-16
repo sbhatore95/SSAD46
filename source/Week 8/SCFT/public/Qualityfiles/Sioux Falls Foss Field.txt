@@ -1,0 +1,79 @@
+                Average Minimum and Maximum Temperatures
+                ========================================
+
+                         Maximum Temperatures:
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMax:-4.54	-1.35	8.74	9.39	8.05	10.66	11.27	11.94	13.61	13.64	14.2	16.08	
+Time:12	12	13	13	12	13	14	14	14	14	14	13	
+
+                         Minimum Temperatures
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMin:-16.26	-11.8	-4.0	-4.01	-2.38	-1.12	-0.33	-0.17	0.98	1.06	1.29	6.5	
+Time: 	11	11	10	10	9	9	10	10	10	9	10	8	
+
+=================================================================================================
+
+                           Solar Radiation Analysis
+                            ========================
+Lines checked: 2643
+===============
+No. of wrong lines: 52
+==================
+Wrong Direct Normal Radiation:
+=================================
+Year: 1991  Month: 3  Day: 29  Time: 8  Solar radiation: 576
+Year: 2000  Month: 4  Day: 4  Time: 8  Solar radiation: 555
+Year: 2000  Month: 4  Day: 5  Time: 8  Solar radiation: 566
+Year: 2000  Month: 4  Day: 21  Time: 8  Solar radiation: 623
+Year: 2000  Month: 4  Day: 22  Time: 8  Solar radiation: 635
+Year: 2000  Month: 4  Day: 28  Time: 8  Solar radiation: 656
+Year: 2000  Month: 4  Day: 29  Time: 8  Solar radiation: 643
+Year: 1986  Month: 5  Day: 4  Time: 8  Solar radiation: 689
+Year: 1986  Month: 5  Day: 6  Time: 8  Solar radiation: 789
+Year: 1986  Month: 5  Day: 11  Time: 7  Solar radiation: 570
+Year: 1986  Month: 5  Day: 11  Time: 8  Solar radiation: 739
+Year: 1986  Month: 5  Day: 18  Time: 7  Solar radiation: 638
+Year: 1986  Month: 5  Day: 18  Time: 8  Solar radiation: 697
+Year: 1986  Month: 5  Day: 19  Time: 8  Solar radiation: 619
+Year: 1986  Month: 5  Day: 20  Time: 8  Solar radiation: 692
+Year: 1986  Month: 5  Day: 21  Time: 7  Solar radiation: 602
+Year: 1986  Month: 5  Day: 21  Time: 8  Solar radiation: 763
+Year: 1986  Month: 5  Day: 22  Time: 8  Solar radiation: 687
+Year: 1986  Month: 5  Day: 31  Time: 7  Solar radiation: 561
+Year: 1986  Month: 5  Day: 31  Time: 8  Solar radiation: 713
+Year: 1996  Month: 6  Day: 4  Time: 7  Solar radiation: 593
+Year: 1996  Month: 6  Day: 4  Time: 8  Solar radiation: 744
+Year: 1996  Month: 6  Day: 8  Time: 8  Solar radiation: 598
+Year: 1996  Month: 6  Day: 9  Time: 8  Solar radiation: 676
+Year: 1996  Month: 6  Day: 10  Time: 7  Solar radiation: 652
+Year: 1996  Month: 6  Day: 10  Time: 8  Solar radiation: 787
+Year: 1996  Month: 6  Day: 11  Time: 8  Solar radiation: 579
+Year: 1996  Month: 6  Day: 12  Time: 8  Solar radiation: 603
+Year: 1996  Month: 6  Day: 13  Time: 8  Solar radiation: 696
+Year: 1996  Month: 6  Day: 19  Time: 8  Solar radiation: 683
+Year: 1996  Month: 6  Day: 23  Time: 8  Solar radiation: 611
+Year: 1996  Month: 6  Day: 24  Time: 8  Solar radiation: 623
+Year: 1996  Month: 6  Day: 26  Time: 8  Solar radiation: 658
+Year: 1996  Month: 6  Day: 27  Time: 8  Solar radiation: 682
+Year: 1996  Month: 6  Day: 30  Time: 7  Solar radiation: 623
+Year: 1996  Month: 6  Day: 30  Time: 8  Solar radiation: 765
+Year: 2003  Month: 7  Day: 2  Time: 8  Solar radiation: 584
+Year: 2003  Month: 7  Day: 5  Time: 8  Solar radiation: 640
+Year: 2003  Month: 7  Day: 6  Time: 8  Solar radiation: 578
+Year: 2003  Month: 7  Day: 11  Time: 8  Solar radiation: 585
+Year: 2003  Month: 7  Day: 12  Time: 8  Solar radiation: 629
+Year: 2003  Month: 7  Day: 15  Time: 8  Solar radiation: 624
+Year: 2003  Month: 7  Day: 17  Time: 8  Solar radiation: 568
+Year: 2003  Month: 7  Day: 23  Time: 8  Solar radiation: 569
+Year: 2003  Month: 7  Day: 30  Time: 8  Solar radiation: 571
+Year: 1980  Month: 8  Day: 5  Time: 8  Solar radiation: 743
+Year: 1980  Month: 8  Day: 12  Time: 8  Solar radiation: 554
+Year: 1980  Month: 8  Day: 21  Time: 8  Solar radiation: 636
+Year: 1988  Month: 9  Day: 4  Time: 8  Solar radiation: 559
+Year: 1988  Month: 9  Day: 5  Time: 8  Solar radiation: 619
+Year: 1988  Month: 9  Day: 9  Time: 8  Solar radiation: 573
+Year: 1988  Month: 9  Day: 23  Time: 8  Solar radiation: 590
+Wrong Global Horizontal Radiation:
+==================================
+Wrong Diffuse Horizontal Radiation:
+====================================

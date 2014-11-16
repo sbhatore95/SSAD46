@@ -1,0 +1,62 @@
+                Average Minimum and Maximum Temperatures
+                ========================================
+
+                         Maximum Temperatures:
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMax:21.22	23.0	23.02	23.31	23.58	23.61	23.82	23.64	24.02	20.55	24.94	24.85	
+Time:14	14	14	14	14	14	14	14	14	11	15	14	
+
+                         Minimum Temperatures
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMin:12.67	11.46	11.24	11.08	11.11	11.73	11.77	11.59	11.59	11.6	12.8	13.94	
+Time: 	6	5	5	5	5	6	6	6	6	15	6	7	
+
+=================================================================================================
+
+                           Solar Radiation Analysis
+                            ========================
+Lines checked: 3140
+===============
+No. of wrong lines: 35
+==================
+Wrong Direct Normal Radiation:
+=================================
+Year: 1979  Month: 1  Day: 6  Time: 8  Solar radiation: 660
+Year: 1979  Month: 1  Day: 12  Time: 8  Solar radiation: 698
+Year: 1979  Month: 1  Day: 13  Time: 8  Solar radiation: 628
+Year: 1979  Month: 1  Day: 14  Time: 8  Solar radiation: 556
+Year: 1979  Month: 1  Day: 15  Time: 8  Solar radiation: 597
+Year: 1979  Month: 1  Day: 24  Time: 8  Solar radiation: 613
+Year: 1979  Month: 1  Day: 29  Time: 8  Solar radiation: 575
+Year: 1979  Month: 1  Day: 31  Time: 8  Solar radiation: 627
+Year: 1994  Month: 2  Day: 2  Time: 8  Solar radiation: 592
+Year: 1980  Month: 5  Day: 1  Time: 8  Solar radiation: 646
+Year: 1994  Month: 6  Day: 13  Time: 8  Solar radiation: 615
+Year: 1999  Month: 9  Day: 26  Time: 8  Solar radiation: 612
+Year: 1989  Month: 10  Day: 4  Time: 8  Solar radiation: 608
+Year: 1989  Month: 10  Day: 16  Time: 8  Solar radiation: 625
+Year: 1989  Month: 10  Day: 25  Time: 8  Solar radiation: 720
+Year: 1989  Month: 10  Day: 26  Time: 8  Solar radiation: 749
+Year: 1989  Month: 10  Day: 31  Time: 8  Solar radiation: 634
+Year: 2000  Month: 11  Day: 7  Time: 8  Solar radiation: 646
+Year: 2000  Month: 11  Day: 8  Time: 8  Solar radiation: 551
+Year: 2000  Month: 11  Day: 11  Time: 8  Solar radiation: 578
+Year: 2000  Month: 11  Day: 12  Time: 8  Solar radiation: 724
+Year: 2000  Month: 11  Day: 19  Time: 8  Solar radiation: 572
+Year: 2000  Month: 11  Day: 23  Time: 8  Solar radiation: 660
+Year: 2000  Month: 11  Day: 24  Time: 8  Solar radiation: 625
+Year: 2000  Month: 11  Day: 26  Time: 8  Solar radiation: 629
+Year: 2000  Month: 11  Day: 27  Time: 8  Solar radiation: 659
+Year: 2000  Month: 11  Day: 28  Time: 8  Solar radiation: 601
+Year: 2000  Month: 11  Day: 29  Time: 8  Solar radiation: 559
+Year: 1981  Month: 12  Day: 1  Time: 8  Solar radiation: 710
+Year: 1981  Month: 12  Day: 5  Time: 8  Solar radiation: 553
+Year: 1981  Month: 12  Day: 8  Time: 8  Solar radiation: 572
+Year: 1981  Month: 12  Day: 13  Time: 8  Solar radiation: 708
+Year: 1981  Month: 12  Day: 19  Time: 8  Solar radiation: 626
+Year: 1981  Month: 12  Day: 25  Time: 8  Solar radiation: 632
+Year: 1981  Month: 12  Day: 31  Time: 8  Solar radiation: 639
+Wrong Global Horizontal Radiation:
+==================================
+Wrong Diffuse Horizontal Radiation:
+====================================

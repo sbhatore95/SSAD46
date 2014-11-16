@@ -1,0 +1,74 @@
+                Average Minimum and Maximum Temperatures
+                ========================================
+
+                         Maximum Temperatures:
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMax:-0.52	0.44	10.88	17.93	11.1	20.64	22.62	22.72	23.18	22.93	23.01	22.03	
+Time:13	12	13	13	8	14	14	14	14	14	14	14	
+
+                         Minimum Temperatures
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMin:-10.11	-7.85	-1.36	6.67	6.9	10.5	12.1	12.1	12.43	12.41	12.41	11.91	
+Time: 	10	11	10	8	6	5	8	8	7	8	8	8	
+
+=================================================================================================
+
+                           Solar Radiation Analysis
+                            ========================
+Lines checked: 2810
+===============
+No. of wrong lines: 47
+==================
+Wrong Direct Normal Radiation:
+=================================
+Year: 1986  Month: 5  Day: 1  Time: 8  Solar radiation: 719
+Year: 1986  Month: 5  Day: 5  Time: 8  Solar radiation: 718
+Year: 1986  Month: 5  Day: 11  Time: 7  Solar radiation: 589
+Year: 1986  Month: 5  Day: 11  Time: 8  Solar radiation: 771
+Year: 1986  Month: 5  Day: 12  Time: 8  Solar radiation: 667
+Year: 1986  Month: 5  Day: 14  Time: 7  Solar radiation: 582
+Year: 1986  Month: 5  Day: 14  Time: 8  Solar radiation: 760
+Year: 1986  Month: 5  Day: 18  Time: 8  Solar radiation: 600
+Year: 1986  Month: 5  Day: 19  Time: 8  Solar radiation: 658
+Year: 1986  Month: 5  Day: 20  Time: 8  Solar radiation: 641
+Year: 1986  Month: 5  Day: 21  Time: 8  Solar radiation: 671
+Year: 1986  Month: 5  Day: 22  Time: 8  Solar radiation: 689
+Year: 1986  Month: 5  Day: 24  Time: 8  Solar radiation: 693
+Year: 1986  Month: 5  Day: 31  Time: 8  Solar radiation: 730
+Year: 1972  Month: 6  Day: 1  Time: 8  Solar radiation: 594
+Year: 1972  Month: 6  Day: 2  Time: 8  Solar radiation: 620
+Year: 1972  Month: 6  Day: 8  Time: 8  Solar radiation: 768
+Year: 1972  Month: 6  Day: 15  Time: 8  Solar radiation: 603
+Year: 1972  Month: 6  Day: 21  Time: 7  Solar radiation: 599
+Year: 1972  Month: 6  Day: 21  Time: 8  Solar radiation: 759
+Year: 1972  Month: 6  Day: 22  Time: 8  Solar radiation: 675
+Year: 1972  Month: 6  Day: 23  Time: 7  Solar radiation: 637
+Year: 1972  Month: 6  Day: 23  Time: 8  Solar radiation: 620
+Year: 1972  Month: 6  Day: 28  Time: 7  Solar radiation: 623
+Year: 1972  Month: 6  Day: 28  Time: 8  Solar radiation: 768
+Year: 1972  Month: 6  Day: 29  Time: 7  Solar radiation: 632
+Year: 1972  Month: 6  Day: 29  Time: 8  Solar radiation: 777
+Year: 1988  Month: 7  Day: 4  Time: 8  Solar radiation: 616
+Year: 1988  Month: 7  Day: 6  Time: 8  Solar radiation: 572
+Year: 1988  Month: 7  Day: 13  Time: 8  Solar radiation: 583
+Year: 1988  Month: 7  Day: 20  Time: 8  Solar radiation: 686
+Year: 1988  Month: 7  Day: 21  Time: 7  Solar radiation: 579
+Year: 1988  Month: 7  Day: 21  Time: 8  Solar radiation: 726
+Year: 1988  Month: 7  Day: 22  Time: 8  Solar radiation: 711
+Year: 1988  Month: 7  Day: 23  Time: 8  Solar radiation: 679
+Year: 1968  Month: 8  Day: 25  Time: 8  Solar radiation: 632
+Year: 1968  Month: 9  Day: 1  Time: 8  Solar radiation: 697
+Year: 1968  Month: 9  Day: 6  Time: 8  Solar radiation: 572
+Year: 1968  Month: 9  Day: 11  Time: 8  Solar radiation: 563
+Year: 1968  Month: 9  Day: 15  Time: 8  Solar radiation: 580
+Year: 1968  Month: 10  Day: 3  Time: 8  Solar radiation: 601
+Year: 1968  Month: 10  Day: 6  Time: 8  Solar radiation: 616
+Wrong Global Horizontal Radiation:
+==================================
+Wrong Diffuse Horizontal Radiation:
+====================================
+Year: 1988  Month: 7  Day: 5  Time: 8  Solar radiation: 310
+Year: 1988  Month: 7  Day: 12  Time: 8  Solar radiation: 273
+Year: 1988  Month: 7  Day: 14  Time: 8  Solar radiation: 300
+Year: 1988  Month: 7  Day: 16  Time: 8  Solar radiation: 282
+Year: 1988  Month: 7  Day: 17  Time: 8  Solar radiation: 295

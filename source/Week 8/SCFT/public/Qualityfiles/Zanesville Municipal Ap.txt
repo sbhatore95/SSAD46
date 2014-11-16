@@ -1,0 +1,33 @@
+                Average Minimum and Maximum Temperatures
+                ========================================
+
+                         Maximum Temperatures:
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMax:6.85	7.06	12.02	18.62	20.5	22.82	24.18	24.26	19.58	21.97	24.0	28.78	
+Time:12	11	12	13	11	12	13	13	14	13	14	14	
+
+                         Minimum Temperatures
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMin:-0.63	-2.48	-0.23	7.11	6.86	10.19	12.07	12.34	10.37	13.01	13.43	16.49	
+Time: 	10	10	11	9	11	10	9	10	8	8	7	7	
+
+=================================================================================================
+
+                           Solar Radiation Analysis
+                            ========================
+Lines checked: 2308
+===============
+No. of wrong lines: 6
+==================
+Wrong Direct Normal Radiation:
+=================================
+Year: 2004  Month: 5  Day: 9  Time: 8  Solar radiation: 552
+Year: 2004  Month: 5  Day: 17  Time: 8  Solar radiation: 563
+Year: 2004  Month: 5  Day: 23  Time: 8  Solar radiation: 555
+Year: 2003  Month: 6  Day: 9  Time: 8  Solar radiation: 560
+Year: 2003  Month: 6  Day: 22  Time: 8  Solar radiation: 554
+Year: 1997  Month: 8  Day: 5  Time: 8  Solar radiation: 638
+Wrong Global Horizontal Radiation:
+==================================
+Wrong Diffuse Horizontal Radiation:
+====================================

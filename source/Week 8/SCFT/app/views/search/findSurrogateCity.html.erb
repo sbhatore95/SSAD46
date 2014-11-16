@@ -1,4 +1,5 @@
-<!doctype html>
+<! -> or -< IIIT is the best-->
+<!DOCTYPE html>
 <html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
@@ -81,7 +82,7 @@ $(document).ready(function(){
 
             function initialize() {
                 geocoder = new google.maps.Geocoder();
-                var centre = new google.maps.LatLng(23.0100, 78.00);
+                var centre = new google.maps.LatLng("<%=$ilatitude_mycity%>", "<%=$ilongitude_mycity %>");
                 var mapOptions = {
                     zoom: 5,
                     center: centre,
@@ -92,6 +93,20 @@ $(document).ready(function(){
                 var len = document.getElementById('length').innerHTML;
 
 
+                marker = new google.maps.Marker({
+                    icon:"http://maps.google.com/mapfiles/ms/icons/green-dot.png",
+                    position: centre,
+                    map: map
+                });
+                var infowindow = new google.maps.InfoWindow({
+                      content:  '<b>' + "<%=$icityname%>" + '</b>' + '<br/>' + 
+                      'latitude : ' + "<%=$ilatitude_mycity%>"+
+                      '<br/>' + 'longitude :  ' +
+                      "<%=$ilongitude_mycity%>"
+                      });
+
+                infowindow.open(map,marker);
+                                
                 codeAddress();
                 lat_belt();
                 draw_radius();
@@ -103,31 +118,35 @@ $(document).ready(function(){
             var flag;
 
             function codeAddress() {
-                    var address = document.getElementById('searchpanel').getElementsByTagName("span");
+                    var lat = document.getElementById('searchpanel').getElementsByClassName("lat");
+                    console.log(lat);
+                    var lon = document.getElementById('searchpanel').getElementsByClassName("lon");
                     var len = document.getElementById('length').innerHTML; //Number of cities
                     console.log(len);
+                    //if(len > 10)
+                      //  len=10;
+                    for(i=0;i<len;i++){
+                        console.log(lat[i].innerHTML);
+                        var loc = new google.maps.LatLng(lat[i].innerHTML,lon[i].innerHTML);
+                        
+                        
+                        markers.push(new google.maps.Marker({
+                            //   position: location,
+                            icon:{url : '/assets/marker.png'},
+                            position: loc,
+                            map: map,
+                            
+                         }));
+                        
+                        console.log(markers);
+                          google.maps.event.addListener(markers[i],'click',function() {
+                          map.setZoom(9);
+                          console.log(markers[i].getPosition());
+                          map.setCenter(markers[i].getPosition());
+                          });
 
-                    for (i = 0; i < 9; i++) { //only 10 cities could be marked now
 
-                        geocoder.geocode({
-                            'address': address[i].innerHTML
-                        }, function(results, status) {
-                            if (status == google.maps.GeocoderStatus.OK) {
-                                map.setCenter(results[0].geometry.location);
-                                addMarker(results[0].geometry.location);
-                                var marker = new google.maps.Marker({
-                                    position: results[0].geometry.location,
-                                });
-                                marker.setMap(map);
-
-
-
-                            } else {
-                                console.log('Geocode was not successful for the following reason: ' + status);
-                            }
-                        });
-
-                    }
+                    }               
                 }
                 //onmouseover implementation
             function gc(element) {
@@ -167,57 +186,38 @@ $(document).ready(function(){
 
             //make latitude belt
             function lat_belt() {
-
-
                 
-                  var address = "<%= $icityname %>"
-                
-
-
-                
-                console.log(address);
                 var ran = parseFloat(document.getElementById('ran').innerHTML);
-                console.log(ran);
-                geocoder.geocode({
-                    'address': address
-                }, function(results, status) {
-                    if (status == google.maps.GeocoderStatus.OK) {
-                        map.setCenter(results[0].geometry.location);
-                        addMarker(results[0].geometry.location);
-                        var a = results[0].geometry.location;
-                        var lat = a.lat();
+                console.log("ran: " + ran);
+                   
+                    var lat = parseFloat("<%=$ilatitude_mycity%>");
 
-                        var lon = a.lng();
+                    var lon =parseFloat("<%=$ilongitude_mycity%>");
 
 
-                        var l_up = new google.maps.LatLng(lat + ran, -177);
-                        var m_up = new google.maps.LatLng(lat + ran, 0);
-                        var r_up = new google.maps.LatLng(lat + ran, +177);
-                        var l_down = new google.maps.LatLng(lat - ran, +177);
-                        var m_down = new google.maps.LatLng(lat - ran, 0);
-                        var r_down = new google.maps.LatLng(lat - ran, -177);
+                    var l_up = new google.maps.LatLng(lat + ran, -177);
+                    var m_up = new google.maps.LatLng(lat + ran, 0);
+                    var r_up = new google.maps.LatLng(lat + ran, +177);
+                    var l_down = new google.maps.LatLng(lat - ran, +177);
+                    var m_down = new google.maps.LatLng(lat - ran, 0);
+                    var r_down = new google.maps.LatLng(lat - ran, -177);
 
-                        var myTrip = [l_up, m_up, r_up, l_down, m_down, r_down];
+                    var myTrip = [l_up, m_up, r_up, l_down, m_down, r_down];
 
 
 
-                        var flightPath = new google.maps.Polygon({
-                            path: myTrip,
-                            strokeColor: "#0000FF",
-                            strokeOpacity: 0.8,
-                            strokeWeight: 2,
-                            fillColor: "#0000FF",
-                            fillOpacity: 0.4
-                        });
+                    var flightPath = new google.maps.Polygon({
+                        path: myTrip,
+                        strokeColor: "#000",
+                        strokeOpacity: 0.8,
+                        strokeWeight: 2,
+                        fillColor: "#0000FF",
+                        fillOpacity: 0.4
+                    });
 
-                        flightPath.setMap(map);
+                    flightPath.setMap(map);
 
-                    } else {
-                        console.log('Geocode was not successful for the following reason: ' + status);
-                    }
-
-                });
-            }
+                }
 
             //Radius range implementation and infowindow showing entered city.
 
@@ -227,55 +227,31 @@ $(document).ready(function(){
                 rad = rad * 1000;
                 console.log(rad);
                 console.log(address);
-                geocoder.geocode({
-                    'address': address
-                }, function(results, status) {
-                    if (status == google.maps.GeocoderStatus.OK) {
-                        map.setCenter(results[0].geometry.location);
-
-                        var marker = new google.maps.Marker({
-                            position: results[0].geometry.location,
-                        });
-
-                        marker.setMap(map);
-
-                        var infowindow = new google.maps.InfoWindow({
-                            content: address
-                        });
-
-                        infowindow.open(map, marker);
-
-                        zoom_on_click(marker, address);
-
-                        var a = results[0].geometry.location;
-                        var lat = a.lat();
-
-                        var lon = a.lng();
+               
+               
+                 var lat = parseFloat("<%=$ilatitude_mycity%>");
+                 console.log("check"+lat);   
+                 var lon =parseFloat("<%=$ilongitude_mycity%>");
 
 
-                        var city = new google.maps.LatLng(lat, lon);
+                var city = new google.maps.LatLng(lat, lon);
 
-                        var myCity = new google.maps.Circle({
-                            center: city,
-                            radius: rad,
-                            strokeColor: "#0000FF",
-                            strokeOpacity: 0.8,
-                            strokeWeight: 2,
-                            fillColor: "#0000FF",
-                            fillOpacity: 0.4
-                        });
-
-                        //console.log(myCity);
-
-                        myCity.setMap(map);
-
-
-                    } else {
-                        console.log('Geocode was not successful for the following reason: ' + status);
-                    }
-
+                var myCity = new google.maps.Circle({
+                    center: city,
+                    radius: rad,
+                    strokeColor: "#000",
+                    strokeOpacity: 0.2,
+                    strokeWeight: 2,
+                    fillColor: "#fff",
+                    fillOpacity: 0.4
                 });
+
+                //console.log(myCity);
+
+                myCity.setMap(map);
             }
+
+          
 
             function zoom_on_click(marker, address) {
                 google.maps.event.addListener(marker, 'click', function() {
@@ -290,12 +266,21 @@ $(document).ready(function(){
 
             // Add a marker to the map and push to the array.
             function addMarker(location) {
+                var image = {
+                    src: '<i class="fa fa-map-marker"></i>',
+                    size: new google.maps.Size(24, 24), 
+                    origin: new google.maps.Point(0,0),   
+                    anchor: new google.maps.Point(12,12)
+                };
+                
                 marker = new google.maps.Marker({
                     //   position: location,
+                    icon:image,
                     position: location,
-                    map: map
+                    map: map,
+                    
                 });
-                markers.push(marker);
+                console.log(marker); 
             }
 
 
@@ -649,8 +634,17 @@ function gowiki(cityname)
 
 
         </script>
-
-
+<style>
+p {
+  font-size: 10; color: white;
+}
+p.pos_fixed{
+      text-align: right;
+      margin-right: :20px;
+      position: relative;
+      
+}
+</style>
 </head>
 
 
@@ -658,20 +652,12 @@ function gowiki(cityname)
 
 <body>
 <div id="about">
-  <b><h2>Modify Search</h2></b>
+  <b><h2 style="background-color: transparent;">Modify Search</h2></b>
     
         <%= form_tag("/search", method: "get", remote: true) do %>
         <ul>
-        
-      
-        
-          <li>
-            <%= label_tag(:city, "City*") %><br>
-    <%= text_field_tag(:city,$icityname) %><br>
-
-          </li>
-             
-          <li>
+            <%= hidden_field_tag('city',$icityname) %><br>
+            <li>
             <%= label_tag(:latitude_range, "Latitude Range*(in degrees)") %><br>
     <%= text_field_tag(:latitude_range,$ilatitude_range ) %><br>
           </li>
@@ -705,11 +691,8 @@ function gowiki(cityname)
         
 </div>
 <div id="mainpage">
-
-
-  
-    
-    <nav id = "top" class="navbar navbar-default" style="margin-top:30px">
+    <p class="pos_fixed">Logged in as <%= current_user.email %></p>
+    <nav id = "top" class="navbar navbar-default" style="margin-top:0">
     <div class="container-fluid">
       <div class="navbar-header">
         <a class="navbar-brand" href="#">SCFT</a>
@@ -728,16 +711,16 @@ function gowiki(cityname)
     </nav>
   
   <div id="content"> 
-    <h3 style="float:right;margin-right:100px;margin-top:0px">Weather file of <%=@city%>
+    <h4 id="exist" style="float:right;margin-right:20px;margin-top:0px">Weather file of <b> <%=@city.titlecase%> </b>
     <%
     if(($found == 1))%>
-        <b>exists</b>
+        <i>exists</i>
     <%else%>
-        <b>does not exist</b>
+        <i>does not exist</i>
     <%end%>
 
-    </h3>
-    <div id="searchpanel" style="overflow-y: auto;height: 580px;margin-top:0px;border:2px solid;border-radius:10px;">
+    </h4>
+    <div id="searchpanel" style="overflow-y: auto;height: 580px;margin-top:0px;margin-right:50px;border:2px solid;border-radius:10px;">
         <ul>
 
             Surrogate cities for
@@ -767,7 +750,14 @@ function gowiki(cityname)
                         <%=c.city %>
                     </a>
                 </li>
+                <li class = "lat"style="display:none">
+                    <%= c.latitude %>                    
+                </li>
+                <li class = "lon"style="display:none">
+                    <%= c.longitude %>                    
+                </li>
                 <% end%>
+                
         </ul>
     </div>
     <!-- place your main page content here --> 
@@ -779,5 +769,6 @@ function gowiki(cityname)
     </div>
   </div>
 </div>
+
 </body>
 </html>

@@ -1,0 +1,45 @@
+                Average Minimum and Maximum Temperatures
+                ========================================
+
+                         Maximum Temperatures:
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMax:1.12	1.33	8.3	13.19	16.22	17.89	18.63	19.04	17.77	17.23	17.2	17.4	
+Time:13	14	13	14	13	13	13	13	14	13	13	14	
+
+                         Minimum Temperatures
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMin:-3.66	-3.45	-0.21	3.28	6.47	6.99	7.32	7.51	7.66	7.23	7.2	7.24	
+Time: 	11	9	11	11	11	9	9	9	10	12	12	11	
+
+=================================================================================================
+
+                           Solar Radiation Analysis
+                            ========================
+Lines checked: 3122
+===============
+No. of wrong lines: 18
+==================
+Wrong Direct Normal Radiation:
+=================================
+Year: 1998  Month: 5  Day: 8  Time: 8  Solar radiation: 600
+Year: 1998  Month: 5  Day: 10  Time: 8  Solar radiation: 603
+Year: 1998  Month: 5  Day: 11  Time: 8  Solar radiation: 623
+Year: 1998  Month: 5  Day: 14  Time: 8  Solar radiation: 607
+Year: 1998  Month: 5  Day: 27  Time: 8  Solar radiation: 610
+Year: 1998  Month: 5  Day: 28  Time: 8  Solar radiation: 588
+Year: 1998  Month: 5  Day: 29  Time: 8  Solar radiation: 590
+Year: 1998  Month: 5  Day: 30  Time: 8  Solar radiation: 591
+Year: 1993  Month: 6  Day: 6  Time: 8  Solar radiation: 582
+Year: 1993  Month: 6  Day: 9  Time: 8  Solar radiation: 571
+Year: 1982  Month: 7  Day: 3  Time: 8  Solar radiation: 554
+Wrong Global Horizontal Radiation:
+==================================
+Wrong Diffuse Horizontal Radiation:
+====================================
+Year: 1998  Month: 5  Day: 19  Time: 8  Solar radiation: 263
+Year: 1998  Month: 5  Day: 24  Time: 8  Solar radiation: 270
+Year: 1998  Month: 5  Day: 26  Time: 8  Solar radiation: 270
+Year: 1993  Month: 6  Day: 3  Time: 8  Solar radiation: 260
+Year: 1993  Month: 6  Day: 13  Time: 8  Solar radiation: 279
+Year: 1993  Month: 6  Day: 16  Time: 8  Solar radiation: 260
+Year: 1993  Month: 6  Day: 27  Time: 8  Solar radiation: 257

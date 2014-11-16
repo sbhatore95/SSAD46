@@ -1,0 +1,57 @@
+                Average Minimum and Maximum Temperatures
+                ========================================
+
+                         Maximum Temperatures:
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMax:14.14	15.16	16.79	16.73	17.01	19.24	19.13	22.42	22.6	23.75	21.8	22.84	
+Time:14	14	14	14	14	15	14	14	14	15	13	13	
+
+                         Minimum Temperatures
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMin:8.09	8.71	9.37	9.54	9.63	11.15	10.81	11.78	11.74	12.33	12.7	12.58	
+Time: 	5	4	4	4	4	4	3	3	3	3	4	4	
+
+=================================================================================================
+
+                           Solar Radiation Analysis
+                            ========================
+Lines checked: 3172
+===============
+No. of wrong lines: 30
+==================
+Wrong Direct Normal Radiation:
+=================================
+Year: 2005  Month: 3  Day: 26  Time: 8  Solar radiation: 603
+Year: 2005  Month: 3  Day: 30  Time: 8  Solar radiation: 659
+Year: 2005  Month: 5  Day: 8  Time: 8  Solar radiation: 719
+Year: 2005  Month: 5  Day: 18  Time: 8  Solar radiation: 646
+Year: 2005  Month: 5  Day: 19  Time: 8  Solar radiation: 731
+Year: 2005  Month: 6  Day: 4  Time: 8  Solar radiation: 560
+Year: 2005  Month: 6  Day: 14  Time: 8  Solar radiation: 604
+Year: 2005  Month: 6  Day: 16  Time: 8  Solar radiation: 678
+Year: 2005  Month: 6  Day: 22  Time: 8  Solar radiation: 662
+Year: 2005  Month: 6  Day: 23  Time: 8  Solar radiation: 784
+Year: 2005  Month: 6  Day: 29  Time: 8  Solar radiation: 629
+Year: 2005  Month: 7  Day: 1  Time: 7  Solar radiation: 592
+Year: 2005  Month: 7  Day: 1  Time: 8  Solar radiation: 590
+Year: 2005  Month: 7  Day: 5  Time: 8  Solar radiation: 668
+Year: 2005  Month: 7  Day: 9  Time: 8  Solar radiation: 580
+Year: 2005  Month: 7  Day: 14  Time: 8  Solar radiation: 663
+Year: 2005  Month: 7  Day: 23  Time: 8  Solar radiation: 559
+Year: 2005  Month: 7  Day: 28  Time: 7  Solar radiation: 567
+Year: 2005  Month: 7  Day: 28  Time: 8  Solar radiation: 638
+Year: 2005  Month: 8  Day: 3  Time: 8  Solar radiation: 552
+Year: 2005  Month: 8  Day: 6  Time: 8  Solar radiation: 710
+Year: 2005  Month: 8  Day: 18  Time: 8  Solar radiation: 640
+Year: 2005  Month: 8  Day: 20  Time: 8  Solar radiation: 717
+Year: 2005  Month: 8  Day: 24  Time: 8  Solar radiation: 566
+Year: 2005  Month: 8  Day: 27  Time: 8  Solar radiation: 570
+Year: 2005  Month: 8  Day: 28  Time: 8  Solar radiation: 605
+Year: 2005  Month: 12  Day: 14  Time: 8  Solar radiation: 647
+Year: 2005  Month: 12  Day: 17  Time: 8  Solar radiation: 652
+Year: 2005  Month: 12  Day: 29  Time: 8  Solar radiation: 619
+Wrong Global Horizontal Radiation:
+==================================
+Wrong Diffuse Horizontal Radiation:
+====================================
+Year: 2005  Month: 6  Day: 5  Time: 8  Solar radiation: 264

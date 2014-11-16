@@ -1,0 +1,57 @@
+                Average Minimum and Maximum Temperatures
+                ========================================
+
+                         Maximum Temperatures:
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMax:11.53	13.93	14.03	15.81	15.6	19.35	16.89	17.67	18.33	18.54	18.1	18.15	
+Time:14	13	13	13	8	10	12	13	13	12	13	13	
+
+                         Minimum Temperatures
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMin:6.37	8.63	9.33	10.1	11.6	11.65	10.78	11.04	11.26	11.65	11.6	11.65	
+Time: 	10	7	10	7	1	2	10	10	9	9	7	7	
+
+=================================================================================================
+
+                           Solar Radiation Analysis
+                            ========================
+Lines checked: 2788
+===============
+No. of wrong lines: 30
+==================
+Wrong Direct Normal Radiation:
+=================================
+Year: 1972  Month: 5  Day: 1  Time: 8  Solar radiation: 551
+Year: 1972  Month: 5  Day: 2  Time: 8  Solar radiation: 554
+Year: 1972  Month: 5  Day: 11  Time: 8  Solar radiation: 574
+Year: 1972  Month: 5  Day: 12  Time: 8  Solar radiation: 576
+Year: 1972  Month: 5  Day: 13  Time: 8  Solar radiation: 578
+Year: 1972  Month: 5  Day: 22  Time: 8  Solar radiation: 600
+Year: 1972  Month: 5  Day: 29  Time: 8  Solar radiation: 614
+Year: 1975  Month: 6  Day: 4  Time: 8  Solar radiation: 584
+Year: 1975  Month: 6  Day: 8  Time: 8  Solar radiation: 623
+Year: 1975  Month: 6  Day: 9  Time: 8  Solar radiation: 624
+Year: 1975  Month: 6  Day: 10  Time: 8  Solar radiation: 625
+Year: 1975  Month: 6  Day: 13  Time: 8  Solar radiation: 604
+Year: 1975  Month: 6  Day: 17  Time: 8  Solar radiation: 598
+Year: 1975  Month: 6  Day: 18  Time: 8  Solar radiation: 631
+Year: 1975  Month: 6  Day: 24  Time: 8  Solar radiation: 572
+Year: 1975  Month: 6  Day: 25  Time: 8  Solar radiation: 630
+Year: 1975  Month: 6  Day: 27  Time: 8  Solar radiation: 629
+Year: 1975  Month: 6  Day: 28  Time: 8  Solar radiation: 628
+Year: 1975  Month: 6  Day: 29  Time: 8  Solar radiation: 628
+Year: 1968  Month: 7  Day: 1  Time: 8  Solar radiation: 626
+Year: 1968  Month: 7  Day: 5  Time: 8  Solar radiation: 622
+Year: 1968  Month: 7  Day: 9  Time: 8  Solar radiation: 617
+Year: 1968  Month: 7  Day: 12  Time: 8  Solar radiation: 613
+Year: 1968  Month: 7  Day: 17  Time: 8  Solar radiation: 604
+Year: 1968  Month: 7  Day: 18  Time: 8  Solar radiation: 602
+Year: 1968  Month: 7  Day: 19  Time: 8  Solar radiation: 601
+Year: 1966  Month: 8  Day: 1  Time: 8  Solar radiation: 576
+Year: 1966  Month: 8  Day: 6  Time: 8  Solar radiation: 562
+Year: 1966  Month: 8  Day: 7  Time: 8  Solar radiation: 559
+Year: 1966  Month: 8  Day: 9  Time: 8  Solar radiation: 553
+Wrong Global Horizontal Radiation:
+==================================
+Wrong Diffuse Horizontal Radiation:
+====================================

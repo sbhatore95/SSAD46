@@ -1,0 +1,57 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  city: MyString
+  qualfile: MyString
+  mjan: 1.5
+  mfeb: 1.5
+  mmar: 1.5
+  mapr: 1.5
+  mmay: 1.5
+  mjun: 1.5
+  mjul: 1.5
+  maug: 1.5
+  msep: 1.5
+  moct: 1.5
+  mnov: 1.5
+  mdec: 1.5
+  njan: 1.5
+  nfeb: 1.5
+  nmar: 1.5
+  napr: 1.5
+  nmay: 1.5
+  njun: 1.5
+  njul: 1.5
+  naug: 1.5
+  nsep: 1.5
+  noct: 1.5
+  nnov: 1.5
+  ndec: 1.5
+
+two:
+  city: MyString
+  qualfile: MyString
+  mjan: 1.5
+  mfeb: 1.5
+  mmar: 1.5
+  mapr: 1.5
+  mmay: 1.5
+  mjun: 1.5
+  mjul: 1.5
+  maug: 1.5
+  msep: 1.5
+  moct: 1.5
+  mnov: 1.5
+  mdec: 1.5
+  njan: 1.5
+  nfeb: 1.5
+  nmar: 1.5
+  napr: 1.5
+  nmay: 1.5
+  njun: 1.5
+  njul: 1.5
+  naug: 1.5
+  nsep: 1.5
+  noct: 1.5
+  nnov: 1.5
+  ndec: 1.5

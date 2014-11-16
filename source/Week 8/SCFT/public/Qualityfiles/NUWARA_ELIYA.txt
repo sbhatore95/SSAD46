@@ -1,0 +1,45 @@
+                Average Minimum and Maximum Temperatures
+                ========================================
+
+                         Maximum Temperatures:
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMax:15.5	18.19	18.3	19.55	20.04	19.69	19.74	19.96	21.31	21.23	21.37	20.92	
+Time:11	12	13	13	12	12	12	12	12	12	12	12	
+
+                         Minimum Temperatures
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMin:8.8	10.04	9.72	10.32	10.32	10.69	10.55	10.47	10.1	10.14	10.2	12.09	
+Time: 	12	9	8	6	7	6	7	6	6	6	6	7	
+
+=================================================================================================
+
+                           Solar Radiation Analysis
+                            ========================
+Lines checked: 2842
+===============
+No. of wrong lines: 18
+==================
+Wrong Direct Normal Radiation:
+=================================
+Year: 1979  Month: 1  Day: 4  Time: 8  Solar radiation: 593
+Year: 1986  Month: 2  Day: 5  Time: 8  Solar radiation: 557
+Year: 1980  Month: 3  Day: 13  Time: 8  Solar radiation: 621
+Year: 1980  Month: 3  Day: 16  Time: 8  Solar radiation: 612
+Year: 1980  Month: 3  Day: 20  Time: 8  Solar radiation: 632
+Year: 1980  Month: 3  Day: 21  Time: 8  Solar radiation: 604
+Year: 1980  Month: 3  Day: 29  Time: 8  Solar radiation: 552
+Year: 1980  Month: 3  Day: 30  Time: 8  Solar radiation: 579
+Year: 1988  Month: 5  Day: 6  Time: 8  Solar radiation: 624
+Year: 1988  Month: 5  Day: 7  Time: 8  Solar radiation: 672
+Year: 1988  Month: 5  Day: 8  Time: 8  Solar radiation: 556
+Year: 1998  Month: 9  Day: 8  Time: 8  Solar radiation: 640
+Year: 2001  Month: 10  Day: 22  Time: 8  Solar radiation: 610
+Year: 2001  Month: 10  Day: 28  Time: 8  Solar radiation: 579
+Year: 1973  Month: 11  Day: 10  Time: 8  Solar radiation: 645
+Year: 1973  Month: 11  Day: 11  Time: 8  Solar radiation: 641
+Year: 1973  Month: 11  Day: 14  Time: 8  Solar radiation: 611
+Year: 1973  Month: 11  Day: 20  Time: 8  Solar radiation: 602
+Wrong Global Horizontal Radiation:
+==================================
+Wrong Diffuse Horizontal Radiation:
+====================================

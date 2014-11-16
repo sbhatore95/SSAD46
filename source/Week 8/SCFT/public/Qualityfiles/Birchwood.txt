@@ -1,0 +1,46 @@
+                Average Minimum and Maximum Temperatures
+                ========================================
+
+                         Maximum Temperatures:
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMax:-6.05	1.38	2.99	9.93	10.46	10.58	11.13	12.61	11.73	12.31	12.41	12.78	
+Time:12	13	14	15	12	11	12	13	12	13	13	13	
+
+                         Minimum Temperatures
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMin:-12.65	-3.45	-4.31	-0.13	-0.9	-0.46	-0.36	-0.36	-0.22	0.57	1.83	2.33	
+Time: 	11	8	6	5	8	7	7	7	8	7	7	7	
+
+=================================================================================================
+
+                           Solar Radiation Analysis
+                            ========================
+Lines checked: 2011
+===============
+No. of wrong lines: 19
+==================
+Wrong Direct Normal Radiation:
+=================================
+Year: 2004  Month: 5  Day: 5  Time: 8  Solar radiation: 654
+Year: 2004  Month: 5  Day: 8  Time: 8  Solar radiation: 589
+Year: 2004  Month: 5  Day: 9  Time: 8  Solar radiation: 652
+Year: 2004  Month: 5  Day: 9  Time: 19  Solar radiation: 622
+Year: 2004  Month: 5  Day: 11  Time: 8  Solar radiation: 621
+Year: 2004  Month: 5  Day: 14  Time: 8  Solar radiation: 554
+Year: 2004  Month: 5  Day: 18  Time: 8  Solar radiation: 633
+Year: 2004  Month: 5  Day: 23  Time: 7  Solar radiation: 554
+Year: 2004  Month: 5  Day: 25  Time: 7  Solar radiation: 554
+Year: 2004  Month: 5  Day: 25  Time: 8  Solar radiation: 672
+Year: 2004  Month: 5  Day: 26  Time: 8  Solar radiation: 647
+Year: 1996  Month: 6  Day: 3  Time: 8  Solar radiation: 556
+Year: 1996  Month: 6  Day: 15  Time: 8  Solar radiation: 613
+Year: 1996  Month: 6  Day: 17  Time: 7  Solar radiation: 614
+Year: 1996  Month: 6  Day: 17  Time: 8  Solar radiation: 716
+Year: 1996  Month: 6  Day: 29  Time: 8  Solar radiation: 718
+Year: 1996  Month: 6  Day: 30  Time: 8  Solar radiation: 637
+Year: 1994  Month: 7  Day: 20  Time: 19  Solar radiation: 727
+Year: 1994  Month: 7  Day: 23  Time: 8  Solar radiation: 679
+Wrong Global Horizontal Radiation:
+==================================
+Wrong Diffuse Horizontal Radiation:
+====================================

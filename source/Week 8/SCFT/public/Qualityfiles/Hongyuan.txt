@@ -1,0 +1,45 @@
+                Average Minimum and Maximum Temperatures
+                ========================================
+
+                         Maximum Temperatures:
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMax:2.64	2.84	4.71	10.6	10.48	11.05	11.32	11.88	13.0	13.59	14.89	14.87	
+Time:16	16	16	15	17	17	17	17	15	16	16	16	
+
+                         Minimum Temperatures
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMin:-17.75	-14.02	-7.62	-2.71	-1.11	0.17	0.36	0.71	4.04	3.01	3.86	3.85	
+Time: 	8	8	9	7	6	7	7	7	8	10	9	8	
+
+=================================================================================================
+
+                           Solar Radiation Analysis
+                            ========================
+Lines checked: 2688
+===============
+No. of wrong lines: 17
+==================
+Wrong Direct Normal Radiation:
+=================================
+Year: 2005  Month: 5  Day: 14  Time: 19  Solar radiation: 559
+Year: 2005  Month: 5  Day: 26  Time: 19  Solar radiation: 583
+Year: 2005  Month: 5  Day: 28  Time: 19  Solar radiation: 586
+Year: 2005  Month: 6  Day: 10  Time: 19  Solar radiation: 602
+Year: 2005  Month: 6  Day: 14  Time: 19  Solar radiation: 606
+Year: 2005  Month: 6  Day: 24  Time: 19  Solar radiation: 612
+Year: 2005  Month: 6  Day: 29  Time: 19  Solar radiation: 613
+Year: 2005  Month: 7  Day: 5  Time: 19  Solar radiation: 614
+Year: 2005  Month: 7  Day: 10  Time: 19  Solar radiation: 613
+Year: 2005  Month: 7  Day: 13  Time: 19  Solar radiation: 611
+Year: 2005  Month: 7  Day: 16  Time: 19  Solar radiation: 610
+Year: 2005  Month: 7  Day: 19  Time: 19  Solar radiation: 607
+Year: 2005  Month: 8  Day: 3  Time: 19  Solar radiation: 585
+Year: 2005  Month: 8  Day: 8  Time: 19  Solar radiation: 572
+Year: 2005  Month: 8  Day: 9  Time: 19  Solar radiation: 570
+Year: 2005  Month: 8  Day: 12  Time: 19  Solar radiation: 560
+Wrong Global Horizontal Radiation:
+==================================
+Wrong Diffuse Horizontal Radiation:
+====================================
+Year: 2005  Month: 6  Day: 23  Time: 19  Solar radiation: 292
+Year: 2005  Month: 8  Day: 6  Time: 19  Solar radiation: 475

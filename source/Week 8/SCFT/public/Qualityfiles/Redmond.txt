@@ -1,0 +1,145 @@
+                Average Minimum and Maximum Temperatures
+                ========================================
+
+                         Maximum Temperatures:
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMax:5.53	7.5	9.76	7.76	8.63	9.64	10.42	11.9	12.68	13.09	12.8	12.57	
+Time:13	13	13	11	12	12	12	12	12	12	12	12	
+
+                         Minimum Temperatures
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMin:-3.72	-2.73	-3.31	-2.22	-1.37	-1.06	-1.07	-0.88	-0.13	0.11	0.09	-0.14	
+Time: 	9	10	10	15	9	10	10	10	10	10	10	9	
+
+=================================================================================================
+
+                       Solar Radiation Analysis
+                        ========================
+Lines checked:2960
+=================
+No. of wrong lines:118
+==================
+Wrong Direct Normal Radiation:
+=================================
+Year:1958Month:4Day:5Time:8Solar radiation:553
+Year:1958Month:4Day:9Time:8Solar radiation:569
+Year:1958Month:4Day:11Time:8Solar radiation:577
+Year:1958Month:4Day:12Time:8Solar radiation:581
+Year:1958Month:4Day:14Time:8Solar radiation:588
+Year:1958Month:4Day:18Time:8Solar radiation:565
+Year:1958Month:4Day:19Time:8Solar radiation:569
+Year:1958Month:4Day:23Time:8Solar radiation:560
+Year:1958Month:4Day:25Time:8Solar radiation:633
+Year:1958Month:4Day:27Time:8Solar radiation:640
+Year:1958Month:4Day:28Time:8Solar radiation:643
+Year:1958Month:4Day:29Time:8Solar radiation:646
+Year:1958Month:4Day:30Time:8Solar radiation:649
+Year:1971Month:5Day:4Time:8Solar radiation:575
+Year:1971Month:5Day:7Time:8Solar radiation:632
+Year:1971Month:5Day:9Time:8Solar radiation:637
+Year:1971Month:5Day:10Time:8Solar radiation:664
+Year:1971Month:5Day:11Time:8Solar radiation:666
+Year:1971Month:5Day:13Time:8Solar radiation:602
+Year:1971Month:5Day:14Time:8Solar radiation:671
+Year:1971Month:5Day:17Time:8Solar radiation:658
+Year:1971Month:5Day:18Time:8Solar radiation:679
+Year:1971Month:5Day:22Time:8Solar radiation:688
+Year:1971Month:5Day:23Time:8Solar radiation:691
+Year:1971Month:5Day:24Time:8Solar radiation:692
+Year:1971Month:5Day:28Time:8Solar radiation:699
+Year:1971Month:5Day:30Time:8Solar radiation:636
+Year:1955Month:6Day:1Time:8Solar radiation:667
+Year:1955Month:6Day:4Time:8Solar radiation:630
+Year:1955Month:6Day:5Time:8Solar radiation:704
+Year:1955Month:6Day:6Time:8Solar radiation:705
+Year:1955Month:6Day:7Time:8Solar radiation:707
+Year:1955Month:6Day:8Time:8Solar radiation:708
+Year:1955Month:6Day:9Time:8Solar radiation:708
+Year:1955Month:6Day:10Time:8Solar radiation:656
+Year:1955Month:6Day:11Time:7Solar radiation:554
+Year:1955Month:6Day:11Time:8Solar radiation:709
+Year:1955Month:6Day:12Time:8Solar radiation:710
+Year:1955Month:6Day:16Time:7Solar radiation:560
+Year:1955Month:6Day:16Time:8Solar radiation:662
+Year:1955Month:6Day:17Time:8Solar radiation:646
+Year:1955Month:6Day:18Time:7Solar radiation:562
+Year:1955Month:6Day:18Time:8Solar radiation:684
+Year:1955Month:6Day:19Time:7Solar radiation:564
+Year:1955Month:6Day:19Time:8Solar radiation:716
+Year:1955Month:6Day:20Time:7Solar radiation:564
+Year:1955Month:6Day:20Time:8Solar radiation:717
+Year:1955Month:6Day:21Time:7Solar radiation:564
+Year:1955Month:6Day:21Time:8Solar radiation:719
+Year:1955Month:6Day:24Time:8Solar radiation:669
+Year:1955Month:6Day:27Time:7Solar radiation:568
+Year:1955Month:6Day:27Time:8Solar radiation:723
+Year:1955Month:6Day:29Time:7Solar radiation:568
+Year:1955Month:6Day:29Time:8Solar radiation:724
+Year:1956Month:7Day:1Time:7Solar radiation:568
+Year:1956Month:7Day:1Time:8Solar radiation:725
+Year:1956Month:7Day:2Time:7Solar radiation:568
+Year:1956Month:7Day:2Time:8Solar radiation:693
+Year:1956Month:7Day:3Time:7Solar radiation:567
+Year:1956Month:7Day:3Time:8Solar radiation:725
+Year:1956Month:7Day:4Time:7Solar radiation:566
+Year:1956Month:7Day:4Time:8Solar radiation:726
+Year:1956Month:7Day:6Time:7Solar radiation:564
+Year:1956Month:7Day:6Time:8Solar radiation:726
+Year:1956Month:7Day:7Time:7Solar radiation:565
+Year:1956Month:7Day:7Time:8Solar radiation:726
+Year:1956Month:7Day:8Time:7Solar radiation:563
+Year:1956Month:7Day:8Time:8Solar radiation:726
+Year:1956Month:7Day:12Time:8Solar radiation:725
+Year:1956Month:7Day:13Time:7Solar radiation:557
+Year:1956Month:7Day:13Time:8Solar radiation:670
+Year:1956Month:7Day:14Time:7Solar radiation:554
+Year:1956Month:7Day:14Time:8Solar radiation:724
+Year:1956Month:7Day:15Time:7Solar radiation:553
+Year:1956Month:7Day:15Time:8Solar radiation:723
+Year:1956Month:7Day:16Time:8Solar radiation:721
+Year:1956Month:7Day:17Time:8Solar radiation:719
+Year:1956Month:7Day:18Time:8Solar radiation:718
+Year:1956Month:7Day:19Time:8Solar radiation:716
+Year:1956Month:7Day:20Time:8Solar radiation:713
+Year:1956Month:7Day:21Time:8Solar radiation:711
+Year:1956Month:7Day:22Time:8Solar radiation:708
+Year:1956Month:7Day:23Time:8Solar radiation:707
+Year:1956Month:7Day:24Time:8Solar radiation:704
+Year:1956Month:7Day:25Time:8Solar radiation:701
+Year:1956Month:7Day:26Time:8Solar radiation:699
+Year:1956Month:7Day:27Time:8Solar radiation:696
+Year:1956Month:7Day:28Time:8Solar radiation:694
+Year:1956Month:7Day:29Time:8Solar radiation:691
+Year:1956Month:7Day:30Time:8Solar radiation:688
+Year:1956Month:7Day:31Time:8Solar radiation:685
+Year:1964Month:8Day:1Time:8Solar radiation:638
+Year:1964Month:8Day:3Time:8Solar radiation:615
+Year:1964Month:8Day:4Time:8Solar radiation:629
+Year:1964Month:8Day:5Time:8Solar radiation:676
+Year:1964Month:8Day:6Time:8Solar radiation:672
+Year:1964Month:8Day:7Time:8Solar radiation:669
+Year:1964Month:8Day:8Time:8Solar radiation:666
+Year:1964Month:8Day:9Time:8Solar radiation:662
+Year:1964Month:8Day:10Time:8Solar radiation:658
+Year:1964Month:8Day:11Time:8Solar radiation:593
+Year:1964Month:8Day:14Time:8Solar radiation:644
+Year:1964Month:8Day:15Time:8Solar radiation:640
+Year:1964Month:8Day:16Time:8Solar radiation:637
+Year:1964Month:8Day:17Time:8Solar radiation:634
+Year:1964Month:8Day:20Time:8Solar radiation:624
+Year:1964Month:8Day:21Time:8Solar radiation:621
+Year:1964Month:8Day:22Time:8Solar radiation:618
+Year:1964Month:8Day:23Time:8Solar radiation:614
+Year:1964Month:8Day:24Time:8Solar radiation:610
+Year:1964Month:8Day:27Time:8Solar radiation:598
+Year:1964Month:8Day:29Time:8Solar radiation:562
+Year:1964Month:8Day:31Time:8Solar radiation:581
+Year:1955Month:9Day:1Time:8Solar radiation:587
+Year:1955Month:9Day:2Time:8Solar radiation:582
+Year:1955Month:9Day:3Time:8Solar radiation:577
+Year:1955Month:9Day:4Time:8Solar radiation:572
+Year:1955Month:9Day:7Time:8Solar radiation:553
+Wrong Global Horizontal Radiation:
+==================================
+Wrong Diffuse Horizontal Radiation:
+====================================

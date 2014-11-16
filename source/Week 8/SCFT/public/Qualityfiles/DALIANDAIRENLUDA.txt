@@ -1,0 +1,41 @@
+                Average Minimum and Maximum Temperatures
+                ========================================
+
+                         Maximum Temperatures:
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMax:-0.38	1.98	6.38	13.57	18.77	18.89	19.28	20.11	19.57	20.38	20.35	23.51	
+Time:11	11	12	14	13	14	13	14	13	13	7	10	
+
+                         Minimum Temperatures
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMin:-6.36	-5.97	0.26	7.3	10.99	11.2	11.71	12.29	12.3	12.69	15.9	16.2	
+Time: 	9	9	9	10	5	5	6	7	8	8	14	12	
+
+=================================================================================================
+
+                           Solar Radiation Analysis
+                            ========================
+Lines checked: 2468
+===============
+No. of wrong lines: 14
+==================
+Wrong Direct Normal Radiation:
+=================================
+Year: 1988  Month: 5  Day: 12  Time: 8  Solar radiation: 581
+Year: 1989  Month: 6  Day: 28  Time: 8  Solar radiation: 602
+Year: 1975  Month: 8  Day: 8  Time: 8  Solar radiation: 556
+Wrong Global Horizontal Radiation:
+==================================
+Wrong Diffuse Horizontal Radiation:
+====================================
+Year: 1988  Month: 5  Day: 11  Time: 8  Solar radiation: 272
+Year: 1988  Month: 5  Day: 15  Time: 8  Solar radiation: 260
+Year: 1988  Month: 5  Day: 21  Time: 8  Solar radiation: 273
+Year: 1988  Month: 5  Day: 26  Time: 8  Solar radiation: 277
+Year: 1989  Month: 6  Day: 2  Time: 8  Solar radiation: 251
+Year: 1989  Month: 6  Day: 7  Time: 8  Solar radiation: 283
+Year: 1989  Month: 6  Day: 17  Time: 8  Solar radiation: 293
+Year: 1989  Month: 6  Day: 20  Time: 8  Solar radiation: 259
+Year: 1979  Month: 7  Day: 11  Time: 8  Solar radiation: 259
+Year: 1979  Month: 7  Day: 19  Time: 8  Solar radiation: 315
+Year: 1975  Month: 8  Day: 7  Time: 8  Solar radiation: 251

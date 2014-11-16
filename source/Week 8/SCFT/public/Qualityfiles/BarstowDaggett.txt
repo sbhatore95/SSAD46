@@ -1,0 +1,65 @@
+                Average Minimum and Maximum Temperatures
+                ========================================
+
+                         Maximum Temperatures:
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMax:16.73	19.03	21.2	24.02	22.44	23.88	25.31	29.09	30.45	30.36	30.21	29.91	
+Time:14	15	15	15	12	12	13	14	14	14	14	14	
+
+                         Minimum Temperatures
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMin:1.72	6.23	8.48	10.94	12.08	12.2	12.69	14.55	15.0	15.0	15.06	14.83	
+Time: 	6	9	9	6	5	5	5	5	5	5	5	5	
+
+=================================================================================================
+
+                           Solar Radiation Analysis
+                            ========================
+Lines checked: 2879
+===============
+No. of wrong lines: 38
+==================
+Wrong Direct Normal Radiation:
+=================================
+Year: 1960  Month: 5  Day: 5  Time: 8  Solar radiation: 704
+Year: 1960  Month: 5  Day: 6  Time: 8  Solar radiation: 705
+Year: 1960  Month: 5  Day: 7  Time: 8  Solar radiation: 706
+Year: 1960  Month: 5  Day: 11  Time: 8  Solar radiation: 709
+Year: 1960  Month: 5  Day: 15  Time: 8  Solar radiation: 711
+Year: 1960  Month: 5  Day: 17  Time: 8  Solar radiation: 717
+Year: 1960  Month: 5  Day: 19  Time: 8  Solar radiation: 723
+Year: 1960  Month: 5  Day: 20  Time: 8  Solar radiation: 724
+Year: 1960  Month: 5  Day: 23  Time: 8  Solar radiation: 731
+Year: 1960  Month: 5  Day: 24  Time: 8  Solar radiation: 733
+Year: 1960  Month: 5  Day: 25  Time: 8  Solar radiation: 690
+Year: 1960  Month: 5  Day: 26  Time: 8  Solar radiation: 736
+Year: 1960  Month: 5  Day: 27  Time: 8  Solar radiation: 694
+Year: 1960  Month: 5  Day: 29  Time: 8  Solar radiation: 697
+Year: 1960  Month: 5  Day: 31  Time: 8  Solar radiation: 744
+Year: 1954  Month: 6  Day: 2  Time: 8  Solar radiation: 740
+Year: 1954  Month: 6  Day: 3  Time: 8  Solar radiation: 742
+Year: 1954  Month: 6  Day: 6  Time: 8  Solar radiation: 745
+Year: 1954  Month: 6  Day: 7  Time: 8  Solar radiation: 747
+Year: 1954  Month: 6  Day: 8  Time: 8  Solar radiation: 706
+Year: 1954  Month: 6  Day: 10  Time: 8  Solar radiation: 749
+Year: 1954  Month: 6  Day: 11  Time: 8  Solar radiation: 749
+Year: 1954  Month: 6  Day: 12  Time: 8  Solar radiation: 681
+Year: 1954  Month: 6  Day: 13  Time: 8  Solar radiation: 751
+Year: 1954  Month: 6  Day: 14  Time: 8  Solar radiation: 751
+Year: 1954  Month: 6  Day: 15  Time: 8  Solar radiation: 712
+Year: 1954  Month: 6  Day: 16  Time: 8  Solar radiation: 752
+Year: 1954  Month: 6  Day: 17  Time: 8  Solar radiation: 752
+Year: 1954  Month: 6  Day: 18  Time: 8  Solar radiation: 752
+Year: 1954  Month: 6  Day: 19  Time: 8  Solar radiation: 752
+Year: 1954  Month: 6  Day: 20  Time: 8  Solar radiation: 752
+Year: 1954  Month: 6  Day: 21  Time: 8  Solar radiation: 752
+Year: 1954  Month: 6  Day: 22  Time: 8  Solar radiation: 752
+Year: 1954  Month: 6  Day: 28  Time: 8  Solar radiation: 749
+Year: 1954  Month: 6  Day: 29  Time: 8  Solar radiation: 748
+Year: 1954  Month: 6  Day: 30  Time: 8  Solar radiation: 747
+Year: 1957  Month: 9  Day: 1  Time: 8  Solar radiation: 607
+Year: 1957  Month: 9  Day: 2  Time: 8  Solar radiation: 602
+Wrong Global Horizontal Radiation:
+==================================
+Wrong Diffuse Horizontal Radiation:
+====================================

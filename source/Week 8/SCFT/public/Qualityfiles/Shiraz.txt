@@ -1,0 +1,56 @@
+                Average Minimum and Maximum Temperatures
+                ========================================
+
+                         Maximum Temperatures:
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMax:11.85	13.13	17.71	23.93	30.48	23.1	31.55	33.7	33.99	34.25	35.44	35.37	
+Time:14	15	14	15	15	8	13	13	14	14	15	15	
+
+                         Minimum Temperatures
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMin:0.32	1.35	5.26	9.44	14.92	17.3	18.18	18.77	18.8	18.78	18.9	18.65	
+Time: 	8	8	8	5	6	3	4	4	5	5	5	5	
+
+=================================================================================================
+
+                           Solar Radiation Analysis
+                            ========================
+Lines checked: 2947
+===============
+No. of wrong lines: 29
+==================
+Wrong Direct Normal Radiation:
+=================================
+Wrong Global Horizontal Radiation:
+==================================
+Wrong Diffuse Horizontal Radiation:
+====================================
+Year: 1988  Month: 6  Day: 1  Time: 8  Solar radiation: 335
+Year: 1988  Month: 6  Day: 4  Time: 8  Solar radiation: 335
+Year: 1988  Month: 6  Day: 6  Time: 8  Solar radiation: 334
+Year: 1988  Month: 6  Day: 12  Time: 8  Solar radiation: 333
+Year: 1988  Month: 6  Day: 13  Time: 8  Solar radiation: 333
+Year: 1988  Month: 6  Day: 23  Time: 8  Solar radiation: 328
+Year: 1988  Month: 6  Day: 27  Time: 8  Solar radiation: 325
+Year: 1988  Month: 6  Day: 28  Time: 8  Solar radiation: 325
+Year: 1988  Month: 6  Day: 29  Time: 8  Solar radiation: 324
+Year: 1988  Month: 6  Day: 30  Time: 8  Solar radiation: 323
+Year: 1970  Month: 7  Day: 1  Time: 8  Solar radiation: 319
+Year: 1970  Month: 7  Day: 7  Time: 8  Solar radiation: 315
+Year: 1970  Month: 7  Day: 9  Time: 8  Solar radiation: 313
+Year: 1970  Month: 7  Day: 15  Time: 8  Solar radiation: 309
+Year: 1970  Month: 7  Day: 16  Time: 8  Solar radiation: 308
+Year: 1970  Month: 7  Day: 17  Time: 8  Solar radiation: 307
+Year: 1970  Month: 7  Day: 18  Time: 8  Solar radiation: 306
+Year: 1970  Month: 7  Day: 20  Time: 8  Solar radiation: 305
+Year: 1970  Month: 7  Day: 25  Time: 8  Solar radiation: 301
+Year: 1970  Month: 7  Day: 26  Time: 8  Solar radiation: 300
+Year: 1970  Month: 7  Day: 31  Time: 8  Solar radiation: 296
+Year: 1988  Month: 8  Day: 1  Time: 8  Solar radiation: 294
+Year: 1988  Month: 8  Day: 2  Time: 8  Solar radiation: 294
+Year: 1988  Month: 8  Day: 4  Time: 8  Solar radiation: 292
+Year: 1988  Month: 8  Day: 12  Time: 8  Solar radiation: 286
+Year: 1988  Month: 8  Day: 24  Time: 8  Solar radiation: 277
+Year: 1988  Month: 8  Day: 29  Time: 8  Solar radiation: 273
+Year: 1988  Month: 8  Day: 30  Time: 8  Solar radiation: 272
+Year: 1976  Month: 9  Day: 3  Time: 8  Solar radiation: 259

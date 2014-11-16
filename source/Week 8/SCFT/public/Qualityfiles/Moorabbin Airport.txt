@@ -1,0 +1,114 @@
+                Average Minimum and Maximum Temperatures
+                ========================================
+
+                         Maximum Temperatures:
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMax:23.35	24.55	32.53	24.41	24.94	26.08	26.28	26.31	25.0	24.81	24.55	24.12	
+Time:10	11	12	11	12	11	11	11	12	12	12	13	
+
+                         Minimum Temperatures
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMin:16.55	16.55	19.5	12.73	12.73	13.71	13.71	13.8	13.62	13.72	13.48	13.62	
+Time: 	4	4	4	9	9	9	9	8	8	8	9	11	
+
+=================================================================================================
+
+                           Solar Radiation Analysis
+                            ========================
+Lines checked: 3003
+===============
+No. of wrong lines: 76
+==================
+Wrong Direct Normal Radiation:
+=================================
+Year: 1991  Month: 1  Day: 2  Time: 7  Solar radiation: 557
+Year: 1991  Month: 1  Day: 2  Time: 8  Solar radiation: 857
+Year: 1991  Month: 1  Day: 3  Time: 8  Solar radiation: 818
+Year: 1991  Month: 1  Day: 9  Time: 7  Solar radiation: 558
+Year: 1991  Month: 1  Day: 10  Time: 8  Solar radiation: 774
+Year: 1991  Month: 1  Day: 13  Time: 7  Solar radiation: 647
+Year: 1991  Month: 1  Day: 13  Time: 8  Solar radiation: 947
+Year: 1991  Month: 1  Day: 14  Time: 8  Solar radiation: 834
+Year: 1991  Month: 1  Day: 20  Time: 8  Solar radiation: 737
+Year: 1991  Month: 1  Day: 31  Time: 8  Solar radiation: 787
+Year: 2003  Month: 2  Day: 2  Time: 8  Solar radiation: 738
+Year: 2003  Month: 2  Day: 3  Time: 8  Solar radiation: 752
+Year: 2003  Month: 2  Day: 4  Time: 8  Solar radiation: 754
+Year: 2003  Month: 2  Day: 9  Time: 8  Solar radiation: 645
+Year: 2003  Month: 2  Day: 11  Time: 8  Solar radiation: 711
+Year: 2003  Month: 2  Day: 12  Time: 8  Solar radiation: 846
+Year: 2003  Month: 2  Day: 14  Time: 8  Solar radiation: 862
+Year: 2003  Month: 2  Day: 19  Time: 8  Solar radiation: 703
+Year: 2003  Month: 2  Day: 23  Time: 8  Solar radiation: 777
+Year: 2003  Month: 2  Day: 24  Time: 8  Solar radiation: 820
+Year: 2003  Month: 2  Day: 26  Time: 8  Solar radiation: 570
+Year: 1991  Month: 3  Day: 2  Time: 8  Solar radiation: 802
+Year: 1991  Month: 3  Day: 3  Time: 8  Solar radiation: 815
+Year: 1991  Month: 3  Day: 4  Time: 8  Solar radiation: 768
+Year: 1991  Month: 3  Day: 13  Time: 8  Solar radiation: 720
+Year: 1991  Month: 3  Day: 25  Time: 8  Solar radiation: 623
+Year: 1991  Month: 3  Day: 28  Time: 8  Solar radiation: 730
+Year: 1991  Month: 9  Day: 23  Time: 8  Solar radiation: 658
+Year: 1991  Month: 9  Day: 27  Time: 8  Solar radiation: 730
+Year: 2000  Month: 10  Day: 4  Time: 8  Solar radiation: 702
+Year: 2000  Month: 10  Day: 5  Time: 8  Solar radiation: 746
+Year: 2000  Month: 10  Day: 11  Time: 8  Solar radiation: 635
+Year: 2000  Month: 10  Day: 17  Time: 7  Solar radiation: 713
+Year: 2000  Month: 10  Day: 17  Time: 8  Solar radiation: 958
+Year: 2000  Month: 10  Day: 21  Time: 8  Solar radiation: 792
+Year: 2000  Month: 10  Day: 30  Time: 8  Solar radiation: 768
+Year: 1992  Month: 11  Day: 2  Time: 8  Solar radiation: 639
+Year: 1992  Month: 11  Day: 7  Time: 7  Solar radiation: 722
+Year: 1992  Month: 11  Day: 7  Time: 8  Solar radiation: 935
+Year: 1992  Month: 11  Day: 13  Time: 8  Solar radiation: 673
+Year: 1992  Month: 11  Day: 14  Time: 7  Solar radiation: 840
+Year: 1992  Month: 11  Day: 14  Time: 8  Solar radiation: 1029
+Year: 1992  Month: 11  Day: 16  Time: 7  Solar radiation: 738
+Year: 1992  Month: 11  Day: 16  Time: 8  Solar radiation: 940
+Year: 1992  Month: 11  Day: 20  Time: 7  Solar radiation: 662
+Year: 1992  Month: 11  Day: 20  Time: 8  Solar radiation: 870
+Year: 1992  Month: 11  Day: 29  Time: 7  Solar radiation: 612
+Year: 1992  Month: 11  Day: 29  Time: 8  Solar radiation: 817
+Year: 1992  Month: 11  Day: 30  Time: 7  Solar radiation: 678
+Year: 1992  Month: 11  Day: 30  Time: 8  Solar radiation: 876
+Year: 1991  Month: 12  Day: 2  Time: 7  Solar radiation: 830
+Year: 1991  Month: 12  Day: 2  Time: 8  Solar radiation: 1009
+Year: 1991  Month: 12  Day: 5  Time: 7  Solar radiation: 738
+Year: 1991  Month: 12  Day: 5  Time: 8  Solar radiation: 928
+Year: 1991  Month: 12  Day: 7  Time: 7  Solar radiation: 842
+Year: 1991  Month: 12  Day: 7  Time: 8  Solar radiation: 1017
+Year: 1991  Month: 12  Day: 8  Time: 7  Solar radiation: 845
+Year: 1991  Month: 12  Day: 8  Time: 8  Solar radiation: 1020
+Year: 1991  Month: 12  Day: 11  Time: 8  Solar radiation: 650
+Year: 1991  Month: 12  Day: 12  Time: 7  Solar radiation: 763
+Year: 1991  Month: 12  Day: 12  Time: 8  Solar radiation: 948
+Year: 1991  Month: 12  Day: 23  Time: 7  Solar radiation: 581
+Year: 1991  Month: 12  Day: 23  Time: 8  Solar radiation: 875
+Year: 1991  Month: 12  Day: 25  Time: 7  Solar radiation: 602
+Year: 1991  Month: 12  Day: 25  Time: 8  Solar radiation: 894
+Year: 1991  Month: 12  Day: 29  Time: 8  Solar radiation: 823
+Wrong Global Horizontal Radiation:
+==================================
+Wrong Diffuse Horizontal Radiation:
+====================================
+Year: 1991  Month: 1  Day: 21  Time: 8  Solar radiation: 258
+Year: 1991  Month: 1  Day: 22  Time: 8  Solar radiation: 256
+Year: 2000  Month: 10  Day: 27  Time: 8  Solar radiation: 266
+Year: 2000  Month: 10  Day: 28  Time: 8  Solar radiation: 261
+Year: 2000  Month: 10  Day: 31  Time: 8  Solar radiation: 273
+Year: 1992  Month: 11  Day: 3  Time: 8  Solar radiation: 272
+Year: 1992  Month: 11  Day: 4  Time: 8  Solar radiation: 262
+Year: 1992  Month: 11  Day: 6  Time: 8  Solar radiation: 262
+Year: 1992  Month: 11  Day: 11  Time: 8  Solar radiation: 280
+Year: 1992  Month: 11  Day: 12  Time: 8  Solar radiation: 278
+Year: 1992  Month: 11  Day: 19  Time: 8  Solar radiation: 305
+Year: 1992  Month: 11  Day: 23  Time: 8  Solar radiation: 291
+Year: 1992  Month: 11  Day: 26  Time: 8  Solar radiation: 276
+Year: 1992  Month: 11  Day: 27  Time: 8  Solar radiation: 292
+Year: 1992  Month: 11  Day: 28  Time: 8  Solar radiation: 279
+Year: 1991  Month: 12  Day: 6  Time: 8  Solar radiation: 264
+Year: 1991  Month: 12  Day: 13  Time: 8  Solar radiation: 287
+Year: 1991  Month: 12  Day: 14  Time: 8  Solar radiation: 273
+Year: 1991  Month: 12  Day: 20  Time: 8  Solar radiation: 274
+Year: 1991  Month: 12  Day: 26  Time: 8  Solar radiation: 262
+Year: 1991  Month: 12  Day: 31  Time: 8  Solar radiation: 257

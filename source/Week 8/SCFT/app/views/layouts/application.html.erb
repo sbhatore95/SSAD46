@@ -15,7 +15,7 @@
   }
   p.pos_fixed{
       text-align: right;
-      position: absolute;
+      position: relative;
       
   }
   #flash_notice{
@@ -28,7 +28,6 @@
   <% if current_user %>
     <p class="pos_fixed">Logged in as <%= current_user.email %>.
     <a href="/log_out"><button>LogOut</button></a></p>
-    <%= link_to "Log out", log_out_path %>
   <% else %>-->
   <!--a href="sign_up"><button>SignUp</button></a>
   <a href="log_in"><button>LogIn</button></a-->
