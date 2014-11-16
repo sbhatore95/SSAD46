@@ -117,33 +117,36 @@ $(document).ready(function(){
             var flag;
 
             function codeAddress() {
-                    var address = document.getElementById('searchpanel').getElementsByTagName("span");
+                    var lat = document.getElementById('searchpanel').getElementsByClassName("lat");
+                    console.log(lat);
+                    var lon = document.getElementById('searchpanel').getElementsByClassName("lon");
                     var len = document.getElementById('length').innerHTML; //Number of cities
                     console.log(len);
-                    if(len > 10)
-                        len=10;
+                    //if(len > 10)
+                      //  len=10;
+                    for(i=0;i<len;i++){
+                        console.log(lat[i].innerHTML);
+                        var loc = new google.maps.LatLng(lat[i].innerHTML,lon[i].innerHTML);
+                        
+                        
+                        marker = new google.maps.Marker({
+                            //   position: location,
+                            icon:{url : '/assets/marker.png'},
+                            position: loc,
+                            map: map,
+                            
+                         });
 
-                    for (i = 0; i < len; i++) { //only 10 cities could be marked now
-
-                        geocoder.geocode({
-                            'address': address[i].innerHTML
-                        }, function(results, status) {
-                            if (status == google.maps.GeocoderStatus.OK) {
-                                
-                                addMarker(results[0].geometry.location);
-                                var marker = new google.maps.Marker({
-                                    position: results[0].geometry.location,
-                                });
-                                marker.setMap(map);
-
-
-
-                            } else {
-                                console.log('Geocode was not successful for the following reason: ' + status);
-                            }
-                        });
 
                     }
+                    
+
+                      //only 10 cities could be marked now
+
+                       
+                        //addMarker(loc);
+                                            
+                    
                 }
                 //onmouseover implementation
             function gc(element) {
@@ -263,11 +266,21 @@ $(document).ready(function(){
 
             // Add a marker to the map and push to the array.
             function addMarker(location) {
+                var image = {
+                    src: '<i class="fa fa-map-marker"></i>',
+                    size: new google.maps.Size(24, 24), 
+                    origin: new google.maps.Point(0,0),   
+                    anchor: new google.maps.Point(12,12)
+                };
+                
                 marker = new google.maps.Marker({
                     //   position: location,
+                    icon:image,
                     position: location,
-                    map: map
+                    map: map,
+                    
                 });
+                console.log(marker);
                 markers.push(marker);
             }
 
@@ -739,6 +752,12 @@ function gowiki(cityname)
                         <%=c.city %>
                     </a>
                 </li>
+                <li class = "lat"style="display:none">
+                    <%= c.latitude %>                    
+                </li>
+                <li class = "lon"style="display:none">
+                    <%= c.longitude %>                    
+                </li>
                 <% end%>
                 
         </ul>
@@ -752,5 +771,6 @@ function gowiki(cityname)
     </div>
   </div>
 </div>
+
 </body>
 </html>
