@@ -4,13 +4,18 @@ class SurrogateController < ApplicationController
 	end
 	
 	#quality report
-	def download 		
- 		send_file "#{Rails.root}/public/EpwFiles/EGYPT.epw"
+	def download 
+		@rms = "#{Rails.root}/public/Qualityfiles/" + ":params[rms]" +".txt"
+		#@file = Weatherdata.find_by upper(city): $rmscity
+ 		send_file @rms
 	end
 
 	#epw files 
 	def download1
-		@link = Cities.where('city = ?' , $icityname )
+
+		@link = Cities.where("lower(city) =?" ,$icityname.downcase)
+		
+		render :text => @link.link
 		
 
 	end

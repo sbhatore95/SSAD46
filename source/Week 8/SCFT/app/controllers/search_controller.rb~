@@ -1,9 +1,0 @@
-class SearchController < ApplicationController
-  def printvals
-  	@cityname= params[:city]
-	@lat= params[:latitude_range]
-	@ele= params[:elevation_range]
-	@rad= params[:radius_range]
-	mycity = Location.find_by(City: '@cityname')
-	render text: mycity.Country
-end
