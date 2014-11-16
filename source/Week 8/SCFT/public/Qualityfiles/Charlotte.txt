@@ -1,0 +1,55 @@
+                Average Minimum and Maximum Temperatures
+                ========================================
+
+                         Maximum Temperatures:
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMax:9.36	10.88	15.39	21.95	26.54	26.81	25.8	27.07	27.81	26.75	27.18	27.67	
+Time:13	15	13	14	13	14	14	14	14	13	14	14	
+
+                         Minimum Temperatures
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMin:-0.9	-0.64	3.58	10.3	15.37	15.37	18.2	18.33	18.73	18.22	18.27	18.56	
+Time: 	10	9	10	9	6	6	4	4	4	7	6	6	
+
+=================================================================================================
+
+                           Solar Radiation Analysis
+                            ========================
+Lines checked: 2830
+===============
+No. of wrong lines: 28
+==================
+Wrong Direct Normal Radiation:
+=================================
+Year: 1956  Month: 5  Day: 31  Time: 8  Solar radiation: 555
+Year: 1975  Month: 6  Day: 4  Time: 8  Solar radiation: 551
+Year: 1975  Month: 6  Day: 7  Time: 8  Solar radiation: 551
+Wrong Global Horizontal Radiation:
+==================================
+Wrong Diffuse Horizontal Radiation:
+====================================
+Year: 1975  Month: 6  Day: 6  Time: 8  Solar radiation: 252
+Year: 1975  Month: 6  Day: 13  Time: 8  Solar radiation: 254
+Year: 1975  Month: 6  Day: 15  Time: 8  Solar radiation: 257
+Year: 1975  Month: 6  Day: 18  Time: 8  Solar radiation: 257
+Year: 1975  Month: 6  Day: 19  Time: 8  Solar radiation: 255
+Year: 1975  Month: 6  Day: 20  Time: 8  Solar radiation: 256
+Year: 1975  Month: 6  Day: 21  Time: 8  Solar radiation: 263
+Year: 1975  Month: 6  Day: 23  Time: 8  Solar radiation: 257
+Year: 1975  Month: 6  Day: 24  Time: 8  Solar radiation: 253
+Year: 1975  Month: 6  Day: 26  Time: 8  Solar radiation: 256
+Year: 1975  Month: 6  Day: 29  Time: 8  Solar radiation: 253
+Year: 1963  Month: 7  Day: 1  Time: 8  Solar radiation: 253
+Year: 1963  Month: 7  Day: 2  Time: 8  Solar radiation: 253
+Year: 1963  Month: 7  Day: 3  Time: 8  Solar radiation: 253
+Year: 1963  Month: 7  Day: 4  Time: 8  Solar radiation: 254
+Year: 1963  Month: 7  Day: 5  Time: 8  Solar radiation: 254
+Year: 1963  Month: 7  Day: 7  Time: 8  Solar radiation: 260
+Year: 1963  Month: 7  Day: 11  Time: 8  Solar radiation: 255
+Year: 1963  Month: 7  Day: 12  Time: 8  Solar radiation: 255
+Year: 1963  Month: 7  Day: 15  Time: 8  Solar radiation: 258
+Year: 1963  Month: 7  Day: 16  Time: 8  Solar radiation: 256
+Year: 1963  Month: 7  Day: 19  Time: 8  Solar radiation: 254
+Year: 1963  Month: 7  Day: 20  Time: 8  Solar radiation: 253
+Year: 1963  Month: 7  Day: 21  Time: 8  Solar radiation: 253
+Year: 1963  Month: 7  Day: 22  Time: 8  Solar radiation: 252

@@ -1,0 +1,49 @@
+                Average Minimum and Maximum Temperatures
+                ========================================
+
+                         Maximum Temperatures:
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMax:11.42	9.35	12.15	20.27	20.5	22.11	22.68	22.28	21.9	22.06	22.2	22.58	
+Time:12	13	13	13	11	14	15	14	14	14	14	14	
+
+                         Minimum Temperatures
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMin:-0.84	-3.27	-1.74	3.93	9.85	6.67	7.54	6.82	6.36	6.52	6.52	6.46	
+Time: 	8	11	9	12	3	6	5	7	8	9	9	9	
+
+=================================================================================================
+
+                           Solar Radiation Analysis
+                            ========================
+Lines checked: 2665
+===============
+No. of wrong lines: 22
+==================
+Wrong Direct Normal Radiation:
+=================================
+Year: 1997  Month: 5  Day: 2  Time: 8  Solar radiation: 685
+Year: 1997  Month: 5  Day: 7  Time: 8  Solar radiation: 652
+Year: 1997  Month: 5  Day: 11  Time: 8  Solar radiation: 705
+Year: 1997  Month: 5  Day: 12  Time: 8  Solar radiation: 681
+Year: 1997  Month: 5  Day: 14  Time: 8  Solar radiation: 668
+Year: 1997  Month: 5  Day: 16  Time: 7  Solar radiation: 561
+Year: 1997  Month: 5  Day: 16  Time: 8  Solar radiation: 751
+Year: 1997  Month: 5  Day: 18  Time: 8  Solar radiation: 614
+Year: 1997  Month: 5  Day: 19  Time: 8  Solar radiation: 704
+Year: 1997  Month: 5  Day: 21  Time: 7  Solar radiation: 556
+Year: 1997  Month: 5  Day: 21  Time: 8  Solar radiation: 737
+Year: 1997  Month: 5  Day: 23  Time: 8  Solar radiation: 639
+Year: 1996  Month: 6  Day: 1  Time: 8  Solar radiation: 571
+Year: 1996  Month: 6  Day: 3  Time: 8  Solar radiation: 654
+Year: 1996  Month: 6  Day: 28  Time: 8  Solar radiation: 663
+Year: 1996  Month: 7  Day: 2  Time: 8  Solar radiation: 571
+Year: 1996  Month: 7  Day: 10  Time: 8  Solar radiation: 570
+Year: 1996  Month: 7  Day: 14  Time: 8  Solar radiation: 687
+Year: 1996  Month: 7  Day: 19  Time: 8  Solar radiation: 583
+Year: 1996  Month: 7  Day: 23  Time: 8  Solar radiation: 612
+Year: 1995  Month: 8  Day: 22  Time: 8  Solar radiation: 641
+Year: 1995  Month: 9  Day: 28  Time: 8  Solar radiation: 608
+Wrong Global Horizontal Radiation:
+==================================
+Wrong Diffuse Horizontal Radiation:
+====================================

@@ -1,0 +1,74 @@
+                Average Minimum and Maximum Temperatures
+                ========================================
+
+                         Maximum Temperatures:
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMax:23.74	24.54	23.96	24.22	25.08	25.48	25.65	26.16	26.27	26.16	26.25	26.49	
+Time:14	13	12	12	11	12	12	12	13	12	12	13	
+
+                         Minimum Temperatures
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMin:16.88	17.05	17.38	17.4	17.41	17.78	17.84	18.82	18.93	18.32	18.35	18.39	
+Time: 	7	10	9	9	7	8	8	5	6	7	6	6	
+
+=================================================================================================
+
+                           Solar Radiation Analysis
+                            ========================
+Lines checked: 2636
+===============
+No. of wrong lines: 47
+==================
+Wrong Direct Normal Radiation:
+=================================
+Year: 1991  Month: 3  Day: 29  Time: 8  Solar radiation: 647
+Year: 1991  Month: 4  Day: 10  Time: 8  Solar radiation: 625
+Year: 1991  Month: 4  Day: 23  Time: 8  Solar radiation: 634
+Year: 1991  Month: 5  Day: 12  Time: 8  Solar radiation: 670
+Year: 1991  Month: 5  Day: 15  Time: 8  Solar radiation: 681
+Year: 1991  Month: 5  Day: 27  Time: 8  Solar radiation: 696
+Year: 1991  Month: 5  Day: 29  Time: 8  Solar radiation: 623
+Year: 1991  Month: 6  Day: 5  Time: 8  Solar radiation: 598
+Year: 1991  Month: 6  Day: 10  Time: 8  Solar radiation: 620
+Year: 1991  Month: 6  Day: 12  Time: 8  Solar radiation: 628
+Year: 1991  Month: 6  Day: 17  Time: 8  Solar radiation: 702
+Year: 1991  Month: 6  Day: 20  Time: 8  Solar radiation: 629
+Year: 1991  Month: 6  Day: 23  Time: 8  Solar radiation: 581
+Year: 1991  Month: 6  Day: 24  Time: 8  Solar radiation: 652
+Year: 1991  Month: 6  Day: 29  Time: 8  Solar radiation: 565
+Year: 1995  Month: 7  Day: 9  Time: 8  Solar radiation: 596
+Year: 1995  Month: 7  Day: 12  Time: 8  Solar radiation: 552
+Year: 1995  Month: 7  Day: 17  Time: 8  Solar radiation: 632
+Year: 1995  Month: 7  Day: 22  Time: 8  Solar radiation: 576
+Year: 1995  Month: 7  Day: 27  Time: 8  Solar radiation: 575
+Year: 1994  Month: 8  Day: 1  Time: 8  Solar radiation: 566
+Year: 1994  Month: 8  Day: 4  Time: 8  Solar radiation: 609
+Year: 1994  Month: 8  Day: 14  Time: 8  Solar radiation: 568
+Year: 1994  Month: 8  Day: 27  Time: 8  Solar radiation: 678
+Year: 1994  Month: 8  Day: 28  Time: 8  Solar radiation: 682
+Year: 1994  Month: 9  Day: 2  Time: 8  Solar radiation: 573
+Year: 1994  Month: 9  Day: 8  Time: 8  Solar radiation: 589
+Year: 1994  Month: 9  Day: 9  Time: 8  Solar radiation: 581
+Year: 1994  Month: 9  Day: 18  Time: 8  Solar radiation: 651
+Year: 1994  Month: 9  Day: 23  Time: 8  Solar radiation: 582
+Year: 1994  Month: 9  Day: 24  Time: 8  Solar radiation: 725
+Year: 1994  Month: 9  Day: 28  Time: 8  Solar radiation: 606
+Year: 1994  Month: 9  Day: 30  Time: 8  Solar radiation: 576
+Year: 1994  Month: 10  Day: 6  Time: 8  Solar radiation: 647
+Year: 1994  Month: 10  Day: 7  Time: 8  Solar radiation: 716
+Year: 1994  Month: 10  Day: 8  Time: 8  Solar radiation: 579
+Year: 1994  Month: 10  Day: 10  Time: 8  Solar radiation: 676
+Year: 1994  Month: 10  Day: 13  Time: 8  Solar radiation: 716
+Year: 1994  Month: 10  Day: 14  Time: 8  Solar radiation: 632
+Year: 1994  Month: 10  Day: 15  Time: 8  Solar radiation: 704
+Year: 1994  Month: 10  Day: 29  Time: 8  Solar radiation: 651
+Year: 1994  Month: 11  Day: 3  Time: 8  Solar radiation: 557
+Year: 1994  Month: 11  Day: 7  Time: 8  Solar radiation: 582
+Year: 1994  Month: 11  Day: 8  Time: 8  Solar radiation: 640
+Year: 1994  Month: 11  Day: 10  Time: 8  Solar radiation: 557
+Year: 1994  Month: 11  Day: 15  Time: 8  Solar radiation: 584
+Year: 1994  Month: 11  Day: 25  Time: 8  Solar radiation: 553
+Wrong Global Horizontal Radiation:
+==================================
+Wrong Diffuse Horizontal Radiation:
+====================================

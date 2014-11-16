@@ -1,0 +1,42 @@
+                Average Minimum and Maximum Temperatures
+                ========================================
+
+                         Maximum Temperatures:
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMax:2.75	2.34	10.88	16.95	17.52	1.7	18.8	20.91	20.61	21.33	17.6	20.0	
+Time:14	13	14	13	13	8	14	15	15	15	12	13	
+
+                         Minimum Temperatures
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMin:-7.83	-7.22	1.04	5.4	5.62	-1.5	6.22	8.89	8.62	9.32	11.2	11.05	
+Time: 	11	10	10	7	8	6	8	8	8	7	12	10	
+
+=================================================================================================
+
+                           Solar Radiation Analysis
+                            ========================
+Lines checked: 2797
+===============
+No. of wrong lines: 15
+==================
+Wrong Direct Normal Radiation:
+=================================
+Year: 1963  Month: 4  Day: 26  Time: 8  Solar radiation: 571
+Year: 1963  Month: 5  Day: 1  Time: 8  Solar radiation: 599
+Year: 1963  Month: 5  Day: 6  Time: 8  Solar radiation: 595
+Year: 1963  Month: 5  Day: 22  Time: 8  Solar radiation: 717
+Year: 1963  Month: 5  Day: 23  Time: 8  Solar radiation: 652
+Year: 1964  Month: 6  Day: 3  Time: 8  Solar radiation: 595
+Year: 1964  Month: 6  Day: 4  Time: 8  Solar radiation: 681
+Year: 1964  Month: 6  Day: 9  Time: 8  Solar radiation: 612
+Year: 1964  Month: 6  Day: 29  Time: 8  Solar radiation: 667
+Year: 1968  Month: 7  Day: 3  Time: 8  Solar radiation: 696
+Year: 1968  Month: 7  Day: 6  Time: 8  Solar radiation: 572
+Year: 1968  Month: 7  Day: 21  Time: 8  Solar radiation: 575
+Year: 1968  Month: 7  Day: 29  Time: 8  Solar radiation: 596
+Year: 1965  Month: 8  Day: 11  Time: 8  Solar radiation: 566
+Year: 1965  Month: 8  Day: 16  Time: 8  Solar radiation: 589
+Wrong Global Horizontal Radiation:
+==================================
+Wrong Diffuse Horizontal Radiation:
+====================================

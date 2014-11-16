@@ -1,0 +1,43 @@
+                Average Minimum and Maximum Temperatures
+                ========================================
+
+                         Maximum Temperatures:
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMax:9.11	8.98	14.12	21.78	24.11	24.12	24.37	24.63	21.1	27.6	26.62	26.27	
+Time:13	14	13	13	14	14	14	15	8	13	14	14	
+
+                         Minimum Temperatures
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMin:-2.31	-0.34	2.44	8.48	13.7	13.72	13.68	13.68	14.1	17.27	16.93	16.08	
+Time: 	9	10	9	8	6	6	6	6	5	10	10	10	
+
+=================================================================================================
+
+                           Solar Radiation Analysis
+                            ========================
+Lines checked: 2913
+===============
+No. of wrong lines: 16
+==================
+Wrong Direct Normal Radiation:
+=================================
+Year: 1958  Month: 5  Day: 28  Time: 8  Solar radiation: 554
+Year: 1958  Month: 5  Day: 29  Time: 8  Solar radiation: 554
+Year: 1958  Month: 5  Day: 31  Time: 8  Solar radiation: 555
+Year: 1960  Month: 6  Day: 1  Time: 8  Solar radiation: 553
+Year: 1960  Month: 6  Day: 6  Time: 8  Solar radiation: 552
+Year: 1960  Month: 6  Day: 9  Time: 8  Solar radiation: 551
+Wrong Global Horizontal Radiation:
+==================================
+Wrong Diffuse Horizontal Radiation:
+====================================
+Year: 1960  Month: 6  Day: 11  Time: 8  Solar radiation: 256
+Year: 1960  Month: 6  Day: 13  Time: 8  Solar radiation: 251
+Year: 1960  Month: 6  Day: 17  Time: 8  Solar radiation: 257
+Year: 1960  Month: 6  Day: 20  Time: 8  Solar radiation: 252
+Year: 1960  Month: 6  Day: 24  Time: 8  Solar radiation: 256
+Year: 1960  Month: 6  Day: 25  Time: 8  Solar radiation: 256
+Year: 1960  Month: 6  Day: 29  Time: 8  Solar radiation: 256
+Year: 1974  Month: 7  Day: 8  Time: 8  Solar radiation: 254
+Year: 1974  Month: 7  Day: 9  Time: 8  Solar radiation: 251
+Year: 1974  Month: 7  Day: 11  Time: 8  Solar radiation: 251

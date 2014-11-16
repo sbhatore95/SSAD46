@@ -1,0 +1,42 @@
+                Average Minimum and Maximum Temperatures
+                ========================================
+
+                         Maximum Temperatures:
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMax:25.29	28.26	32.24	35.31	34.69	35.06	35.52	35.58	35.37	35.26	35.46	30.3	
+Time:14	14	15	14	14	13	14	14	14	14	14	8	
+
+                         Minimum Temperatures
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMin:13.7	16.82	21.84	24.79	25.64	26.37	26.38	26.5	26.1	25.53	25.53	28.0	
+Time: 	6	9	8	6	7	6	8	7	8	8	8	6	
+
+=================================================================================================
+
+                           Solar Radiation Analysis
+                            ========================
+Lines checked: 3214
+===============
+No. of wrong lines: 15
+==================
+Wrong Direct Normal Radiation:
+=================================
+Wrong Global Horizontal Radiation:
+==================================
+Wrong Diffuse Horizontal Radiation:
+====================================
+Year: 1997  Month: 5  Day: 10  Time: 8  Solar radiation: 253
+Year: 1997  Month: 5  Day: 14  Time: 8  Solar radiation: 255
+Year: 1997  Month: 5  Day: 22  Time: 8  Solar radiation: 256
+Year: 1997  Month: 5  Day: 23  Time: 8  Solar radiation: 281
+Year: 1997  Month: 5  Day: 24  Time: 8  Solar radiation: 275
+Year: 1997  Month: 5  Day: 31  Time: 8  Solar radiation: 256
+Year: 1982  Month: 6  Day: 1  Time: 8  Solar radiation: 256
+Year: 1982  Month: 6  Day: 2  Time: 8  Solar radiation: 256
+Year: 1982  Month: 6  Day: 7  Time: 8  Solar radiation: 263
+Year: 1982  Month: 6  Day: 8  Time: 8  Solar radiation: 273
+Year: 1982  Month: 6  Day: 9  Time: 8  Solar radiation: 255
+Year: 1982  Month: 6  Day: 15  Time: 8  Solar radiation: 253
+Year: 1982  Month: 6  Day: 22  Time: 8  Solar radiation: 258
+Year: 1982  Month: 6  Day: 30  Time: 8  Solar radiation: 281
+Year: 1995  Month: 7  Day: 29  Time: 8  Solar radiation: 253

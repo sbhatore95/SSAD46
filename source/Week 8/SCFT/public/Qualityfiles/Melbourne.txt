@@ -1,0 +1,105 @@
+                Average Minimum and Maximum Temperatures
+                ========================================
+
+                         Maximum Temperatures:
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMax:15.35	19.99	20.27	23.02	23.21	23.15	23.79	23.88	24.58	24.71	24.12	24.18	
+Time:11	14	14	14	14	14	14	14	14	14	14	14	
+
+                         Minimum Temperatures
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMin:11.65	14.07	14.07	15.39	15.39	15.04	15.22	15.22	15.59	15.59	15.46	15.46	
+Time: 	13	6	6	6	6	9	8	8	7	7	8	8	
+
+=================================================================================================
+
+                           Solar Radiation Analysis
+                            ========================
+Lines checked: 2651
+===============
+No. of wrong lines: 78
+==================
+Wrong Direct Normal Radiation:
+=================================
+Year: 1971  Month: 1  Day: 7  Time: 7  Solar radiation: 691
+Year: 1971  Month: 1  Day: 7  Time: 8  Solar radiation: 853
+Year: 1971  Month: 1  Day: 8  Time: 7  Solar radiation: 570
+Year: 1971  Month: 1  Day: 8  Time: 8  Solar radiation: 781
+Year: 1971  Month: 1  Day: 11  Time: 8  Solar radiation: 845
+Year: 1971  Month: 1  Day: 13  Time: 7  Solar radiation: 630
+Year: 1971  Month: 1  Day: 13  Time: 8  Solar radiation: 665
+Year: 1971  Month: 1  Day: 15  Time: 7  Solar radiation: 697
+Year: 1971  Month: 1  Day: 15  Time: 8  Solar radiation: 849
+Year: 1971  Month: 1  Day: 19  Time: 7  Solar radiation: 638
+Year: 1971  Month: 1  Day: 19  Time: 8  Solar radiation: 747
+Year: 1971  Month: 1  Day: 21  Time: 8  Solar radiation: 816
+Year: 1971  Month: 1  Day: 22  Time: 7  Solar radiation: 667
+Year: 1971  Month: 1  Day: 22  Time: 8  Solar radiation: 849
+Year: 1971  Month: 1  Day: 24  Time: 8  Solar radiation: 649
+Year: 1971  Month: 1  Day: 25  Time: 7  Solar radiation: 619
+Year: 1971  Month: 1  Day: 25  Time: 8  Solar radiation: 695
+Year: 1971  Month: 1  Day: 26  Time: 8  Solar radiation: 658
+Year: 1972  Month: 2  Day: 4  Time: 8  Solar radiation: 804
+Year: 1972  Month: 2  Day: 5  Time: 8  Solar radiation: 735
+Year: 1972  Month: 2  Day: 6  Time: 8  Solar radiation: 709
+Year: 1972  Month: 2  Day: 9  Time: 8  Solar radiation: 834
+Year: 1972  Month: 2  Day: 12  Time: 8  Solar radiation: 897
+Year: 1972  Month: 2  Day: 16  Time: 8  Solar radiation: 587
+Year: 1972  Month: 2  Day: 27  Time: 8  Solar radiation: 614
+Year: 1972  Month: 2  Day: 28  Time: 8  Solar radiation: 694
+Year: 1970  Month: 3  Day: 2  Time: 8  Solar radiation: 701
+Year: 1970  Month: 3  Day: 3  Time: 8  Solar radiation: 681
+Year: 1970  Month: 3  Day: 10  Time: 8  Solar radiation: 701
+Year: 1970  Month: 3  Day: 26  Time: 8  Solar radiation: 595
+Year: 1971  Month: 9  Day: 13  Time: 8  Solar radiation: 628
+Year: 1971  Month: 9  Day: 19  Time: 8  Solar radiation: 597
+Year: 1971  Month: 9  Day: 25  Time: 8  Solar radiation: 627
+Year: 1972  Month: 10  Day: 2  Time: 8  Solar radiation: 695
+Year: 1972  Month: 10  Day: 3  Time: 8  Solar radiation: 696
+Year: 1972  Month: 10  Day: 10  Time: 8  Solar radiation: 654
+Year: 1972  Month: 10  Day: 14  Time: 8  Solar radiation: 745
+Year: 1972  Month: 10  Day: 19  Time: 8  Solar radiation: 581
+Year: 1972  Month: 10  Day: 23  Time: 8  Solar radiation: 752
+Year: 1972  Month: 10  Day: 24  Time: 7  Solar radiation: 614
+Year: 1972  Month: 10  Day: 24  Time: 8  Solar radiation: 752
+Year: 1972  Month: 10  Day: 27  Time: 8  Solar radiation: 782
+Year: 1972  Month: 10  Day: 28  Time: 8  Solar radiation: 807
+Year: 1972  Month: 10  Day: 29  Time: 8  Solar radiation: 779
+Year: 1972  Month: 11  Day: 1  Time: 7  Solar radiation: 636
+Year: 1972  Month: 11  Day: 1  Time: 8  Solar radiation: 659
+Year: 1972  Month: 11  Day: 8  Time: 7  Solar radiation: 631
+Year: 1972  Month: 11  Day: 8  Time: 8  Solar radiation: 556
+Year: 1972  Month: 11  Day: 11  Time: 7  Solar radiation: 759
+Year: 1972  Month: 11  Day: 11  Time: 8  Solar radiation: 845
+Year: 1972  Month: 11  Day: 19  Time: 7  Solar radiation: 661
+Year: 1972  Month: 11  Day: 19  Time: 8  Solar radiation: 610
+Year: 1972  Month: 11  Day: 22  Time: 8  Solar radiation: 715
+Year: 1972  Month: 11  Day: 26  Time: 8  Solar radiation: 708
+Year: 1972  Month: 11  Day: 27  Time: 7  Solar radiation: 721
+Year: 1972  Month: 11  Day: 27  Time: 8  Solar radiation: 848
+Year: 1972  Month: 11  Day: 28  Time: 7  Solar radiation: 666
+Year: 1972  Month: 11  Day: 28  Time: 8  Solar radiation: 809
+Year: 1970  Month: 12  Day: 2  Time: 7  Solar radiation: 732
+Year: 1970  Month: 12  Day: 2  Time: 8  Solar radiation: 865
+Year: 1970  Month: 12  Day: 3  Time: 7  Solar radiation: 619
+Year: 1970  Month: 12  Day: 3  Time: 8  Solar radiation: 866
+Year: 1970  Month: 12  Day: 6  Time: 8  Solar radiation: 809
+Year: 1970  Month: 12  Day: 7  Time: 8  Solar radiation: 726
+Year: 1970  Month: 12  Day: 11  Time: 7  Solar radiation: 672
+Year: 1970  Month: 12  Day: 11  Time: 8  Solar radiation: 811
+Year: 1970  Month: 12  Day: 15  Time: 8  Solar radiation: 560
+Year: 1970  Month: 12  Day: 17  Time: 8  Solar radiation: 856
+Year: 1970  Month: 12  Day: 20  Time: 8  Solar radiation: 849
+Year: 1970  Month: 12  Day: 22  Time: 7  Solar radiation: 694
+Year: 1970  Month: 12  Day: 22  Time: 8  Solar radiation: 795
+Year: 1970  Month: 12  Day: 25  Time: 8  Solar radiation: 898
+Year: 1970  Month: 12  Day: 26  Time: 7  Solar radiation: 747
+Year: 1970  Month: 12  Day: 26  Time: 8  Solar radiation: 872
+Year: 1970  Month: 12  Day: 27  Time: 7  Solar radiation: 631
+Year: 1970  Month: 12  Day: 27  Time: 8  Solar radiation: 560
+Wrong Global Horizontal Radiation:
+==================================
+Wrong Diffuse Horizontal Radiation:
+====================================
+Year: 1971  Month: 1  Day: 2  Time: 8  Solar radiation: 253
+Year: 1970  Month: 12  Day: 16  Time: 8  Solar radiation: 261

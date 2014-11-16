@@ -1,0 +1,45 @@
+                Average Minimum and Maximum Temperatures
+                ========================================
+
+                         Maximum Temperatures:
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMax:20.5	27.78	28.06	30.36	28.32	25.91	27.86	25.64	20.36	21.24	19.92	22.12	
+Time:11	14	14	14	14	12	13	15	14	13	14	12	
+
+                         Minimum Temperatures
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMin:15.75	18.84	18.79	20.3	20.34	17.68	18.14	16.21	11.51	10.41	10.99	12.72	
+Time: 	6	8	7	7	10	10	10	9	10	10	9	14	
+
+=================================================================================================
+
+                           Solar Radiation Analysis
+                            ========================
+Lines checked: 2806
+===============
+No. of wrong lines: 18
+==================
+Wrong Direct Normal Radiation:
+=================================
+Year: 1980  Month: 1  Day: 2  Time: 8  Solar radiation: 763
+Year: 1980  Month: 1  Day: 14  Time: 8  Solar radiation: 629
+Year: 1980  Month: 1  Day: 15  Time: 8  Solar radiation: 605
+Year: 1987  Month: 3  Day: 14  Time: 8  Solar radiation: 572
+Year: 1987  Month: 10  Day: 21  Time: 8  Solar radiation: 580
+Year: 1987  Month: 10  Day: 30  Time: 8  Solar radiation: 696
+Year: 1978  Month: 11  Day: 3  Time: 8  Solar radiation: 565
+Year: 1978  Month: 11  Day: 9  Time: 8  Solar radiation: 719
+Year: 1978  Month: 11  Day: 10  Time: 8  Solar radiation: 599
+Year: 1978  Month: 11  Day: 11  Time: 8  Solar radiation: 618
+Year: 1978  Month: 11  Day: 13  Time: 8  Solar radiation: 778
+Year: 1978  Month: 11  Day: 24  Time: 7  Solar radiation: 604
+Year: 1978  Month: 11  Day: 24  Time: 8  Solar radiation: 804
+Year: 1998  Month: 12  Day: 4  Time: 8  Solar radiation: 809
+Year: 1998  Month: 12  Day: 8  Time: 8  Solar radiation: 735
+Year: 1998  Month: 12  Day: 12  Time: 8  Solar radiation: 652
+Year: 1998  Month: 12  Day: 20  Time: 8  Solar radiation: 623
+Year: 1998  Month: 12  Day: 23  Time: 8  Solar radiation: 740
+Wrong Global Horizontal Radiation:
+==================================
+Wrong Diffuse Horizontal Radiation:
+====================================

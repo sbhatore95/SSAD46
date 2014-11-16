@@ -1,0 +1,198 @@
+                Average Minimum and Maximum Temperatures
+                ========================================
+
+                         Maximum Temperatures:
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMax:0.46	2.04	4.69	5.13	5.23	5.43	5.6	5.99	9.45	10.57	13.01	14.22	
+Time:13	14	12	13	13	13	14	14	11	12	14	14	
+
+                         Minimum Temperatures
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMin:-14.1	-12.37	-3.61	-4.92	-5.19	-5.39	-6.01	-6.04	-0.55	-1.83	-0.43	-0.38	
+Time: 	11	11	8	11	10	10	10	10	3	3	12	11	
+
+=================================================================================================
+
+                           Solar Radiation Analysis
+                            ========================
+Lines checked: 2993
+===============
+No. of wrong lines: 171
+==================
+Wrong Direct Normal Radiation:
+=================================
+Year: 1970  Month: 3  Day: 7  Time: 8  Solar radiation: 596
+Year: 1970  Month: 3  Day: 20  Time: 8  Solar radiation: 664
+Year: 1970  Month: 3  Day: 21  Time: 8  Solar radiation: 577
+Year: 1970  Month: 3  Day: 23  Time: 8  Solar radiation: 659
+Year: 1970  Month: 3  Day: 28  Time: 8  Solar radiation: 705
+Year: 1967  Month: 4  Day: 2  Time: 8  Solar radiation: 721
+Year: 1967  Month: 4  Day: 3  Time: 8  Solar radiation: 725
+Year: 1967  Month: 4  Day: 7  Time: 8  Solar radiation: 746
+Year: 1967  Month: 4  Day: 8  Time: 8  Solar radiation: 751
+Year: 1967  Month: 4  Day: 10  Time: 8  Solar radiation: 760
+Year: 1967  Month: 4  Day: 11  Time: 8  Solar radiation: 741
+Year: 1967  Month: 4  Day: 12  Time: 8  Solar radiation: 745
+Year: 1967  Month: 4  Day: 14  Time: 8  Solar radiation: 779
+Year: 1967  Month: 4  Day: 17  Time: 8  Solar radiation: 791
+Year: 1967  Month: 4  Day: 18  Time: 8  Solar radiation: 795
+Year: 1967  Month: 4  Day: 19  Time: 8  Solar radiation: 737
+Year: 1967  Month: 4  Day: 20  Time: 8  Solar radiation: 741
+Year: 1967  Month: 4  Day: 21  Time: 8  Solar radiation: 690
+Year: 1967  Month: 4  Day: 22  Time: 8  Solar radiation: 748
+Year: 1967  Month: 4  Day: 24  Time: 8  Solar radiation: 631
+Year: 1967  Month: 4  Day: 27  Time: 8  Solar radiation: 823
+Year: 1967  Month: 4  Day: 28  Time: 8  Solar radiation: 826
+Year: 1967  Month: 4  Day: 29  Time: 8  Solar radiation: 828
+Year: 1973  Month: 5  Day: 2  Time: 8  Solar radiation: 649
+Year: 1973  Month: 5  Day: 3  Time: 8  Solar radiation: 819
+Year: 1973  Month: 5  Day: 4  Time: 8  Solar radiation: 805
+Year: 1973  Month: 5  Day: 5  Time: 8  Solar radiation: 773
+Year: 1973  Month: 5  Day: 7  Time: 8  Solar radiation: 661
+Year: 1973  Month: 5  Day: 8  Time: 8  Solar radiation: 778
+Year: 1973  Month: 5  Day: 10  Time: 8  Solar radiation: 822
+Year: 1973  Month: 5  Day: 11  Time: 8  Solar radiation: 781
+Year: 1973  Month: 5  Day: 12  Time: 7  Solar radiation: 578
+Year: 1973  Month: 5  Day: 12  Time: 8  Solar radiation: 823
+Year: 1973  Month: 5  Day: 13  Time: 7  Solar radiation: 580
+Year: 1973  Month: 5  Day: 13  Time: 8  Solar radiation: 823
+Year: 1973  Month: 5  Day: 14  Time: 7  Solar radiation: 584
+Year: 1973  Month: 5  Day: 14  Time: 8  Solar radiation: 824
+Year: 1973  Month: 5  Day: 15  Time: 7  Solar radiation: 587
+Year: 1973  Month: 5  Day: 15  Time: 8  Solar radiation: 824
+Year: 1973  Month: 5  Day: 16  Time: 7  Solar radiation: 589
+Year: 1973  Month: 5  Day: 16  Time: 8  Solar radiation: 824
+Year: 1973  Month: 5  Day: 17  Time: 8  Solar radiation: 741
+Year: 1973  Month: 5  Day: 18  Time: 7  Solar radiation: 594
+Year: 1973  Month: 5  Day: 18  Time: 8  Solar radiation: 826
+Year: 1973  Month: 5  Day: 19  Time: 8  Solar radiation: 826
+Year: 1973  Month: 5  Day: 20  Time: 7  Solar radiation: 580
+Year: 1973  Month: 5  Day: 20  Time: 8  Solar radiation: 816
+Year: 1973  Month: 5  Day: 21  Time: 8  Solar radiation: 791
+Year: 1973  Month: 5  Day: 23  Time: 7  Solar radiation: 585
+Year: 1973  Month: 5  Day: 23  Time: 8  Solar radiation: 818
+Year: 1973  Month: 5  Day: 24  Time: 7  Solar radiation: 561
+Year: 1973  Month: 5  Day: 24  Time: 8  Solar radiation: 792
+Year: 1973  Month: 5  Day: 27  Time: 8  Solar radiation: 690
+Year: 1973  Month: 5  Day: 28  Time: 7  Solar radiation: 608
+Year: 1973  Month: 5  Day: 28  Time: 8  Solar radiation: 829
+Year: 1973  Month: 5  Day: 29  Time: 7  Solar radiation: 610
+Year: 1973  Month: 5  Day: 29  Time: 8  Solar radiation: 829
+Year: 1973  Month: 5  Day: 30  Time: 8  Solar radiation: 749
+Year: 1973  Month: 5  Day: 31  Time: 7  Solar radiation: 611
+Year: 1973  Month: 5  Day: 31  Time: 8  Solar radiation: 829
+Year: 1966  Month: 6  Day: 1  Time: 7  Solar radiation: 608
+Year: 1966  Month: 6  Day: 1  Time: 8  Solar radiation: 824
+Year: 1966  Month: 6  Day: 2  Time: 7  Solar radiation: 609
+Year: 1966  Month: 6  Day: 2  Time: 8  Solar radiation: 823
+Year: 1966  Month: 6  Day: 3  Time: 7  Solar radiation: 610
+Year: 1966  Month: 6  Day: 3  Time: 8  Solar radiation: 824
+Year: 1966  Month: 6  Day: 4  Time: 7  Solar radiation: 611
+Year: 1966  Month: 6  Day: 4  Time: 8  Solar radiation: 823
+Year: 1966  Month: 6  Day: 6  Time: 7  Solar radiation: 611
+Year: 1966  Month: 6  Day: 6  Time: 8  Solar radiation: 823
+Year: 1966  Month: 6  Day: 9  Time: 7  Solar radiation: 571
+Year: 1966  Month: 6  Day: 9  Time: 8  Solar radiation: 785
+Year: 1966  Month: 6  Day: 10  Time: 7  Solar radiation: 596
+Year: 1966  Month: 6  Day: 10  Time: 8  Solar radiation: 811
+Year: 1966  Month: 6  Day: 12  Time: 8  Solar radiation: 821
+Year: 1966  Month: 6  Day: 13  Time: 7  Solar radiation: 610
+Year: 1966  Month: 6  Day: 13  Time: 8  Solar radiation: 821
+Year: 1966  Month: 6  Day: 14  Time: 7  Solar radiation: 610
+Year: 1966  Month: 6  Day: 14  Time: 8  Solar radiation: 820
+Year: 1966  Month: 6  Day: 15  Time: 7  Solar radiation: 609
+Year: 1966  Month: 6  Day: 15  Time: 8  Solar radiation: 819
+Year: 1966  Month: 6  Day: 16  Time: 7  Solar radiation: 594
+Year: 1966  Month: 6  Day: 16  Time: 8  Solar radiation: 808
+Year: 1966  Month: 6  Day: 17  Time: 7  Solar radiation: 593
+Year: 1966  Month: 6  Day: 17  Time: 8  Solar radiation: 808
+Year: 1966  Month: 6  Day: 18  Time: 7  Solar radiation: 607
+Year: 1966  Month: 6  Day: 18  Time: 8  Solar radiation: 820
+Year: 1966  Month: 6  Day: 19  Time: 7  Solar radiation: 605
+Year: 1966  Month: 6  Day: 19  Time: 8  Solar radiation: 820
+Year: 1966  Month: 6  Day: 21  Time: 8  Solar radiation: 740
+Year: 1966  Month: 6  Day: 22  Time: 7  Solar radiation: 586
+Year: 1966  Month: 6  Day: 22  Time: 8  Solar radiation: 806
+Year: 1966  Month: 6  Day: 23  Time: 7  Solar radiation: 600
+Year: 1966  Month: 6  Day: 23  Time: 8  Solar radiation: 820
+Year: 1966  Month: 6  Day: 24  Time: 7  Solar radiation: 598
+Year: 1966  Month: 6  Day: 24  Time: 8  Solar radiation: 820
+Year: 1966  Month: 6  Day: 25  Time: 7  Solar radiation: 596
+Year: 1966  Month: 6  Day: 25  Time: 8  Solar radiation: 820
+Year: 1966  Month: 6  Day: 27  Time: 7  Solar radiation: 593
+Year: 1966  Month: 6  Day: 27  Time: 8  Solar radiation: 819
+Year: 1966  Month: 6  Day: 28  Time: 8  Solar radiation: 734
+Year: 1975  Month: 7  Day: 1  Time: 7  Solar radiation: 580
+Year: 1975  Month: 7  Day: 1  Time: 8  Solar radiation: 817
+Year: 1975  Month: 7  Day: 2  Time: 7  Solar radiation: 577
+Year: 1975  Month: 7  Day: 2  Time: 8  Solar radiation: 817
+Year: 1975  Month: 7  Day: 3  Time: 7  Solar radiation: 573
+Year: 1975  Month: 7  Day: 3  Time: 8  Solar radiation: 815
+Year: 1975  Month: 7  Day: 4  Time: 7  Solar radiation: 569
+Year: 1975  Month: 7  Day: 4  Time: 8  Solar radiation: 813
+Year: 1975  Month: 7  Day: 5  Time: 8  Solar radiation: 724
+Year: 1975  Month: 7  Day: 6  Time: 8  Solar radiation: 792
+Year: 1975  Month: 7  Day: 7  Time: 7  Solar radiation: 556
+Year: 1975  Month: 7  Day: 7  Time: 8  Solar radiation: 809
+Year: 1975  Month: 7  Day: 8  Time: 8  Solar radiation: 760
+Year: 1975  Month: 7  Day: 9  Time: 8  Solar radiation: 664
+Year: 1975  Month: 7  Day: 10  Time: 8  Solar radiation: 803
+Year: 1975  Month: 7  Day: 11  Time: 8  Solar radiation: 783
+Year: 1975  Month: 7  Day: 12  Time: 8  Solar radiation: 799
+Year: 1975  Month: 7  Day: 13  Time: 8  Solar radiation: 779
+Year: 1975  Month: 7  Day: 14  Time: 8  Solar radiation: 794
+Year: 1975  Month: 7  Day: 15  Time: 8  Solar radiation: 705
+Year: 1975  Month: 7  Day: 16  Time: 8  Solar radiation: 570
+Year: 1975  Month: 7  Day: 17  Time: 8  Solar radiation: 771
+Year: 1975  Month: 7  Day: 18  Time: 8  Solar radiation: 740
+Year: 1975  Month: 7  Day: 19  Time: 8  Solar radiation: 785
+Year: 1975  Month: 7  Day: 21  Time: 8  Solar radiation: 781
+Year: 1975  Month: 7  Day: 22  Time: 8  Solar radiation: 778
+Year: 1975  Month: 7  Day: 23  Time: 8  Solar radiation: 691
+Year: 1975  Month: 7  Day: 24  Time: 8  Solar radiation: 773
+Year: 1975  Month: 7  Day: 25  Time: 8  Solar radiation: 772
+Year: 1975  Month: 7  Day: 26  Time: 8  Solar radiation: 768
+Year: 1975  Month: 7  Day: 27  Time: 8  Solar radiation: 766
+Year: 1975  Month: 7  Day: 28  Time: 8  Solar radiation: 763
+Year: 1975  Month: 7  Day: 31  Time: 8  Solar radiation: 712
+Year: 1970  Month: 8  Day: 1  Time: 8  Solar radiation: 757
+Year: 1970  Month: 8  Day: 2  Time: 8  Solar radiation: 673
+Year: 1970  Month: 8  Day: 3  Time: 8  Solar radiation: 671
+Year: 1970  Month: 8  Day: 4  Time: 8  Solar radiation: 618
+Year: 1970  Month: 8  Day: 5  Time: 8  Solar radiation: 745
+Year: 1970  Month: 8  Day: 7  Time: 8  Solar radiation: 738
+Year: 1970  Month: 8  Day: 8  Time: 8  Solar radiation: 718
+Year: 1970  Month: 8  Day: 9  Time: 8  Solar radiation: 714
+Year: 1970  Month: 8  Day: 10  Time: 8  Solar radiation: 727
+Year: 1970  Month: 8  Day: 11  Time: 8  Solar radiation: 724
+Year: 1970  Month: 8  Day: 12  Time: 8  Solar radiation: 720
+Year: 1970  Month: 8  Day: 13  Time: 8  Solar radiation: 716
+Year: 1970  Month: 8  Day: 16  Time: 8  Solar radiation: 706
+Year: 1970  Month: 8  Day: 17  Time: 8  Solar radiation: 704
+Year: 1970  Month: 8  Day: 18  Time: 8  Solar radiation: 702
+Year: 1970  Month: 8  Day: 23  Time: 8  Solar radiation: 690
+Year: 1970  Month: 8  Day: 24  Time: 8  Solar radiation: 687
+Year: 1970  Month: 8  Day: 25  Time: 8  Solar radiation: 685
+Year: 1970  Month: 8  Day: 26  Time: 8  Solar radiation: 609
+Year: 1970  Month: 8  Day: 27  Time: 8  Solar radiation: 679
+Year: 1970  Month: 8  Day: 28  Time: 8  Solar radiation: 676
+Year: 1970  Month: 8  Day: 29  Time: 8  Solar radiation: 673
+Year: 1970  Month: 8  Day: 31  Time: 8  Solar radiation: 667
+Year: 1973  Month: 9  Day: 2  Time: 8  Solar radiation: 628
+Year: 1973  Month: 9  Day: 3  Time: 8  Solar radiation: 663
+Year: 1973  Month: 9  Day: 4  Time: 8  Solar radiation: 660
+Year: 1973  Month: 9  Day: 5  Time: 8  Solar radiation: 656
+Year: 1973  Month: 9  Day: 6  Time: 8  Solar radiation: 652
+Year: 1973  Month: 9  Day: 7  Time: 8  Solar radiation: 648
+Year: 1973  Month: 9  Day: 8  Time: 8  Solar radiation: 630
+Year: 1973  Month: 9  Day: 9  Time: 8  Solar radiation: 626
+Year: 1973  Month: 9  Day: 13  Time: 8  Solar radiation: 624
+Year: 1973  Month: 9  Day: 14  Time: 8  Solar radiation: 621
+Year: 1973  Month: 9  Day: 17  Time: 8  Solar radiation: 606
+Year: 1973  Month: 9  Day: 18  Time: 8  Solar radiation: 601
+Year: 1973  Month: 9  Day: 19  Time: 8  Solar radiation: 552
+Year: 1973  Month: 9  Day: 20  Time: 8  Solar radiation: 592
+Wrong Global Horizontal Radiation:
+==================================
+Wrong Diffuse Horizontal Radiation:
+====================================

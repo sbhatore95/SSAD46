@@ -1,0 +1,41 @@
+                Average Minimum and Maximum Temperatures
+                ========================================
+
+                         Maximum Temperatures:
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMax:-1.39	1.44	2.85	8.65	21.38	20.52	20.32	16.91	15.96	15.99	16.28	15.4	
+Time:11	13	14	13	14	13	13	13	13	13	13	8	
+
+                         Minimum Temperatures
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMin:-6.18	-3.24	-2.04	-0.14	9.46	7.72	7.28	6.29	5.69	5.67	5.78	8.0	
+Time: 	12	13	9	8	8	10	9	8	9	9	9	3	
+
+=================================================================================================
+
+                           Solar Radiation Analysis
+                            ========================
+Lines checked: 3171
+===============
+No. of wrong lines: 14
+==================
+Wrong Direct Normal Radiation:
+=================================
+Year: 1990  Month: 5  Day: 9  Time: 8  Solar radiation: 559
+Year: 1990  Month: 5  Day: 12  Time: 8  Solar radiation: 555
+Year: 1990  Month: 5  Day: 13  Time: 8  Solar radiation: 560
+Year: 1990  Month: 5  Day: 29  Time: 8  Solar radiation: 569
+Year: 1990  Month: 5  Day: 30  Time: 8  Solar radiation: 561
+Year: 1985  Month: 6  Day: 1  Time: 8  Solar radiation: 558
+Year: 1985  Month: 6  Day: 3  Time: 8  Solar radiation: 561
+Year: 1985  Month: 6  Day: 23  Time: 8  Solar radiation: 562
+Year: 1985  Month: 6  Day: 24  Time: 8  Solar radiation: 559
+Year: 1985  Month: 6  Day: 25  Time: 8  Solar radiation: 558
+Year: 1985  Month: 6  Day: 26  Time: 8  Solar radiation: 561
+Year: 1986  Month: 7  Day: 1  Time: 8  Solar radiation: 556
+Wrong Global Horizontal Radiation:
+==================================
+Wrong Diffuse Horizontal Radiation:
+====================================
+Year: 1990  Month: 5  Day: 24  Time: 8  Solar radiation: 259
+Year: 1985  Month: 6  Day: 16  Time: 8  Solar radiation: 272
