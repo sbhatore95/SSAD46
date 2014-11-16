@@ -10,7 +10,8 @@ class SurrogateController < ApplicationController
 
 	#epw files 
 	def download1
-		@link = Cities.where('city = ?' , $icityname )
+		@link = Cities.find_by_sql("SELECT link FROM cities WHERE city = 'PUNTA ARENAS'" )
+		render :text => @link
 		
 
 	end
