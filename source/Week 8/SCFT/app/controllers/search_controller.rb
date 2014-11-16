@@ -32,6 +32,17 @@ class SearchController < ApplicationController
 			$ilatitude_mycity = params[:latitude_mycity]
 			$ilongitude_mycity = params[:longitude_mycity]
 
+
+			@arr ||= []
+            require 'nokogiri'
+            require 'open-uri'
+	      	@wikilink='http://en.wikipedia.org/wiki/' + $icityname
+	        doc = Nokogiri::HTML(open(@wikilink))
+	        doc.xpath("//table[@class='wikitable collapsible']").each do |row|
+	            @arr << row.text
+	        end
+
+
 			require 'net/http'
 			require 'json'
 			@url = 'https://maps.googleapis.com/maps/api/elevation/json?locations=' + $ilatitude_mycity + ',' + $ilongitude_mycity
@@ -76,6 +87,18 @@ class SearchController < ApplicationController
 
 			@results = Cities.where('latitude > ? AND latitude < ? AND elevation > ? AND elevation < ? AND (round(latitude) != ? OR round(longitude) != ?)',@latitude_Range_Start,@latitude_Range_End,@elevation_Range_Start, @elevation_Range_End, $ilatitude_mycity.to_f.round, $ilongitude_mycity.to_f.round)
 
+			@matter ||= []
+			@results.each do |c|
+				@var = c.city
+				@var = @var.gsub(/['\/-]/,'')
+				@any = Weatherdata.where('city =?' , @var)
+				@matter << @any
+				puts @matter
+			end
+					
+				
+				
+
 	end
 
 	def weather
@@ -103,4 +126,4 @@ class SearchController < ApplicationController
 
 end
 			
-			
+

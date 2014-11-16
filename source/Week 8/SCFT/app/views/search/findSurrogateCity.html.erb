@@ -316,7 +316,7 @@ $(document).ready(function(){
                 markers = [];
             }
 
-            //calcu();
+            calcu();
             google.maps.event.addDomListener(window, 'load', initialize);
        
  
@@ -330,7 +330,8 @@ $(document).ready(function(){
 
 function calcu()
 {
-    tt= document.getElementById('searchpanel').getElementsByTagName("span");
+    tt= '<%= @matter %>';
+    
     climatedata=gowiki('<%= $icityname %>');
     drawmainmap('<%= $ilatitude_mycity %>','<%= $ilatitude_mycity %>',tt,climatedata);
 
@@ -384,7 +385,7 @@ function distance(lat1, lon1, lat2, lon2, unit) {
 
 
 
-function drawmainmap(lat,lng,matter,citydata)
+function drawmainmap(lat,lng,citydata)
 {   
     var lnrange = parseFloat('<%= $ilatitude_range %>');//parseFloat(document.getElementById("latrange").value);
     var maxtemp = parseFloat(40);//parseFloat(document.getElementById("maxtemp").value);
@@ -423,41 +424,43 @@ icon:'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
             circle.bindTo('center',marker,'position');
    */ i=0;
     var tabledata=[];
-    while(i<matter.length)
+    <%= @matter.each do |r|%>
+
     {
         var fl=1;
-        //var myCenter=new google.maps.LatLng(matter[i].latitude,matter[i].longitude);
+        //var myCenter=new google.maps.LatLng('<%= @matter[i].latitude,'<%= r.longitude);
         //var marker=new google.maps.Marker({
           //position:myCenter,});
         
         var the=[];
-        the.push([matter[i].mjan,matter[i].njan]);
-        the.push([matter[i].mfeb,matter[i].nfeb]);
-        the.push([matter[i].mmar,matter[i].nmar]);
-        the.push([matter[i].mapr,matter[i].napr]);
-        the.push([matter[i].mmay,matter[i].nmay]);
-        the.push([matter[i].mjun,matter[i].njun]);
-        the.push([matter[i].mjul,matter[i].njul]);
-        the.push([matter[i].maug,matter[i].naug]);
-        the.push([matter[i].msep,matter[i].nsep]);
-        the.push([matter[i].moct,matter[i].noct]);
-        the.push([matter[i].mnov,matter[i].nnov]);
-        the.push([matter[i].mdec,matter[i].ndec]);
+        the.push([<%= r.mjan%>,<%= r.njan%>]);
+        the.push([<%= r.mfeb%>,<%= r.nfeb%>]);
+        the.push([<%= r.mmar%>,<%= r.nmar%>]);
+        the.push([<%= r.mapr%>','<%= r.napr%>']);
+        the.push(['<%= r.mapr%>','<%= r.napr%>']);
+        the.push(['<%= r.mmay%>','<%= r.nmay%>']);
+        the.push(['<%= r.mjun%>','<%= r.njun%>']);
+        the.push(['<%= r.mjul%>','<%= r.njul%>']);
+        the.push(['<%= r.maug%>','<%= r.naug%>']);
+        the.push(['<%= r.msep%>','<%= r.nsep%>']);
+        the.push(['<%= r.moct%>','<%= r.noct%>']);
+        the.push(['<%= r.mnov%>','<%= r.nnov%>']);
+        the.push(['<%= r.mdec%>','<%= r.ndec%>']);
         if(cmf==1)
         {
             citydata=[];    
-            citydata.push([matter[i].mjan,matter[i].njan]);
-            citydata.push([matter[i].mfeb,matter[i].nfeb]);
-            citydata.push([matter[i].mmar,matter[i].nmar]);
-            citydata.push([matter[i].mapr,matter[i].napr]);
-            citydata.push([matter[i].mmay,matter[i].nmay]);
-            citydata.push([matter[i].mjun,matter[i].njun]);
-            citydata.push([matter[i].mjul,matter[i].njul]);
-            citydata.push([matter[i].maug,matter[i].naug]);
-            citydata.push([matter[i].msep,matter[i].nsep]);
-            citydata.push([matter[i].moct,matter[i].noct]);
-            citydata.push([matter[i].mnov,matter[i].nnov]);
-            citydata.push([matter[i].mdec,matter[i].ndec]);
+            citydata.push(['<%= r.mjan%>','<%= r.njan%>']);
+            citydata.push(['<%= r.mfeb%>','<%= r.nfeb%>']);
+            citydata.push(['<%= r.mmar%>','<%= r.nmar%>']);
+            citydata.push(['<%= r.mapr%>','<%= r.napr%>']);
+            citydata.push(['<%= r.mmay%>','<%= r.nmay%>']);
+            citydata.push(['<%= r.mjun%>','<%= r.njun%>']);
+            citydata.push(['<%= r.mjul%>','<%= r.njul%>']);
+            citydata.push(['<%= r.maug%>','<%= r.naug%>']);
+            citydata.push(['<%= r.msep%>','<%= r.nsep%>']);
+            citydata.push(['<%= r.moct%>','<%= r.noct%>']);
+            citydata.push(['<%= r.mnov%>','<%= r.nnov%>']);
+            citydata.push(['<%= r.mdec%>','<%= r.ndec%>']);
         }
         
         var arr=[];
@@ -466,7 +469,7 @@ icon:'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
         var rmsmin=[];
         var rmstotal=[];
 
-        var ll=distance(lat,lng,parseFloat(matter[i].latitude),parseFloat(matter[i].longitude),"K");
+        var ll=distance(lat,lng,parseFloat('<%= r.latitude%>'),parseFloat('<%= r.longitude%>'),"K");
         
         
         while(kk<12)
@@ -512,15 +515,15 @@ icon:'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
  //           marker.setMap(map);
             if(cmf==0)
             {
-                tabledata.push([matter[i].cityname,matter[i].countryname,rmax,rmin,rtotal]);
+                tabledata.push(['<%= r.city%>',rmax,rmin,rtotal]);
             }
             else
             {
-                tabledata.push([matter[i].cityname,matter[i].countryname,"N/A","N/A","N/A"]);
+                tabledata.push(['<%= r.city%>',"N/A","N/A","N/A"]);
             }
     /*        var infowindow =  new google.maps.InfoWindow({content: '', 
             maxWidth: 200 });
-            bindInfoWindow(marker, map, infowindow, "<p style=\" width:100px;color:black;font-width:bold\">" + matter[i].cityname + "</p>"); 
+            bindInfoWindow(marker, map, infowindow, "<p style=\" width:100px;color:black;font-width:bold\">" + '<%= @matter[i].cityname + "</p>"); 
     */    }
         i=i+1;
     }
@@ -552,8 +555,8 @@ icon:'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
     });
 
     flightPath.setMap(map);
-    drawtable(tabledata);
-*/
+    */drawtable(tabledata);
+
 }
 
 
@@ -562,41 +565,48 @@ icon:'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
 function gowiki(cityname)
 {
     
-    var stt=cityname;//document.getElementById("city").innerHTML;
+/*    var stt=cityname;//document.getElementById("city").innerHTML;
     var value=stt.toLowerCase();
     var postData = new Array();
     postData.push({name: 'cityname', value: value});
-   var sendarray=[];
-    
-/*$.ajax({url : "http://localhost/submit1.php",type: "POST",data : postData,async: false,success:function(data, textStatus, jqXHR) 
-{ */      var maxtemp=[];
+      
+$.ajax({url : "http://localhost/submit1.php",type: "POST",data : postData,async: false,success:function(data, textStatus, jqXHR) 
+{ */
+	var sendarray=[];
+	data = '<%= @arr %>'
+	data=data[0].split('\n');
+	alert(data);
+	var maxtemp=[];
         var mintemp=[];
         var maxyearavg;
+
         var minyearavg;
         if(data.length>1)
         {
             var i=0;
             while(i<data.length)
             {
-                if(i<12)
-                {   
-                    maxtemp.push(data[i].substring(1,data[i].length-1));
-                }
-                else if(i==12)
-                {
-                     maxyearavg=data[i].substring(1,data[i].length-1);
-                }
-                else if(i<25)
-                {
-                    mintemp.push(data[i].substring(1,data[i].length-1));
-                }
-                else
-                {
-                    minyearavg=data[i].substring(1,data[i].length-1);
-                }
                 
+                if(data[i].match(/Average\ High/g).length!=0)
+                {   
+                    var j;
+                    for(j=0;j<12;j++)
+                        maxtemp.push(data[j]);
+            
+                     maxyearavg=data[j];
+                }
+                else if(data[i].match(/Average\ Low/g).length!=0)
+                {
+                     var j;
+                     for(var j=0;j<12;j++)
+                        mintemp.push(data[j]); 
+            
+                    minyearavg=data[j];
+                }
                 i=i+1;
             }
+        
+
             i=0;
             var newdata=[["year","Min","Max"]];
             var dates=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
