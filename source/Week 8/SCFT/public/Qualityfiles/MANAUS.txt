@@ -1,0 +1,42 @@
+                Average Minimum and Maximum Temperatures
+                ========================================
+
+                         Maximum Temperatures:
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMax:28.72	28.65	29.99	29.85	29.81	29.31	29.95	30.17	30.65	30.99	30.78	29.8	
+Time:13	12	12	13	13	13	13	13	13	13	12	12	
+
+                         Minimum Temperatures
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMin:23.6	23.65	24.08	24.01	24.2	24.59	23.45	23.84	25.09	24.29	24.1	24.03	
+Time: 	9	8	9	9	9	10	8	8	11	11	12	6	
+
+=================================================================================================
+
+                           Solar Radiation Analysis
+                            ========================
+Lines checked: 2630
+===============
+No. of wrong lines: 15
+==================
+Wrong Direct Normal Radiation:
+=================================
+Year: 1979  Month: 3  Day: 29  Time: 8  Solar radiation: 728
+Year: 1977  Month: 6  Day: 22  Time: 8  Solar radiation: 577
+Year: 2001  Month: 7  Day: 11  Time: 8  Solar radiation: 616
+Year: 2001  Month: 7  Day: 26  Time: 8  Solar radiation: 662
+Year: 1976  Month: 8  Day: 3  Time: 8  Solar radiation: 616
+Year: 1976  Month: 8  Day: 17  Time: 8  Solar radiation: 575
+Year: 1976  Month: 8  Day: 29  Time: 8  Solar radiation: 632
+Year: 1994  Month: 9  Day: 7  Time: 8  Solar radiation: 643
+Year: 1994  Month: 9  Day: 18  Time: 8  Solar radiation: 606
+Year: 1978  Month: 10  Day: 3  Time: 8  Solar radiation: 557
+Year: 1978  Month: 10  Day: 31  Time: 8  Solar radiation: 683
+Year: 1988  Month: 11  Day: 1  Time: 8  Solar radiation: 627
+Year: 1988  Month: 11  Day: 9  Time: 8  Solar radiation: 618
+Wrong Global Horizontal Radiation:
+==================================
+Wrong Diffuse Horizontal Radiation:
+====================================
+Year: 1978  Month: 10  Day: 13  Time: 8  Solar radiation: 274
+Year: 1978  Month: 10  Day: 24  Time: 8  Solar radiation: 264

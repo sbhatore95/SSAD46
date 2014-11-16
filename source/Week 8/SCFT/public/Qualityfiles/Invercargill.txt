@@ -1,0 +1,52 @@
+                Average Minimum and Maximum Temperatures
+                ========================================
+
+                         Maximum Temperatures:
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMax:15.71	15.97	16.22	16.66	17.04	17.64	15.06	14.65	15.92	16.91	17.33	17.75	
+Time:12	13	12	12	12	12	12	13	13	13	14	13	
+
+                         Minimum Temperatures
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMin:9.83	9.75	9.72	9.65	9.77	10.14	8.08	7.47	8.38	8.7	9.93	10.31	
+Time: 	13	12	11	10	10	10	12	11	8	8	7	8	
+
+=================================================================================================
+
+                           Solar Radiation Analysis
+                            ========================
+Lines checked: 2196
+===============
+No. of wrong lines: 25
+==================
+Wrong Direct Normal Radiation:
+=================================
+Year: 2006  Month: 1  Day: 12  Time: 8  Solar radiation: 736
+Year: 2006  Month: 1  Day: 13  Time: 8  Solar radiation: 589
+Year: 2006  Month: 1  Day: 17  Time: 8  Solar radiation: 714
+Year: 2006  Month: 1  Day: 23  Time: 8  Solar radiation: 800
+Year: 2006  Month: 1  Day: 24  Time: 8  Solar radiation: 736
+Year: 2006  Month: 2  Day: 5  Time: 8  Solar radiation: 600
+Year: 2006  Month: 2  Day: 6  Time: 8  Solar radiation: 731
+Year: 2006  Month: 2  Day: 9  Time: 8  Solar radiation: 667
+Year: 2006  Month: 2  Day: 10  Time: 8  Solar radiation: 692
+Year: 2006  Month: 2  Day: 18  Time: 8  Solar radiation: 572
+Year: 1995  Month: 10  Day: 22  Time: 8  Solar radiation: 556
+Year: 1995  Month: 11  Day: 3  Time: 8  Solar radiation: 583
+Year: 1995  Month: 11  Day: 11  Time: 8  Solar radiation: 611
+Year: 1995  Month: 11  Day: 22  Time: 8  Solar radiation: 817
+Year: 1995  Month: 11  Day: 23  Time: 8  Solar radiation: 795
+Year: 2002  Month: 12  Day: 9  Time: 7  Solar radiation: 687
+Year: 2002  Month: 12  Day: 9  Time: 8  Solar radiation: 797
+Year: 2002  Month: 12  Day: 13  Time: 7  Solar radiation: 697
+Year: 2002  Month: 12  Day: 18  Time: 7  Solar radiation: 750
+Year: 2002  Month: 12  Day: 18  Time: 8  Solar radiation: 843
+Year: 2002  Month: 12  Day: 24  Time: 7  Solar radiation: 687
+Year: 2002  Month: 12  Day: 24  Time: 8  Solar radiation: 861
+Year: 2002  Month: 12  Day: 27  Time: 8  Solar radiation: 850
+Year: 2002  Month: 12  Day: 28  Time: 8  Solar radiation: 605
+Year: 2002  Month: 12  Day: 29  Time: 8  Solar radiation: 856
+Wrong Global Horizontal Radiation:
+==================================
+Wrong Diffuse Horizontal Radiation:
+====================================

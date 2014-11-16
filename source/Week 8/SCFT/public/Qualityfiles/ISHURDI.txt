@@ -1,0 +1,40 @@
+                Average Minimum and Maximum Temperatures
+                ========================================
+
+                         Maximum Temperatures:
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMax:23.05	25.98	30.72	33.9	25.4	33.31	32.89	32.72	32.86	30.82	30.71	30.58	
+Time:13	13	13	12	8	13	13	13	13	12	13	13	
+
+                         Minimum Temperatures
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMin:11.2	14.09	18.83	23.46	21.6	24.34	24.31	24.4	24.48	26.06	26.45	26.18	
+Time: 	10	7	7	8	6	10	10	9	10	9	9	8	
+
+=================================================================================================
+
+                           Solar Radiation Analysis
+                            ========================
+Lines checked: 2849
+===============
+No. of wrong lines: 13
+==================
+Wrong Direct Normal Radiation:
+=================================
+Year: 1994  Month: 5  Day: 1  Time: 8  Solar radiation: 567
+Year: 1994  Month: 9  Day: 25  Time: 8  Solar radiation: 560
+Year: 1996  Month: 10  Day: 3  Time: 8  Solar radiation: 561
+Year: 1996  Month: 10  Day: 9  Time: 8  Solar radiation: 674
+Year: 1996  Month: 10  Day: 14  Time: 8  Solar radiation: 567
+Year: 1996  Month: 10  Day: 16  Time: 8  Solar radiation: 670
+Year: 1996  Month: 10  Day: 19  Time: 8  Solar radiation: 666
+Year: 1996  Month: 10  Day: 22  Time: 8  Solar radiation: 621
+Year: 1987  Month: 11  Day: 11  Time: 8  Solar radiation: 560
+Year: 1987  Month: 11  Day: 20  Time: 8  Solar radiation: 553
+Wrong Global Horizontal Radiation:
+==================================
+Wrong Diffuse Horizontal Radiation:
+====================================
+Year: 1994  Month: 5  Day: 23  Time: 8  Solar radiation: 309
+Year: 1994  Month: 5  Day: 27  Time: 8  Solar radiation: 262
+Year: 1994  Month: 5  Day: 30  Time: 8  Solar radiation: 267

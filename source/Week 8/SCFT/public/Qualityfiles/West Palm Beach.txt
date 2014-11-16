@@ -1,0 +1,47 @@
+                Average Minimum and Maximum Temperatures
+                ========================================
+
+                         Maximum Temperatures:
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMax:23.35	23.88	26.21	27.26	29.75	29.45	30.18	30.84	30.82	31.14	31.23	31.2	
+Time:12	12	13	12	12	11	11	11	11	11	12	12	
+
+                         Minimum Temperatures
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMin:14.11	14.55	17.01	19.84	22.37	22.07	22.17	22.39	22.45	22.8	23.26	23.38	
+Time: 	11	10	8	7	7	9	7	8	8	7	8	8	
+
+=================================================================================================
+
+                           Solar Radiation Analysis
+                            ========================
+Lines checked: 2429
+===============
+No. of wrong lines: 20
+==================
+Wrong Direct Normal Radiation:
+=================================
+Wrong Global Horizontal Radiation:
+==================================
+Wrong Diffuse Horizontal Radiation:
+====================================
+Year: 1963  Month: 6  Day: 8  Time: 8  Solar radiation: 251
+Year: 1963  Month: 6  Day: 12  Time: 8  Solar radiation: 254
+Year: 1963  Month: 6  Day: 16  Time: 8  Solar radiation: 251
+Year: 1963  Month: 6  Day: 17  Time: 8  Solar radiation: 255
+Year: 1963  Month: 6  Day: 20  Time: 8  Solar radiation: 253
+Year: 1963  Month: 6  Day: 24  Time: 8  Solar radiation: 254
+Year: 1963  Month: 6  Day: 25  Time: 8  Solar radiation: 254
+Year: 1963  Month: 6  Day: 26  Time: 8  Solar radiation: 255
+Year: 1957  Month: 7  Day: 4  Time: 8  Solar radiation: 254
+Year: 1957  Month: 7  Day: 5  Time: 8  Solar radiation: 252
+Year: 1957  Month: 7  Day: 6  Time: 8  Solar radiation: 253
+Year: 1957  Month: 7  Day: 7  Time: 8  Solar radiation: 254
+Year: 1957  Month: 7  Day: 8  Time: 8  Solar radiation: 255
+Year: 1957  Month: 7  Day: 9  Time: 8  Solar radiation: 254
+Year: 1957  Month: 7  Day: 10  Time: 8  Solar radiation: 253
+Year: 1957  Month: 7  Day: 12  Time: 8  Solar radiation: 253
+Year: 1957  Month: 7  Day: 13  Time: 8  Solar radiation: 253
+Year: 1957  Month: 7  Day: 14  Time: 8  Solar radiation: 253
+Year: 1957  Month: 7  Day: 15  Time: 8  Solar radiation: 253
+Year: 1957  Month: 7  Day: 16  Time: 8  Solar radiation: 252

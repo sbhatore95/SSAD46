@@ -1,0 +1,52 @@
+                Average Minimum and Maximum Temperatures
+                ========================================
+
+                         Maximum Temperatures:
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMax:18.06	16.86	17.09	17.72	16.1	16.22	16.6	16.26	16.43	17.0	17.73	17.97	
+Time:12	12	13	14	12	13	13	13	13	13	13	13	
+
+                         Minimum Temperatures
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMin:7.55	8.88	6.8	9.74	11.3	9.72	9.6	9.3	9.19	10.07	10.75	11.18	
+Time: 	10	7	7	7	11	8	8	8	7	8	7	8	
+
+=================================================================================================
+
+                           Solar Radiation Analysis
+                            ========================
+Lines checked: 2050
+===============
+No. of wrong lines: 25
+==================
+Wrong Direct Normal Radiation:
+=================================
+Year: 1965  Month: 5  Day: 3  Time: 8  Solar radiation: 556
+Year: 1965  Month: 5  Day: 6  Time: 8  Solar radiation: 563
+Year: 1965  Month: 5  Day: 7  Time: 8  Solar radiation: 564
+Year: 1965  Month: 5  Day: 8  Time: 8  Solar radiation: 565
+Year: 1965  Month: 5  Day: 9  Time: 8  Solar radiation: 568
+Year: 1965  Month: 5  Day: 15  Time: 8  Solar radiation: 577
+Year: 1965  Month: 5  Day: 25  Time: 8  Solar radiation: 600
+Year: 1967  Month: 6  Day: 1  Time: 8  Solar radiation: 608
+Year: 1967  Month: 6  Day: 2  Time: 8  Solar radiation: 609
+Year: 1967  Month: 6  Day: 3  Time: 8  Solar radiation: 611
+Year: 1967  Month: 6  Day: 4  Time: 8  Solar radiation: 612
+Year: 1967  Month: 6  Day: 5  Time: 8  Solar radiation: 559
+Year: 1967  Month: 6  Day: 6  Time: 8  Solar radiation: 614
+Year: 1967  Month: 6  Day: 7  Time: 8  Solar radiation: 615
+Year: 1967  Month: 6  Day: 10  Time: 8  Solar radiation: 565
+Year: 1967  Month: 6  Day: 14  Time: 8  Solar radiation: 571
+Year: 1953  Month: 7  Day: 1  Time: 8  Solar radiation: 619
+Year: 1953  Month: 7  Day: 7  Time: 8  Solar radiation: 559
+Year: 1953  Month: 7  Day: 8  Time: 8  Solar radiation: 558
+Year: 1953  Month: 7  Day: 9  Time: 8  Solar radiation: 573
+Year: 1953  Month: 7  Day: 10  Time: 8  Solar radiation: 610
+Year: 1953  Month: 7  Day: 11  Time: 8  Solar radiation: 608
+Year: 1953  Month: 7  Day: 12  Time: 8  Solar radiation: 568
+Year: 1953  Month: 7  Day: 14  Time: 8  Solar radiation: 564
+Year: 1953  Month: 7  Day: 15  Time: 8  Solar radiation: 562
+Wrong Global Horizontal Radiation:
+==================================
+Wrong Diffuse Horizontal Radiation:
+====================================

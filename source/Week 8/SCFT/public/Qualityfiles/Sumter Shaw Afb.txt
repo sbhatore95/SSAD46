@@ -1,0 +1,43 @@
+                Average Minimum and Maximum Temperatures
+                ========================================
+
+                         Maximum Temperatures:
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMax:11.09	15.61	16.69	22.04	21.5	22.0	22.91	23.31	23.96	24.38	26.06	26.25	
+Time:12	12	13	13	12	12	13	13	13	13	14	14	
+
+                         Minimum Temperatures
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMin:-0.67	2.66	4.22	9.1	12.5	11.8	12.0	11.45	11.57	11.65	12.58	13.15	
+Time: 	11	11	9	8	5	7	6	7	6	7	7	7	
+
+=================================================================================================
+
+                           Solar Radiation Analysis
+                            ========================
+Lines checked: 2571
+===============
+No. of wrong lines: 16
+==================
+Wrong Direct Normal Radiation:
+=================================
+Year: 1997  Month: 5  Day: 2  Time: 8  Solar radiation: 570
+Year: 1997  Month: 5  Day: 5  Time: 8  Solar radiation: 669
+Year: 1997  Month: 5  Day: 7  Time: 8  Solar radiation: 639
+Year: 1997  Month: 5  Day: 11  Time: 8  Solar radiation: 564
+Year: 1997  Month: 5  Day: 14  Time: 8  Solar radiation: 649
+Year: 1997  Month: 5  Day: 17  Time: 8  Solar radiation: 652
+Year: 1997  Month: 5  Day: 24  Time: 8  Solar radiation: 637
+Year: 1991  Month: 6  Day: 1  Time: 8  Solar radiation: 610
+Year: 1991  Month: 6  Day: 2  Time: 8  Solar radiation: 584
+Year: 1991  Month: 6  Day: 8  Time: 8  Solar radiation: 588
+Year: 1991  Month: 6  Day: 9  Time: 8  Solar radiation: 607
+Year: 1991  Month: 7  Day: 14  Time: 8  Solar radiation: 573
+Year: 1994  Month: 8  Day: 10  Time: 8  Solar radiation: 579
+Year: 1994  Month: 8  Day: 15  Time: 8  Solar radiation: 599
+Year: 1994  Month: 8  Day: 29  Time: 8  Solar radiation: 567
+Wrong Global Horizontal Radiation:
+==================================
+Wrong Diffuse Horizontal Radiation:
+====================================
+Year: 1997  Month: 5  Day: 26  Time: 8  Solar radiation: 275

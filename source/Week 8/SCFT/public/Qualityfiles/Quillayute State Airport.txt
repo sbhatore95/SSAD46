@@ -1,0 +1,50 @@
+                Average Minimum and Maximum Temperatures
+                ========================================
+
+                         Maximum Temperatures:
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMax:8.43	9.58	10.01	9.23	13.11	13.25	12.89	13.03	13.17	16.31	16.05	16.0	
+Time:11	12	13	13	13	13	13	13	13	13	13	13	
+
+                         Minimum Temperatures
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMin:2.51	1.68	2.06	2.94	4.11	4.11	4.06	3.99	4.25	6.98	6.66	6.36	
+Time: 	11	10	11	9	9	9	10	10	10	8	9	10	
+
+=================================================================================================
+
+                           Solar Radiation Analysis
+                            ========================
+Lines checked: 2412
+===============
+No. of wrong lines: 23
+==================
+Wrong Direct Normal Radiation:
+=================================
+Year: 1988  Month: 4  Day: 9  Time: 8  Solar radiation: 666
+Year: 1988  Month: 4  Day: 20  Time: 7  Solar radiation: 579
+Year: 1988  Month: 4  Day: 20  Time: 8  Solar radiation: 775
+Year: 1988  Month: 4  Day: 25  Time: 8  Solar radiation: 553
+Year: 1988  Month: 4  Day: 26  Time: 8  Solar radiation: 710
+Year: 1989  Month: 5  Day: 14  Time: 7  Solar radiation: 602
+Year: 1989  Month: 5  Day: 19  Time: 8  Solar radiation: 588
+Year: 1989  Month: 5  Day: 20  Time: 8  Solar radiation: 624
+Year: 1977  Month: 6  Day: 6  Time: 8  Solar radiation: 599
+Year: 1977  Month: 6  Day: 9  Time: 8  Solar radiation: 725
+Year: 1980  Month: 7  Day: 7  Time: 7  Solar radiation: 661
+Year: 1980  Month: 7  Day: 7  Time: 8  Solar radiation: 777
+Year: 1980  Month: 7  Day: 17  Time: 8  Solar radiation: 575
+Year: 1980  Month: 7  Day: 21  Time: 7  Solar radiation: 652
+Year: 1980  Month: 7  Day: 21  Time: 8  Solar radiation: 779
+Year: 1980  Month: 7  Day: 28  Time: 7  Solar radiation: 622
+Year: 1980  Month: 7  Day: 28  Time: 8  Solar radiation: 762
+Year: 1989  Month: 8  Day: 12  Time: 8  Solar radiation: 622
+Year: 1981  Month: 9  Day: 6  Time: 8  Solar radiation: 605
+Year: 1981  Month: 9  Day: 7  Time: 8  Solar radiation: 660
+Year: 1981  Month: 9  Day: 13  Time: 8  Solar radiation: 579
+Year: 1981  Month: 9  Day: 14  Time: 8  Solar radiation: 659
+Year: 1981  Month: 9  Day: 15  Time: 8  Solar radiation: 656
+Wrong Global Horizontal Radiation:
+==================================
+Wrong Diffuse Horizontal Radiation:
+====================================

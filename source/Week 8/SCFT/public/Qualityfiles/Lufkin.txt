@@ -1,0 +1,55 @@
+                Average Minimum and Maximum Temperatures
+                ========================================
+
+                         Maximum Temperatures:
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMax:15.85	17.78	20.87	21.11	21.45	24.75	24.46	24.72	24.99	24.91	24.9	25.21	
+Time:14	14	12	12	12	13	13	13	13	13	13	13	
+
+                         Minimum Temperatures
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMin:3.36	4.82	8.38	8.44	8.44	15.67	15.18	15.1	15.12	14.96	14.75	14.67	
+Time: 	10	13	7	7	7	9	10	9	9	9	10	9	
+
+=================================================================================================
+
+                           Solar Radiation Analysis
+                            ========================
+Lines checked: 2934
+===============
+No. of wrong lines: 28
+==================
+Wrong Direct Normal Radiation:
+=================================
+Year: 1956  Month: 3  Day: 30  Time: 8  Solar radiation: 552
+Year: 1956  Month: 3  Day: 31  Time: 8  Solar radiation: 553
+Year: 1969  Month: 4  Day: 19  Time: 8  Solar radiation: 569
+Year: 1969  Month: 4  Day: 21  Time: 8  Solar radiation: 572
+Year: 1969  Month: 4  Day: 22  Time: 8  Solar radiation: 573
+Year: 1969  Month: 4  Day: 23  Time: 8  Solar radiation: 574
+Year: 1969  Month: 4  Day: 25  Time: 8  Solar radiation: 577
+Year: 1969  Month: 4  Day: 29  Time: 8  Solar radiation: 581
+Year: 1958  Month: 5  Day: 6  Time: 8  Solar radiation: 577
+Year: 1958  Month: 5  Day: 7  Time: 8  Solar radiation: 577
+Year: 1958  Month: 5  Day: 23  Time: 8  Solar radiation: 591
+Year: 1958  Month: 5  Day: 24  Time: 8  Solar radiation: 593
+Year: 1958  Month: 5  Day: 25  Time: 8  Solar radiation: 594
+Year: 1958  Month: 5  Day: 27  Time: 8  Solar radiation: 596
+Year: 1964  Month: 6  Day: 1  Time: 8  Solar radiation: 596
+Year: 1964  Month: 6  Day: 2  Time: 8  Solar radiation: 597
+Year: 1964  Month: 6  Day: 3  Time: 8  Solar radiation: 597
+Year: 1964  Month: 6  Day: 4  Time: 8  Solar radiation: 598
+Year: 1964  Month: 6  Day: 24  Time: 8  Solar radiation: 602
+Year: 1964  Month: 6  Day: 27  Time: 8  Solar radiation: 601
+Year: 1964  Month: 6  Day: 28  Time: 8  Solar radiation: 601
+Year: 1963  Month: 7  Day: 4  Time: 8  Solar radiation: 597
+Year: 1963  Month: 7  Day: 22  Time: 8  Solar radiation: 573
+Year: 1963  Month: 7  Day: 24  Time: 8  Solar radiation: 569
+Wrong Global Horizontal Radiation:
+==================================
+Wrong Diffuse Horizontal Radiation:
+====================================
+Year: 1964  Month: 6  Day: 18  Time: 8  Solar radiation: 254
+Year: 1964  Month: 6  Day: 19  Time: 8  Solar radiation: 257
+Year: 1963  Month: 7  Day: 5  Time: 8  Solar radiation: 254
+Year: 1963  Month: 7  Day: 9  Time: 8  Solar radiation: 253

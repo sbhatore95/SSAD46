@@ -1,0 +1,159 @@
+                Average Minimum and Maximum Temperatures
+                ========================================
+
+                         Maximum Temperatures:
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMax:-17.25	-15.19	-15.28	-15.41	-15.03	-27.0	-12.64	-12.56	-13.41	-11.85	-8.79	-8.65	
+Time:12	14	13	13	13	11	14	14	13	13	13	13	
+
+                         Minimum Temperatures
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMin:-26.42	-24.2	-25.23	-26.51	-26.51	-32.7	-24.83	-25.28	-26.69	-25.38	-21.29	-21.27	
+Time: 	11	12	12	12	12	6	11	10	11	11	11	11	
+
+=================================================================================================
+
+                           Solar Radiation Analysis
+                            ========================
+Lines checked: 2737
+===============
+No. of wrong lines: 106
+==================
+Wrong Direct Normal Radiation:
+=================================
+Year: 1985  Month: 2  Day: 20  Time: 8  Solar radiation: 659
+Year: 1985  Month: 2  Day: 25  Time: 8  Solar radiation: 659
+Year: 1985  Month: 2  Day: 28  Time: 8  Solar radiation: 681
+Year: 1979  Month: 3  Day: 2  Time: 8  Solar radiation: 765
+Year: 1979  Month: 3  Day: 9  Time: 8  Solar radiation: 825
+Year: 1979  Month: 3  Day: 10  Time: 8  Solar radiation: 658
+Year: 1979  Month: 3  Day: 17  Time: 8  Solar radiation: 872
+Year: 1979  Month: 3  Day: 20  Time: 8  Solar radiation: 777
+Year: 1979  Month: 3  Day: 29  Time: 8  Solar radiation: 810
+Year: 1979  Month: 3  Day: 30  Time: 8  Solar radiation: 901
+Year: 1989  Month: 4  Day: 2  Time: 8  Solar radiation: 916
+Year: 1989  Month: 4  Day: 3  Time: 7  Solar radiation: 705
+Year: 1989  Month: 4  Day: 3  Time: 8  Solar radiation: 901
+Year: 1989  Month: 4  Day: 11  Time: 8  Solar radiation: 561
+Year: 1989  Month: 4  Day: 12  Time: 6  Solar radiation: 689
+Year: 1989  Month: 4  Day: 12  Time: 7  Solar radiation: 869
+Year: 1989  Month: 4  Day: 12  Time: 8  Solar radiation: 948
+Year: 1989  Month: 4  Day: 15  Time: 8  Solar radiation: 737
+Year: 1989  Month: 4  Day: 23  Time: 8  Solar radiation: 933
+Year: 1989  Month: 4  Day: 25  Time: 8  Solar radiation: 660
+Year: 1989  Month: 4  Day: 26  Time: 6  Solar radiation: 684
+Year: 1989  Month: 4  Day: 26  Time: 7  Solar radiation: 793
+Year: 1989  Month: 4  Day: 26  Time: 8  Solar radiation: 851
+Year: 1989  Month: 4  Day: 30  Time: 6  Solar radiation: 613
+Year: 1989  Month: 4  Day: 30  Time: 7  Solar radiation: 702
+Year: 1989  Month: 4  Day: 30  Time: 8  Solar radiation: 848
+Year: 1982  Month: 5  Day: 5  Time: 7  Solar radiation: 701
+Year: 1982  Month: 5  Day: 5  Time: 8  Solar radiation: 844
+Year: 1982  Month: 5  Day: 15  Time: 5  Solar radiation: 563
+Year: 1982  Month: 5  Day: 15  Time: 6  Solar radiation: 643
+Year: 1982  Month: 5  Day: 15  Time: 7  Solar radiation: 715
+Year: 1982  Month: 5  Day: 15  Time: 8  Solar radiation: 662
+Year: 1982  Month: 5  Day: 18  Time: 5  Solar radiation: 655
+Year: 1982  Month: 5  Day: 18  Time: 6  Solar radiation: 823
+Year: 1982  Month: 5  Day: 18  Time: 7  Solar radiation: 907
+Year: 1982  Month: 5  Day: 18  Time: 8  Solar radiation: 957
+Year: 1982  Month: 5  Day: 28  Time: 6  Solar radiation: 829
+Year: 1982  Month: 5  Day: 28  Time: 7  Solar radiation: 635
+Year: 1982  Month: 5  Day: 28  Time: 8  Solar radiation: 573
+Year: 1982  Month: 5  Day: 29  Time: 7  Solar radiation: 636
+Year: 1982  Month: 5  Day: 29  Time: 8  Solar radiation: 669
+Year: 1987  Month: 6  Day: 1  Time: 8  Solar radiation: 863
+Year: 1987  Month: 6  Day: 2  Time: 8  Solar radiation: 664
+Year: 1987  Month: 6  Day: 3  Time: 6  Solar radiation: 567
+Year: 1987  Month: 6  Day: 4  Time: 8  Solar radiation: 743
+Year: 1987  Month: 6  Day: 7  Time: 6  Solar radiation: 747
+Year: 1987  Month: 6  Day: 7  Time: 7  Solar radiation: 813
+Year: 1987  Month: 6  Day: 7  Time: 8  Solar radiation: 857
+Year: 1987  Month: 6  Day: 8  Time: 8  Solar radiation: 661
+Year: 1987  Month: 6  Day: 10  Time: 6  Solar radiation: 748
+Year: 1987  Month: 6  Day: 10  Time: 7  Solar radiation: 903
+Year: 1987  Month: 6  Day: 10  Time: 8  Solar radiation: 856
+Year: 1987  Month: 6  Day: 14  Time: 5  Solar radiation: 632
+Year: 1987  Month: 6  Day: 14  Time: 6  Solar radiation: 664
+Year: 1987  Month: 6  Day: 14  Time: 7  Solar radiation: 901
+Year: 1987  Month: 6  Day: 14  Time: 8  Solar radiation: 663
+Year: 1987  Month: 6  Day: 19  Time: 8  Solar radiation: 655
+Year: 1987  Month: 6  Day: 21  Time: 7  Solar radiation: 813
+Year: 1987  Month: 6  Day: 21  Time: 8  Solar radiation: 759
+Year: 1987  Month: 6  Day: 22  Time: 5  Solar radiation: 701
+Year: 1987  Month: 6  Day: 22  Time: 6  Solar radiation: 828
+Year: 1987  Month: 6  Day: 22  Time: 7  Solar radiation: 897
+Year: 1987  Month: 6  Day: 22  Time: 8  Solar radiation: 944
+Year: 1987  Month: 6  Day: 23  Time: 5  Solar radiation: 621
+Year: 1987  Month: 6  Day: 23  Time: 6  Solar radiation: 734
+Year: 1987  Month: 6  Day: 23  Time: 7  Solar radiation: 710
+Year: 1987  Month: 6  Day: 23  Time: 8  Solar radiation: 746
+Year: 1987  Month: 6  Day: 25  Time: 5  Solar radiation: 618
+Year: 1987  Month: 6  Day: 25  Time: 6  Solar radiation: 734
+Year: 1987  Month: 6  Day: 25  Time: 7  Solar radiation: 886
+Year: 1987  Month: 6  Day: 25  Time: 8  Solar radiation: 932
+Year: 1987  Month: 6  Day: 26  Time: 5  Solar radiation: 614
+Year: 1987  Month: 6  Day: 26  Time: 6  Solar radiation: 729
+Year: 1987  Month: 6  Day: 26  Time: 7  Solar radiation: 619
+Year: 1987  Month: 6  Day: 26  Time: 8  Solar radiation: 744
+Year: 1979  Month: 7  Day: 1  Time: 5  Solar radiation: 669
+Year: 1979  Month: 7  Day: 1  Time: 6  Solar radiation: 803
+Year: 1979  Month: 7  Day: 1  Time: 7  Solar radiation: 879
+Year: 1979  Month: 7  Day: 1  Time: 8  Solar radiation: 741
+Year: 1979  Month: 7  Day: 6  Time: 5  Solar radiation: 668
+Year: 1979  Month: 7  Day: 6  Time: 6  Solar radiation: 807
+Year: 1979  Month: 7  Day: 6  Time: 7  Solar radiation: 882
+Year: 1979  Month: 7  Day: 6  Time: 8  Solar radiation: 932
+Year: 1979  Month: 7  Day: 9  Time: 7  Solar radiation: 600
+Year: 1979  Month: 7  Day: 9  Time: 8  Solar radiation: 635
+Year: 1979  Month: 7  Day: 14  Time: 6  Solar radiation: 709
+Year: 1979  Month: 7  Day: 14  Time: 7  Solar radiation: 788
+Year: 1979  Month: 7  Day: 14  Time: 8  Solar radiation: 834
+Year: 1979  Month: 7  Day: 15  Time: 6  Solar radiation: 632
+Year: 1979  Month: 7  Day: 18  Time: 7  Solar radiation: 689
+Year: 1979  Month: 7  Day: 19  Time: 7  Solar radiation: 776
+Year: 1979  Month: 7  Day: 19  Time: 8  Solar radiation: 731
+Year: 1979  Month: 7  Day: 28  Time: 8  Solar radiation: 636
+Year: 1974  Month: 8  Day: 4  Time: 8  Solar radiation: 636
+Year: 1974  Month: 8  Day: 8  Time: 7  Solar radiation: 673
+Year: 1974  Month: 8  Day: 12  Time: 8  Solar radiation: 892
+Year: 1974  Month: 8  Day: 16  Time: 6  Solar radiation: 623
+Year: 1974  Month: 8  Day: 16  Time: 7  Solar radiation: 823
+Year: 1974  Month: 8  Day: 16  Time: 8  Solar radiation: 897
+Year: 1974  Month: 8  Day: 25  Time: 8  Solar radiation: 709
+Year: 1974  Month: 8  Day: 26  Time: 7  Solar radiation: 643
+Year: 1974  Month: 8  Day: 26  Time: 8  Solar radiation: 709
+Year: 1982  Month: 9  Day: 2  Time: 7  Solar radiation: 633
+Year: 1982  Month: 9  Day: 2  Time: 8  Solar radiation: 619
+Year: 1982  Month: 9  Day: 7  Time: 7  Solar radiation: 779
+Year: 1982  Month: 9  Day: 7  Time: 8  Solar radiation: 880
+Year: 1982  Month: 9  Day: 12  Time: 7  Solar radiation: 599
+Year: 1982  Month: 9  Day: 16  Time: 7  Solar radiation: 668
+Year: 1982  Month: 9  Day: 16  Time: 8  Solar radiation: 691
+Year: 1982  Month: 9  Day: 23  Time: 8  Solar radiation: 742
+Year: 1982  Month: 9  Day: 28  Time: 8  Solar radiation: 672
+Year: 1976  Month: 11  Day: 4  Time: 8  Solar radiation: 604
+Wrong Global Horizontal Radiation:
+==================================
+Wrong Diffuse Horizontal Radiation:
+====================================
+Year: 1989  Month: 4  Day: 4  Time: 8  Solar radiation: 264
+Year: 1989  Month: 4  Day: 10  Time: 8  Solar radiation: 468
+Year: 1989  Month: 4  Day: 11  Time: 8  Solar radiation: 363
+Year: 1989  Month: 4  Day: 13  Time: 8  Solar radiation: 430
+Year: 1989  Month: 4  Day: 14  Time: 8  Solar radiation: 495
+Year: 1989  Month: 4  Day: 19  Time: 8  Solar radiation: 279
+Year: 1982  Month: 5  Day: 11  Time: 8  Solar radiation: 259
+Year: 1982  Month: 5  Day: 12  Time: 8  Solar radiation: 259
+Year: 1982  Month: 5  Day: 15  Time: 8  Solar radiation: 336
+Year: 1982  Month: 5  Day: 19  Time: 8  Solar radiation: 292
+Year: 1982  Month: 5  Day: 23  Time: 7  Solar radiation: 321
+Year: 1982  Month: 5  Day: 23  Time: 8  Solar radiation: 463
+Year: 1982  Month: 5  Day: 27  Time: 8  Solar radiation: 321
+Year: 1982  Month: 5  Day: 28  Time: 8  Solar radiation: 296
+Year: 1982  Month: 5  Day: 30  Time: 8  Solar radiation: 259
+Year: 1987  Month: 6  Day: 18  Time: 7  Solar radiation: 280
+Year: 1987  Month: 6  Day: 18  Time: 8  Solar radiation: 373
+Year: 1979  Month: 7  Day: 7  Time: 7  Solar radiation: 273
+Year: 1979  Month: 7  Day: 7  Time: 8  Solar radiation: 358
+Year: 1979  Month: 7  Day: 15  Time: 8  Solar radiation: 331

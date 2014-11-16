@@ -1,0 +1,43 @@
+                Average Minimum and Maximum Temperatures
+                ========================================
+
+                         Maximum Temperatures:
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMax:-1.81	3.9	7.67	16.65	19.75	21.37	23.47	23.99	26.6	26.85	26.67	27.03	
+Time:17	16	16	16	15	16	16	15	15	15	15	15	
+
+                         Minimum Temperatures
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMin:-15.54	-9.63	-5.1	3.4	5.61	7.3	9.32	12.2	13.69	13.73	13.7	13.77	
+Time: 	9	8	9	8	9	8	8	9	8	8	8	8	
+
+=================================================================================================
+
+                           Solar Radiation Analysis
+                            ========================
+Lines checked: 2662
+===============
+No. of wrong lines: 16
+==================
+Wrong Direct Normal Radiation:
+=================================
+Year: 2005  Month: 5  Day: 10  Time: 19  Solar radiation: 569
+Year: 2005  Month: 5  Day: 23  Time: 19  Solar radiation: 597
+Year: 2005  Month: 6  Day: 8  Time: 19  Solar radiation: 618
+Year: 2005  Month: 6  Day: 24  Time: 19  Solar radiation: 628
+Year: 2005  Month: 6  Day: 26  Time: 19  Solar radiation: 629
+Year: 2005  Month: 6  Day: 28  Time: 19  Solar radiation: 629
+Year: 2005  Month: 7  Day: 10  Time: 19  Solar radiation: 627
+Year: 2005  Month: 7  Day: 11  Time: 19  Solar radiation: 627
+Year: 2005  Month: 7  Day: 14  Time: 19  Solar radiation: 625
+Year: 2005  Month: 7  Day: 19  Time: 19  Solar radiation: 621
+Year: 2005  Month: 7  Day: 22  Time: 19  Solar radiation: 618
+Year: 2005  Month: 7  Day: 25  Time: 19  Solar radiation: 614
+Year: 2005  Month: 7  Day: 29  Time: 19  Solar radiation: 608
+Year: 2005  Month: 8  Day: 13  Time: 19  Solar radiation: 568
+Year: 2005  Month: 8  Day: 17  Time: 19  Solar radiation: 551
+Wrong Global Horizontal Radiation:
+==================================
+Wrong Diffuse Horizontal Radiation:
+====================================
+Year: 2005  Month: 8  Day: 31  Time: 19  Solar radiation: 319

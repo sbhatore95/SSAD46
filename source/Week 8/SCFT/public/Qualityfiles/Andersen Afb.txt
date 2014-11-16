@@ -1,0 +1,44 @@
+                Average Minimum and Maximum Temperatures
+                ========================================
+
+                         Maximum Temperatures:
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMax:28.47	28.15	28.74	29.52	29.52	29.65	29.58	29.67	29.67	29.68	29.74	29.88	
+Time:12	12	12	12	11	11	11	11	11	11	11	11	
+
+                         Minimum Temperatures
+Month:	Jan	Feb	Mar	Apr	May	Jun	Jul	Aug	Sep	Oct	Nov	Dec	
+AvgMin:24.19	24.12	24.7	25.24	25.65	25.6	25.57	25.57	25.52	25.55	25.62	25.55	
+Time: 	7	6	3	4	7	6	6	6	6	6	6	6	
+
+=================================================================================================
+
+                           Solar Radiation Analysis
+                            ========================
+Lines checked: 1886
+===============
+No. of wrong lines: 17
+==================
+Wrong Direct Normal Radiation:
+=================================
+Year: 1991  Month: 5  Day: 13  Time: 8  Solar radiation: 684
+Year: 1991  Month: 5  Day: 15  Time: 8  Solar radiation: 605
+Year: 1991  Month: 5  Day: 18  Time: 8  Solar radiation: 675
+Year: 1991  Month: 5  Day: 23  Time: 8  Solar radiation: 566
+Year: 1991  Month: 5  Day: 25  Time: 8  Solar radiation: 613
+Year: 1991  Month: 5  Day: 26  Time: 8  Solar radiation: 599
+Year: 1991  Month: 5  Day: 29  Time: 8  Solar radiation: 612
+Year: 1991  Month: 6  Day: 2  Time: 8  Solar radiation: 560
+Year: 1991  Month: 6  Day: 3  Time: 8  Solar radiation: 554
+Year: 1991  Month: 6  Day: 7  Time: 8  Solar radiation: 563
+Year: 1991  Month: 6  Day: 28  Time: 8  Solar radiation: 605
+Year: 1991  Month: 6  Day: 29  Time: 8  Solar radiation: 576
+Year: 1991  Month: 6  Day: 30  Time: 8  Solar radiation: 584
+Year: 1991  Month: 7  Day: 5  Time: 8  Solar radiation: 586
+Year: 1991  Month: 7  Day: 15  Time: 8  Solar radiation: 612
+Year: 1994  Month: 8  Day: 31  Time: 8  Solar radiation: 632
+Year: 1994  Month: 10  Day: 14  Time: 8  Solar radiation: 638
+Wrong Global Horizontal Radiation:
+==================================
+Wrong Diffuse Horizontal Radiation:
+====================================
