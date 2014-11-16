@@ -129,24 +129,23 @@ $(document).ready(function(){
                         var loc = new google.maps.LatLng(lat[i].innerHTML,lon[i].innerHTML);
                         
                         
-                        marker = new google.maps.Marker({
+                        markers.push(new google.maps.Marker({
                             //   position: location,
                             icon:{url : '/assets/marker.png'},
                             position: loc,
                             map: map,
                             
-                         });
+                         }));
+                        
+                        console.log(markers);
+                          google.maps.event.addListener(markers[i],'click',function() {
+                          map.setZoom(9);
+                          console.log(markers[i].getPosition());
+                          map.setCenter(markers[i].getPosition());
+                          });
 
 
-                    }
-                    
-
-                      //only 10 cities could be marked now
-
-                       
-                        //addMarker(loc);
-                                            
-                    
+                    }               
                 }
                 //onmouseover implementation
             function gc(element) {
@@ -208,7 +207,7 @@ $(document).ready(function(){
 
                     var flightPath = new google.maps.Polygon({
                         path: myTrip,
-                        strokeColor: "#0000FF",
+                        strokeColor: "#000",
                         strokeOpacity: 0.8,
                         strokeWeight: 2,
                         fillColor: "#0000FF",
@@ -239,10 +238,10 @@ $(document).ready(function(){
                 var myCity = new google.maps.Circle({
                     center: city,
                     radius: rad,
-                    strokeColor: "#0000FF",
-                    strokeOpacity: 0.8,
+                    strokeColor: "#000",
+                    strokeOpacity: 0.2,
                     strokeWeight: 2,
-                    fillColor: "#0000FF",
+                    fillColor: "#fff",
                     fillOpacity: 0.4
                 });
 
@@ -280,8 +279,7 @@ $(document).ready(function(){
                     map: map,
                     
                 });
-                console.log(marker);
-                markers.push(marker);
+                console.log(marker); 
             }
 
 
@@ -641,6 +639,7 @@ p {
 }
 p.pos_fixed{
       text-align: right;
+      margin-right: :20px;
       position: relative;
       
 }
@@ -711,7 +710,7 @@ p.pos_fixed{
     </nav>
   
   <div id="content"> 
-    <h4 id="exist" style="float:right;margin-right:0;margin-top:0px">Weather file of <b> <%=@city.titlecase%> </b>
+    <h4 id="exist" style="float:right;margin-right:20px;margin-top:0px">Weather file of <b> <%=@city.titlecase%> </b>
     <%
     if(($found == 1))%>
         <i>exists</i>
