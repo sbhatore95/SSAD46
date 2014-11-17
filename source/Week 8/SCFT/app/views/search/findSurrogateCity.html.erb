@@ -1,4 +1,4 @@
-<! -> or -< IIIT is the best-->
+
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
@@ -119,6 +119,7 @@ $(document).ready(function(){
 
             function codeAddress() {
                     var lat = document.getElementById('searchpanel').getElementsByClassName("lat");
+                    var cit = document.getElementById('searchpanel').getElementsByClassName("cit");
                     console.log(lat);
                     var lon = document.getElementById('searchpanel').getElementsByClassName("lon");
                     var len = document.getElementById('length').innerHTML; //Number of cities
@@ -128,27 +129,33 @@ $(document).ready(function(){
                     for(i=0;i<len;i++){
                         console.log(lat[i].innerHTML);
                         var loc = new google.maps.LatLng(lat[i].innerHTML,lon[i].innerHTML);
-                        
-                        
-                        markers.push(new google.maps.Marker({
-                            //   position: location,
-                            icon:{url : '/assets/marker.png'},
-                            position: loc,
-                            map: map,
-                            
-                         }));
-                        
-                        console.log(markers);
-                          google.maps.event.addListener(markers[i],'click',function() {
-                          map.setZoom(9);
-                          console.log(markers[i].getPosition());
-                          map.setCenter(markers[i].getPosition());
-                          });
-
-
+                        createMarker(loc, lat[i].innerHTML,lon[i].innerHTML, cit[i].innerHTML);
                     }               
                 }
-                //onmouseover implementation
+            function createMarker(loc, lat, lon, cit){
+                var marker = new google.maps.Marker({
+                    icon:{url : '/assets/marker.png'},
+                    position: loc,
+                    map: map,
+                });
+                var infowindow = new google.maps.InfoWindow({
+                      content:  '<b>' + cit + '</b>' + '<br/>' + 
+                      'latitude : ' + lat+
+                      '<br/>' + 'longitude :  ' +
+                      lon
+                      });
+
+                
+
+                google.maps.event.addListener(marker,'click',function() {
+                  map.setZoom(9);
+                  
+                  map.setCenter(marker.getPosition());
+                  infowindow.open(map,marker);
+                  });
+        
+            }
+
             function gc(element) {
                 geocoder.geocode({
                         'address': element.innerHTML
@@ -691,7 +698,7 @@ p.pos_fixed{
         
 </div>
 <div id="mainpage">
-    <p class="pos_fixed">Logged in as <%= current_user.email %></p>
+    
     <nav id = "top" class="navbar navbar-default" style="margin-top:0">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -755,6 +762,9 @@ p.pos_fixed{
                 </li>
                 <li class = "lon"style="display:none">
                     <%= c.longitude %>                    
+                </li>
+                <li class = "cit"style="display:none">
+                    <%= c.city %>                    
                 </li>
                 <% end%>
                 
