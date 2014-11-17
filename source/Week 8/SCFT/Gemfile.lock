@@ -58,12 +58,15 @@ GEM
     mail (2.6.1)
       mime-types (>= 1.16, < 3)
     mime-types (2.3)
+    mini_portile (0.6.1)
     minitest (5.4.1)
     multi_json (1.10.1)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
     net (0.2.1)
       activesupport
+    nokogiri (1.6.4.1)
+      mini_portile (~> 0.6.0)
     oauth2 (1.0.0)
       faraday (>= 0.8, < 0.10)
       jwt (~> 1.0)
@@ -143,6 +146,7 @@ DEPENDENCIES
   jquery-rails
   json
   net
+  nokogiri
   omniauth-facebook
   rails (= 4.1.6)
   sass-rails (~> 4.0.3)

@@ -43,4 +43,4 @@ gem 'geocoder'
 #gem 'font-awesome-sass'
 gem 'net'
 gem 'json'
-
+gem 'nokogiri'
