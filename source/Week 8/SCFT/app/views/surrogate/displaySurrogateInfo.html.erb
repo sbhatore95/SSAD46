@@ -48,10 +48,24 @@ body{
 		Graph image
 	</div>
 	<div id="links" style="margin-left:900px;margin-top:-200px;">
-		<%= button_to 'Quality Report', :controller=> "surrogate" ,:action=> "download",:class => "fa fa-download" %>
+		<a href="/surrogate/download">
+		<button>
+		
+		<i class="fa fa-download"></i>
+		Quality Report
+		
+		</button>
+		</a>
 		<br/><br/><br/>
-	
-		<%= button_to 'EPW Weather file', :controller=> "surrogate" ,:action=> "download1",:class => "fa fa-download" %>
+		<a href="/surrogate/download1">
+		<button>
+		
+		<i class="fa fa-download"></i>
+		EPW Weather File
+		
+		</button>
+		</a>
+		
 	
 		
 	</div>
