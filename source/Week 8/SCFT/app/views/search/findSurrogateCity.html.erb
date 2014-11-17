@@ -1,4 +1,3 @@
-<! -> or -< IIIT is the best-->
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
@@ -17,9 +16,14 @@
 
 <%= stylesheet_link_tag "demo.css" %>
 
+<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
 <link rel="stylesheet" type="text/css" media="all" href="http://fonts.googleapis.com/css?family=ABeeZee">
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js"></script>
+<script type="text/javascript" src="jquery-latest.js"></script> 
+<script type="text/javascript" src="jquery.tablesorter.js"></script> 
 <script type="text/javascript">
 $(document).ready(function(){
   $("#srch").on("click", function(e){
@@ -119,14 +123,14 @@ $(document).ready(function(){
 
             function codeAddress() {
                     var lat = document.getElementById('searchpanel').getElementsByClassName("lat");
-                    console.log(lat);
+                    //console.log(lat);
                     var lon = document.getElementById('searchpanel').getElementsByClassName("lon");
                     var len = document.getElementById('length').innerHTML; //Number of cities
-                    console.log(len);
+                    //console.log(len);
                     //if(len > 10)
                       //  len=10;
                     for(i=0;i<len;i++){
-                        console.log(lat[i].innerHTML);
+                       // console.log(lat[i].innerHTML);
                         var loc = new google.maps.LatLng(lat[i].innerHTML,lon[i].innerHTML);
                         
                         
@@ -138,7 +142,7 @@ $(document).ready(function(){
                             
                          }));
                         
-                        console.log(markers);
+                        //console.log(markers);
                           google.maps.event.addListener(markers[i],'click',function() {
                           map.setZoom(9);
                           console.log(markers[i].getPosition());
@@ -317,8 +321,7 @@ $(document).ready(function(){
                 markers = [];
             }
 
-            calcu();
-            google.maps.event.addDomListener(window, 'load', initialize);
+           
        
  
         <!--CODE FOR RMS-->
@@ -328,317 +331,223 @@ $(document).ready(function(){
 
 
        
+var count=0;
 
+/*google.load("visualization", "1", {packages:["corechart"]});
+google.setOnLoadCallback(drawChart);
+var options;
+var chart;	
+	
+function drawChart() 
+{
+	 var data = google.visualization.arrayToDataTable([
+          ['Year', 'Min', 'Max'],
+          ['Jan',  14.7,      28.6],
+          ['Feb',  17.0,      31.8],
+          ['Mar',  20.3,      35.2],
+          ['Apr',  24.1,      37.6],
+          ['May',  26.0,      38.8],
+          ['Jun',  23.9,      34.4],
+          ['Jul',  22.5,      30.5],
+          ['Aug',  22.0,       29.6],
+          ['Sep',  21.7,       30.1],
+          ['Oct',  20.0,       30.4],
+          ['Nov',  16.4,       28.8],
+          ['Dec',  14.1,       27.8]
+        ]);
+       
+
+       options = {
+          title: 'Sample Temperature Varience',
+         backgroundColor: '#FFFFFF'
+        };
+
+         chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+
+        chart.draw(data, options);
+}
+*/
 function calcu()
 {
-    tt= '<%= @matter %>';
+    tt= <%=raw @matter.to_json %>;
     
-    climatedata=gowiki('<%= $icityname %>');
-    drawmainmap('<%= $ilatitude_mycity %>','<%= $ilatitude_mycity %>',tt,climatedata);
+    
+    
+    climatedata=gowiki();
+    //alert("climate:"+climatedata);
+    rmsData('<%= $ilatitude_mycity %>','<%= $ilatitude_mycity %>',tt,climatedata);
 
 }
 
 function drawtable(tabledata)
 {   count=count+1;
     var i=0;
-    var maindata="<table id=\"myTable"+count+"\" class=\"tablesorter\"><thead> <tr><th>City Name</th><th>Country Name</th><th>RMS MAX</th><th>RMS Min</th><th>RMS Total</th></tr></thead><tbody>";
-    while(i<tabledata.length)
+    var maindata="<table id=\"myTable"+count+"\" class=\"tablesorter\"><thead> <tr><th>City Name</th><th>RMS MAX</th><th>RMS Min</th><th>RMS Total</th></tr></thead><tbody>";
+   
+    while(i<10)
     {
-        var template="<tr><td>"+tabledata[i][0]+"</td><td>"+tabledata[i][1]+"</td><td>"+tabledata[i][2]+"</td><td>"+tabledata[i][3]+"</td><td>"+tabledata[i][4]+"</td></tr>";
+        var template="<tr><td><a href=http://127.0.0.1:3000/surrogate/displaySurrogateInfo?&rmscity="+tabledata[i][0]+">" + tabledata[i][0]+"</a></td><td>"+tabledata[i][1].toFixed(2)+"</td><td>"+tabledata[i][2].toFixed(2)+"</td><td>"+ tabledata[i][3].toFixed(2)+"</td></tr>";
         maindata=maindata+template;
         i=i+1;
     }
     document.getElementById("tablespace").innerHTML=maindata+"</tbody></table>";
     
-    $("#myTable"+count).tablesorter(); 
-}
-
-
-function distance(lat1, lon1, lat2, lon2, unit) {
-
-    var radlat1 = Math.PI * lat1/180;
-
-    var radlat2 = Math.PI * lat2/180;
-
-    var radlon1 = Math.PI * lon1/180;
-
-    var radlon2 = Math.PI * lon2/180;
-
-    var theta = lon1-lon2;
-
-    var radtheta = Math.PI * theta/180;
-
-    var dist = Math.sin(radlat1) * Math.sin(radlat2) + Math.cos(radlat1) * Math.cos(radlat2) * Math.cos(radtheta);
-
-    dist = Math.acos(dist);
-
-    dist = dist * 180/Math.PI;
-
-    dist = dist * 60 * 1.1515;
-
-    if (unit=="K") { dist = dist * 1.609344; }
-
-    if (unit=="N") { dist = dist * 0.8684; }
-
-    return dist;
-
+   // $("#myTable"+count).tablesorter(); 
 }
 
 
 
-function drawmainmap(lat,lng,citydata)
+
+function rmsData(lat,lng,matter,citydata)
 {   
     var lnrange = parseFloat('<%= $ilatitude_range %>');//parseFloat(document.getElementById("latrange").value);
     var maxtemp = parseFloat(40);//parseFloat(document.getElementById("maxtemp").value);
     var mintemp = parseFloat(20);//parseFloat(document.getElementById("mintemp").value);
     var rad = parseFloat('<%= $iradius_range %>');//parseFloat(document.getElementById("radrange").value);
-   // var myCenter=new google.maps.LatLng(lat,lng);
-    var cmf=0;
-    if(citydata.length==0)
-    {
-        cmf=1;
-    }
-   /* var mapProp = {
-          center:myCenter,
-          zoom:7,
-          mapTypeId:google.maps.MapTypeId.HYBRID,
-          
-        
-     };
+   	
+   	var tabledata=[];
+   	for(i=0;i<matter.length;i++)
+   	{
+   		var rmsmax=0,rmsmin=0;
+   		for(j=1,k=0;j<=12 && k<24;j++,k+=2)
+   		{
 
-    var map=new google.maps.Map(document.getElementById("chart_div2"),mapProp);
+   			
+   			
+   			rmsmax=parseFloat(rmsmax);
+   			var t= parseFloat(matter[i][j]);
+   			var r= parseFloat(citydata[k]);
+   			var s = t-r;
+   			s=Math.abs(s)
+   			s=parseFloat(s);
+   			var l= Math.pow(s,2);
+			l=parseFloat(l);
+			
+			
+   			rmsmax = parseFloat(Math.abs(rmsmax + l));
+   	
+   			
+   		}
+   	
+   		for (j=13,k=1;j<25 && k<24;j++,k+=2)
+   		{
+   			rmsmin=rmsmax + Math.pow(Math.abs(parseFloat(matter[i][j])- parseFloat(citydata[k])),2); 
+   		}
 
-    var marker=new google.maps.Marker({
-          position:myCenter,
-icon:'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
-      });
-    marker.setMap(map);
-    var circle = new google.maps.Circle({
-                center: myCenter,
-                map:map,
-                radius:rad*1000,
-                strokeColor: "black",
-                strokeOpacity:0.4,
-                strokeWeight: 2,
-                fillColor: "black"
-            });
-            circle.bindTo('center',marker,'position');
-   */ i=0;
-    var tabledata=[];
-    <%= @matter.each do |r|%>
+   		rmax=Math.sqrt(rmsmax/12)
+   		rmin=Math.sqrt(rmsmin/12)
+   		rtotal = (rmax+rmin)/2
+   		
+   		tabledata.push([matter[i][0],rmax,rmin,rtotal]);
 
-    {
-        var fl=1;
-        //var myCenter=new google.maps.LatLng('<%= @matter[i].latitude,'<%= r.longitude);
-        //var marker=new google.maps.Marker({
-          //position:myCenter,});
-        
-        var the=[];
-        the.push([<%= r.mjan%>,<%= r.njan%>]);
-        the.push([<%= r.mfeb%>,<%= r.nfeb%>]);
-        the.push([<%= r.mmar%>,<%= r.nmar%>]);
-        the.push([<%= r.mapr%>','<%= r.napr%>']);
-        the.push(['<%= r.mapr%>','<%= r.napr%>']);
-        the.push(['<%= r.mmay%>','<%= r.nmay%>']);
-        the.push(['<%= r.mjun%>','<%= r.njun%>']);
-        the.push(['<%= r.mjul%>','<%= r.njul%>']);
-        the.push(['<%= r.maug%>','<%= r.naug%>']);
-        the.push(['<%= r.msep%>','<%= r.nsep%>']);
-        the.push(['<%= r.moct%>','<%= r.noct%>']);
-        the.push(['<%= r.mnov%>','<%= r.nnov%>']);
-        the.push(['<%= r.mdec%>','<%= r.ndec%>']);
-        if(cmf==1)
-        {
-            citydata=[];    
-            citydata.push(['<%= r.mjan%>','<%= r.njan%>']);
-            citydata.push(['<%= r.mfeb%>','<%= r.nfeb%>']);
-            citydata.push(['<%= r.mmar%>','<%= r.nmar%>']);
-            citydata.push(['<%= r.mapr%>','<%= r.napr%>']);
-            citydata.push(['<%= r.mmay%>','<%= r.nmay%>']);
-            citydata.push(['<%= r.mjun%>','<%= r.njun%>']);
-            citydata.push(['<%= r.mjul%>','<%= r.njul%>']);
-            citydata.push(['<%= r.maug%>','<%= r.naug%>']);
-            citydata.push(['<%= r.msep%>','<%= r.nsep%>']);
-            citydata.push(['<%= r.moct%>','<%= r.noct%>']);
-            citydata.push(['<%= r.mnov%>','<%= r.nnov%>']);
-            citydata.push(['<%= r.mdec%>','<%= r.ndec%>']);
-        }
-        
-        var arr=[];
-        var kk=0;
-        var rmsmax=[];
-        var rmsmin=[];
-        var rmstotal=[];
-
-        var ll=distance(lat,lng,parseFloat('<%= r.latitude%>'),parseFloat('<%= r.longitude%>'),"K");
-        
-        
-        while(kk<12)
-        {
-            if(Math.abs(parseFloat(the[kk][0])-parseFloat(citydata[kk][0]))<=maxtemp )
-
-            {
-                arr.push(1);
-            }
-            else
-            {
-                //alert([the[kk][0],citydata[kk][0]]);
-                arr.push(0);
-                fl=0;
-            }
-            rmsmax.push(Math.pow(Math.abs(parseFloat(the[kk][0])-parseFloat(citydata[kk][0])),2 ));
-            rmsmin.push(Math.pow(Math.abs(parseFloat(the[kk][1])-parseFloat(citydata[kk][1])),2 ));
-            rmstotal.push(Math.pow(Math.abs(parseFloat(the[kk][0])-parseFloat(citydata[kk][0])),2));
-            rmstotal.push(Math.pow(Math.abs(parseFloat(the[kk][1])-parseFloat(citydata[kk][1])),2));
-            kk=kk+1;
-        }
-        kk=0;
-        rmax=0;
-        rmin=0;
-        rtotal=0;
-        while(kk<12)
-        {
-            rmax=rmax+rmsmax[kk];
-            rmin=rmin+rmsmin[kk];
-            rtotal=rtotal+rmstotal[2*kk];
-            rtotal=rtotal+rmstotal[2*kk+1];
-            kk=kk+1;
-        }
-        rmax=Math.sqrt(rmax/12);
-        rmin=Math.sqrt(rmin/12);
-        rtotal=Math.sqrt(rtotal/24);
-        rmax=Math.round(rmax * 100) / 100;
-        rmin=Math.round(rmin * 100) / 100;
-        rtotal=Math.round(rtotal * 100) / 100;
-        
-        if(fl==1 && ll<=rad)
-        {
- //           marker.setMap(map);
-            if(cmf==0)
-            {
-                tabledata.push(['<%= r.city%>',rmax,rmin,rtotal]);
-            }
-            else
-            {
-                tabledata.push(['<%= r.city%>',"N/A","N/A","N/A"]);
-            }
-    /*        var infowindow =  new google.maps.InfoWindow({content: '', 
-            maxWidth: 200 });
-            bindInfoWindow(marker, map, infowindow, "<p style=\" width:100px;color:black;font-width:bold\">" + '<%= @matter[i].cityname + "</p>"); 
-    */    }
-        i=i+1;
-    }
-   /* var flightPlanCoordinates = [
-    new google.maps.LatLng(lat+lnrange, -179),
-    new google.maps.LatLng(lat+lnrange, 0.0),
-    new google.maps.LatLng(lat+lnrange, 179.027892)
-    ];
-    var flightPath = new google.maps.Polyline({
-    path: flightPlanCoordinates,
-    strokeColor: '#FF0000',
-    strokeOpacity: 1.0,
-    strokeWeight: 1
-    });
-
-    flightPath.setMap(map);
-
-
-    var flightPlanCoordinates = [
-    new google.maps.LatLng(lat-lnrange, -179),
-    new google.maps.LatLng(lat-lnrange, 0.0),
-    new google.maps.LatLng(lat-lnrange, 179.027892)
-    ];
-    var flightPath = new google.maps.Polyline({
-    path: flightPlanCoordinates,
-    strokeColor: '#FF0000',
-    strokeOpacity: 1.0,
-    strokeWeight: 1
-    });
-
-    flightPath.setMap(map);
-    */drawtable(tabledata);
+	}
+   	function Comparator(a,b){
+   			if (a[3]<b[3]) return -1;
+   			if (a[3]>b[3]) return 1;
+   			return 0;
+    		} 
+    	tabledata.sort(Comparator);
+    	alert(tabledata);
+   drawtable(tabledata);
 
 }
 
 
 
 
-function gowiki(cityname)
+function gowiki()
 {
     
-/*    var stt=cityname;//document.getElementById("city").innerHTML;
-    var value=stt.toLowerCase();
-    var postData = new Array();
-    postData.push({name: 'cityname', value: value});
-      
-$.ajax({url : "http://localhost/submit1.php",type: "POST",data : postData,async: false,success:function(data, textStatus, jqXHR) 
-{ */
+
 	var sendarray=[];
-	data = '<%= @arr %>'
-	data=data[0].split('\n');
-	alert(data);
+	data = <%=raw @arr.to_json %>
+	
+	data=data[0].split("\n");
+	while (i<data.length)
+	{
+		if (data[i]=null)
+		{
+			data[i]="";
+		}
+	}
+	
+
+	
 	var maxtemp=[];
-        var mintemp=[];
-        var maxyearavg;
+    var mintemp=[];
+    var maxyearavg;
+    var minyearavg;
+   if(data.length>1)
+{
+	var i=0;
+	for(i=0;i<data.length;i++)
+	{
 
-        var minyearavg;
-        if(data.length>1)
-        {
-            var i=0;
-            while(i<data.length)
-            {
-                
-                if(data[i].match(/Average\ High/g).length!=0)
-                {   
-                    var j;
-                    for(j=0;j<12;j++)
-                        maxtemp.push(data[j]);
-            
-                     maxyearavg=data[j];
-                }
-                else if(data[i].match(/Average\ Low/g).length!=0)
-                {
-                     var j;
-                     for(var j=0;j<12;j++)
-                        mintemp.push(data[j]); 
-            
-                    minyearavg=data[j];
-                }
-                i=i+1;
-            }
+		
+		if(data[i].match(/Average\shigh\s/g))
+		{   
+			
+			var j;
+			var k=i;
+			for(j=0;j<24;j++,k++)
+				if(!data[k].match(/\(/g))
+				{	
+					data[k]=data[k].replace("−", "-"); 
+					maxtemp.push(data[k]);
+				}
+
+			maxyearavg=data[k+1];
+		}
+		else if(data[i].match(/Average\slow\s/g))
+		{
+			var j;
+			var k=i;
+			for(var j=0;j<24;j++,k++)
+				if(!data[k].match(/\(/g))
+				{
+					data[k]=data[k].replace("−", "-");
+					mintemp.push(data[k]);
+				} 
+
+			minyearavg=data[k+1];
+
+		}
+		
+	}
+
+    
+
+        i=0;
+        var newdata=[["year","Min","Max"]];
+        var dates=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
         
-
-            i=0;
-            var newdata=[["year","Min","Max"]];
-            var dates=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-            
-            while(i<12)
-            {
-                var temp=[dates[i],parseFloat(mintemp[i]),parseFloat(maxtemp[i])];
-                var temp1=[parseFloat(maxtemp[i]),parseFloat(mintemp[i])]   
-                newdata.push(temp);
-                sendarray.push(temp1);
-                        
-                i=i+1;  
-            }
-           // drawChart1(newdata); 
-          //  document.getElementById("temp").innerHTML=maxyearavg + "&deg;C / " +minyearavg + "&deg;C";
-            }
-            else
-            {
-                sendarray=[];
-                var newdata=[["year","Min","Max"]];
-                var dates=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-                var i=0;
-                while(i<12)
-                {
-                        newdata.push([dates[i],0,0]);
-                        i=i+1;
-                }
-             //   drawChart1(newdata); 
-            //    document.getElementById("temp").innerHTML="Weather Data Not Available";
-         }
-            /* }});*/
+        while(i<12)
+        {
+            var temp=[dates[i],parseFloat(mintemp[i]),parseFloat(maxtemp[i])];
+            var temp1=[parseFloat(maxtemp[i]),parseFloat(mintemp[i])];   
+            min=parseFloat(mintemp[i]);
+            max=parseFloat(maxtemp[i]);
+            sendarray.push(max);
+            sendarray.push(min);
+            newdata.push(temp);
+           
+                    
+            i=i+1;  
+        }
+    }
+    else
+    {
+        sendarray=[];
+        var newdata=[["year","Min","Max"]];
+        var dates=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+        var i=0;
+        while(i<12)
+        {
+                newdata.push([dates[i],0,0]);
+                i=i+1;
+        }
+    }
+       
         return sendarray;
 }
 
@@ -701,7 +610,7 @@ p.pos_fixed{
         
 </div>
 <div id="mainpage">
-    <p class="pos_fixed">Logged in as <%= current_user.email %></p>
+    <p class="pos_fixed">Logged in as</p>
     <nav id = "top" class="navbar navbar-default" style="margin-top:0">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -757,7 +666,7 @@ p.pos_fixed{
             <% @results.each do |c| %>
                 <li style="display:none;">
                     <span id="hidden" href="#" onclick="gc(this);">
-                        <%=c.city %>
+                        <%=c.city %></span>
                     </a>
                 </li>
                 <li class = "lat"style="display:none">
@@ -769,16 +678,20 @@ p.pos_fixed{
                 <% end%>
                 
         </ul>
+        <div id="tablespace"></div>
     </div>
     <!-- place your main page content here --> 
     <div id="map-canvas">
     </div>
     <div id="display">
     </div>
-    <div id="tablespace">
-    </div>
+    
   </div>
 </div>
 
+<script type="text/javascript">
+	 calcu();
+            google.maps.event.addDomListener(window, 'load', initialize);
+</script>
 </body>
 </html>
