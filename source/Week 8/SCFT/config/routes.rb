@@ -26,10 +26,10 @@ get 'sessions/new'
 get 'users/new'
 get 'search/new'
 get 'surrogate/displaySurrogateInfo'
-get 'surrogate/download'
-get 'surrogate/download1'
-post 'surrogate/download' => "surrogate#download" 
-post 'surrogate/download1' => "surrogate#download1"
+get 'surrogate/QualitySearch'
+get 'surrogate/EPWfile'
+post 'surrogate/QualityReport' => "surrogate#QualityReport" 
+post 'surrogate/EPWfile' => "surrogate#EPWfile"
 #resources :location 
 
   # Example of regular route:
