@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> 079651f283c4f991e8ddc7c1310e9c11f5b2487b
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
@@ -127,42 +124,18 @@ $(document).ready(function(){
 
             function codeAddress() {
                     var lat = document.getElementById('searchpanel').getElementsByClassName("lat");
-<<<<<<< HEAD
+
                     var cit = document.getElementById('searchpanel').getElementsByClassName("cit");
-                    console.log(lat);
-=======
-                    //console.log(lat);
->>>>>>> 079651f283c4f991e8ddc7c1310e9c11f5b2487b
+
+
                     var lon = document.getElementById('searchpanel').getElementsByClassName("lon");
                     var len = document.getElementById('length').innerHTML; //Number of cities
-                    //console.log(len);
-                    //if(len > 10)
-                      //  len=10;
+
                     for(i=0;i<len;i++){
-                       // console.log(lat[i].innerHTML);
+
                         var loc = new google.maps.LatLng(lat[i].innerHTML,lon[i].innerHTML);
-<<<<<<< HEAD
+
                         createMarker(loc, lat[i].innerHTML,lon[i].innerHTML, cit[i].innerHTML);
-=======
-                        
-                        
-                        markers.push(new google.maps.Marker({
-                            //   position: location,
-                            icon:{url : '/assets/marker.png'},
-                            position: loc,
-                            map: map,
-                            
-                         }));
-                        
-                        //console.log(markers);
-                          google.maps.event.addListener(markers[i],'click',function() {
-                          map.setZoom(9);
-                          console.log(markers[i].getPosition());
-                          map.setCenter(markers[i].getPosition());
-                          });
-
-
->>>>>>> 079651f283c4f991e8ddc7c1310e9c11f5b2487b
                     }               
                 }
             function createMarker(loc, lat, lon, cit){
@@ -613,11 +586,11 @@ p.pos_fixed{
         
 </div>
 <div id="mainpage">
-<<<<<<< HEAD
+
     
-=======
-    <p class="pos_fixed">Logged in as</p>
->>>>>>> 079651f283c4f991e8ddc7c1310e9c11f5b2487b
+
+
+
     <nav id = "top" class="navbar navbar-default" style="margin-top:0">
     <div class="container-fluid">
       <div class="navbar-header">
