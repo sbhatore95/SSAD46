@@ -41,6 +41,7 @@ class SearchController < ApplicationController
 	        doc.xpath("//table[@class='wikitable collapsible']").each do |row|
 	            @arr << row.text
 	        end
+	        puts @arr
 
 
 			require 'net/http'
@@ -87,14 +88,17 @@ class SearchController < ApplicationController
 
 			@results = Cities.where('latitude > ? AND latitude < ? AND elevation > ? AND elevation < ? AND (round(latitude) != ? OR round(longitude) != ?)',@latitude_Range_Start,@latitude_Range_End,@elevation_Range_Start, @elevation_Range_End, $ilatitude_mycity.to_f.round, $ilongitude_mycity.to_f.round)
 
+			@la = [1,2,3]
+			puts @la
 			@matter ||= []
 			@results.each do |c|
 				@var = c.city
-				@var = @var.gsub(/['\/-]/,'')
-				@any = Weatherdata.where('city =?' , @var)
-				@matter << @any
-				puts @matter
+				#@var = @var.gsub(/['\/-]/,'')
+				any = Weatherdata.where('city = ?' , @var).first
+				@matter << [any.city,any.mjan,any.mfeb,any.mmar,any.mapr,any.mmay,any.mjun,any.mjul,any.maug,any.msep,any.moct,any.mnov,any.mdec,any.njan,any.nfeb,any.nmar,any.napr,any.nmay,any.njun,any.njul,any.naug,any.nsep,any.noct,any.nnov,any.ndec]
+
 			end
+			#puts @matter
 					
 				
 				
