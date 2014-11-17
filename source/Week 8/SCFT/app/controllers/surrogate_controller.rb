@@ -1,5 +1,6 @@
 class SurrogateController < ApplicationController
 #	@EPW_PATH = File.join(Rails.root, "public", "EpwFiles")
+	@LINK = " "
 	def displaySurrogateInfo
 
 	end
@@ -7,18 +8,19 @@ class SurrogateController < ApplicationController
 	#quality report
 	def QualityReport
 		
-#		@rms = "#{Rails.root}/public/Qualityfiles/" + params[:rmscity] +".txt"
-		render :text => params[:rmscity]
+		@rms = "#{Rails.root}/public/Qualityfiles/" + params[:value] +".txt"
+		#render :text => params[:value]
 		#@ = Weatherdata.find_by upper(city): $rmscity
-# 		send_file @rms
+ 		send_file @rms
 	end
 
 	#epw files 
 	def EPWfile
-
-		@link = Cities.where("lower(city) =?" ,$icityname.downcase)
-		
-		render :text => @link.link
+		@some = params[:value]
+		@link = Cities.where("city =?", @some)
+		@LINK = @link[0].link
+		redirect_to @LINK
+#	render :text => @link[0].link
 		
 
 	end
