@@ -365,7 +365,7 @@ function drawtable(tabledata)
         var set;
         set=tabledata[i][0];
         set=set.trim().replace(/ /g, '%20');
-        alert(set);
+        
         var template="<tr><td><a href=http://127.0.0.1:3000/surrogate/displaySurrogateInfo?rmscity="+set+">" + tabledata[i][0]+"</a></td><td>"+tabledata[i][1].toFixed(2)+"</td><td>"+tabledata[i][2].toFixed(2)+"</td><td>"+ tabledata[i][3].toFixed(2)+"</td></tr>";
         maindata=maindata+template;
         i=i+1;
