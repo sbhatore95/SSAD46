@@ -657,28 +657,35 @@ p.pos_fixed{
     </h4>
     <div id="searchpanel" style="overflow-y: auto;height: 100%; width: 25%;margin-top:0px;margin-right:10px;border:2px solid;border-radius:10px;">
         <ul>
-
-            Surrogate cities for
+            <table><tr><td>
+            Surrogate cities for</td><td></td><td>
             <p id="city">
                 <%=@city %>
-            </p>
+            </p></td></tr>
+            <tr><td>
             Latitude range:
-            <p id="ran">
+            </td><td></td><td><p id="ran">
                 <%=@lat_range %>&#176;
-            </p>
+            </p></td></tr>
+            <tr><td>
             Elevation range:
+            </td><td></td><td>
             <p id="ran">
                 <%=@elev_range %>
-            </p>
+            </p></td></tr>
+            <tr><td>
             Radius range(in Km):
-            <p id="radius">
+            </td><td></td><td><p id="radius">
                 <%=@rad_range%>
             </p>
-
+            </td></tr>
+            <tr><td>
             Total cities:
+            </td><td></td><td>
             <p id="length">
                 <%=@results.length%>
             </p>
+            </td></tr></table>
             <% @results.each do |c| %>
                 <li style="display:none;">
                     <span id="hidden" href="#" onclick="gc(this);">

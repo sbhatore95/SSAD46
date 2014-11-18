@@ -83,7 +83,8 @@ a.close:hover { background: #4a6397; }
 
 #searchpanel p {
   
-  text-shadow: 2px 1px 0px rgba(0,0,0,0.7);
+  text-shadow: 2px 5px 0px rgba(0,0,0,0.7);
+  text-align: center;
 }
 
 
