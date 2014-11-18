@@ -390,7 +390,7 @@ function calcu()
 function drawtable(tabledata)
 {   count=count+1;
     var i=0;
-    var maindata="<table id=\"myTable"+count+"\" class=\"tablesorter\"><thead> <tr><th>City Name</th><th>RMS MAX</th><th>RMS Min</th><th>RMS Total</th></tr></thead><tbody>";
+    var maindata="<table id=\"myTable"+count+"\" class=\"tablesorter\"><thead> <tr><th>City Name</th><th>RMS MAX</th><th></th><th>RMS Min</th><th></th><th>RMS Total</th></tr></thead><tbody>";
    
     while(i<10)
     {
@@ -398,7 +398,7 @@ function drawtable(tabledata)
         set=tabledata[i][0];
         set=set.trim().replace(/ /g, '%20');
         
-        var template="<tr><td><a href=http://127.0.0.1:3000/surrogate/displaySurrogateInfo?rmscity="+set+">" + tabledata[i][0]+"</a></td><td>"+tabledata[i][1].toFixed(2)+"</td><td>"+tabledata[i][2].toFixed(2)+"</td><td>"+ tabledata[i][3].toFixed(2)+"</td></tr>";
+        var template="<tr><td><a href=http://127.0.0.1:3000/surrogate/displaySurrogateInfo?rmscity="+set+">" + tabledata[i][0]+"</a></td><td>"+tabledata[i][1].toFixed(2)+"</td><td></td><td>"+tabledata[i][2].toFixed(2)+"</td><td></td><td>"+ tabledata[i][3].toFixed(2)+"</td></tr>";
         maindata=maindata+template;
         i=i+1;
     }
@@ -568,9 +568,7 @@ function gowiki()
 
         </script>
 <style>
-p {
-  font-size: 10; color: white;
-}
+
 p.pos_fixed{
       text-align: right;
       margin-right: :20px;
@@ -629,7 +627,7 @@ p.pos_fixed{
 
 
 
-    <nav id = "top" class="navbar navbar-default" style="margin-top:0">
+    <nav id = "top" class="navbar navbar-default" style="margin-top:30px; height:50px;">
     <div class="container-fluid">
       <div class="navbar-header">
         <a class="navbar-brand" href="#">SCFT</a>
@@ -657,30 +655,30 @@ p.pos_fixed{
     <%end%>
 
     </h4>
-    <div id="searchpanel" style="overflow-y: auto;height: 580px;margin-top:0px;margin-right:50px;border:2px solid;border-radius:10px;">
+    <div id="searchpanel" style="overflow-y: auto;height: 100%; width: 25%;margin-top:0px;margin-right:10px;border:2px solid;border-radius:10px;">
         <ul>
 
             Surrogate cities for
             <p id="city">
                 <%=@city %>
             </p>
-            Latitude range
+            Latitude range:
             <p id="ran">
-                <%=@lat_range %>
+                <%=@lat_range %>&#176;
             </p>
-            Elevation range
+            Elevation range:
             <p id="ran">
                 <%=@elev_range %>
             </p>
-            Radius range(in Km)
+            Radius range(in Km):
             <p id="radius">
                 <%=@rad_range%>
             </p>
 
-            Total cities
+            Total cities:
             <p id="length">
                 <%=@results.length%>
-            </p>:
+            </p>
             <% @results.each do |c| %>
                 <li style="display:none;">
                     <span id="hidden" href="#" onclick="gc(this);">
