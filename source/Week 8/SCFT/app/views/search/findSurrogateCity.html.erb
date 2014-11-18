@@ -77,6 +77,10 @@ $(document).ready(function(){
 </script>
 
  <script>
+             function toTitleCase(str)
+            {
+                return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+            }
             // In the following example, markers appear when the user clicks on the map.
             // The markers are stored in an array.
             // The user can then click an option to hide, show or delete the markers.
@@ -88,6 +92,7 @@ $(document).ready(function(){
             function initialize() {
                 geocoder = new google.maps.Geocoder();
                 var centre = new google.maps.LatLng("<%=$ilatitude_mycity%>", "<%=$ilongitude_mycity %>");
+
                 var mapOptions = {
                     zoom: 5,
                     center: centre,
@@ -127,23 +132,50 @@ $(document).ready(function(){
 
                     var cit = document.getElementById('searchpanel').getElementsByClassName("cit");
 
+                    var top10 = document.getElementById("tablespace").getElementsByTagName("a");
 
                     var lon = document.getElementById('searchpanel').getElementsByClassName("lon");
                     var len = document.getElementById('length').innerHTML; //Number of cities
 
                     for(i=0;i<len;i++){
+                        flag=0;
+
+                        for(j=0;j<10;j++){
+                            
+                            if(top10[j].innerHTML.toLowerCase() == cit[i].innerHTML.toLowerCase().trim()){
+                                flag = 1;                        
+                                
+                            }
+                        }
 
                         var loc = new google.maps.LatLng(lat[i].innerHTML,lon[i].innerHTML);
-
-                        createMarker(loc, lat[i].innerHTML,lon[i].innerHTML, cit[i].innerHTML);
+                        createMarker(loc, lat[i].innerHTML,lon[i].innerHTML, cit[i].innerHTML, flag, len);
                     }               
                 }
-            function createMarker(loc, lat, lon, cit){
-                var marker = new google.maps.Marker({
-                    icon:{url : '/assets/marker.png'},
+            function createMarker(loc, lat, lon, cit, flag,len){
+                if(!flag){
+                    if(len < 200){
+                        var marker = new google.maps.Marker({
+                            icon:{url : '/assets/marker.png'},
+                            position: loc,
+                            map: map,
+                        });
+                    }
+                    else{
+                        var marker = new google.maps.Marker({
+                        icon:{url : '/assets/placemark_circle.png'},
+                        position: loc,
+                        map: map,
+                        });
+                    }
+                }
+                else{
+                    var marker = new google.maps.Marker({
+                    icon:{url : '/assets/blue-dot.png'},
                     position: loc,
                     map: map,
-                });
+                    });
+                }
                 var infowindow = new google.maps.InfoWindow({
                       content:  '<b>' + cit + '</b>' + '<br/>' + 
                       'latitude : ' + lat+
@@ -416,9 +448,11 @@ function rmsData(lat,lng,matter,citydata)
 
    		rmax=Math.sqrt(rmsmax/12)
    		rmin=Math.sqrt(rmsmin/12)
-   		rtotal = (rmax+rmin)/2
+   		rtotal = (rmax+rmin)/2;
+        var fail = toTitleCase(matter[i][0]);
+        console.log(fail);
    		
-   		tabledata.push([matter[i][0],rmax,rmin,rtotal]);
+   		tabledata.push([fail,rmax,rmin,rtotal]);
 
 	}
    	function Comparator(a,b){
