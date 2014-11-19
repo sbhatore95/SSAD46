@@ -393,7 +393,7 @@ function calcu()
 function drawtable(tabledata)
 {   count=count+1;
     var i=0;
-    var maindata="<table id=\"myTabl"+count+"\" class=\"table table-striped\"><thead> <tr><th>City Name</th><th>RMS Min</th><th>RMS Max</th><th>RMS Total</th></tr></thead><tbody>";
+    var maindata="<table id=\"myTabl"+count+"\" class=\"table table-striped\"><thead> <tr><th>City Name<img src=\"/assets/black-dot.png\" style=\"text-align:center;width:16px;height:16px;margin-left:80px;display:block;margin-top:-17px;\"></th><th>RMS Min</th><th>RMS Max</th><th>RMS Total</th></tr></thead><tbody>";
    
     while(i<10)
     {
@@ -709,16 +709,18 @@ p.pos_fixed{
         <ul>
             <table><tr><td>
             Surrogate cities for</td><td></td><td>
-            <p id="city">
+            <p id="city" style="margin-top:-6px;">
                 <%=@city %>
-            </p></td></tr>
+            </p>
+            <img src="/assets/green-dot.png" style="text-align:center;width:16px;height:16px;margin-left:60px;display:block;margin-top:-23px;">
+            </td></tr>
             <tr><td>
             Latitude range:
             </td><td></td><td><p id="ran">
                 <%=@lat_range %>&#176;
             </p></td></tr>
             <tr><td>
-            Elevation range:
+            Elevation range(in m):
             </td><td></td><td>
             <p id="ran">
                 <%=@elev_range %>
@@ -732,9 +734,14 @@ p.pos_fixed{
             <tr><td>
             Total cities:
             </td><td></td><td>
-            <p id="length">
+            <p id="length" style = "margin-top:-6px;">
                 <%=@results.length%>
             </p>
+            <%if @results.length < 200 %>
+            <img src="/assets/marker.png" style="text-align:center;width:10px;height:16px;margin-left:60px;display:block;margin-top:-23px;">
+            <%else%>
+            <img src="/assets/placemark_circle.png" style="text-align:center;width:16px;height:16px;margin-left:60px;display:block;margin-top:-23px;">
+            <%end%>
             </td></tr></table>
             <% @results.each do |c| %>
                 <li style="display:none;">
