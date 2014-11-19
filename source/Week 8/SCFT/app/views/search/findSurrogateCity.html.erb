@@ -25,7 +25,9 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js"></script>
 <script type="text/javascript" src="jquery-latest.js"></script> 
 <script type="text/javascript" src="jquery.tablesorter.js"></script> 
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script type="text/javascript">
+google.load("visualization", "1", {packages:["table"]});
 $(document).ready(function(){
   $("#srch").on("click", function(e){
     e.preventDefault();
@@ -386,7 +388,7 @@ function calcu()
     rmsData('<%= $ilatitude_mycity %>','<%= $ilatitude_mycity %>',tt,climatedata);
 
 }
-
+/*
 function drawtable(tabledata)
 {   count=count+1;
     var i=0;
@@ -405,6 +407,42 @@ function drawtable(tabledata)
     document.getElementById("tablespace").innerHTML=maindata+"</tbody></table>";
     
    // $("#myTable"+count).tablesorter(); 
+}
+*/
+
+
+function drawtable(tabledata)
+{
+
+        var data = new google.visualization.DataTable();
+//      data.addColumn('number', 'No'); 
+        data.addColumn('string', 'City Name');
+        data.addColumn('string', 'RMS min'); 
+        data.addColumn('string', 'RMS max'); 
+        data.addColumn('string', 'RMS total'); 
+        
+        
+        data.addRows([
+                       [ tabledata[0][0] ,tabledata[0][1].toFixed(2) ,tabledata[0][2].toFixed(2),tabledata[0][2].toFixed(3)],
+                       [ tabledata[1][0] ,tabledata[1][1].toFixed(2) ,tabledata[1][2].toFixed(2),tabledata[1][2].toFixed(3)],
+                       [ tabledata[2][0] ,tabledata[2][1].toFixed(2) ,tabledata[2][2].toFixed(2),tabledata[2][2].toFixed(3)],
+                       [ tabledata[3][0] ,tabledata[3][1].toFixed(2) ,tabledata[3][2].toFixed(2),tabledata[3][2].toFixed(3)],
+                       [ tabledata[4][0] ,tabledata[4][1].toFixed(2) ,tabledata[4][2].toFixed(2),tabledata[4][2].toFixed(3)],
+                       [ tabledata[5][0] ,tabledata[5][1].toFixed(2) ,tabledata[5][2].toFixed(2),tabledata[5][2].toFixed(3)],
+                       [ tabledata[6][0] ,tabledata[6][1].toFixed(2) ,tabledata[6][2].toFixed(2),tabledata[6][2].toFixed(3)],
+                       [ tabledata[7][0] ,tabledata[7][1].toFixed(2) ,tabledata[7][2].toFixed(2),tabledata[7][2].toFixed(3)],
+                       [ tabledata[8][0] ,tabledata[8][1].toFixed(2) ,tabledata[8][2].toFixed(2),tabledata[8][2].toFixed(3)],
+                       [ tabledata[9][0] ,tabledata[9][1].toFixed(2) ,tabledata[9][2].toFixed(2),tabledata[9][2].toFixed(3)]
+
+
+                        ]);
+
+
+        var table = new google.visualization.Table(document.getElementById('tablespace'));
+
+        table.draw(data, {showRowNumber: true});
+
+
 }
 
 
