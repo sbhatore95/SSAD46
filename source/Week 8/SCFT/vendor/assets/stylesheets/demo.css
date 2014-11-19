@@ -67,8 +67,8 @@ a.close:hover { background: #4a6397; }
 #map-canvas{
   margin-top:100px;
   margin-left:20px;
-  height:500px;
-  width:900px;
+  height:530px;
+  width:960px;
 }
 
 #searchpanel {
