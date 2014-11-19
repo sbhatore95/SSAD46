@@ -393,7 +393,7 @@ function calcu()
 function drawtable(tabledata)
 {   count=count+1;
     var i=0;
-    var maindata="<table id=\"myTable"+count+"\" class=\"tablesorter\"><thead> <tr><th>City Name</th><th>RMS Min</th><th>RMS Max</th><th>RMS Total</th></tr></thead><tbody>";
+    var maindata="<table id=\"myTabl"+count+"\" class=\"table table-striped\"><thead> <tr><th>City Name</th><th>RMS Min</th><th>RMS Max</th><th>RMS Total</th></tr></thead><tbody>";
    
     while(i<10)
     {
@@ -401,7 +401,9 @@ function drawtable(tabledata)
         set=tabledata[i][0];
         set=set.trim().replace(/ /g, '%20');
         
-        var template="<tr><td><a href=http://127.0.0.1:3000/surrogate/displaySurrogateInfo?rmscity="+set+">" + tabledata[i][0]+"</a></td><td>"+tabledata[i][1].toFixed(2)+"</td><td>"+tabledata[i][2].toFixed(2)+"</td><td>"+ tabledata[i][3].toFixed(2)+"</td></tr>";
+        var template="<tr><td><a href=http://127.0.0.1:3000/surrogate/displaySurrogateInfo?rmscity="+set+ "&city=" + "<%= $icityname %>"+
+"&lat=" + "<%= $ilatitude_mycity %>" + "&lon=" + "<%= $ilongitude_mycity %>" + "&elev=" + "<%= $ielevation_mycity %>" + ">" + tabledata[i][0]+"</a></td><td>"+tabledata[i][1].toFixed(2)+"</td><td>"+tabledata[i][2].toFixed(2)+"</td><td>"+ tabledata[i][3].toFixed(2)+"</td></tr>";
+
         maindata=maindata+template;
         i=i+1;
     }

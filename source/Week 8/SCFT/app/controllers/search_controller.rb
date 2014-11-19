@@ -56,9 +56,10 @@ class SearchController < ApplicationController
 			res = http.request(request)
 			res = JSON.parse(res.body)
 			$ielevation_mycity = res['results'][0]['elevation']
+			$anyone=$icityname
 
 			#highly precise search for searching the existence of the weather file of the input city 
-			if Cities.where('lower(city) = ? AND (latitude-0.2) < ? AND (latitude+0.2) > ?  AND (longitude-0.2) < ? AND (longitude+0.2) > ?',$icityname.downcase,$ilatitude_mycity.to_f,$ilatitude_mycity.to_f,$ilongitude_mycity.to_f,$ilongitude_mycity.to_f).exists?
+			if Cities.where('lower(city) = ? AND (latitude-0.2) < ? AND (latitude+0.2) > ?  AND (longitude-0.2) < ? AND (longitude+0.2) > ?',$anyone.downcase,$ilatitude_mycity.to_f,$ilatitude_mycity.to_f,$ilongitude_mycity.to_f,$ilongitude_mycity.to_f).exists?
 		 	#redirect_to :action => 'weather' ,:city => params[:city] ,:latitude_range => params[:lat], :elevation_range => params[:altrange] ,:radius => params[:radrange]
 			$found = 1
 		#If the city  exist in database 
