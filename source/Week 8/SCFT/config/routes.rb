@@ -28,8 +28,8 @@ get 'search/new'
 get 'surrogate/displaySurrogateInfo'
 get 'surrogate/QualitySearch'
 get 'surrogate/EPWfile'
-post 'surrogate/QualityReport' => "surrogate#QualityReport" 
-post 'surrogate/EPWfile' => "surrogate#EPWfile"
+get 'surrogate/QualityReport' => "surrogate#QualityReport" 
+get 'surrogate/EPWfile' => "surrogate#EPWfile"
 #resources :location 
 
   # Example of regular route:
