@@ -9,6 +9,10 @@ class SurrogateController < ApplicationController
 		$lat = params[:lat]
 		$lon = params[:lon]
 		$elev = params[:elev]
+		
+		$latitude = 0
+		$longitude = 0
+		
 		#render :text => $city
 
 		@arr ||= []
@@ -23,6 +27,20 @@ class SurrogateController < ApplicationController
         
         $hello=$icity
         @any = Weatherdata.where('lower(city) = ?' , $hello.downcase).first
+        @any1 = Cities.where('lower(city) = ?' , $icity.downcase).first
+        $latitude = @any1.latitude
+        $longitude = @any1.longitude
+        require 'net/http'
+			require 'json'
+			@url = 'https://maps.googleapis.com/maps/api/elevation/json?locations=' + $latitude.to_s + ',' + $longitude.to_s
+			url = URI.parse(@url)
+			http = Net::HTTP.new(url.host, url.port)
+			http.use_ssl = true
+			http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+			request = Net::HTTP::Get.new(url.request_uri)
+			res = http.request(request)
+			res = JSON.parse(res.body)
+			$elevation = res['results'][0]['elevation']
         any = @any
 		@matter = [any.city,any.mjan,any.mfeb,any.mmar,any.mapr,any.mmay,any.mjun,any.mjul,any.maug,any.msep,any.moct,any.mnov,any.mdec,any.njan,any.nfeb,any.nmar,any.napr,any.nmay,any.njun,any.njul,any.naug,any.nsep,any.noct,any.nnov,any.ndec]
 	end

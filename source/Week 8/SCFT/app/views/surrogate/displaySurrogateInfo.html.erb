@@ -9,7 +9,8 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js"></script>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 <script>
 function goBack() {
     window.history.back()
@@ -91,7 +92,7 @@ function drawChart()
 	 //array[i][4] = min of tt from 13th to 25th element of tt
 	//climatedata= gowiki();
 	//alert(climatedata);    
-	alert(data1);
+	//alert(data1);
 
 	 var data = google.visualization.arrayToDataTable([
           ['Year', 'Min', 'Max'],
@@ -237,35 +238,44 @@ function gowiki()
     </div>
 
     </nav>
-<div id="content">
-	<div id="chartdiv" style="margin-top:100px;margin-left:100px;height:400px;width:700px;background-color:white;">
+<div id="content" style="height: 370px;">
+	<div id="chartdiv" style="margin-top:100px;margin-left:100px;height:400px;width:800px;background-color:white;">
 		Graph image
 	</div>
-	
-	<div id="links" style="margin-left:900px;margin-top:-200px;">
-		
-		<div>
+	<h4 style="margin-left: 220px; color: white;"> Graph comparing Temperature variance btw <i><%= $city %></i> and <i><%= $icity %></i></h4>
+	<div id="links" style="margin-left:1000px;margin-top:-400px; background: white; height: 360px; border-radius: 10%;">
+    <br><br>
+		<table class="table table-striped"style="color: black;">
+    <tr><td></td><td>&nbsp;&nbsp;&nbsp;<b><%= $city%></b></td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b><%= $icity%></b></td></tr>
+    <tr><td>Latitude </td><td> &nbsp;&nbsp;&nbsp;<%= $lat.to_f.round(2) %>&#176; </td><td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= $latitude.to_f.round(2) %>&#176;   </td></tr>
+    <tr><td>Longitude </td><td>&nbsp;&nbsp;&nbsp;<%= $lon.to_f.round(2)%>&#176;   </td><td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= $longitude.to_f.round(2) %>&#176;    </td></tr>
+    <tr><td>Elevation </td><td>&nbsp;&nbsp;&nbsp;<%= $elev.to_f.round(2)%>m </td><td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= $elevation.to_f.round(2) %>m</td></tr>
+    
+    </table>
+		<!--div style="color: white; margin-bottom: 15px;">
 			Queried City = '<%= $city %>'
+      <br>
 			Match Found = '<%= $icity%>'
 
-		</div> 
-		<a href="/surrogate/QualityReport">
+		</div--> 
+    <br>
+		&nbsp;&nbsp;<a href="/surrogate/QualityReport">
 			<button>
 				<i class="fa fa-download"></i>
 				Quality Report
 			</button>
 		</a>
 		
-		<br/><br/><br/>
+		<br><br>
 	
-		<a href="/surrogate/EPWfile">
+		&nbsp;&nbsp;<a href="/surrogate/EPWfile">
 			<button>
 				<i class="fa fa-download"></i>
 				Weather File
 			</button>
 		</a>
 	
-			 
+		 
 	</div>
 	
 </div>
