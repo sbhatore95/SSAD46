@@ -36,7 +36,8 @@ class SearchController < ApplicationController
 			@arr ||= []
             require 'nokogiri'
             require 'open-uri'
-	      	@wikilink='http://en.wikipedia.org/wiki/' + $icityname
+            var = $icityname.gsub(' ', '_')
+	      	@wikilink='http://en.wikipedia.org/wiki/' + var
 	        doc = Nokogiri::HTML(open(@wikilink))
 	        doc.xpath("//table[@class='wikitable collapsible']").each do |row|
 	            @arr << row.text
