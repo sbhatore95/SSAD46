@@ -119,6 +119,12 @@ $(document).ready(function(){
                       });
 
                 infowindow.open(map,marker);
+                google.maps.event.addListener(marker,'click',function() {
+                  map.setZoom(9);
+                  
+                  map.setCenter(marker.getPosition());
+                  infowindow.open(map,marker);
+                  });
                                 
                 codeAddress();
                 lat_belt();
@@ -393,7 +399,7 @@ function calcu()
 function drawtable(tabledata)
 {   count=count+1;
     var i=0;
-    var maindata="<table id=\"myTabl"+count+"\" class=\"table table-striped\"><thead> <tr><th>City Name<img src=\"/assets/black-dot.png\" style=\"text-align:center;width:16px;height:16px;margin-left:80px;display:block;margin-top:-17px;\"></th><th>RMS Min</th><th>RMS Max</th><th>RMS Total</th></tr></thead><tbody>";
+    var maindata="<table id=\"myTable"+count+"\" class=\"table table-striped\"><thead> <tr><th>City Name<img src=\"/assets/black-dot.png\" style=\"text-align:center;width:16px;height:16px;margin-left:70px;display:block;margin-top:-17px;\"></th><th>RMS Min</th><th>RMS Max</th><th>RMS Total</th></tr></thead><tbody>";
    
     while(i<10)
     {
@@ -617,7 +623,7 @@ p.pos_fixed{
       
 }
 #myTable1,#myTable1 th,#myTable1 td{
-    border: 1px solid black;
+    
     border-collapse: collapse;
 }
 #myTable1 th,#myTable1 td {
