@@ -25,9 +25,6 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js"></script>
 <script type="text/javascript" src="jquery-latest.js"></script> 
 <script type="text/javascript" src="jquery.tablesorter.js"></script> 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
 <script type="text/javascript">
 
@@ -396,7 +393,7 @@ function calcu()
 function drawtable(tabledata)
 {   count=count+1;
     var i=0;
-    var maindata="<table id=\"myTable"+count+"\" class=\"table\"><thead> <tr><th>City Name</th><th>RMS Min</th><th>RMS Max</th><th>RMS Total</th></tr></thead><tbody>";
+    var maindata="<table id=\"myTable"+count+"\" class=\"tablesorter\"><thead> <tr><th>City Name</th><th>RMS Min</th><th>RMS Max</th><th>RMS Total</th></tr></thead><tbody>";
    
     while(i<10)
     {
@@ -617,7 +614,13 @@ p.pos_fixed{
       position: relative;
       
 }
-
+#myTable1,#myTable1 th,#myTable1 td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+#myTable1 th,#myTable1 td {
+    padding: 5px;
+}
 </style>
 </head>
 
