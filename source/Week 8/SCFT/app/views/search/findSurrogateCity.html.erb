@@ -6,7 +6,7 @@
 <title>SCFT</title>
 
 <link rel="shortcut icon" href="http://www.hongkiat.com/blog/favicon.ico">
-<link rel="icon" href="http://www.hongkiat.com/blog/favicon.ico">
+<link rel="icon" href="/assets/search-icon.png">
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -393,7 +393,7 @@ function calcu()
 function drawtable(tabledata)
 {   count=count+1;
     var i=0;
-    var maindata="<table id=\"myTabl"+count+"\" class=\"table table-striped\"><thead> <tr><th>City Name<img src=\"/assets/black-dot.png\" style=\"text-align:center;width:16px;height:16px;margin-left:80px;display:block;margin-top:-17px;\"></th><th>RMS Min</th><th>RMS Max</th><th>RMS Total</th></tr></thead><tbody>";
+    var maindata="<table id=\"myTable"+count+"\" class=\"table table-striped\"><thead> <tr><th>City Name<img src=\"/assets/black-dot.png\" style=\"text-align:center;width:16px;height:16px;margin-left:80px;display:block;margin-top:-17px;\"></th><th>RMS Min</th><th>RMS Max</th><th>RMS Total</th></tr></thead><tbody>";
    
     while(i<10)
     {
@@ -617,7 +617,7 @@ p.pos_fixed{
       
 }
 #myTable1,#myTable1 th,#myTable1 td{
-    border: 1px solid black;
+    
     border-collapse: collapse;
 }
 #myTable1 th,#myTable1 td {
@@ -738,9 +738,9 @@ p.pos_fixed{
                 <%=@results.length%>
             </p>
             <%if @results.length < 200 %>
-            <img src="/assets/marker.png" style="text-align:center;width:10px;height:16px;margin-left:100px;display:block;margin-top:-23px;">
+            <img src="/assets/marker.png" style="text-align:center;width:10px;height:16px;margin-left:105px;display:block;margin-top:-23px;">
             <%else%>
-            <img src="/assets/placemark_circle.png" style="text-align:center;width:16px;height:16px;margin-left:100px;display:block;margin-top:-23px;">
+            <img src="/assets/placemark_circle.png" style="text-align:center;width:16px;height:16px;margin-left:105px;display:block;margin-top:-23px;">
             <%end%>
             </td></tr></table>
             <% @results.each do |c| %>
