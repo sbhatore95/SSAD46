@@ -67,7 +67,7 @@ a.close:hover { background: #4a6397; }
 #map-canvas{
   margin-top:100px;
   margin-left:20px;
-  height:500px;
+  height:560px;
   width:900px;
 }
 
@@ -87,6 +87,7 @@ a.close:hover { background: #4a6397; }
   text-align: center;
   color:  black;
   margin: 5px;
+  font-size: 10px;
 }
 
 

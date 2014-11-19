@@ -135,11 +135,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 	  <p class="pos_fixed">Logged in as <%= current_user.email.at(0..a-1) %>
  <!-- <a href="/log_out"><button>LogOut</button></a></p> -->
 	  <!--%= link_to "Log out", log_out_path %-->
-  <% else %>
-		  <a href="sign_up"><button>SignUp</button></a>
-	  <a href="log_in"><button>LogIn</button></a>
-	  <!--%= link_to "Sign up", sign_up_path %--> 
-  <!--%= link_to "log in", log_in_path %-->
+  
   <% end %>
   </div>
   <nav class="navbar navbar-default" style="margin-top:30px; height: 30px;">
