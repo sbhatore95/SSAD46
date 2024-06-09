@@ -7,7 +7,8 @@
     <link type="stylesheet" href="../../static/css/style.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script>
-        function initMap(latlng) {
+        function initMap() {
+            let latlng = document.getElementById('latlng').innerHTML
             const map = new google.maps.Map(document.getElementById("map"), {
             zoom: 4,
             center: myLatLng,
@@ -27,11 +28,12 @@
     <section>
         <h1>City Finder</h1>
     <div id = "map"></div>
+    {% block  span %}
+    <span>{{ latlng }}</span>
+    {% endblock %}
     <form method="GET">
         <input name="cityname" placeholder="city name">
-        {% block  button %}
-        <input class="btn btn-primary" value="submit" type="submit" onclick='initMap({ latlng })'>
-        {% endblock %}
+        <input class="btn btn-primary" value="submit" type="submit">
     </form>
     </section>
     <script
