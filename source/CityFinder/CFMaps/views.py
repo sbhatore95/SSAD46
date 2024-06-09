@@ -1,11 +1,12 @@
 from django.shortcuts import render
 from .models import City
 
-class CFMaps:
-  flag = True
+filename = "indianCities.csv"
 
+class CFMaps:
+  
   def __init__(self):
-    pass
+    self.flag = True
   
   def getLatLong(self, cityname):
      dictLL = {}
@@ -15,8 +16,8 @@ class CFMaps:
      return dictLL
   
   def parse_csv(self):
-    if flag:
-        f = open('./static/files/cities.csv', 'r')
+    if (len(City.objects.all()) < 1):
+        f = open("CFMaps/static/files/" + filename, 'r', encoding="utf8")
         line = f.readline()
         line = f.readline()
         cityname = ""
@@ -24,16 +25,14 @@ class CFMaps:
         long = ""
         while line != "":
             lineSplit = line.split(',')
-            cityname = lineSplit[1]
-            lat = lineSplit[9]
-            long = lineSplit[10]
-            if (flag):
-                q = City.objects.create(lat=lat, long=long, cityname=cityname)
-                q.save()
+            cityname = lineSplit[0]
+            lat = lineSplit[1]
+            long = lineSplit[2]
+            uid = len(City.objects.all()) + 1
+            q = City.objects.create(uid=uid, cityname=cityname, lat=lat, long=long)
+            q.save()
             line = f.readline()
         f.close()
-        if (flag):
-            flag = False
     else:
        pass
     return
@@ -62,4 +61,4 @@ def index(request):
     else:
         latlng = cfmap1.getLatLong(params['cityname'])
         context = {'data': params, 'latlng': latlng}
-    return render(request, 'CFMaps/index.html', {})
+    return render(request, 'CFMaps/index.html', context)
