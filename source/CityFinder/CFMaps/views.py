@@ -60,5 +60,5 @@ def index(request):
         pass
     else:
         latlng = cfmap1.getLatLong(params['cityname'])
-        context = {'data': params, 'latlng': latlng}
+        context = {'cityname': params['cityname'], 'latlng':[latlng['lat'], latlng['lng']]}
     return render(request, 'CFMaps/index.html', context)
